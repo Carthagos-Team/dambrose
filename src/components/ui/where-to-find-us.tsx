@@ -86,7 +86,7 @@ export function WhereToFindUs() {
 							style={{ transform: 'rotate(13.12deg)' }}
 						>
 							<Image
-								src="/stamp.svg"
+								src="/marks/stamp.svg"
 								alt=""
 								width={140}
 								height={123}

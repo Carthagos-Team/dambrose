@@ -22,7 +22,7 @@ export function MembershipHolds() {
 			{/* Stamp */}
 			<div className="absolute top-4.75 right-6 md:right-[26.7%] z-10">
 				<Image
-					src="/stamp.svg"
+					src="/marks/stamp.svg"
 					alt="Here for every life chapter"
 					width={106}
 					height={106}
@@ -72,7 +72,7 @@ export function MembershipHolds() {
 							Discover our services
 						</Button>
 						<Image
-							src="/discover.svg"
+							src="/marks/dambrose.svg"
 							alt="Discover"
 							width={183}
 							height={39}

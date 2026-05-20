@@ -58,7 +58,7 @@ export function MedicalFramework() {
 										services.
 									</p>
 									<Image
-										src="/lifelong-medicine-stamp.svg"
+										src="/marks/lifelong-medicine-stamp.svg"
 										alt=""
 										width={133}
 										height={63}

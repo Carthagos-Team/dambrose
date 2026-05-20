@@ -39,7 +39,7 @@ export function SteadyHand() {
 									navigate your health alone.
 								</p>
 								<Image
-									src="/dambrose.svg"
+									src="/marks/dambrose.svg"
 									alt="Dambrose"
 									width={183}
 									height={39}

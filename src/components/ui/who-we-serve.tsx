@@ -41,7 +41,7 @@ export function WhoWeServe() {
 						className="relative bg-white-rock px-4 py-6 md:px-10 md:py-12"
 					>
 						<Image
-							src="/stamp.svg"
+							src="/marks/stamp.svg"
 							alt="Here for every life chapter"
 							width={106}
 							height={106}
