@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+	/* ── Fonts ──────────────────────────────────────────── */
+	--font-display: var(--font-display), "Instrument Serif", serif;
+	--font-body: var(--font-body), "Martian Mono", monospace;
+	--font-ui: var(--font-ui), "Public Sans", sans-serif;
+
+	/* ── Color Palette ──────────────────────────────────── */
+
+	/* Greens / Darks */
+	--color-rangoon-green: #1c1a08;
+	--color-woodrush: #222009;
+	--color-rangitoto: #3c3c27;
+	--color-cape-cod: #383f39;
+	--color-corduroy: #6b7167;
+	--color-green-spring: #b2b9a9;
+
+	/* Neutrals / Browns */
+	--color-zeus: #2a231b;
+	--color-mondo: #413527;
+	--color-judge-gray: #574b3b;
+	--color-olive-haze: #847c66;
+	--color-gray-olive: #a29a84;
+	--color-bison-hide: #bdb8a9;
+
+	/* Blues / Teals */
+	--color-shuttle-gray: #586577;
+	--color-regent-gray: #808d9f;
+	--color-william: #4a6363;
+	--color-blue-smoke: #728b8b;
+	--color-opal: #b1c5c1;
+	--color-barley-corn: #997d4d;
+
+	/* Warm / Reds */
+	--color-fire: #ae4000;
+	--color-tia-maria: #cc3d0d;
+	--color-sandy-brown: #eba16f;
+	--color-sanguine: #913f3b;
+	--color-contessa: #b96763;
+	--color-my-pink: #d58e8a;
+	--color-mongoose: #c1a575;
+	--color-indian-khaki: #c8b698;
+
+	/* Golds / Creams */
+	--color-husk: #bda25f;
+	--color-putty: #e6ca84;
+	--color-banana-mania: #fae5b0;
+	--color-heathered-gray: #bdb992;
+	--color-tana: #dedbbc;
+	--color-white-rock: #ebe9d1;
+	--color-ecru-white: #f2f1e3;
+
+	/* ── Semantic Colors ────────────────────────────────── */
+	--color-bg: #f2f1e3; /* ecru-white */
+	--color-bg-subtle: #ebe9d1; /* white-rock */
+	--color-bg-muted: #dedbbc; /* tana */
+	--color-fg: #1c1a08; /* rangoon-green */
+	--color-fg-muted: #847c66; /* olive-haze */
+	--color-fg-subtle: #a29a84; /* gray-olive */
+	--color-border: #dedbbc; /* tana */
+	--color-border-strong: #bdb8a9; /* bison-hide */
+	--color-accent: #ae4000; /* fire */
+
+	/* ── Type Scale (em, base 16px) ─────────────────────── */
+	--text-xs: 0.75em; /*  12px */
+	--text-sm: 0.875em; /*  14px */
+	--text-lg: 1.25em; /*  20px */
+	--text-2xl: 2em; /*  32px */
+	--text-4xl: 2.5em; /*  40px */
+	--text-5xl: 3.125em; /*  50px */
+	--text-6xl: 3.25em; /*  52px */
+	--text-7xl: 4.5em; /*  72px */
+
+	/* ── Leading ────────────────────────────────────────── */
+	--leading-none: 1;
+	--leading-tight: 1.1;
+	--leading-snug: 1.2;
+	--leading-relaxed: 1.4;
+
+	/* ── Letter Spacing ─────────────────────────────────── */
+	--tracking-normal: 0em;
+	--tracking-wide: 0.01em;
+	--tracking-wider: 0.02em;
+	--tracking-tight: -0.04em;
+
+	--spacing: 0.25em;
+}
+
+/* ─── Base — fluid type scale, continuous across breakpoints ─── */
+/* Small  (<768px):  14px → 16px */
+html {
+	font-size: clamp(0.875rem, calc(0.75rem + 0.5vw), 1rem);
+}
+/* Md     (768-1023px): 16px → 18px */
+@media (min-width: 768px) {
+	html {
+		font-size: clamp(1rem, calc(0.625rem + 0.78vw), 1.125rem);
+	}
+}
+/* Lg+    (≥1024px):  18px → 22px (caps around 2167px) */
+@media (min-width: 1024px) {
+	html {
+		font-size: clamp(1.125rem, calc(0.9rem + 0.35vw), 1.375rem);
+	}
+}
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+	font-family: var(--font-ui);
+}
