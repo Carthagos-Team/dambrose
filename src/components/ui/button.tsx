@@ -17,6 +17,7 @@ const button = tv({
 			khaki: 'bg-indian-khaki text-ecru-white',
 			teal: 'bg-william text-ecru-white',
 			dark: 'bg-gray-olive text-ecru-white',
+			regent: 'bg-regent-gray text-ecru-white',
 			outline: 'border border-current bg-transparent text-current',
 		},
 		size: {

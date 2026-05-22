@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/_next/static/chunks/\\\\[root-of-the-server\\\\]__*._.css)",
+      "Bash(sips -Z 1024 /tmp/sec08-v7.png --out /tmp/sec08-v7-sm.png)",
+      "Bash(ls -lt /tmp/*.png /tmp/*.jpg /tmp/*.jpeg /tmp/*.webp 2>/dev/null | head -10 *)",
+      "Read(//private/var/folders/**)",
+      "Read(//Users/samuelcardoso/Downloads/**)",
+      "Read(//Users/samuelcardoso/Desktop/**)",
+      "Bash(xargs -I {} ls -lh {})",
+      "Bash(sort -k6)",
+      "Bash(find ~/Library -name \"*.png\" -mtime -1 -size +500k 2>/dev/null | head -10 *)",
+      "Read(//Users/samuelcardoso/Library/**)",
+      "Read(//Users/samuelcardoso/.claude/**)",
+      "Bash(# Look in VSCode user data and Claude extension storage *)",
+      "Read(//Users/samuelcardoso/.cache/**)",
+      "Read(//Users/samuelcardoso/**)",
+      "Bash(cp \"/Users/samuelcardoso/Downloads/🟢 UI \\(28 apr/Rectangle 34624408.png\" /Users/samuelcardoso/Documents/GitHub/dambrose/public/features/b2b-hero.png *)",
+      "Bash(node /tmp/sshot-mobile.js)",
+      "Bash(sips -Z 800 /tmp/intro-mobile.png --out /tmp/intro-mobile-v2.png)"
+    ],
+    "additionalDirectories": [
+      "/Users/samuelcardoso/Downloads/🟢 UI (28 apr"
+    ]
+  }
+}

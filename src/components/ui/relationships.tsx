@@ -9,7 +9,7 @@ export function Relationships() {
 			{/* Badge — left edge, outside container */}
 			<div className="hidden md:block absolute left-10 bottom-[160px] z-10">
 				<Image
-					src="/marks/badge-left.svg"
+					src="/badge-left.svg"
 					alt="Lifelong medicine Dambrose Orlando FL"
 					width={69}
 					height={207}
@@ -35,7 +35,7 @@ export function Relationships() {
 
 						{/* Botanical decoration — top-right of image area */}
 						<div className="hidden md:block absolute left-[883px] top-0 opacity-80">
-							<Image src="/marks/botanical.svg" alt="" width={66} height={80} aria-hidden="true" />
+							<Image src="/botanical.svg" alt="" width={66} height={80} aria-hidden="true" />
 						</div>
 
 						{/* 01 label — positioned between image and description */}

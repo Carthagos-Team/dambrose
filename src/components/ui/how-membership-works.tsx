@@ -78,13 +78,11 @@ export function HowMembershipWorks() {
 						{steps.map((step) => (
 							<div
 								key={step.number}
-								className="flex flex-col md:flex-row md:items-start gap-3 md:gap-6"
+								className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-start gap-3 md:gap-6"
 							>
-								<div className="flex items-center gap-4 md:gap-6">
-									<span className="font-body text-xs text-rangitoto shrink-0 md:mt-2.4">
-										{step.number}
-									</span>
-									<span className="font-display text-2xl md:text-[2rem] text-rangitoto leading-none shrink-0">
+								<div className="grid grid-cols-[auto_auto] items-center gap-4 md:gap-6">
+									<span className="font-body text-xs text-rangitoto md:mt-2.4">{step.number}</span>
+									<span className="font-display text-2xl md:text-[2rem] text-rangitoto leading-none">
 										{step.title}
 									</span>
 								</div>
