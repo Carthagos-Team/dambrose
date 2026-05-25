@@ -18,12 +18,20 @@ type BlurRevealOptions = {
 export function useBlurReveal<T extends HTMLElement>(options: BlurRevealOptions = {}) {
 	const ref = useRef<T>(null)
 
-	const { duration = 2.2, delay = 0, ease = 'expo.out', start = 'top 80%', blur = '12px' } = options
+	const { duration = 1.8, delay = 0, ease = 'expo.out', start = 'top 85%', blur = '12px' } = options
 
 	useGSAP(
 		() => {
 			const el = ref.current
 			if (!el) return
+
+			if (
+				typeof window !== 'undefined' &&
+				window.matchMedia('(prefers-reduced-motion: reduce)').matches
+			) {
+				gsap.set(el, { autoAlpha: 1, filter: 'none' })
+				return
+			}
 
 			gsap.from(el, {
 				autoAlpha: 0,
