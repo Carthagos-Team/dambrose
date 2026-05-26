@@ -5,6 +5,7 @@ import { MembershipExclusivity } from '@/components/ui/membership-exclusivity'
 import { MembershipHero } from '@/components/ui/membership-hero'
 import { MembershipIncluded } from '@/components/ui/membership-included'
 import { MembershipIntro } from '@/components/ui/membership-intro'
+import { MembershipPrograms } from '@/components/ui/membership-programs'
 
 export const metadata: Metadata = {
 	title: 'Membership — Dambrose',
@@ -20,6 +21,7 @@ export default function MembershipPage() {
 			<MembershipIntro />
 			<MembershipExclusivity />
 			<MembershipIncluded />
+			<MembershipPrograms />
 			<MembershipApply />
 		</>
 	)

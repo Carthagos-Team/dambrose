@@ -10,7 +10,11 @@ export function Header() {
 				<MobileNav />
 
 				{/* ── Wordmark ───────────────────────────────────── */}
-				<div className="flex flex-col items-end md:items-center gap-3.75">
+				<a
+					href="/"
+					aria-label="Dambrose — Home"
+					className="flex flex-col items-end md:items-center gap-3.75"
+				>
 					<svg
 						aria-label="Dambrose"
 						className="w-40 md:w-44 h-auto"
@@ -138,7 +142,7 @@ export function Header() {
 							fill="#A29A84"
 						/>
 					</svg>
-				</div>
+				</a>
 
 				{/* ── CTA ────────────────────────────────────────── */}
 				<div className="hidden md:inline-flex justify-end">

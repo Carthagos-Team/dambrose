@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'motion/react'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const listVariants = {
@@ -33,7 +34,6 @@ const itemVariants = {
 }
 
 const LINKS = [
-	{ label: 'Home', href: '/', active: true },
 	{ label: 'Services', href: '/services' },
 	{ label: 'Alma', href: '/alma', italic: true },
 	{ label: 'Praeva', href: '/praeva', italic: true },
@@ -47,6 +47,7 @@ const LINKS = [
 
 export function MobileNav() {
 	const [open, setOpen] = useState(false)
+	const pathname = usePathname()
 
 	const toggle = (next: boolean) => {
 		setOpen(next)
@@ -121,7 +122,7 @@ export function MobileNav() {
 													href={link.href}
 													onClick={() => toggle(false)}
 													className={`font-display text-4xl leading-none tracking-[-0.03em] block w-fit ${
-														link.active
+														pathname === link.href
 															? 'text-cape-cod border-b border-cape-cod'
 															: 'text-olive-haze'
 													} ${link.italic ? 'italic' : ''}`}

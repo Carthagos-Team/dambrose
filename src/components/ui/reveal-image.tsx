@@ -3,7 +3,7 @@
 import { useImageReveal } from '@/hooks/use-image-reveal'
 
 type RevealImageProps = {
-	children: React.ReactNode
+	children?: React.ReactNode
 	className?: string
 	duration?: number
 	delay?: number
