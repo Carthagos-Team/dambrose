@@ -1,19 +1,43 @@
+import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 
 export function MichaelQuote() {
 	return (
-		<section className="w-full bg-rangitoto py-28 md:py-36 border-t border-black/10">
+		<section className="w-full bg-woodrush py-24 md:py-32">
 			<Container>
-				<BlurReveal className="flex flex-col items-center gap-12 text-center">
-					<blockquote className="font-display text-3xl md:text-4xl text-ecru-white leading-snug max-w-[28ch]">
-						&ldquo;People don&rsquo;t just need access to care. They need someone who carries their{' '}
-						<em className="font-display italic">story,</em> protects their interests, and helps them
-						decide.&rdquo;
-					</blockquote>
-					<p className="font-body text-xs text-bison-hide uppercase tracking-wide leading-none">
-						— Dr. Michael J. D&rsquo;Ambrose
-					</p>
+				<BlurReveal className="flex flex-col items-center gap-20 text-center">
+					<div className="flex flex-col items-center gap-3">
+						<Image
+							src="/signature.svg"
+							alt=""
+							width={119}
+							height={74}
+							className="w-24 h-auto"
+							aria-hidden="true"
+						/>
+						<Image
+							src="/marks/dambrose.svg"
+							alt="Dambrose — Lifelong Medicine"
+							width={176}
+							height={41}
+							className="w-44 h-auto"
+						/>
+						<p className="font-body text-[0.625rem] text-fire uppercase tracking-[0.3em] leading-none mt-3">
+							Orlando — FL
+						</p>
+					</div>
+
+					<div className="flex flex-col items-center gap-8 max-w-2xl">
+						<blockquote className="font-display text-3xl md:text-4xl text-ecru-white leading-none tracking-wide">
+							&ldquo;People don&rsquo;t just need access to care. They need someone who carries their
+							story, protects their interests, and helps them decide.&rdquo;
+						</blockquote>
+
+						<p className="font-body text-xs text-bison-hide/80 uppercase tracking-tight leading-relaxed">
+							— Dr. Michael J. D&rsquo;Ambrose
+						</p>
+					</div>
 				</BlurReveal>
 			</Container>
 		</section>
