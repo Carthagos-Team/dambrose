@@ -45,7 +45,11 @@ const LINKS = [
 	{ label: 'Contact', href: '/contact' },
 ]
 
-export function MobileNav() {
+type MobileNavProps = {
+	variant?: 'default' | 'contact'
+}
+
+export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 	const [open, setOpen] = useState(false)
 	const pathname = usePathname()
 
@@ -56,6 +60,8 @@ export function MobileNav() {
 		else window.__lenis?.start()
 	}
 
+	const lineColor = variant === 'contact' ? 'bg-half-and-half' : 'bg-gray-olive'
+
 	return (
 		<>
 			{/* ── Trigger (header burger) ─────────────────────── */}
@@ -65,9 +71,9 @@ export function MobileNav() {
 				onClick={() => toggle(true)}
 				className="flex flex-col items-start justify-center gap-1.25 w-10 h-10 md:w-12 md:h-12"
 			>
-				<span className="block w-4.25 h-px bg-gray-olive" />
-				<span className="block w-4.25 h-px bg-gray-olive" />
-				<span className="block w-4.25 h-px bg-gray-olive" />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
 			</button>
 
 			{/* ── Drawer + Backdrop ───────────────────────────── */}
@@ -95,19 +101,8 @@ export function MobileNav() {
 								ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
 							}}
 						>
-							{/* Top section: close button + nav links (anchored to bottom) */}
+							{/* Top section: nav links (anchored to bottom) */}
 							<div className="flex-1 flex flex-col pt-10.75 px-10.5 pb-13">
-								<button
-									type="button"
-									aria-label="Close navigation"
-									onClick={() => toggle(false)}
-									className="w-6 h-6 rounded-full bg-rangoon-green flex flex-col items-center justify-center gap-1"
-								>
-									<span className="block w-2.75 h-px bg-ecru-white" />
-									<span className="block w-2.75 h-px bg-ecru-white" />
-									<span className="block w-2.75 h-px bg-ecru-white" />
-								</button>
-
 								<nav className="mt-auto">
 									<motion.ul
 										className="flex flex-col gap-1.5"
@@ -136,9 +131,9 @@ export function MobileNav() {
 							</div>
 
 							{/* Footer dark band */}
-							<div className="bg-rangoon-green px-10.5 py-9 flex flex-col gap-20">
+							<div className="bg-rangoon-green px-10.5 py-9 flex flex-col gap-4">
 								{/* Social + copyright */}
-								<div className="flex flex-col gap-8">
+								<div className="flex flex-col gap-4">
 									<div className="flex items-center gap-2">
 										<SocialIcon label="Facebook">
 											<svg
@@ -184,7 +179,7 @@ export function MobileNav() {
 											</svg>
 										</SocialIcon>
 									</div>
-									<p className="font-body text-base text-opal tracking-tighter">
+									<p className="font-body text-sm text-opal tracking-tighter">
 										© DAMBROSE® 2026, All Rights Reserved
 									</p>
 								</div>
