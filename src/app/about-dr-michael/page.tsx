@@ -6,7 +6,7 @@ import { MichaelConnect } from '@/components/ui/michael-connect'
 import { MichaelHero } from '@/components/ui/michael-hero'
 import { MichaelNarrative } from '@/components/ui/michael-narrative'
 import { MichaelQuote } from '@/components/ui/michael-quote'
-import { MichaelSpecialties } from '@/components/ui/michael-specialties'
+
 import { MichaelStory } from '@/components/ui/michael-story'
 import { Testimonials } from '@/components/ui/testimonials'
 
@@ -21,7 +21,7 @@ export default function AboutDrMichaelPage() {
 		<>
 			<Header />
 			<MichaelHero />
-			<MichaelSpecialties />
+			
 			<MichaelStory />
 			<MichaelNarrative />
 			<MichaelQuote />
