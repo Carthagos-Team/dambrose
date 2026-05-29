@@ -5,7 +5,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function B2bHero() {
 	return (
-		<section className="w-full bg-ecru-white flex flex-col h-[calc(100dvh-5em)] md:h-[calc(100dvh-7em)]">
+		<section className="w-full bg-ecru-white flex flex-col h-[calc(100dvh-5em)] md:h-[calc(100dvh-4.5em)]">
 			<Container className="flex-1">
 				<RevealImage
 					className="relative h-full w-full overflow-hidden bg-bison-hide"

@@ -34,7 +34,7 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 	const styles = header({ variant })
 	return (
 		<header className={styles.root()}>
-			<Container className="grid grid-cols-2 md:grid-cols-3  gap-4 items-center py-5 md:py-8">
+			<Container className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center py-5 md:pt-6 md:pb-0">
 				{/* ── Hamburger ──────────────────────────────────── */}
 				<MobileNav variant={variant ?? 'default'} />
 

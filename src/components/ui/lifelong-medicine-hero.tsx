@@ -5,7 +5,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function LifelongMedicineHero() {
 	return (
-		<section className="w-full bg-ecru-white flex flex-col h-[calc(100dvh-5em)] md:h-[calc(100dvh-7em)]">
+		<section className="w-full bg-ecru-white flex flex-col h-[calc(100dvh-5em)] md:h-[calc(100dvh-4.5em)]">
 
 			{/* ── IMAGE — fills remaining height ───────────────── */}
 			<Container className="flex-1">
