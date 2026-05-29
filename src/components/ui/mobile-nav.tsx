@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 const listVariants = {
 	hidden: {},
@@ -51,7 +52,10 @@ type MobileNavProps = {
 
 export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 	const [open, setOpen] = useState(false)
+	const [mounted, setMounted] = useState(false)
 	const pathname = usePathname()
+
+	useEffect(() => setMounted(true), [])
 
 	const toggle = (next: boolean) => {
 		setOpen(next)
@@ -60,7 +64,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 		else window.__lenis?.start()
 	}
 
-	const lineColor = variant === 'contact' ? 'bg-half-and-half' : 'bg-gray-olive'
+	const lineColor = variant === 'contact' ? 'bg-[#ffffe4]' : 'bg-[#a29a84]'
 
 	return (
 		<>
@@ -77,10 +81,11 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 			</button>
 
 			{/* ── Drawer + Backdrop ───────────────────────────── */}
-			<AnimatePresence>
-				{open && (
-					<>
-						<motion.button
+			{mounted && createPortal(
+				<AnimatePresence>
+					{open && (
+						<>
+							<motion.button
 							type="button"
 							aria-label="Close navigation"
 							onClick={() => toggle(false)}
@@ -204,9 +209,11 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 								</div>
 							</div>
 						</motion.div>
-					</>
-				)}
-			</AnimatePresence>
+						</>
+					)}
+				</AnimatePresence>,
+				document.body
+			)}
 		</>
 	)
 }

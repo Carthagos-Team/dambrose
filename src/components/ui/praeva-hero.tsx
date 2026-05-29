@@ -8,10 +8,12 @@ export function PraevaHero() {
 	return (
 		<section className="relative h-[100dvh] overflow-hidden flex flex-col bg-gradient-to-b from-[#545c63] via-[#dedbbc] via-[78%] to-[#272018]">
 
-			{/* ── Header (~4.5em) + separator ─────────────────── */}
+			{/* ── Header (4.5em: pt-6 + h-12) + separator ────── */}
 			<div className="relative z-10 shrink-0">
 				<Header variant="contact" />
-				<div className="w-full h-px bg-[#ffffe4]/20" />
+				<Container className="mt-5">
+					<div className="h-px bg-[#ffffe4]/20" />
+				</Container>
 			</div>
 
 			{/* ── Content: 3em gap top, 2em reserve bottom ── */}
