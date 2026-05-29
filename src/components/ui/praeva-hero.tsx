@@ -10,7 +10,7 @@ export function PraevaHero() {
 
 			{/* ── Header (~4.5em) + separator ─────────────────── */}
 			<div className="relative z-10 shrink-0">
-				<Header variant="dark" />
+				<Header variant="contact" />
 				<div className="w-full h-px bg-[#ffffe4]/20" />
 			</div>
 
