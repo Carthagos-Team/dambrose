@@ -24,8 +24,22 @@ const publicSans = Public_Sans({
 })
 
 export const metadata: Metadata = {
-	title: 'Dambrose',
-	description: 'Dambrose — Style Guide',
+	metadataBase: new URL('https://dambrose.com'),
+	title: {
+		default: 'Dambrose',
+		template: '%s | Dambrose',
+	},
+	description:
+		'DAMBROSE — Private physician-led care centered on preventive medicine, longevity, and lifelong health for individuals and families.',
+	openGraph: {
+		title: 'Dambrose',
+		description:
+			'DAMBROSE — Private physician-led care centered on preventive medicine, longevity, and lifelong health for individuals and families.',
+		url: 'https://dambrose.com',
+		siteName: 'Dambrose',
+		locale: 'en_US',
+		type: 'website',
+	},
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

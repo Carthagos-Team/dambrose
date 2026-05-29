@@ -18,9 +18,12 @@ const button = tv({
 			teal: 'bg-william text-ecru-white',
 			dark: 'bg-gray-olive text-ecru-white',
 			regent: 'bg-regent-gray text-ecru-white',
+			dune: 'bg-[#cac7a8] text-[#545c63]',
 			outline: 'border border-current bg-transparent text-current',
+			'half-and-half': 'bg-[#ffffe4] text-[#282119] underline',
 		},
 		size: {
+			badge: 'px-[0.31rem] py-0',
 			sm: 'px-4 py-2.5',
 			md: 'px-5 h-12',
 		},

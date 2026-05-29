@@ -45,7 +45,7 @@ const LINKS = [
 	{ label: 'Contact', href: '/contact' },
 ]
 
-export function MobileNav() {
+export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark' }) {
 	const [open, setOpen] = useState(false)
 
 	const toggle = (next: boolean) => {
@@ -64,9 +64,9 @@ export function MobileNav() {
 				onClick={() => toggle(true)}
 				className="flex flex-col items-start justify-center gap-1.25 w-10 h-10 md:w-12 md:h-12"
 			>
-				<span className="block w-4.25 h-px bg-gray-olive" />
-				<span className="block w-4.25 h-px bg-gray-olive" />
-				<span className="block w-4.25 h-px bg-gray-olive" />
+				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
+				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
+				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
 			</button>
 
 			{/* ── Drawer + Backdrop ───────────────────────────── */}

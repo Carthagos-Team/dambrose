@@ -5,48 +5,44 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 /**
  * SEC 8 — /about — Figma node 3557:169
- * Figma specs:
- *   Headline: 408×100, Instrument Serif 50 / lh 100% / ls 1%
- *   Body text: 403px wide (NOT 408), Martian Mono 14 / lh 140% / ls -4%
- *   [01 + body] row: 498px container, 65px gap, items-center
  */
 export function AboutSec8() {
 	return (
 		<section className="w-full bg-ecru-white py-[6.05em]">
 			<Container>
-				<div className="flex flex-col gap-10 md:gap-[86px] items-center">
+				<div className="flex flex-col gap-10 md:gap-[4.3rem] items-center">
 					<BlurReveal>
-						<h2 className="font-display text-[50px] leading-none tracking-[0.01em] text-gray-olive w-full max-w-[408px] shrink-0 text-left">
+						<h2 className="font-display text-[2.5rem] leading-none tracking-[0.01em] text-gray-olive w-full max-w-[20.4rem] shrink-0 text-left">
 							The original meaning of care, <em className="font-display italic">restored.</em>
 						</h2>
 					</BlurReveal>
 
-					<div className="w-full flex flex-col gap-10 md:flex-row md:items-start md:gap-[120px]">
+					<div className="w-full flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
 						{/* LEFT: badge + main photo */}
-						<div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-[147px]">
+						<div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-[7.35rem] md:w-[52%]">
 							<Image
 								src="/about/sec8-side-badge.svg"
 								alt=""
 								width={66}
 								height={211}
-								className="hidden md:block shrink-0 self-start w-[66px] h-auto"
+								className="hidden md:block shrink-0 self-start w-[3.3rem] h-auto"
 								aria-hidden="true"
 								unoptimized
 							/>
 
-							<RevealImage className="relative overflow-hidden bg-bison-hide w-full md:w-[501px] aspect-[501/368] shrink-0">
+							<RevealImage className="relative overflow-hidden bg-bison-hide w-full md:flex-1 min-w-0 aspect-[501/368]">
 								<Image
 									src="/about/sec8-main.png"
 									alt="Hand resting on a marble surface beside white flowers in a glass vase"
 									fill
 									className="object-cover"
-									sizes="(max-width: 768px) 100vw, 501px"
+									sizes="(max-width: 768px) 100vw, 52vw"
 								/>
 							</RevealImage>
 						</div>
 
-						{/* RIGHT: ornament + [01 · body] — 498px column */}
-						<div className="flex flex-col gap-[57px] md:w-[498px] shrink-0">
+						{/* RIGHT: ornament + [01 · body] */}
+						<div className="flex flex-col gap-[2.85rem] md:w-[37%] shrink-0">
 							<Image
 								src="/about/sec8-mark.svg"
 								alt=""
@@ -57,15 +53,15 @@ export function AboutSec8() {
 								unoptimized
 							/>
 
-							<BlurReveal className="flex flex-col md:flex-row md:items-center gap-2 md:gap-[65px] w-full">
+							<BlurReveal className="flex flex-col md:flex-row md:items-center gap-2 md:gap-[3.25rem] w-full">
 								<span
-									className="font-body text-xs uppercase text-gray-olive/80 leading-[1.3] shrink-0 w-[30px]"
+									className="font-body text-xs uppercase text-gray-olive/80 leading-[1.3] shrink-0 w-[1.5rem]"
 									aria-hidden="true"
 								>
 									01
 								</span>
 
-								<p className="font-body text-sm uppercase text-rangitoto/80 leading-[1.4] tracking-[-0.04em] w-full md:w-[403px] shrink-0">
+								<p className="font-body text-sm uppercase text-rangitoto/80 leading-[1.4] tracking-[-0.04em] w-full">
 									Medicine has drifted too far from the people it serves.
 									<br />
 									<br />

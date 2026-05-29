@@ -6,26 +6,22 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 /**
  * SEC 10 — /about — Figma node 3586:120
- * Two-column team profiles: heading + two equal-width photo+bio cards.
- * Left: Dr. Michael (gap-48px, has button). Right: Elaina (gap-24px, pb-96px offset).
+ * Mobile: photo → text per person (natural DOM order).
+ * Desktop: md:order-* pulls photos to row 1, texts to row 2.
  */
 export function AboutSec10() {
 	return (
 		<section className="w-full bg-ecru-white py-[7em]">
 			<Container>
-				<div className="flex flex-col gap-12 md:gap-[100px]">
+				<div className="flex flex-col gap-12 md:gap-[5rem]">
 					{/* ── HEADING ─────────────────────────────────────── */}
 					<BlurReveal>
-						<h2 className="font-display text-[50px] leading-none tracking-[0.01em] text-gray-olive max-w-[408px]">
+						<h2 className="font-display text-[2.5rem] leading-none tracking-[0.01em] text-gray-olive max-w-[20.4rem]">
 							The <em className="font-display italic">people</em> behind your journey.
 						</h2>
 					</BlurReveal>
 
-					{/* ── PROFILES
-					     Mobile: photo → text per person (natural DOM order)
-					     Desktop: md:order-* pulls photos to row 1, texts to row 2
-					─── */}
-					<div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-6 md:gap-y-[48px]">
+					<div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-6 md:gap-y-[2.4rem]">
 						{/* Michael photo — desktop row 1 col 1 */}
 						<RevealImage className="relative w-full aspect-[628/799] overflow-hidden bg-bison-hide md:order-1">
 							<Image
@@ -38,9 +34,9 @@ export function AboutSec10() {
 						</RevealImage>
 
 						{/* Michael text — desktop row 2 col 1 */}
-						<div className="flex flex-col gap-[24px] md:gap-[48px] md:order-3">
-							<BlurReveal delay={0.1} className="flex flex-col gap-[24px] uppercase">
-								<h3 className="font-display text-[26px] leading-[1.3] tracking-[0.02em] text-zeus max-w-[334px]">
+						<div className="flex flex-col gap-[1.2rem] md:gap-[2.4rem] md:order-3">
+							<BlurReveal delay={0.1} className="flex flex-col gap-[1.2rem] uppercase">
+								<h3 className="font-display text-[1.3rem] leading-[1.3] tracking-[0.02em] text-zeus max-w-[16.7rem]">
 									<em className="font-display italic">
 										Dr. Michael J. D&rsquo;Ambrose, M.D.,{' '}
 									</em>
@@ -76,8 +72,8 @@ export function AboutSec10() {
 						</RevealImage>
 
 						{/* Elaina text — desktop row 2 col 2 */}
-						<BlurReveal delay={0.2} className="flex flex-col gap-[24px] uppercase md:pb-[96px] md:order-4">
-							<h3 className="font-display text-[26px] leading-[1.3] tracking-[0.02em] text-zeus max-w-[220px]">
+						<BlurReveal delay={0.2} className="flex flex-col gap-[1.2rem] uppercase md:pb-[4.8rem] md:order-4">
+							<h3 className="font-display text-[1.3rem] leading-[1.3] tracking-[0.02em] text-zeus max-w-[11rem]">
 								<em className="font-display italic">
 									Elaina Aldrin, APRN,
 									<br />
