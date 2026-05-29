@@ -17,10 +17,30 @@
       "Read(//Users/samuelcardoso/**)",
       "Bash(cp \"/Users/samuelcardoso/Downloads/🟢 UI \\(28 apr/Rectangle 34624408.png\" /Users/samuelcardoso/Documents/GitHub/dambrose/public/features/b2b-hero.png *)",
       "Bash(node /tmp/sshot-mobile.js)",
-      "Bash(sips -Z 800 /tmp/intro-mobile.png --out /tmp/intro-mobile-v2.png)"
+      "Bash(sips -Z 800 /tmp/intro-mobile.png --out /tmp/intro-mobile-v2.png)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/membership)",
+      "Bash(curl -s http://localhost:3000/membership -o /tmp/membership.html)",
+      "Bash(grep -oE \"[Ww]hat.{1,3}[ ]?[Ii]ncluded\" /tmp/membership.html)",
+      "Bash(curl -s http://localhost:3000/membership)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --window-size=1440,2400 --screenshot=/tmp/membership-shot.png http://localhost:3000/membership)",
+      "Bash(cat > *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --window-size=1440,9000 --virtual-time-budget=15000 --screenshot=/tmp/membership-full.png http://localhost:3000/membership)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --hide-scrollbars --disable-gpu --window-size=1440,900 --virtual-time-budget=10000 --screenshot=/tmp/m1.png \"http://localhost:3000/membership#programs\")",
+      "Bash(npm root *)",
+      "Bash(xargs ls)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf=/tmp/membership.pdf --print-to-pdf-no-header \"http://localhost:3000/membership\")",
+      "Bash(pdfinfo /tmp/membership.pdf)",
+      "Bash(brew install *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --disable-javascript --no-pdf-header-footer --print-to-pdf=/tmp/nojs.pdf \"http://localhost:3000/membership\")",
+      "Bash(/usr/local/bin/pdftoppm -png -r 60 /tmp/nojs.pdf /tmp/nojs)",
+      "Bash(curl -s http://localhost:3000/about-dr-michael)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --disable-javascript --no-pdf-header-footer --print-to-pdf=/tmp/michael.pdf \"http://localhost:3000/about-dr-michael\")",
+      "Bash(/usr/local/bin/pdftoppm -png -r 50 /tmp/michael.pdf /tmp/mich)",
+      "Bash(echo \"exit: $?\")"
     ],
     "additionalDirectories": [
-      "/Users/samuelcardoso/Downloads/🟢 UI (28 apr"
+      "/Users/samuelcardoso/Downloads/🟢 UI (28 apr",
+      "/tmp"
     ]
   }
 }

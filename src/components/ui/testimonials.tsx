@@ -38,16 +38,29 @@ export function Testimonials() {
 
 				<div className="mt-12 md:mt-20 flex flex-col gap-8">
 					{QUOTES.map((q, i) => (
-						<BlurReveal key={q.author} delay={i * 0.1}>
-							<div className="bg-banana-mania/95 px-8 py-12 md:px-20 md:py-16 flex flex-col gap-10">
-								<div className="font-body text-xs text-rangoon-green uppercase tracking-wide">
-									{q.author}, {q.location}
+						<div key={q.author} className="flex flex-col gap-8">
+							<BlurReveal delay={i * 0.1}>
+								<div className="bg-banana-mania/95 px-8 py-12 md:px-20 md:py-16 flex flex-col gap-10">
+									<div className="font-body text-xs text-rangoon-green uppercase tracking-wide">
+										{q.author}, {q.location}
+									</div>
+									<p className="font-display text-2xl md:text-[1.625rem] text-rangoon-green leading-relaxed">
+										{q.quote}
+									</p>
 								</div>
-								<p className="font-display text-2xl md:text-[1.625rem] text-rangoon-green leading-relaxed">
-									{q.quote}
-								</p>
-							</div>
-						</BlurReveal>
+							</BlurReveal>
+							{i === 0 && QUOTES.length > 1 && (
+								<BlurReveal delay={0.2} className="flex items-center justify-center">
+									<Image
+										src="/marks/lifelong-medicine-stamp.svg"
+										alt="Lifelong Medicine"
+										width={133}
+										height={63}
+										className="h-12 w-auto"
+									/>
+								</BlurReveal>
+							)}
+						</div>
 					))}
 				</div>
 			</Container>

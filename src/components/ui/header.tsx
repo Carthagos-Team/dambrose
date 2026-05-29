@@ -1,20 +1,48 @@
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { MobileNav } from '@/components/ui/mobile-nav'
+import { tv, type VariantProps } from '@/lib/tv'
 
-export function Header({ variant = 'default' }: { variant?: 'default' | 'dark' }) {
-	const isDark = variant === 'dark'
+const header = tv({
+	slots: {
+		root: 'w-full',
+		wordmark: 'flex flex-col items-end md:items-center gap-3.75',
+		contactLink:
+			'hidden md:inline-flex justify-end font-body text-xs uppercase tracking-wide hover:opacity-80 transition-opacity',
+	},
+	variants: {
+		variant: {
+			default: {
+				root: 'bg-ecru-white',
+				wordmark: 'flex flex-col items-end md:items-center gap-3.75 text-gray-olive',
+			},
+			contact: {
+				root: 'bg-transparent',
+				wordmark: 'flex flex-col items-end md:items-center gap-3.75 text-ecru-white',
+				contactLink: 'text-ecru-white',
+			},
+		},
+	},
+	defaultVariants: {
+		variant: 'default',
+	},
+})
+
+type HeaderVariants = VariantProps<typeof header>
+
+export function Header({ variant = 'default' }: HeaderVariants = {}) {
+	const styles = header({ variant })
 	return (
-		<header className={`w-full ${isDark ? 'bg-transparent' : 'bg-ecru-white'}`}>
-			<Container className={`grid grid-cols-2 md:grid-cols-3 gap-4 items-center ${isDark ? 'py-3' : 'py-5 md:py-8'}`}>
+		<header className={styles.root()}>
+			<Container className="grid grid-cols-2 md:grid-cols-3  gap-4 items-center py-5 md:py-8">
 				{/* ── Hamburger ──────────────────────────────────── */}
-				<MobileNav variant={variant} />
+				<MobileNav variant={variant ?? 'default'} />
 
 				{/* ── Wordmark ───────────────────────────────────── */}
-				<div className="flex flex-col items-end md:items-center gap-3.75">
+				<a href="/" aria-label="Dambrose — Home" className={styles.wordmark()}>
 					<svg
 						aria-label="Dambrose"
-						className={`w-40 md:w-44 h-auto ${isDark ? 'text-[#ffffe4]' : 'text-gray-olive'}`}
+						className="w-40 md:w-44 h-auto"
 						viewBox="0 0 176 41"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -139,18 +167,18 @@ export function Header({ variant = 'default' }: { variant?: 'default' | 'dark' }
 							fill="currentColor"
 						/>
 					</svg>
-				</div>
+				</a>
 
 				{/* ── CTA ────────────────────────────────────────── */}
-				<div className="hidden md:inline-flex justify-end">
-					{isDark ? (
-						<Button variant="outline" className="text-[#ffffe4] border-[#ffffe4]/60">
-							Inquiry about membership
-						</Button>
-					) : (
+				{variant === 'contact' ? (
+					<a href="/contact" className={styles.contactLink()}>
+						Contact
+					</a>
+				) : (
+					<div className="hidden md:inline-flex justify-end">
 						<Button variant="dark">Inquiry about membership</Button>
-					)}
-				</div>
+					</div>
+				)}
 			</Container>
 		</header>
 	)

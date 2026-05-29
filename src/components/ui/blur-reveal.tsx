@@ -10,7 +10,7 @@ type BlurRevealProps = {
 	delay?: number
 	ease?: string
 	start?: string
-	blur?: string
+	y?: number
 }
 
 export function BlurReveal({
@@ -21,9 +21,9 @@ export function BlurReveal({
 	delay,
 	ease,
 	start,
-	blur,
+	y,
 }: BlurRevealProps) {
-	const ref = useBlurReveal<HTMLElement>({ duration, delay, ease, start, blur })
+	const ref = useBlurReveal<HTMLElement>({ duration, delay, ease, start, y })
 
 	// biome-ignore lint/suspicious/noExplicitAny: polymorphic ref
 	const AnyTag = Tag as any

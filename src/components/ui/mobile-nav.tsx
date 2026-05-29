@@ -1,6 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'motion/react'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const listVariants = {
@@ -33,7 +34,6 @@ const itemVariants = {
 }
 
 const LINKS = [
-	{ label: 'Home', href: '/', active: true },
 	{ label: 'Services', href: '/services' },
 	{ label: 'Alma', href: '/alma', italic: true },
 	{ label: 'Praeva', href: '/praeva', italic: true },
@@ -45,8 +45,13 @@ const LINKS = [
 	{ label: 'Contact', href: '/contact' },
 ]
 
-export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark' }) {
+type MobileNavProps = {
+	variant?: 'default' | 'contact'
+}
+
+export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 	const [open, setOpen] = useState(false)
+	const pathname = usePathname()
 
 	const toggle = (next: boolean) => {
 		setOpen(next)
@@ -54,6 +59,8 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 		if (next) window.__lenis?.stop()
 		else window.__lenis?.start()
 	}
+
+	const lineColor = variant === 'contact' ? 'bg-half-and-half' : 'bg-gray-olive'
 
 	return (
 		<>
@@ -64,9 +71,9 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 				onClick={() => toggle(true)}
 				className="flex flex-col items-start justify-center gap-1.25 w-10 h-10 md:w-12 md:h-12"
 			>
-				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
-				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
-				<span className={`block w-4.25 h-px ${variant === 'dark' ? 'bg-[#ffffe4]' : 'bg-gray-olive'}`} />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
+				<span className={`block w-4.25 h-px ${lineColor}`} />
 			</button>
 
 			{/* ── Drawer + Backdrop ───────────────────────────── */}
@@ -94,19 +101,8 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 								ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
 							}}
 						>
-							{/* Top section: close button + nav links (anchored to bottom) */}
+							{/* Top section: nav links (anchored to bottom) */}
 							<div className="flex-1 flex flex-col pt-10.75 px-10.5 pb-13">
-								<button
-									type="button"
-									aria-label="Close navigation"
-									onClick={() => toggle(false)}
-									className="w-6 h-6 rounded-full bg-rangoon-green flex flex-col items-center justify-center gap-1"
-								>
-									<span className="block w-2.75 h-px bg-ecru-white" />
-									<span className="block w-2.75 h-px bg-ecru-white" />
-									<span className="block w-2.75 h-px bg-ecru-white" />
-								</button>
-
 								<nav className="mt-auto">
 									<motion.ul
 										className="flex flex-col gap-1.5"
@@ -121,7 +117,7 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 													href={link.href}
 													onClick={() => toggle(false)}
 													className={`font-display text-4xl leading-none tracking-[-0.03em] block w-fit ${
-														link.active
+														pathname === link.href
 															? 'text-cape-cod border-b border-cape-cod'
 															: 'text-olive-haze'
 													} ${link.italic ? 'italic' : ''}`}
@@ -135,9 +131,9 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 							</div>
 
 							{/* Footer dark band */}
-							<div className="bg-rangoon-green px-10.5 py-9 flex flex-col gap-20">
+							<div className="bg-rangoon-green px-10.5 py-9 flex flex-col gap-4">
 								{/* Social + copyright */}
-								<div className="flex flex-col gap-8">
+								<div className="flex flex-col gap-4">
 									<div className="flex items-center gap-2">
 										<SocialIcon label="Facebook">
 											<svg
@@ -183,7 +179,7 @@ export function MobileNav({ variant = 'default' }: { variant?: 'default' | 'dark
 											</svg>
 										</SocialIcon>
 									</div>
-									<p className="font-body text-base text-opal tracking-tighter">
+									<p className="font-body text-sm text-opal tracking-tighter">
 										© DAMBROSE® 2026, All Rights Reserved
 									</p>
 								</div>
