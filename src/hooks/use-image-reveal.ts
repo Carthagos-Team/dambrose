@@ -24,6 +24,14 @@ export function useImageReveal<T extends HTMLElement>(options: ImageRevealOption
 			const el = ref.current
 			if (!el) return
 
+			if (
+				typeof window !== 'undefined' &&
+				window.matchMedia('(prefers-reduced-motion: reduce)').matches
+			) {
+				gsap.set(el, { clipPath: 'none' })
+				return
+			}
+
 			gsap.set(el, { clipPath: 'inset(0 0 100% 0)' })
 
 			gsap.to(el, {

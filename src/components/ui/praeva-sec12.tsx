@@ -1,0 +1,169 @@
+import Image from 'next/image'
+import { BlurReveal } from '@/components/ui/blur-reveal'
+import { Container } from '@/components/ui/container'
+import { RevealImage } from '@/components/ui/reveal-image'
+
+/**
+ * SEC 12 — /praeva — Figma node 3746:5528
+ * Editorial photo collage: chairs top-centre, orchid+landscape+text top-right,
+ * heading + leaf bottom-left. Desktop uses absolute layout at ≥ 1440 px.
+ */
+export function PraevaSec12() {
+	return (
+		<section className="w-full bg-[#ffffe4]">
+
+			{/* ── Mobile / tablet layout (< 1440 px) ─────── */}
+			<div className="min-[1440px]:hidden">
+				<Container className="py-[4rem] flex flex-col gap-[4rem]">
+
+					{/* Chairs — partial width, not full-bleed (Figma: 294px of 335px) */}
+					<RevealImage className="relative w-[18.41rem] aspect-[295/154] overflow-hidden">
+						<Image
+							src="/praeva/sec12-chairs.jpg"
+							alt="Elegant chairs in a serene interior — the quality of the DAMBROSE environment"
+							fill
+							className="object-cover"
+							sizes="295px"
+						/>
+					</RevealImage>
+
+					<BlurReveal>
+						<h2 className="font-display text-[2rem] leading-[1.1] tracking-[0.025em] text-[#222009] uppercase">
+							Health guided with{' '}
+							<em className="italic">foresight</em>.
+						</h2>
+					</BlurReveal>
+
+					{/* Image pair: tall runner left + small orchid top-right */}
+					<div className="flex items-start gap-4">
+						<RevealImage className="relative flex-1 h-[17.81rem] overflow-hidden">
+							<Image
+								src="/praeva/sec12-landscape.jpg"
+								alt="Aerial landscape — the long-term perspective of preventive care"
+								fill
+								className="object-cover"
+								sizes="60vw"
+							/>
+						</RevealImage>
+						<RevealImage className="relative w-[8.56rem] h-[9.63rem] overflow-hidden shrink-0" delay={0.05}>
+							<Image
+								src="/praeva/sec12-orchid.jpg"
+								alt="Orchid — a detail of natural vitality"
+								fill
+								className="object-cover"
+								sizes="137px"
+							/>
+						</RevealImage>
+					</div>
+
+					<BlurReveal delay={0.1}>
+						<p className="font-ui text-[14px] leading-[1.4] tracking-[-0.04em] text-[#282119]/80">
+							Some people feel healthiest when they understand what&apos;s ahead.
+							They pay attention to how they age, how they recover, how their energy
+							and wellbeing change over time.{' '}
+							<strong className="font-bold">PRAEVA</strong>
+							{' '}is for this level of prevention. It creates space to look forward
+							with a health team who helps interpret patterns, guide choices, and
+							support health before urgency enters the picture—so longevity becomes
+							something intentional, not reactive.
+						</p>
+					</BlurReveal>
+
+					{/* Single leaf — right-aligned */}
+					<div className="flex justify-end">
+						<RevealImage className="relative w-[8.56rem] h-[9.63rem] overflow-hidden" delay={0.05}>
+							<Image
+								src="/praeva/sec12-leaf.jpg"
+								alt="Plant leaf — the organic texture of wellness"
+								fill
+								className="object-cover"
+								sizes="137px"
+							/>
+						</RevealImage>
+					</div>
+
+				</Container>
+			</div>
+
+			{/* ── Desktop layout (≥ 1440 px) — absolute collage ── */}
+			<div className="hidden min-[1440px]:block relative h-[29.07rem] overflow-hidden">
+
+				{/* Chairs — upper centre-left */}
+				<div
+					className="absolute top-0 w-[15.15rem] h-[7.92rem]"
+					style={{ left: 'calc(8.33% + 2.01rem)' }}
+				>
+					<RevealImage className="relative w-full h-full overflow-hidden">
+						<Image
+							src="/praeva/sec12-chairs.jpg"
+							alt="Elegant chairs in a serene interior — the quality of the DAMBROSE environment"
+							fill
+							className="object-cover"
+						/>
+					</RevealImage>
+				</div>
+
+				{/* Right group: orchid (left) + landscape+text (right) */}
+				<div
+					className="absolute top-[4.17rem] w-[47.27rem] flex items-start justify-between"
+					style={{ left: 'calc(33.33% + 0.21rem)' }}
+				>
+					<RevealImage className="relative w-[7.05rem] h-[7.92rem] overflow-hidden shrink-0 mt-[1.5em]" delay={0.05}>
+						<Image
+							src="/praeva/sec12-orchid.jpg"
+							alt="Orchid — a detail of natural vitality"
+							fill
+							className="object-cover"
+						/>
+					</RevealImage>
+
+					<div className="flex flex-col gap-[1.6rem] w-[19.91rem] shrink-0">
+						<RevealImage className="relative w-full aspect-[463/242] overflow-hidden" delay={0.08}>
+							<Image
+								src="/praeva/sec12-landscape.jpg"
+								alt="Aerial landscape — the long-term perspective of preventive care"
+								fill
+								className="object-cover"
+							/>
+						</RevealImage>
+						<BlurReveal delay={0.12}>
+							<p className="font-ui text-[0.72rem] leading-[1.4] tracking-[-0.029em] text-[#282119]/80">
+								Some people feel healthiest when they understand what&apos;s ahead.
+								They pay attention to how they age, how they recover, how their energy
+								and wellbeing change over time.{' '}
+								<strong className="font-bold">PRAEVA</strong>
+								{' '}is for this level of prevention. It creates space to look forward
+								with a health team who helps interpret patterns, guide choices, and
+								support health before urgency enters the picture—so longevity becomes
+								something intentional, not reactive.
+							</p>
+						</BlurReveal>
+					</div>
+				</div>
+
+				{/* Heading + leaf — lower left */}
+				<div className="absolute top-[15.59rem] left-[2.06rem] w-[13.22rem] flex flex-col gap-[1.8rem]">
+					<BlurReveal>
+						<h2 className="font-display text-[2.57rem] leading-none tracking-[0.025em] text-[#222009] uppercase">
+							Health{' '}
+							<br />
+							guided with{' '}
+							<br />
+							<em className="italic">foresight</em>.
+						</h2>
+					</BlurReveal>
+					<RevealImage className="relative w-[7.05rem] h-[7.92rem] overflow-hidden" delay={0.08}>
+						<Image
+							src="/praeva/sec12-leaf.jpg"
+							alt="Plant leaf — the organic texture of wellness"
+							fill
+							className="object-cover"
+						/>
+					</RevealImage>
+				</div>
+
+			</div>
+
+		</section>
+	)
+}
