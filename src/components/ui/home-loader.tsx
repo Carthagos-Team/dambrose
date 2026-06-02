@@ -122,11 +122,11 @@ export function HomeLoader() {
 				data-loader-content
 				className="absolute inset-0 flex flex-col items-center justify-center gap-[3em] opacity-0"
 			>
-				{/* Row: LIFELONG · brasão · MEDICINE */}
-				<div className="flex items-center justify-center gap-[2.5em] md:gap-[3.75em]">
+				{/* Row: LIFELONG · brasão · MEDICINE — fluid so it never wraps on mobile */}
+				<div className="flex items-center justify-center gap-[clamp(0.75rem,4vw,3.5rem)]">
 					<span
 						data-loader-word
-						className="font-ui font-bold uppercase leading-none text-[#e0dfc7] text-[0.85rem] md:text-[1.05rem] tracking-[0.5em]"
+						className="font-[family-name:var(--font-sohne-breit)] font-semibold uppercase leading-none whitespace-nowrap text-[#e0dfc7] text-[clamp(0.62rem,2.6vw,1.05rem)] tracking-[clamp(0.16em,1.1vw,0.5em)]"
 					>
 						Lifelong
 					</span>
@@ -136,7 +136,7 @@ export function HomeLoader() {
 						viewBox="0 0 283.56 332.6"
 						fill="none"
 						stroke="transparent"
-						className="h-[9.5rem] md:h-[12rem] w-auto shrink-0"
+						className="h-[clamp(6rem,26vw,12rem)] w-auto shrink-0"
 						aria-hidden="true"
 					>
 						<path d="M213.93 93.1701C213.93 93.5901 213.43 93.8101 213.1 93.5401C210.04 90.9701 206.87 88.6901 203.65 86.7201C203.63 86.7101 203.6 86.6901 203.58 86.6801C202.93 84.9801 202.32 83.2901 201.26 81.5501C196.66 74.0401 188.88 70.6501 180.55 70.6501C179.44 70.6501 178.32 70.7101 177.2 70.8301C177.02 70.8501 176.84 70.7701 176.74 70.6201C175.2 68.2901 173.47 65.9401 171.52 63.5601C171.3 63.2901 171.41 62.8701 171.74 62.7501C175.06 61.6501 178.42 61.1401 181.7 61.1401C198.74 61.1401 213.97 74.8701 213.93 93.1701Z" />
@@ -157,7 +157,7 @@ export function HomeLoader() {
 
 					<span
 						data-loader-word
-						className="font-ui font-bold uppercase leading-none text-[#e0dfc7] text-[0.85rem] md:text-[1.05rem] tracking-[0.5em]"
+						className="font-[family-name:var(--font-sohne-breit)] font-semibold uppercase leading-none whitespace-nowrap text-[#e0dfc7] text-[clamp(0.62rem,2.6vw,1.05rem)] tracking-[clamp(0.16em,1.1vw,0.5em)]"
 					>
 						Medicine
 					</span>
