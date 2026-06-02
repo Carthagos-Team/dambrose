@@ -28,6 +28,9 @@ const PHOTOS = [
 export function HeroAlma() {
 	return (
 		<section className="relative w-full overflow-hidden">
+			<h1 className="sr-only">
+				Alma — Core Primary Care &amp; Internal Medicine by Dr. Michael J. D&apos;Ambrose
+			</h1>
 			<Container className="pt-5 pb-0">
 				{/* Desktop cream canvas — absolute scene root */}
 				<div className="relative hidden md:block">

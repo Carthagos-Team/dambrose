@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif, Martian_Mono, Public_Sans } from 'next/font/google'
+import { JsonLd } from '@/components/json-ld'
 import { SmoothScroll } from '@/components/smooth-scroll'
 import { Footer } from '@/components/ui/footer'
+import { siteConfig } from '@/lib/site'
+import { physicianSchema, practiceSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
 
 const instrumentSerif = Instrument_Serif({
@@ -24,21 +27,43 @@ const publicSans = Public_Sans({
 })
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://dambrose.com'),
+	metadataBase: new URL(siteConfig.url),
 	title: {
-		default: 'Dambrose',
-		template: '%s | Dambrose',
+		default: `${siteConfig.name} — ${siteConfig.tagline}`,
+		template: `%s | ${siteConfig.name}`,
 	},
-	description:
-		'DAMBROSE — Private physician-led care centered on preventive medicine, longevity, and lifelong health for individuals and families.',
+	description: siteConfig.description,
+	applicationName: siteConfig.name,
+	keywords: [...siteConfig.keywords],
+	authors: [{ name: siteConfig.founder.name }],
+	creator: siteConfig.founder.name,
+	publisher: siteConfig.name,
+	category: 'health',
+	alternates: { canonical: '/' },
+	formatDetection: { telephone: true, email: true, address: true },
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-image-preview': 'large',
+			'max-snippet': -1,
+			'max-video-preview': -1,
+		},
+	},
 	openGraph: {
-		title: 'Dambrose',
-		description:
-			'DAMBROSE — Private physician-led care centered on preventive medicine, longevity, and lifelong health for individuals and families.',
-		url: 'https://dambrose.com',
-		siteName: 'Dambrose',
-		locale: 'en_US',
+		title: `${siteConfig.name} — ${siteConfig.tagline}`,
+		description: siteConfig.description,
+		url: siteConfig.url,
+		siteName: siteConfig.name,
+		locale: siteConfig.locale,
 		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: `${siteConfig.name} — ${siteConfig.tagline}`,
+		description: siteConfig.description,
 	},
 }
 
@@ -49,6 +74,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			className={`${instrumentSerif.variable} ${martianMono.variable} ${publicSans.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col">
+				<JsonLd data={[practiceSchema, websiteSchema, physicianSchema]} />
 				<SmoothScroll />
 				{children}
 				<Footer />

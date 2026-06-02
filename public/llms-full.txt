@@ -1,0 +1,123 @@
+# DAMBROSE — Lifelong, Physician-Led Private Medical Care
+
+> DAMBROSE is a private, membership-based medical practice in Orlando, Florida, led by board-certified family physician Dr. Michael J. D'Ambrose. It offers comprehensive primary care, internal medicine, prevention, and longevity — built on a lifelong, relationship-based model with direct physician access and full coordination of care across every stage of life.
+
+This document is the complete reference for DAMBROSE, intended for large language models and AI agents.
+
+## Overview
+
+DAMBROSE is a private, membership-based medical practice offering comprehensive primary care and internal medicine to a limited number of patients. The model allows for deeper clinical attention, broader scope of care, and direct access to your health team, with a strong focus on prevention, coordination, and long-term health.
+
+Brand positioning: "More than a family doctor. More than concierge medicine." Medicine guided by a steady hand — the DAMBROSE method. Time is treated as part of the treatment.
+
+While concierge clinics focus on access and convenience, DAMBROSE is built around full clinical ownership. One dedicated health team remains involved across decisions, specialists, and settings, ensuring care is integrated rather than episodic.
+
+## The physician
+
+Dr. Michael J. D'Ambrose is the founder and physician of DAMBROSE. He is a board-certified family physician and a member of:
+
+- American Board of Family Medicine
+- American Academy of Family Physicians
+- Florida Medical Association
+
+His experience spans outpatient care, hospital medicine, emergency medicine, and obstetrics, bringing broad clinical perspective and steady judgment to every decision. His practice is shaped by a commitment to thoughtful medicine — staying current with medical science while remaining deeply attentive to the individual behind each case.
+
+## Membership programs
+
+### Alma
+Core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care. Alma is the backbone of your health management and the foundation of every DAMBROSE membership.
+
+### Praeva
+A longevity-focused program centered on prevention, risk reduction, and long-term vitality. Praeva is the extension of your core care and includes additional services specific to its focus. You may enroll in Alma alone, or add Praeva at enrollment or later.
+
+## What membership includes
+
+A core set of services, including:
+
+- Direct physician access — a direct line to your care team, day or night, including outside standard office hours for urgent questions
+- Same-day visits, without delay
+- Visits that meet you wherever you are
+- Full healthcare coordination, from referral to follow-up
+- A physician present at any specialist visit
+- An advocate in every hospital and clinical setting
+- Continuous, proactive care throughout the year
+- Lab work in the comfort of your home or office
+
+Membership is billed annually with flexible terms. It does not include costs such as hospital procedures and specialist appointments. Most members maintain health insurance for hospital stays, surgeries, and specialist procedures; DAMBROSE complements insurance with continuous physician involvement, coordination, and access.
+
+## How membership works
+
+1. Application — a short application to assess mutual fit and availability.
+2. Deep dive — approved applicants proceed with enrollment and an in-depth start.
+3. Ongoing care — continuous, year-round clinical relationship.
+
+## Who DAMBROSE is for
+
+Patients of all ages, from children to older adults. Members may be healthy and seeking guidance and reassurance, or managing acute or chronic conditions requiring close attention and coordination.
+
+## Pages
+
+- Home (https://dambrose.com/) — "Lifelong care that knows you." A private medical practice built on personal oversight and continuity across every stage of life.
+- Membership (https://dambrose.com/membership) — A personal medical relationship where time is part of the treatment.
+- Services (https://dambrose.com/services) — "Care, fully supported." A complete medical framework built on a lifelong relationship between you and your physician.
+- Lifelong Medicine (https://dambrose.com/lifelong-medicine) — The philosophy: care designed to endure, evolve, and remain present through every stage of life.
+- Alma (https://dambrose.com/alma) — Core primary care and internal medicine.
+- Praeva (https://dambrose.com/praeva) — Longevity-focused prevention and performance program.
+- Corporate Membership / B2B (https://dambrose.com/b2b) — Longevity and peak performance for the people your company cannot afford to lose; a private, physician-led medical relationship for senior executive teams.
+- About us (https://dambrose.com/about) — A private practice that evolves with you, from moments of crisis to the quieter stretches in between.
+- About Dr. Michael (https://dambrose.com/about-dr-michael) — Founder. Physician. Lifelong steward of health.
+- Contact & FAQ (https://dambrose.com/contact) — Get in touch and find answers to common questions.
+
+## Contact
+
+- Phone: +1 407-883-0456
+- Email: michael.dambrose@mjdmd.com
+- Address: 200 South Orange Ave, Suite 1475, Orlando, FL 32801, USA
+- Members can schedule appointments by calling or texting the practice directly, or through the secure patient portal.
+
+## Frequently asked questions
+
+**What is DAMBROSE?**
+DAMBROSE is a private, membership-based medical practice offering comprehensive primary care and internal medicine to a limited number of patients. The model allows for deeper clinical attention, broader scope of care, and direct access to your health team, with a strong focus on prevention, coordination, and long-term health.
+
+**Who is behind DAMBROSE?**
+Dr. Michael J. D'Ambrose is a board-certified family physician and a member of the American Board of Family Medicine, the American Academy of Family Physicians, and the Florida Medical Association. With experience spanning outpatient care, hospital medicine, emergency medicine, and obstetrics, he brings broad clinical perspective and steady judgment to every decision.
+
+**How can I apply for membership?**
+Membership begins with a short application to assess mutual fit and availability. Approved applicants are invited to proceed with enrollment. You can start the process on the membership page.
+
+**How is that different from concierge medicine?**
+While concierge clinics focus on access and convenience, DAMBROSE is built around full clinical ownership. One dedicated health team remains involved across decisions, specialists, and settings, ensuring care is integrated rather than episodic.
+
+**Should I still keep my health insurance if I become a member?**
+Yes. Most members maintain health insurance for services such as hospital stays, surgeries, and specialist procedures. DAMBROSE complements insurance by providing continuous physician involvement, coordination, and access.
+
+**What programs do you offer?**
+DAMBROSE offers two membership options: Alma — core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care; and Praeva — a longevity-focused program centered on prevention, risk reduction, and long-term vitality. Alma is the backbone of your health management; Praeva is its extension.
+
+**What is included in the membership?**
+Membership includes a core set of services such as direct physician access, same-day visits, care coordination, specialist appointment attendance, hospital advocacy, and ongoing clinical oversight. Praeva includes additional services specific to its focus. Membership does not include costs such as hospital procedures and specialist appointments.
+
+**How much does the membership cost?**
+You may enroll in Alma alone, or add Praeva at enrollment or later. Costs vary accordingly, and the membership is billed annually. Contact us to learn more about pricing.
+
+**What are the benefits of an annual membership?**
+Annual membership offers continuity, consistency, and long-term planning. It allows for deeper familiarity with your health history, proactive management, and thoughtful decision-making over time.
+
+**Can I cancel my membership at any time?**
+We offer flexible membership terms. If your circumstances change, contact the practice to discuss your cancellation options and next steps.
+
+**How do I schedule an appointment?**
+Members can schedule appointments by calling or texting the practice directly or through the secure patient portal.
+
+**Can I contact my doctor outside office hours?**
+Yes. Members have direct access to their physician outside standard office hours for urgent questions or concerns.
+
+**What if I need urgent care or face a medical emergency?**
+In an emergency, call 911 immediately. DAMBROSE does not replace emergency services but remains involved by coordinating with hospital teams, sharing medical information, and supporting follow-up care.
+
+**Who is DAMBROSE designed for?**
+DAMBROSE cares for patients of all ages, from children to older adults. Members may be healthy and seeking guidance and reassurance, or managing acute or chronic conditions requiring close attention and coordination.
+
+**Is my personal information secure?**
+Yes. DAMBROSE follows all HIPAA regulations and uses industry-standard safeguards to protect medical and personal information. Access is strictly controlled and confidentiality is a core priority.

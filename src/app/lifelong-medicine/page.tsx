@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { JsonLd } from '@/components/json-ld'
 import { Container } from '@/components/ui/container'
 import { Header } from '@/components/ui/header'
 import { LifelongMedicineHero } from '@/components/ui/lifelong-medicine-hero'
@@ -10,16 +10,28 @@ import { LifelongMedicineSec16 } from '@/components/ui/lifelong-medicine-sec16'
 import { LifelongMedicineSec17 } from '@/components/ui/lifelong-medicine-sec17'
 import { LifelongMedicineSec18 } from '@/components/ui/lifelong-medicine-sec18'
 import { SectionDividerReveal } from '@/components/ui/section-divider-reveal'
+import { pageMetadata } from '@/lib/seo'
+import { breadcrumbSchema } from '@/lib/structured-data'
 
-export const metadata: Metadata = {
-	title: 'Lifelong Medicine — Dambrose',
+export const metadata = pageMetadata({
+	title: 'Lifelong Medicine',
+	path: '/lifelong-medicine',
 	description:
-		'DAMBROSE Lifelong Medicine — care designed to endure, evolve, and remain present through every stage of life.',
-}
+		'The DAMBROSE philosophy of Lifelong Medicine — relationship-based, preventive care designed to endure, evolve, and remain present through every stage of life.',
+	keywords: [
+		'lifelong medicine',
+		'philosophy of care',
+		'relationship-based medicine',
+		'continuity of care',
+		'preventive medicine',
+		'every stage of life',
+	],
+})
 
 export default function LifelongMedicinePage() {
 	return (
 		<>
+			<JsonLd data={breadcrumbSchema('Lifelong Medicine', '/lifelong-medicine')} />
 			<Header />
 			<main className="flex-1 w-full bg-bg">
 				<LifelongMedicineHero />
