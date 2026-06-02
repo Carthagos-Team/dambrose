@@ -2,6 +2,7 @@ import { Features } from '@/components/ui/features'
 import { Foundation } from '@/components/ui/foundation'
 import { Header } from '@/components/ui/header'
 import { Hero } from '@/components/ui/hero'
+import { HomeLoader } from '@/components/ui/home-loader'
 import { HowMembershipWorks } from '@/components/ui/how-membership-works'
 import { MembershipHolds } from '@/components/ui/membership-holds'
 import { MoreThan } from '@/components/ui/more-than'
@@ -30,9 +31,10 @@ export const metadata = pageMetadata({
 export default function HomePage() {
 	return (
 		<>
+			<HomeLoader />
 			<Header />
 			<main className="flex-1 w-full">
-				<Hero />
+				<Hero hold />
 				<Relationships />
 				<Programs />
 				<MembershipHolds />

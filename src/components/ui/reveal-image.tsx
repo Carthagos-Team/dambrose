@@ -9,6 +9,7 @@ type RevealImageProps = {
 	delay?: number
 	ease?: string
 	start?: string
+	hold?: boolean
 }
 
 export function RevealImage({
@@ -18,8 +19,9 @@ export function RevealImage({
 	delay,
 	ease,
 	start,
+	hold,
 }: RevealImageProps) {
-	const ref = useImageReveal<HTMLDivElement>({ duration, delay, ease, start })
+	const ref = useImageReveal<HTMLDivElement>({ duration, delay, ease, start, hold })
 
 	return (
 		<div ref={ref} className={className}>

@@ -57,10 +57,10 @@ export function PraevaSec16() {
 					</RevealImage>
 
 					{/* Heading + portrait — right-aligned on desktop */}
-					<div className="flex flex-col gap-[3.29rem] items-start min-[1440px]:items-end w-full">
+					<div className="flex flex-col gap-[3.29rem] min-[1440px]:gap-[4rem] items-start min-[1440px]:items-end w-full">
 
-						<BlurReveal className="px-5 min-[1440px]:px-0 w-full">
-							<h2 className="font-display text-[2.57rem] leading-none tracking-[0.5px] text-[#282119] uppercase w-full min-[1440px]:w-[22rem]">
+						<BlurReveal className="px-5 min-[1440px]:px-0 w-full min-[1440px]:w-auto">
+							<h2 className="font-display text-[2.57rem] leading-none tracking-[0.5px] text-[#282119] uppercase min-[1440px]:w-[23.94rem] min-[1440px]:text-right">
 								The advantages of thinking ahead.
 							</h2>
 						</BlurReveal>

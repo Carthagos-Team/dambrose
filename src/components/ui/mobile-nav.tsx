@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { lockScroll, unlockScroll } from '@/lib/scroll-lock'
 
 const listVariants = {
 	hidden: {},
@@ -59,9 +60,13 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 
 	const toggle = (next: boolean) => {
 		setOpen(next)
-		document.documentElement.style.overflow = next ? 'hidden' : ''
-		if (next) window.__lenis?.stop()
-		else window.__lenis?.start()
+		if (next) {
+			lockScroll()
+			window.__lenis?.stop()
+		} else {
+			unlockScroll()
+			window.__lenis?.start()
+		}
 	}
 
 	const lineColor = variant === 'contact' ? 'bg-[#ffffe4]' : 'bg-[#a29a84]'
