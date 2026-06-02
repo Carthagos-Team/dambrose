@@ -1,10 +1,15 @@
 'use client'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { CustomEase } from 'gsap/CustomEase'
 import { AnimatePresence, motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { lockScroll, unlockScroll } from '@/lib/scroll-lock'
+
+gsap.registerPlugin(useGSAP, CustomEase)
 
 const listVariants = {
 	hidden: {},
@@ -69,20 +74,91 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 		}
 	}
 
-	const lineColor = variant === 'contact' ? 'bg-[#ffffe4]' : 'bg-[#a29a84]'
+	// Closed bar color by variant; on the open circle the bars go ecru-white.
+	const closedColor = variant === 'contact' ? '#ffffe4' : '#a29a84'
+	const OPEN_COLOR = '#f2f1e3'
+
+	const buttonRef = useRef<HTMLButtonElement>(null)
+	const circleRef = useRef<HTMLSpanElement>(null)
+	const topRef = useRef<HTMLSpanElement>(null)
+	const midRef = useRef<HTMLSpanElement>(null)
+	const botRef = useRef<HTMLSpanElement>(null)
+
+	// Morph the bars burger ↔ X (and bloom the dark circle), driven by `open`
+	// so backdrop-close reverses it too. Bars converge ±7px (gap 6 + 1px bar).
+	useGSAP(
+		() => {
+			const top = topRef.current
+			const mid = midRef.current
+			const bot = botRef.current
+			const circle = circleRef.current
+			if (!top || !mid || !bot || !circle) return
+
+			if (!CustomEase.get('menu-ease')) {
+				CustomEase.create('menu-ease', '0.5, 0.05, 0.05, 0.99')
+			}
+
+			const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+			if (reduce) {
+				if (open) {
+					gsap.set(circle, { scale: 1, autoAlpha: 1 })
+					gsap.set([top, mid, bot], { backgroundColor: OPEN_COLOR })
+					gsap.set(mid, { autoAlpha: 0 })
+					gsap.set(top, { y: 7, rotate: 45 })
+					gsap.set(bot, { y: -7, rotate: -45 })
+				} else {
+					gsap.set(circle, { scale: 0, autoAlpha: 0 })
+					gsap.set([top, mid, bot], { backgroundColor: closedColor, autoAlpha: 1, y: 0, rotate: 0 })
+				}
+				return
+			}
+
+			const tl = gsap.timeline({
+				defaults: { ease: 'menu-ease', duration: 0.4, overwrite: 'auto' },
+			})
+
+			if (open) {
+				tl.to(circle, { scale: 1, autoAlpha: 1, duration: 0.45 }, 0)
+					.to([top, mid, bot], { backgroundColor: OPEN_COLOR, duration: 0.3 }, 0)
+					.to(mid, { autoAlpha: 0, scaleX: 0, duration: 0.2 }, 0)
+					.to(top, { y: 7, duration: 0.25 }, 0.05)
+					.to(bot, { y: -7, duration: 0.25 }, 0.05)
+					.to(top, { rotate: 45, duration: 0.3 }, 0.2)
+					.to(bot, { rotate: -45, duration: 0.3 }, 0.2)
+			} else {
+				tl.to([top, bot], { rotate: 0, duration: 0.3 }, 0)
+					.to([top, bot], { y: 0, duration: 0.25 }, 0.12)
+					.to(mid, { autoAlpha: 1, scaleX: 1, duration: 0.25 }, 0.18)
+					.to([top, mid, bot], { backgroundColor: closedColor, duration: 0.3 }, 0.1)
+					.to(circle, { scale: 0, autoAlpha: 0, duration: 0.35 }, 0.05)
+			}
+		},
+		{ scope: buttonRef, dependencies: [open, closedColor] },
+	)
 
 	return (
 		<>
-			{/* ── Trigger (header burger) ─────────────────────── */}
+			{/* ── Menu toggle — single button, morphs burger ↔ X with a bloom circle ── */}
 			<button
+				ref={buttonRef}
 				type="button"
-				aria-label="Open navigation"
-				onClick={() => toggle(true)}
-				className="flex flex-col items-start justify-center gap-1.25 w-10 h-10 md:w-12 md:h-12"
+				aria-label={open ? 'Close menu' : 'Open navigation'}
+				aria-expanded={open}
+				onClick={() => toggle(!open)}
+				className="relative z-[60] flex items-center justify-center w-10 h-10 md:w-12 md:h-12"
 			>
-				<span className={`block w-4.25 h-px ${lineColor}`} />
-				<span className={`block w-4.25 h-px ${lineColor}`} />
-				<span className={`block w-4.25 h-px ${lineColor}`} />
+				{/* bloom circle (behind bars) */}
+				<span
+					ref={circleRef}
+					aria-hidden="true"
+					className="pointer-events-none absolute inset-0 m-auto size-[30px] rounded-full bg-rangoon-green opacity-0"
+				/>
+				{/* bars */}
+				<span className="relative z-10 flex flex-col items-center gap-[6px]">
+					<span ref={topRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
+					<span ref={midRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
+					<span ref={botRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
+				</span>
 			</button>
 
 			{/* ── Drawer + Backdrop ───────────────────────────── */}
@@ -115,7 +191,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 							<div className="flex-1 flex flex-col pt-10.75 px-10.5 pb-13">
 								<nav className="mt-auto">
 									<motion.ul
-										className="flex flex-col gap-1.5"
+										className="flex flex-col gap-[clamp(5px,0.42vw,11px)]"
 										variants={listVariants}
 										initial="hidden"
 										animate="visible"
@@ -126,10 +202,10 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 												<a
 													href={link.href}
 													onClick={() => toggle(false)}
-													className={`font-display text-4xl leading-none tracking-[-0.03em] block w-fit ${
+													className={`font-display text-[clamp(32px,2.78vw,72px)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
 														pathname === link.href
-															? 'text-cape-cod border-b border-cape-cod'
-															: 'text-olive-haze'
+															? 'text-rangitoto after:origin-left after:scale-x-100'
+															: 'text-olive-haze after:origin-right after:scale-x-0'
 													} ${link.italic ? 'italic' : ''}`}
 												>
 													{link.label}

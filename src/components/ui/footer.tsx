@@ -278,7 +278,7 @@ export function Footer() {
 											{link.href ? (
 												<a
 													href={link.href}
-													className="font-display text-ecru-white text-lg md:text-xl hover:text-white transition-colors"
+													className="font-display text-ecru-white text-lg md:text-xl relative inline-block no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none"
 												>
 													{link.text}
 												</a>
