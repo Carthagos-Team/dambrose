@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { JsonLd } from '@/components/json-ld'
 import { Header } from '@/components/ui/header'
 import { MembershipApply } from '@/components/ui/membership-apply'
 import { MembershipExclusivity } from '@/components/ui/membership-exclusivity'
@@ -6,23 +6,39 @@ import { MembershipHero } from '@/components/ui/membership-hero'
 import { MembershipIncluded } from '@/components/ui/membership-included'
 import { MembershipIntro } from '@/components/ui/membership-intro'
 import { MembershipPrograms } from '@/components/ui/membership-programs'
+import { pageMetadata } from '@/lib/seo'
+import { breadcrumbSchema } from '@/lib/structured-data'
 
-export const metadata: Metadata = {
-	title: 'Membership — Dambrose',
+export const metadata = pageMetadata({
+	title: 'Membership',
+	path: '/membership',
 	description:
-		'Annual membership with Dr. Michael Dambrose — a private relationship built on continuity, availability, and full coordination of care.',
-}
+		'A private medical relationship with Dr. Michael J. D’Ambrose, billed annually — direct physician access, same-day visits, hospital advocacy, and full coordination of care. Begin with the Alma core program and add Praeva for longevity.',
+	keywords: [
+		'Dambrose membership',
+		'annual membership',
+		'private medical relationship',
+		'same-day visits',
+		'hospital advocacy',
+		'direct physician access',
+		'Alma program',
+		'Praeva program',
+	],
+})
 
 export default function MembershipPage() {
 	return (
 		<>
+			<JsonLd data={breadcrumbSchema('Membership', '/membership')} />
 			<Header />
-			<MembershipHero />
-			<MembershipIntro />
-			<MembershipExclusivity />
-			<MembershipIncluded />
-			<MembershipPrograms />
-			<MembershipApply />
+			<main className="flex-1 w-full">
+				<MembershipHero />
+				<MembershipIntro />
+				<MembershipExclusivity />
+				<MembershipIncluded />
+				<MembershipPrograms />
+				<MembershipApply />
+			</main>
 		</>
 	)
 }

@@ -1,0 +1,49 @@
+# DAMBROSE
+
+> DAMBROSE is a private, membership-based medical practice in Orlando, Florida, led by board-certified family physician Dr. Michael J. D'Ambrose. It offers comprehensive primary care, internal medicine, prevention, and longevity — built on a lifelong, relationship-based model with direct physician access and full coordination of care across every stage of life.
+
+DAMBROSE serves a limited number of members so that care can be deeper, more personal, and continuous. Unlike concierge clinics focused mainly on access and convenience, DAMBROSE is built around full clinical ownership: one dedicated health team stays involved across decisions, specialists, and settings, so care is integrated rather than episodic. Members typically keep their health insurance for hospital stays, surgeries, and specialist procedures; DAMBROSE complements it with continuous physician involvement.
+
+## Membership programs
+
+- [Alma](https://dambrose.com/alma): Core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care — the backbone of every DAMBROSE membership.
+- [Praeva](https://dambrose.com/praeva): A longevity-focused program centered on prevention, risk assessment, and long-term vitality — the performance-minded extension of core care. Can be added at enrollment or later.
+
+## What membership includes
+
+- Direct physician access, including outside standard office hours for urgent questions
+- Same-day visits and visits that meet you wherever you are
+- Full healthcare coordination, from referral to follow-up
+- A physician present at specialist visits and as your advocate in hospital settings
+- Continuous, proactive care throughout the year
+- Lab work in the comfort of your home or office
+- Billed annually; flexible membership terms. Membership does not cover hospital procedures or specialist appointment fees.
+
+## Core pages
+
+- [Home](https://dambrose.com/): Overview — "Lifelong care that knows you."
+- [Membership](https://dambrose.com/membership): How membership works (application, deep dive, ongoing care) and what it includes.
+- [Services](https://dambrose.com/services): The full medical framework built on a lifelong physician relationship.
+- [Lifelong Medicine](https://dambrose.com/lifelong-medicine): The DAMBROSE philosophy of care designed to endure and evolve through every stage of life.
+- [Corporate Membership (B2B)](https://dambrose.com/b2b): Longevity and peak performance for senior executive teams.
+- [About DAMBROSE](https://dambrose.com/about): The practice and the team behind physician-led care.
+- [About Dr. Michael](https://dambrose.com/about-dr-michael): The founder's background, training, and affiliations.
+- [Contact & FAQ](https://dambrose.com/contact): Phone, address, email, and answers to common questions.
+
+## About the physician
+
+- Dr. Michael J. D'Ambrose — Founder & Physician. Board-certified family physician and member of the American Board of Family Medicine, the American Academy of Family Physicians, and the Florida Medical Association.
+- Experience spanning outpatient care, hospital medicine, emergency medicine, and obstetrics, devoted to lifelong, relationship-based medicine.
+
+## Contact
+
+- Phone: +1 407-883-0456
+- Email: michael.dambrose@mjdmd.com
+- Address: 200 South Orange Ave, Suite 1475, Orlando, FL 32801, USA
+- Who it's for: Patients of all ages, from children to older adults — whether healthy and seeking guidance or managing acute or chronic conditions.
+
+## Optional
+
+- [Sitemap](https://dambrose.com/sitemap.xml): All indexable pages.
+- For emergencies, call 911. DAMBROSE does not replace emergency services but coordinates with hospital teams and supports follow-up care.
+- DAMBROSE follows HIPAA regulations and industry-standard safeguards to protect medical and personal information.
