@@ -6,6 +6,7 @@ import { tv, type VariantProps } from '@/lib/tv'
 const header = tv({
 	slots: {
 		root: 'w-full',
+		container: 'grid grid-cols-2 md:grid-cols-3 gap-4 items-center py-5 md:pt-6',
 		wordmark: 'flex flex-col items-end md:items-center gap-3.75',
 		contactLink:
 			'hidden md:inline-flex justify-end font-body text-xs uppercase tracking-wide hover:opacity-80 transition-opacity',
@@ -14,10 +15,12 @@ const header = tv({
 		variant: {
 			default: {
 				root: 'bg-ecru-white',
+				container: 'md:pb-6',
 				wordmark: 'flex flex-col items-end md:items-center gap-3.75 text-gray-olive',
 			},
 			contact: {
 				root: 'bg-transparent',
+				container: 'md:pb-0',
 				wordmark: 'flex flex-col items-end md:items-center gap-3.75 text-ecru-white',
 				contactLink: 'text-ecru-white',
 			},
@@ -34,7 +37,7 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 	const styles = header({ variant })
 	return (
 		<header className={styles.root()}>
-			<Container className="grid grid-cols-2 md:grid-cols-3 gap-4 items-center py-5 md:pt-6 md:pb-0">
+			<Container className={styles.container()}>
 				{/* ── Hamburger ──────────────────────────────────── */}
 				<MobileNav variant={variant ?? 'default'} />
 
