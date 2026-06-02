@@ -3,30 +3,34 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
 
-const NAV = [
+type FooterLink = { text: string; href?: string; italic?: boolean }
+type FooterColumn = { label: string; links: FooterLink[] }
+
+const NAV: FooterColumn[] = [
 	{
 		label: 'Main Pages',
 		links: [
-			{ text: 'Homepage' },
-			{ text: 'Membership' },
-			{ text: 'About us' },
-			{ text: 'About Dr. Michael' },
-			{ text: 'Lifelong medicine' },
+			{ text: 'Homepage', href: '/' },
+			{ text: 'Membership', href: '/membership' },
+			{ text: 'About us', href: '/about' },
+			{ text: 'About Dr. Michael', href: '/about-dr-michael' },
+			{ text: 'Lifelong medicine', href: '/lifelong-medicine' },
 		],
 	},
 	{
 		label: 'Services',
 		links: [
-			{ text: 'Services' },
-			{ text: 'Alma', italic: true },
-			{ text: 'Praeva', italic: true },
-			{ text: 'Corporate' },
+			{ text: 'Services', href: '/services' },
+			{ text: 'Alma', href: '/alma', italic: true },
+			{ text: 'Praeva', href: '/praeva', italic: true },
+			{ text: 'Corporate', href: '/b2b' },
 		],
 	},
 	{
 		label: 'Contact & Other',
 		links: [
-			{ text: 'Contact & FAQ' },
+			{ text: 'Contact & FAQ', href: '/contact' },
+			// Pages not built yet — rendered as plain text (no link).
 			{ text: '404' },
 			{ text: 'Privacy policy' },
 			{ text: 'Terms of service' },
@@ -271,12 +275,18 @@ export function Footer() {
 								<ul className="flex flex-col items-center gap-3">
 									{col.links.map((link) => (
 										<li key={link.text}>
-											<a
-												href="/"
-												className="font-display text-ecru-white text-lg md:text-xl hover:text-white transition-colors"
-											>
-												{link.text}
-											</a>
+											{link.href ? (
+												<a
+													href={link.href}
+													className="font-display text-ecru-white text-lg md:text-xl hover:text-white transition-colors"
+												>
+													{link.text}
+												</a>
+											) : (
+												<span className="font-display text-ecru-white/70 text-lg md:text-xl cursor-default">
+													{link.text}
+												</span>
+											)}
 										</li>
 									))}
 								</ul>
