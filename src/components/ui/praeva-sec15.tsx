@@ -14,7 +14,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const STEPS = [
 	{
-		src: '/praeva/sec15-application.jpg',
+		src: '/praeva/praeva-how-1.webp',
 		alt: 'Person in formal attire — the application process for PRAEVA membership',
 		label: 'Application',
 		description:
@@ -22,7 +22,7 @@ const STEPS = [
 		indent: false,
 	},
 	{
-		src: '/praeva/sec15-strategy.jpg',
+		src: '/praeva/praeva-how-2.webp',
 		alt: 'Clasped hands — the collaborative health strategy session',
 		label: 'Strategy',
 		description:
@@ -30,7 +30,7 @@ const STEPS = [
 		indent: true,
 	},
 	{
-		src: '/praeva/sec15-ongoing-care.jpg',
+		src: '/praeva/praeva-how-3.webp',
 		alt: 'Couple walking — the continuous oversight of ongoing care',
 		label: 'Ongoing Care',
 		description:
