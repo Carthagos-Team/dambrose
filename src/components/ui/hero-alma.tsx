@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { Container } from '@/components/ui/container'
+import { TransitionLink } from '@/components/ui/transition-link'
 
 const PHOTOS = [
 	{
@@ -41,7 +41,7 @@ export function HeroAlma() {
 							</div>
 						))}
 
-						<Link
+						<TransitionLink
 							href="/alma"
 							aria-label="Discover Alma by Michael J. D'Ambrose"
 							className="absolute left-120.5 top-16 w-99 h-118 block transition-opacity duration-300 hover:opacity-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ecru-white"
@@ -54,7 +54,7 @@ export function HeroAlma() {
 								priority
 								className="object-cover"
 							/>
-						</Link>
+						</TransitionLink>
 					</div>
 
 					{/* Bottom gradient strip — 946×112 centered under cream canvas */}
@@ -66,7 +66,7 @@ export function HeroAlma() {
 
 				{/* Mobile fallback — Alma card centered, no scatter */}
 				<div className="md:hidden flex justify-center py-10">
-					<Link
+					<TransitionLink
 						href="/alma"
 						aria-label="Discover Alma by Michael J. D'Ambrose"
 						className="block w-64 aspect-396/472 relative rounded-sm overflow-hidden"
@@ -79,7 +79,7 @@ export function HeroAlma() {
 							priority
 							className="object-cover"
 						/>
-					</Link>
+					</TransitionLink>
 				</div>
 			</Container>
 		</section>

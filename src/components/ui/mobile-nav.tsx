@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { TransitionLink } from '@/components/ui/transition-link'
 import { lockScroll, unlockScroll } from '@/lib/scroll-lock'
 
 gsap.registerPlugin(useGSAP, CustomEase)
@@ -136,165 +137,191 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 		{ scope: buttonRef, dependencies: [open, closedColor] },
 	)
 
+	const menuButton = (
+		// Portaled to <body> so it always paints above the portaled drawer,
+		// even on pages whose header sits inside a stacking context (e.g. praeva).
+		// `absolute` (not fixed) keeps the current behavior: it scrolls away with
+		// the header instead of floating.
+		<button
+			ref={buttonRef}
+			type="button"
+			aria-label={open ? 'Close menu' : 'Open navigation'}
+			aria-expanded={open}
+			onClick={() => toggle(!open)}
+			className="absolute left-5 top-5 z-[70] flex items-center justify-center w-10 h-10 md:left-10 md:top-6 md:w-12 md:h-12"
+		>
+			{/* bloom circle (behind bars) */}
+			<span
+				ref={circleRef}
+				aria-hidden="true"
+				className="pointer-events-none absolute inset-0 m-auto size-[30px] rounded-full bg-rangoon-green opacity-0"
+			/>
+			{/* bars */}
+			<span className="relative z-10 flex flex-col items-center gap-[6px]">
+				<span
+					ref={topRef}
+					className="block h-px w-[18px]"
+					style={{ backgroundColor: closedColor }}
+				/>
+				<span
+					ref={midRef}
+					className="block h-px w-[18px]"
+					style={{ backgroundColor: closedColor }}
+				/>
+				<span
+					ref={botRef}
+					className="block h-px w-[18px]"
+					style={{ backgroundColor: closedColor }}
+				/>
+			</span>
+		</button>
+	)
+
 	return (
 		<>
-			{/* ── Menu toggle — single button, morphs burger ↔ X with a bloom circle ── */}
-			<button
-				ref={buttonRef}
-				type="button"
-				aria-label={open ? 'Close menu' : 'Open navigation'}
-				aria-expanded={open}
-				onClick={() => toggle(!open)}
-				className="relative z-[60] flex items-center justify-center w-10 h-10 md:w-12 md:h-12"
-			>
-				{/* bloom circle (behind bars) */}
-				<span
-					ref={circleRef}
-					aria-hidden="true"
-					className="pointer-events-none absolute inset-0 m-auto size-[30px] rounded-full bg-rangoon-green opacity-0"
-				/>
-				{/* bars */}
-				<span className="relative z-10 flex flex-col items-center gap-[6px]">
-					<span ref={topRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
-					<span ref={midRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
-					<span ref={botRef} className="block h-px w-[18px]" style={{ backgroundColor: closedColor }} />
-				</span>
-			</button>
+			{/* Spacer keeps the header grid layout; the real button is portaled below. */}
+			<div aria-hidden="true" className="w-10 h-10 md:w-12 md:h-12" />
 
-			{/* ── Drawer + Backdrop ───────────────────────────── */}
-			{mounted && createPortal(
-				<AnimatePresence>
-					{open && (
-						<>
-							<motion.button
-							type="button"
-							aria-label="Close navigation"
-							onClick={() => toggle(false)}
-							className="fixed inset-0 z-40 bg-rangoon-green/50 backdrop-blur-md cursor-pointer"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0 }}
-							transition={{ duration: 0.4 }}
-						/>
+			{/* ── Menu button (portaled) + Drawer + Backdrop ───────────── */}
+			{mounted &&
+				createPortal(
+					<>
+						{menuButton}
+						<AnimatePresence>
+							{open && (
+								<>
+									<motion.button
+										type="button"
+										aria-label="Close navigation"
+										onClick={() => toggle(false)}
+										className="fixed inset-0 z-40 bg-rangoon-green/50 backdrop-blur-md cursor-pointer"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ duration: 0.4 }}
+									/>
 
-						<motion.div
-							className="fixed inset-y-0 left-0 z-50 w-full md:w-[43vw] bg-ecru-white flex flex-col"
-							initial={{ x: '-100%' }}
-							animate={{ x: 0 }}
-							exit={{ x: '-100%' }}
-							transition={{
-								duration: 0.7,
-								ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
-							}}
-						>
-							{/* Top section: nav links (anchored to bottom) */}
-							<div className="flex-1 flex flex-col pt-10.75 px-10.5 pb-13">
-								<nav className="mt-auto">
-									<motion.ul
-										className="flex flex-col gap-[clamp(5px,0.42vw,11px)]"
-										variants={listVariants}
-										initial="hidden"
-										animate="visible"
-										exit="exit"
+									<motion.div
+										className="fixed inset-y-0 left-0 z-50 w-full md:w-[43vw] bg-ecru-white flex flex-col"
+										initial={{ x: '-100%' }}
+										animate={{ x: 0 }}
+										exit={{ x: '-100%' }}
+										transition={{
+											duration: 0.7,
+											ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
+										}}
 									>
-										{LINKS.map((link) => (
-											<motion.li key={link.href} variants={itemVariants}>
-												<a
-													href={link.href}
-													onClick={() => toggle(false)}
-													className={`font-display text-[clamp(32px,2.78vw,72px)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
-														pathname === link.href
-															? 'text-rangitoto after:origin-left after:scale-x-100'
-															: 'text-olive-haze after:origin-right after:scale-x-0'
-													} ${link.italic ? 'italic' : ''}`}
+										{/* Top section: nav links anchored to the bottom on tall screens,
+									    but scrollable with top clearance so the menu button never
+									    overlaps the links on short (laptop) viewports. */}
+										<div className="flex-1 min-h-0 overflow-y-auto px-10.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+											<nav className="flex min-h-full flex-col justify-end pt-20 pb-10">
+												<motion.ul
+													className="flex flex-col gap-[clamp(5px,0.42vw,11px)]"
+													variants={listVariants}
+													initial="hidden"
+													animate="visible"
+													exit="exit"
 												>
-													{link.label}
+													{LINKS.map((link) => (
+														<motion.li key={link.href} variants={itemVariants}>
+															<TransitionLink
+																href={link.href}
+																onClick={() => toggle(false)}
+																className={`font-display text-[clamp(28px,min(2.78vw,4.6vh),64px)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
+																	pathname === link.href
+																		? 'text-rangitoto after:origin-left after:scale-x-100'
+																		: 'text-olive-haze after:origin-right after:scale-x-0'
+																} ${link.italic ? 'italic' : ''}`}
+															>
+																{link.label}
+															</TransitionLink>
+														</motion.li>
+													))}
+												</motion.ul>
+											</nav>
+										</div>
+
+										{/* Footer dark band */}
+										<div className="bg-rangoon-green px-10.5 py-7 flex flex-col gap-4">
+											{/* Social + copyright */}
+											<div className="flex flex-col gap-4">
+												<div className="flex items-center gap-2">
+													<SocialIcon label="Facebook">
+														<svg
+															width="14"
+															height="14"
+															viewBox="0 0 16 16"
+															fill="currentColor"
+															aria-hidden="true"
+														>
+															<path d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.616-1.304 1.249V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8Z" />
+														</svg>
+													</SocialIcon>
+													<SocialIcon label="Instagram">
+														<svg
+															width="14"
+															height="14"
+															viewBox="0 0 16 16"
+															fill="none"
+															aria-hidden="true"
+														>
+															<rect
+																x="1.5"
+																y="1.5"
+																width="13"
+																height="13"
+																rx="3.5"
+																stroke="currentColor"
+																strokeWidth="1.2"
+															/>
+															<circle cx="8" cy="8" r="3" stroke="currentColor" strokeWidth="1.2" />
+															<circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" />
+														</svg>
+													</SocialIcon>
+													<SocialIcon label="WhatsApp">
+														<svg
+															width="14"
+															height="14"
+															viewBox="0 0 16 16"
+															fill="currentColor"
+															aria-hidden="true"
+														>
+															<path d="M11.2 7.65c-.06-.03-.12-.06-.18-.08-.1-1.77-1.05-2.78-2.63-2.79h-.02c-.94 0-1.72.4-2.2 1.14l1.04.71c.36-.53.88-.66 1.18-.66.45 0 .8.13 1.01.4.16.19.26.45.3.78a5.3 5.3 0 0 0-1.42-.03c-1.42.16-2.33.94-2.27 1.94.03.5.3.94.75 1.23.38.24.88.36 1.4.33.69-.04 1.23-.28 1.6-.72.28-.33.46-.76.54-1.3.32.2.56.45.7.76.23.53.24 1.4-.47 2.1-.62.62-1.37.89-2.35.9-1.1-.01-1.93-.36-2.48-.92C4.36 10.9 4.1 9.88 4.1 8s.26-2.9.8-3.54c.55-.57 1.39-.91 2.48-.93 1.1.01 1.95.36 2.5.93.27.28.47.63.6 1.04l1.1-.29c-.17-.57-.45-1.06-.83-1.46C10 3 8.87 2.54 7.42 2.53h-.02C5.95 2.54 4.84 3 4.1 3.75c-.72.74-1.09 1.87-1.1 3.38V8.87c.01 1.51.38 2.64 1.1 3.38.75.75 1.86 1.21 3.3 1.22h.02c1.23-.01 2.18-.37 2.98-1.16.97-.97 1-2.3.6-3.2-.28-.64-.78-1.16-1.48-1.5l-.3.04Zm-.54 2.21c-.05.65-.49 1.37-1.66 1.44-.55.03-.98-.14-1.14-.24a.65.65 0 0 1-.31-.5c-.03-.42.3-.73.99-.81.09-.01.17-.01.26-.01.35 0 .68.04 1 .1l.03.01c-.04.01-.1.01-.17.01Z" />
+														</svg>
+													</SocialIcon>
+												</div>
+												<p className="font-body text-xs text-opal tracking-tighter">
+													© DAMBROSE® 2026, All Rights Reserved
+												</p>
+											</div>
+
+											{/* Legal links */}
+											<div className="flex flex-col gap-4">
+												<a
+													href="/terms"
+													className="font-body text-xs text-ecru-white tracking-tight leading-tight"
+												>
+													Terms &amp; Conditions
 												</a>
-											</motion.li>
-										))}
-									</motion.ul>
-								</nav>
-							</div>
-
-							{/* Footer dark band */}
-							<div className="bg-rangoon-green px-10.5 py-9 flex flex-col gap-4">
-								{/* Social + copyright */}
-								<div className="flex flex-col gap-4">
-									<div className="flex items-center gap-2">
-										<SocialIcon label="Facebook">
-											<svg
-												width="14"
-												height="14"
-												viewBox="0 0 16 16"
-												fill="currentColor"
-												aria-hidden="true"
-											>
-												<path d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.616-1.304 1.249V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0 0 16 8Z" />
-											</svg>
-										</SocialIcon>
-										<SocialIcon label="Instagram">
-											<svg
-												width="14"
-												height="14"
-												viewBox="0 0 16 16"
-												fill="none"
-												aria-hidden="true"
-											>
-												<rect
-													x="1.5"
-													y="1.5"
-													width="13"
-													height="13"
-													rx="3.5"
-													stroke="currentColor"
-													strokeWidth="1.2"
-												/>
-												<circle cx="8" cy="8" r="3" stroke="currentColor" strokeWidth="1.2" />
-												<circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" />
-											</svg>
-										</SocialIcon>
-										<SocialIcon label="WhatsApp">
-											<svg
-												width="14"
-												height="14"
-												viewBox="0 0 16 16"
-												fill="currentColor"
-												aria-hidden="true"
-											>
-												<path d="M11.2 7.65c-.06-.03-.12-.06-.18-.08-.1-1.77-1.05-2.78-2.63-2.79h-.02c-.94 0-1.72.4-2.2 1.14l1.04.71c.36-.53.88-.66 1.18-.66.45 0 .8.13 1.01.4.16.19.26.45.3.78a5.3 5.3 0 0 0-1.42-.03c-1.42.16-2.33.94-2.27 1.94.03.5.3.94.75 1.23.38.24.88.36 1.4.33.69-.04 1.23-.28 1.6-.72.28-.33.46-.76.54-1.3.32.2.56.45.7.76.23.53.24 1.4-.47 2.1-.62.62-1.37.89-2.35.9-1.1-.01-1.93-.36-2.48-.92C4.36 10.9 4.1 9.88 4.1 8s.26-2.9.8-3.54c.55-.57 1.39-.91 2.48-.93 1.1.01 1.95.36 2.5.93.27.28.47.63.6 1.04l1.1-.29c-.17-.57-.45-1.06-.83-1.46C10 3 8.87 2.54 7.42 2.53h-.02C5.95 2.54 4.84 3 4.1 3.75c-.72.74-1.09 1.87-1.1 3.38V8.87c.01 1.51.38 2.64 1.1 3.38.75.75 1.86 1.21 3.3 1.22h.02c1.23-.01 2.18-.37 2.98-1.16.97-.97 1-2.3.6-3.2-.28-.64-.78-1.16-1.48-1.5l-.3.04Zm-.54 2.21c-.05.65-.49 1.37-1.66 1.44-.55.03-.98-.14-1.14-.24a.65.65 0 0 1-.31-.5c-.03-.42.3-.73.99-.81.09-.01.17-.01.26-.01.35 0 .68.04 1 .1l.03.01c-.04.01-.1.01-.17.01Z" />
-											</svg>
-										</SocialIcon>
-									</div>
-									<p className="font-body text-sm text-opal tracking-tighter">
-										© DAMBROSE® 2026, All Rights Reserved
-									</p>
-								</div>
-
-								{/* Legal links */}
-								<div className="flex flex-col gap-4">
-									<a
-										href="/terms"
-										className="font-body text-sm text-ecru-white tracking-tight leading-tight"
-									>
-										Terms &amp; Conditions
-									</a>
-									<a
-										href="/privacy"
-										className="font-body text-sm text-ecru-white tracking-tight leading-tight"
-									>
-										Privacy Policy
-									</a>
-									<p className="font-body text-sm text-ecru-white tracking-tight leading-tight">
-										All Rights Reserved © 2025
-									</p>
-								</div>
-							</div>
-						</motion.div>
-						</>
-					)}
-				</AnimatePresence>,
-				document.body
-			)}
+												<a
+													href="/privacy"
+													className="font-body text-xs text-ecru-white tracking-tight leading-tight"
+												>
+													Privacy Policy
+												</a>
+												<p className="font-body text-xs text-ecru-white tracking-tight leading-tight">
+													All Rights Reserved © 2025
+												</p>
+											</div>
+										</div>
+									</motion.div>
+								</>
+							)}
+						</AnimatePresence>
+					</>,
+					document.body,
+				)}
 		</>
 	)
 }

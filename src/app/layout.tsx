@@ -4,6 +4,8 @@ import localFont from 'next/font/local'
 import { JsonLd } from '@/components/json-ld'
 import { SmoothScroll } from '@/components/smooth-scroll'
 import { Footer } from '@/components/ui/footer'
+import { PageTransition } from '@/components/ui/page-transition'
+import { PageTransitionWatcher } from '@/components/ui/page-transition-watcher'
 import { siteConfig } from '@/lib/site'
 import { physicianSchema, practiceSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
@@ -85,6 +87,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			<body className="min-h-full flex flex-col">
 				<JsonLd data={[practiceSchema, websiteSchema, physicianSchema]} />
 				<SmoothScroll />
+				<PageTransition />
+				<PageTransitionWatcher />
 				{children}
 				<Footer />
 			</body>

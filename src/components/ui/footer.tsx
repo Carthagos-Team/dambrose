@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
+import { TransitionLink } from '@/components/ui/transition-link'
 
 type FooterLink = { text: string; href?: string; italic?: boolean }
 type FooterColumn = { label: string; links: FooterLink[] }
@@ -276,12 +277,12 @@ export function Footer() {
 									{col.links.map((link) => (
 										<li key={link.text}>
 											{link.href ? (
-												<a
+												<TransitionLink
 													href={link.href}
 													className="font-display text-ecru-white text-lg md:text-xl relative inline-block no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none"
 												>
 													{link.text}
-												</a>
+												</TransitionLink>
 											) : (
 												<span className="font-display text-ecru-white/70 text-lg md:text-xl cursor-default">
 													{link.text}

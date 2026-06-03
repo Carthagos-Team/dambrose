@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { MobileNav } from '@/components/ui/mobile-nav'
+import { TransitionLink } from '@/components/ui/transition-link'
 import { tv, type VariantProps } from '@/lib/tv'
 
 const header = tv({
@@ -42,7 +43,7 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 				<MobileNav variant={variant ?? 'default'} />
 
 				{/* ── Wordmark ───────────────────────────────────── */}
-				<a href="/" aria-label="Dambrose — Home" className={styles.wordmark()}>
+				<TransitionLink href="/" aria-label="Dambrose — Home" className={styles.wordmark()}>
 					<svg
 						aria-label="Dambrose"
 						className="w-40 md:w-44 h-auto"
@@ -170,13 +171,13 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 							fill="currentColor"
 						/>
 					</svg>
-				</a>
+				</TransitionLink>
 
 				{/* ── CTA ────────────────────────────────────────── */}
 				{variant === 'contact' ? (
-					<a href="/contact" className={styles.contactLink()}>
+					<TransitionLink href="/contact" className={styles.contactLink()}>
 						Contact
-					</a>
+					</TransitionLink>
 				) : (
 					<div className="hidden md:inline-flex justify-end">
 						<Button variant="dark">Inquiry about membership</Button>

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
+import { TransitionLink } from '@/components/ui/transition-link'
 
 const steps = [
 	{
@@ -55,12 +55,12 @@ export function HowItWorks() {
 									How it works
 								</h2>
 							</BlurReveal>
-							<Link
+							<TransitionLink
 								href="/contact"
 								className="inline-flex items-center justify-center px-5 h-9 border border-ecru-white/90 text-ecru-white font-body text-xs uppercase tracking-wider hover:bg-ecru-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ecru-white cursor-pointer"
 							>
 								Inquiry
-							</Link>
+							</TransitionLink>
 						</div>
 					</RevealImage>
 

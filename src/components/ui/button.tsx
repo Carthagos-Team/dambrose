@@ -1,4 +1,5 @@
 import type { ComponentProps } from 'react'
+import { TransitionLink } from '@/components/ui/transition-link'
 import { tv, type VariantProps } from '@/lib/tv'
 
 const button = tv({
@@ -46,7 +47,12 @@ export function Button({ variant, size, className, ...props }: ButtonProps) {
 	const cls = button({ variant, size, className })
 
 	if ('href' in props && props.href !== undefined) {
-		return <a className={cls} {...(props as ComponentProps<'a'>)} />
+		const anchorProps = props as ComponentProps<'a'> & { href: string }
+		// Internal links get the page transition; external/anchor stay native.
+		if (anchorProps.href.startsWith('/')) {
+			return <TransitionLink className={cls} {...anchorProps} />
+		}
+		return <a className={cls} {...anchorProps} />
 	}
 
 	return <button type="button" className={cls} {...(props as ComponentProps<'button'>)} />
