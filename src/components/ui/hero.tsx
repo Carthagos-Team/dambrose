@@ -13,10 +13,12 @@ export function Hero({ hold = false }: { hold?: boolean } = {}) {
 					hold={hold}
 				>
 					<Image
-						src="/contact/contact.png"
-						alt="Dr. Michael Dambrose - Lifelong Medicine"
+						src="/home/hero.webp"
+						alt="A refined, light-filled living room — the considered environment of Dambrose care"
 						fill
-						className="object-cover"
+						priority
+						sizes="100vw"
+						className="object-cover object-center"
 					/>
 				</RevealImage>
 			</Container>

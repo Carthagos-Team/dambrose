@@ -5,33 +5,33 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const ITEMS = [
 	{
-		image: '/features/anthurium.png',
-		alt: 'Anthurium flowers',
-		imageHeight: 'h-80',
+		image: '/home/feature-exclusive.webp',
+		alt: 'A composed man with a notebook in a refined, light-filled room',
+		imageHeight: 'h-94',
 		title: 'Exclusive attention',
 		body: 'Care is offered within a private, members-only structure, intentionally limited so the physician can dedicate the necessary time to each patient.',
 		delay: 0,
 	},
 	{
-		image: '/features/moth.png',
-		alt: 'Moth resting on a bottle',
-		imageHeight: 'h-40',
+		image: '/home/feature-coordinated.webp',
+		alt: 'A physician and patient in close conversation',
+		imageHeight: 'h-47',
 		title: 'Coordinated care',
 		body: 'Your doctor never hands you off, personally overseeing everything: diagnosis, specialist appointments, exams, hospital visits, and follow-up.',
 		delay: 0.1,
 	},
 	{
-		image: '/features/kitchen.png',
-		alt: 'Man in a sunlit kitchen',
-		imageHeight: 'h-120',
+		image: '/home/feature-discretion.webp',
+		alt: 'Quiet rolling hills with a small pond at dusk',
+		imageHeight: 'h-94',
 		title: 'Discretion and availability',
 		body: 'With direct access and flexible scheduling, you can be seen as soon as needed — without waiting rooms, crowds, or crossing paths with other patients.',
 		delay: 0.2,
 	},
 	{
-		image: '/features/botanical-stem.png',
-		alt: 'Botanical stem against dark background',
-		imageHeight: 'h-40',
+		image: '/home/feature-alignment.webp',
+		alt: 'Macro close-up of a human iris',
+		imageHeight: 'h-47',
 		title: 'Alignment with personal goals',
 		body: 'Medical strategy is shaped around what matters to you, respecting your priorities and values without pressure or unnecessary intervention.',
 		delay: 0.3,
@@ -44,15 +44,15 @@ export function Features() {
 			<Container className="flex flex-col gap-20">
 				{/* ── Heading ──────────────────────────────────────── */}
 				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-5xl text-olive-haze text-center leading-tight">
+					<h2 className="font-display text-4xl md:text-5xl text-corduroy text-center leading-tight">
 						What changes when care <em className="font-display italic">truly knows</em> you.
 					</h2>
 				</BlurReveal>
 
 				{/* ── Grid ─────────────────────────────────────────── */}
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-x-6 gap-y-10">
+				<div className="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10">
 					{ITEMS.map((item) => (
-						<div key={item.title} className="flex flex-col gap-5">
+						<div key={item.title} className="flex flex-col gap-10">
 							<RevealImage
 								className={`relative w-full ${item.imageHeight} overflow-hidden bg-bison-hide`}
 								delay={item.delay}
@@ -60,11 +60,11 @@ export function Features() {
 								<Image src={item.image} alt={item.alt} fill className="object-cover" />
 							</RevealImage>
 
-							<BlurReveal className="flex flex-col gap-3" delay={item.delay + 0.2}>
-								<h3 className="font-display italic text-2xl text-olive-haze leading-snug">
+							<BlurReveal className="flex flex-col gap-7" delay={item.delay + 0.2}>
+								<h3 className="font-display italic text-[2.1rem] text-corduroy leading-[1.1] tracking-[0.02em]">
 									{item.title}
 								</h3>
-								<p className="font-body text-xs uppercase leading-relaxed tracking-wide text-gray-olive">
+								<p className="font-body text-[0.78rem] uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
 									{item.body}
 								</p>
 							</BlurReveal>

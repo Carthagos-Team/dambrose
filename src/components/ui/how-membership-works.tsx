@@ -34,7 +34,12 @@ export function HowMembershipWorks() {
 					<div className="grid grid-cols-1 md:grid-cols-3 items-start">
 						{/* Left panel — hidden on mobile */}
 						<RevealImage className="hidden md:block relative overflow-hidden aspect-453/531">
-							<Image src="/features/anthurium.png" alt="" fill className="object-cover" />
+							<Image
+								src="/home/how-left.webp"
+								alt="A curved flowering stem with buds against a deep blue backdrop"
+								fill
+								className="object-cover"
+							/>
 							<div className="absolute inset-0 bg-black/20" />
 						</RevealImage>
 
@@ -43,8 +48,13 @@ export function HowMembershipWorks() {
 							delay={0.15}
 							className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
 						>
-							<Image src="/features/kitchen.png" alt="" fill className="object-cover" />
-							<div className="absolute inset-0 bg-black/25" />
+							<Image
+								src="/home/how-center.webp"
+								alt="Two pink anthurium blooms on slender stems against a soft sky"
+								fill
+								className="object-cover"
+							/>
+							<div className="absolute inset-0 bg-black/40" />
 							<div className="absolute inset-0 flex items-center justify-center p-8">
 								<div className="flex flex-col items-center gap-6 md:gap-8 text-center">
 									<h2 className="font-display text-2xl md:text-[2.5rem] text-ecru-white leading-tight">
@@ -66,7 +76,12 @@ export function HowMembershipWorks() {
 							delay={0.3}
 							className="hidden md:block relative overflow-hidden aspect-453/440"
 						>
-							<Image src="/features/elder.png" alt="" fill className="object-cover" />
+							<Image
+								src="/home/how-right.webp"
+								alt="A moth resting on a dark green vessel"
+								fill
+								className="object-cover"
+							/>
 							<div className="absolute inset-0 bg-black/25" />
 						</RevealImage>
 					</div>
