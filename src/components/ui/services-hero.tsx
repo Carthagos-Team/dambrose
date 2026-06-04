@@ -14,8 +14,10 @@ export function ServicesHero() {
 				>
 					<Image
 						src="/features/hands.png"
-						alt="Care, fully supported"
+						alt="Two pairs of hands gently clasped — care, fully supported"
 						fill
+						sizes="100vw"
+						priority
 						className="object-cover"
 					/>
 				</RevealImage>

@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 	title: 'About us',
 	path: '/about',
 	description:
-		'DAMBROSE is a private practice that evolves with you — continuity, lifelong medicine, and the team behind physician-led care, from moments of crisis to the quieter stretches in between.',
+		'DAMBROSE is a private, physician-led practice that evolves with you — continuity, lifelong medicine, and the team behind your care at every stage.',
 	keywords: [
 		'about Dambrose',
 		'private practice',

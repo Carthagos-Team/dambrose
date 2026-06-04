@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
 	title: 'Services',
 	path: '/services',
 	description:
-		'Care, fully supported. A complete medical framework built on a lifelong relationship with your physician — primary care, internal medicine, prevention, and full care coordination through the Alma and Praeva programs.',
+		'A complete medical framework built on a lifelong physician relationship — primary care, internal medicine, prevention, and full care coordination.',
 	keywords: [
 		'medical services',
 		'medical framework',

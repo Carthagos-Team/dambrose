@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 	title: 'Praeva',
 	path: '/praeva',
 	description:
-		'Praeva™ by Dr. Michael J. D’Ambrose — a longevity-focused program centered on prevention, risk assessment, and long-term vitality. The performance-minded extension of your DAMBROSE core care.',
+		'Praeva™ — a longevity-focused program centered on prevention, risk assessment, and long-term vitality: the extension of your DAMBROSE core care.',
 	keywords: [
 		'Praeva',
 		'longevity program',

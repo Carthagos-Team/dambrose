@@ -14,8 +14,10 @@ export function MembershipHero() {
 				>
 					<Image
 						src="/membership/membership-hero.png"
-						alt="Dambrose membership"
+						alt="DAMBROSE membership — a personal, physician-led medical relationship"
 						fill
+						sizes="100vw"
+						priority
 						className="object-cover"
 					/>
 				</RevealImage>

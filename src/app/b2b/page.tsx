@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 	title: 'Corporate Membership',
 	path: '/b2b',
 	description:
-		'Longevity and peak performance for the people your company cannot afford to lose. A private, physician-led medical relationship for senior executive teams — executive health, prevention, and continuous care.',
+		'Executive health for the people your company can’t afford to lose — a private, physician-led program of longevity, prevention, and continuous care.',
 	keywords: [
 		'corporate membership',
 		'executive health',

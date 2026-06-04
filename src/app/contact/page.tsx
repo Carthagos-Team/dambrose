@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
 	title: 'Contact & FAQ',
 	path: '/contact',
 	description:
-		'Get in touch with DAMBROSE in Orlando, FL — phone +1 407-883-0456, email, our downtown address, and answers to common questions about membership, the Alma and Praeva programs, and physician-led care.',
+		'Get in touch with DAMBROSE in Orlando, FL — phone, email, our downtown address, and answers to common questions about membership and physician-led care.',
 	keywords: [
 		'contact Dambrose',
 		'Orlando physician',

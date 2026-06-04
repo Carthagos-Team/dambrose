@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Instrument_Serif, Martian_Mono, Public_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -50,6 +52,9 @@ export const metadata: Metadata = {
 	creator: siteConfig.founder.name,
 	publisher: siteConfig.name,
 	category: 'health',
+	// Google Search Console verification — set GOOGLE_SITE_VERIFICATION in the
+	// Vercel project env to emit the meta tag (omitted when unset).
+	verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
 	alternates: { canonical: '/' },
 	formatDetection: { telephone: true, email: true, address: true },
 	robots: {
@@ -91,6 +96,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 				<PageTransitionWatcher />
 				{children}
 				<Footer />
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)

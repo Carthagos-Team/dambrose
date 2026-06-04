@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 	title: 'Alma',
 	path: '/alma',
 	description:
-		'Alma by Dr. Michael J. D’Ambrose — core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care. The continuous-care backbone of your DAMBROSE membership.',
+		'Alma — core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care: the continuous-care backbone of DAMBROSE membership.',
 	keywords: [
 		'Alma',
 		'core primary care',

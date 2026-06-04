@@ -13,7 +13,7 @@ export const metadata = pageMetadata({
 	title: 'Membership',
 	path: '/membership',
 	description:
-		'A private medical relationship with Dr. Michael J. D’Ambrose, billed annually — direct physician access, same-day visits, hospital advocacy, and full coordination of care. Begin with the Alma core program and add Praeva for longevity.',
+		'A private medical relationship with Dr. D’Ambrose — direct physician access, same-day visits, hospital advocacy, and full coordination of care.',
 	keywords: [
 		'Dambrose membership',
 		'annual membership',

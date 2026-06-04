@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 	path: '/about-dr-michael',
 	type: 'profile',
 	description:
-		'Dr. Michael J. D’Ambrose — founder of DAMBROSE and board-certified family physician trained across primary care, hospital medicine, emergency care, and obstetrics, devoted to lifelong, relationship-based medicine.',
+		'Dr. Michael J. D’Ambrose — founder of DAMBROSE and board-certified family physician devoted to lifelong, relationship-based, physician-led medicine.',
 	keywords: [
 		'Dr. Michael J. D’Ambrose',
 		'board-certified family physician',
