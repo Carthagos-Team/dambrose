@@ -49,7 +49,6 @@ export function AboutSec9() {
 									width={500}
 									height={175}
 									className="w-full md:max-w-[19.7rem] h-auto"
-									unoptimized
 								/>
 							</BlurReveal>
 

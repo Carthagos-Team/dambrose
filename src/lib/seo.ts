@@ -13,12 +13,19 @@ type PageMetadataInput = {
 	keywords?: readonly string[]
 	/** OpenGraph type, defaults to "website". */
 	type?: 'website' | 'article' | 'profile'
+	/**
+	 * Public asset path for a page-specific OG/Twitter image (e.g. `/Open-graph/Alma-page.jpg`).
+	 * Omit to inherit the site-wide image from `src/app/opengraph-image.jpg`.
+	 */
+	ogImage?: string
+	/** Accessible label for the OG image; defaults to the OG title. */
+	ogImageAlt?: string
 }
 
 /**
  * Build complete, SEO-optimized metadata for a route: canonical URL,
- * keyword set, OpenGraph and Twitter cards. The site-wide OpenGraph image
- * is supplied automatically by `src/app/opengraph-image.tsx`.
+ * keyword set, OpenGraph and Twitter cards. Pass `ogImage` for a page-specific
+ * share image; otherwise the site-wide image from `src/app/opengraph-image.jpg` applies.
  */
 export function pageMetadata({
 	title,
@@ -27,9 +34,13 @@ export function pageMetadata({
 	path,
 	keywords = [],
 	type = 'website',
+	ogImage,
+	ogImageAlt,
 }: PageMetadataInput): Metadata {
 	const ogTitle = absoluteTitle ? title : `${title} | ${siteConfig.name}`
 	const url = absoluteUrl(path)
+	const imageAlt = ogImageAlt ?? ogTitle
+	const shareImages = ogImage ? [{ url: absoluteUrl(ogImage), alt: imageAlt }] : undefined
 
 	return {
 		title: absoluteTitle ? { absolute: title } : title,
@@ -43,11 +54,13 @@ export function pageMetadata({
 			url,
 			siteName: siteConfig.name,
 			locale: siteConfig.locale,
+			...(shareImages && { images: shareImages }),
 		},
 		twitter: {
 			card: 'summary_large_image',
 			title: ogTitle,
 			description,
+			...(shareImages && { images: shareImages.map((image) => image.url) }),
 		},
 	}
 }

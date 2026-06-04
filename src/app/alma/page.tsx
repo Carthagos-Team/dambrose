@@ -13,6 +13,8 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 export const metadata = pageMetadata({
 	title: 'Alma',
 	path: '/alma',
+	ogImage: '/Open-graph/Alma-page.jpg',
+	ogImageAlt: 'Alma — core primary care and internal medicine at DAMBROSE',
 	description:
 		'Alma — core primary care and internal medicine for diagnosis, treatment, and ongoing clinical care: the continuous-care backbone of DAMBROSE membership.',
 	keywords: [

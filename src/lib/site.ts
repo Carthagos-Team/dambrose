@@ -68,7 +68,8 @@ export const siteConfig = {
 /** Resolve an absolute URL against the canonical site origin. */
 export function absoluteUrl(path = '/'): string {
 	if (path.startsWith('http')) return path
-	return `${siteConfig.url}${path.startsWith('/') ? path : `/${path}`}`
+	const pathname = path.startsWith('/') ? path : `/${path}`
+	return new URL(pathname, siteConfig.url).href
 }
 
 /** Brand programs, reused in copy, structured data and llms.txt. */
