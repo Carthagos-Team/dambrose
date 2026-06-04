@@ -29,7 +29,12 @@ export function ContactForm() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
 						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square">
-							<Image src="/contact/contact.png" alt="" fill className="object-cover" />
+							<Image
+								src="/contact/contact.png"
+								alt="A person’s hands resting on a sunlit windowsill beside fresh flowers"
+								fill
+								className="object-cover"
+							/>
 						</RevealImage>
 
 						<BlurReveal delay={0.1} className="flex flex-col justify-between gap-7 md:h-full">

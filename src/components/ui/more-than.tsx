@@ -61,7 +61,12 @@ export function MoreThan() {
 								delay={0.2}
 								className="relative w-full aspect-680/642 overflow-hidden bg-bison-hide"
 							>
-								<Image src="/features/kitchen.png" alt="" fill className="object-cover" />
+								<Image
+									src="/features/kitchen.png"
+									alt="A man at the sink in a bright, sunlit home kitchen"
+									fill
+									className="object-cover"
+								/>
 							</RevealImage>
 						</div>
 					</div>
