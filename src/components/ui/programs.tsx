@@ -1,5 +1,5 @@
-import type { ReactNode, StaticImageData } from 'react'
-import Image from 'next/image'
+import type { ReactNode } from 'react'
+import Image, { type StaticImageData } from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
