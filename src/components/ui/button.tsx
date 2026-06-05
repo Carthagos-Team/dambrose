@@ -17,6 +17,7 @@ const button = tv({
 			opal: 'bg-opal text-william',
 			khaki: 'bg-indian-khaki text-ecru-white',
 			teal: 'bg-william text-ecru-white',
+			fire: 'bg-fire text-ecru-white',
 			dark: 'bg-gray-olive text-ecru-white',
 			regent: 'bg-regent-gray text-ecru-white',
 			dune: 'bg-[#cac7a8] text-[#545c63]',

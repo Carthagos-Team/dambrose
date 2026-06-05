@@ -28,7 +28,7 @@ export function MoreThan() {
 
 							<BlurReveal delay={0.15}>
 								<p
-									className="font-body text-sm text-rangitoto/80 leading-relaxed mt-4"
+									className="font-body text-sm uppercase text-rangitoto/80 leading-relaxed mt-4"
 									style={{ letterSpacing: '-0.04em' }}
 								>
 									DAMBROSE goes further by keeping medicine accountable and personal, bringing
@@ -38,7 +38,7 @@ export function MoreThan() {
 
 							<span className="font-body text-xs text-olive-haze/60">06</span>
 
-							<Button href="/philosophy" className="w-fit" variant="teal">
+							<Button href="/philosophy" className="w-fit" variant="fire">
 								Learn about our philosophy →
 							</Button>
 						</div>
@@ -47,7 +47,7 @@ export function MoreThan() {
 						<div className="flex flex-col gap-10 md:gap-30 flex-1 mt-10 md:mt-0">
 							<BlurReveal delay={0.1}>
 								<p
-									className="font-body text-sm text-rangitoto/80 leading-relaxed"
+									className="font-body text-sm uppercase text-rangitoto/80 leading-relaxed"
 									style={{ letterSpacing: '-0.04em' }}
 								>
 									Traditional healthcare is fragmented and inefficient, shaped by multiple

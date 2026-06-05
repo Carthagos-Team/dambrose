@@ -19,7 +19,7 @@ export function SteadyHand() {
 					</BlurReveal>
 
 					{/* Two-column: image left, text+button right */}
-					<div className="flex flex-col md:flex-row md:justify-between md:items-start">
+					<div className="flex flex-col md:flex-row md:justify-between md:items-end">
 						{/* Left: Image */}
 						<RevealImage className="relative w-full md:w-[34%] aspect-463/368 overflow-hidden">
 							<Image
@@ -31,7 +31,7 @@ export function SteadyHand() {
 						</RevealImage>
 
 						{/* Right: Text + signature + button */}
-						<div className="flex flex-col gap-6 w-full md:w-[31%] mt-10 md:mt-32">
+						<div className="flex flex-col gap-6 w-full md:w-[31%] mt-10 md:mt-0">
 							{/* Paragraph with Dambrose signature overlapping last line */}
 							<BlurReveal delay={0.15} className="relative pb-6">
 								<p

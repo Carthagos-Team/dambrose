@@ -25,7 +25,7 @@ const steps = [
 	},
 ]
 
-export function HowMembershipWorks() {
+export function HowMembershipWorks({ hideOverlay = false }: { hideOverlay?: boolean } = {}) {
 	return (
 		<section className="w-full bg-ecru-white pt-10 pb-16 md:pb-28 border-t border-black/10">
 			<div>
@@ -43,7 +43,7 @@ export function HowMembershipWorks() {
 							<div className="absolute inset-0 bg-black/20" />
 						</RevealImage>
 
-						{/* Center panel — tallest, with text overlay */}
+						{/* Center panel */}
 						<RevealImage
 							delay={0.15}
 							className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
@@ -54,21 +54,25 @@ export function HowMembershipWorks() {
 								fill
 								className="object-cover"
 							/>
-							<div className="absolute inset-0 bg-black/40" />
-							<div className="absolute inset-0 flex items-center justify-center p-8">
-								<div className="flex flex-col items-center gap-6 md:gap-8 text-center">
-									<h2 className="font-display text-2xl md:text-[2.5em] text-ecru-white leading-tight">
-										How annual membership works:
-									</h2>
-									<Button
-										href="/inquiry"
-										variant="outline"
-										className="text-ecru-white border-ecru-white/60"
-									>
-										Inquiry
-									</Button>
-								</div>
-							</div>
+							{!hideOverlay && (
+								<>
+									<div className="absolute inset-0 bg-black/40" />
+									<div className="absolute inset-0 flex items-center justify-center p-8">
+										<div className="flex flex-col items-center gap-6 md:gap-8 text-center">
+											<h2 className="font-display text-2xl md:text-[2.5em] text-ecru-white leading-tight">
+												How annual membership works:
+											</h2>
+											<Button
+												href="/inquiry"
+												variant="outline"
+												className="text-ecru-white border-ecru-white/60"
+											>
+												Inquiry
+											</Button>
+										</div>
+									</div>
+								</>
+							)}
 						</RevealImage>
 
 						{/* Right panel — hidden on mobile */}

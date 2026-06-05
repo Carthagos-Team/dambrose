@@ -39,10 +39,10 @@ export default function HomePage() {
 				<Programs />
 				<MembershipHolds />
 				<Features />
-				<HowMembershipWorks />
+				<HowMembershipWorks hideOverlay />
 				<MoreThan />
-				<SteadyHand />
 				<Foundation />
+				<SteadyHand />
 			</main>
 		</>
 	)
