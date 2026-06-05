@@ -27,9 +27,9 @@ export function Relationships() {
 					</BlurReveal>
 
 					{/* ── Image + right content ─────────────────────────────── */}
-					<div className="relative flex flex-col min-[1440px]:flex-row min-[1440px]:items-start min-[1440px]:min-h-107">
+					<div className="relative flex flex-col min-[1440px]:flex-row min-[1440px]:items-start min-[1440px]:min-h-[428px]">
 						{/* Image */}
-						<RevealImage className="relative w-full min-[1440px]:absolute min-[1440px]:left-41.75 min-[1440px]:top-0 aspect-501/368 min-[1440px]:w-125.25 overflow-hidden">
+						<RevealImage className="relative w-full min-[1440px]:absolute min-[1440px]:left-[167px] min-[1440px]:top-0 aspect-501/368 min-[1440px]:w-[501px] overflow-hidden">
 							<Image
 								src="/home/sec01/intro-photo.webp"
 								alt="Weathered layered rock — endurance and the foundation of lifelong care"
@@ -40,17 +40,17 @@ export function Relationships() {
 						</RevealImage>
 
 						{/* Botanical decoration — top-right of image area */}
-						<div className="hidden min-[1440px]:block absolute left-220.75 top-0 opacity-80">
+						<div className="hidden min-[1440px]:block absolute left-[883px] top-0 opacity-80">
 							<Image src="/botanical.svg" alt="" width={66} height={80} aria-hidden="true" />
 						</div>
 
 						{/* 01 label — positioned between image and description */}
-						<BlurReveal delay={0.15} className="hidden min-[1440px]:block absolute left-190 top-46">
+						<BlurReveal delay={0.15} className="hidden min-[1440px]:block absolute left-[760px] top-[184px]">
 							<span className="font-body text-xs text-gray-olive/80">01</span>
 						</BlurReveal>
 
 						{/* Description */}
-						<div className="hidden min-[1440px]:flex min-[1440px]:absolute min-[1440px]:left-220.75 min-[1440px]:top-52.5 flex-col gap-4 w-100.75">
+						<div className="hidden min-[1440px]:flex min-[1440px]:absolute min-[1440px]:left-[883px] min-[1440px]:top-[210px] flex-col gap-4 w-[403px]">
 							<BlurReveal delay={0.1}>
 								<p
 									className="font-body text-sm text-rangitoto/80 leading-relaxed"
