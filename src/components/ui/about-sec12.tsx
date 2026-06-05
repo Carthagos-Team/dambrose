@@ -86,7 +86,7 @@ export function AboutSec12() {
 								className="relative w-full md:flex-1 min-w-0 min-h-56 md:h-[18.1em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/shared/team-mask-2.webp"
+									src="/about-us/sec12/journal.webp"
 									alt="Elderly gentleman writing in a journal — warmth of long-term physician care"
 									fill
 									className="object-cover object-center"

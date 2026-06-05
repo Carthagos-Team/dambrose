@@ -19,7 +19,7 @@ const QUOTES = [
 
 export function Testimonials() {
 	return (
-		<section className="relative w-full py-20 md:py-32 border-t border-black/10 overflow-hidden">
+		<section className="relative w-full overflow-hidden py-20 md:py-24">
 			<Image
 				src="/shared/fullpage-section-bg.webp"
 				alt=""
@@ -27,41 +27,38 @@ export function Testimonials() {
 				className="object-cover -z-10"
 				aria-hidden="true"
 			/>
-			<div className="absolute inset-0 -z-10 bg-rangoon-green/60" aria-hidden="true" />
+			<div className="absolute inset-0 -z-10 bg-black/20" aria-hidden="true" />
 
 			<Container>
-				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-[3.375em] text-banana-mania text-center uppercase leading-tight max-w-72 mx-auto">
-						Trusted by those who expect more from medicine.
-					</h2>
-				</BlurReveal>
+				<div className="flex flex-col items-center gap-12">
+					<BlurReveal className="w-full">
+						<h2 className="font-display text-4xl md:text-[3.375em] text-half-and-half text-center uppercase leading-tight tracking-wide">
+							Trusted by those who expect more from medicine.
+						</h2>
+					</BlurReveal>
 
-				<div className="mt-12 md:mt-20 flex flex-col gap-8">
-					{QUOTES.map((q, i) => (
-						<div key={q.author} className="flex flex-col gap-8">
-							<BlurReveal delay={i * 0.1}>
-								<div className="bg-banana-mania/95 px-8 py-12 md:px-20 md:py-16 flex flex-col gap-10">
-									<div className="font-body text-xs text-rangoon-green uppercase tracking-wide">
-										{q.author}, {q.location}
-									</div>
-									<p className="font-display text-2xl md:text-[1.625em] text-rangoon-green leading-relaxed">
-										{q.quote}
-									</p>
-								</div>
-							</BlurReveal>
-							{i === 0 && QUOTES.length > 1 && (
-								<BlurReveal delay={0.2} className="flex items-center justify-center">
+					<div className="flex w-full flex-col gap-4">
+						{QUOTES.map((q, i) => (
+							<BlurReveal key={q.author} delay={i * 0.1} className="w-full">
+								<figure className="flex flex-col items-center gap-10 md:gap-16 text-center bg-white-rock/90 rounded-lg overflow-hidden px-6 py-10 md:px-16 md:py-12">
+									<figcaption className="font-body text-sm uppercase tracking-wider text-zeus">
+										<span className="font-semibold">{q.author}, </span>
+										<span className="font-extralight">{q.location}</span>
+									</figcaption>
 									<Image
-										src="/marks/lifelong-medicine-stamp.svg"
+										src="/marks/lifelong-medicine-frame.svg"
 										alt="Lifelong Medicine"
-										width={133}
-										height={63}
-										className="h-12 w-auto"
+										width={260}
+										height={81}
+										className="h-16 md:h-20 w-auto"
 									/>
-								</BlurReveal>
-							)}
-						</div>
-					))}
+									<blockquote className="font-ui text-xl md:text-2xl text-zeus/80 leading-snug tracking-wider text-pretty">
+										{q.quote}
+									</blockquote>
+								</figure>
+							</BlurReveal>
+						))}
+					</div>
 				</div>
 			</Container>
 		</section>
