@@ -15,6 +15,8 @@ export const metadata = pageMetadata({
 	title: 'About Dr. Michael',
 	path: '/about-dr-michael',
 	type: 'profile',
+	ogImage: '/Open-graph/Dr. Michael.jpg',
+	ogImageAlt: 'Dr. Michael J. D’Ambrose — founder and physician at DAMBROSE',
 	description:
 		'Dr. Michael J. D’Ambrose — founder of DAMBROSE and board-certified family physician devoted to lifelong, relationship-based, physician-led medicine.',
 	keywords: [

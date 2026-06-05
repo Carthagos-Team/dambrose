@@ -15,6 +15,8 @@ import { breadcrumbSchema } from '@/lib/structured-data'
 export const metadata = pageMetadata({
 	title: 'Praeva',
 	path: '/praeva',
+	ogImage: '/Open-graph/Praeva.jpg',
+	ogImageAlt: 'Praeva — longevity and preventive medicine at DAMBROSE',
 	description:
 		'Praeva™ — a longevity-focused program centered on prevention, risk assessment, and long-term vitality: the extension of your DAMBROSE core care.',
 	keywords: [
