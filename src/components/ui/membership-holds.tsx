@@ -5,7 +5,7 @@ import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 
-const benefits = [
+const BENEFITS = [
 	'Always a direct line to your care team, day or night',
 	'Care whenever you need it, without delay',
 	'Visits that meet you wherever you are',
@@ -18,31 +18,41 @@ const benefits = [
 
 export function MembershipHolds() {
 	return (
-		<section className="relative w-full bg-ecru-white py-20 md:py-36 border-t border-black/10">
-			{/* Stamp */}
-			<div className="absolute top-4.75 right-6 md:right-[26.7%] z-10">
+		<section className="relative w-full bg-ecru-white py-20 md:py-28 border-t border-black/10">
+			{/* Stamp — upper right, decorative absolute */}
+			<div className="absolute top-14 right-3 md:right-[calc(50%-400px)] z-10 pointer-events-none">
 				<Image
-					src="/stamp.png"
-					alt="Here for every life chapter"
-					width={106}
-					height={106}
-					className="w-16 h-16 md:w-26 md:h-26"
+					src="/stamp.svg"
+					alt="Here for every life chapter — Dambrose"
+					width={228}
+					height={200}
+					className="w-14 h-auto md:w-[110px]"
+				/>
+			</div>
+
+			{/* M.J.D. Signature — lower right, decorative absolute */}
+			<div className="hidden md:block absolute bottom-20 right-[calc(50%-400px)] z-10 pointer-events-none">
+				<Image
+					src="/signature.svg"
+					alt="M.J.D. — Dr. Michael J. D'Ambrose"
+					width={119}
+					height={74}
+					className="w-[90px] h-auto"
 				/>
 			</div>
 
 			<Container>
-				<div className="flex flex-col items-center gap-14 md:gap-20 text-center">
-					<div className="flex flex-col gap-8 items-center">
-						{/* Heading */}
+				<div className="flex flex-col items-center gap-16 md:gap-20 text-center">
+					{/* Heading + description */}
+					<div className="flex flex-col gap-8 items-center max-w-[561px]">
 						<BlurReveal>
-							<h2 className="font-display text-3xl md:text-6xl text-rangitoto leading-tight max-w-lg">
+							<h2 className="font-display text-4xl md:text-[3.125rem] text-corduroy leading-none tracking-[0.01em]">
 								What every membership holds:
 							</h2>
 						</BlurReveal>
 
-						{/* Description */}
-						<BlurReveal delay={0.1} className="max-w-xl">
-							<p className="font-body text-sm uppercase tracking-wider text-rangitoto leading-relaxed">
+						<BlurReveal delay={0.1}>
+							<p className="font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80 leading-relaxed">
 								Our membership is not a list of services — it is a commitment from a physician and a
 								care team who hold themselves accountable for your whole health. We coordinate all
 								details, advocate on your behalf, and remain present through each stage of care.
@@ -51,33 +61,28 @@ export function MembershipHolds() {
 					</div>
 
 					{/* Benefits list */}
-					<BlurReveal delay={0.15} className="w-full max-w-xl">
-						{benefits.map((benefit) => (
-							<div key={benefit}>
-								<p className="font-body text-sm uppercase tracking-wider text-rangitoto py-5">
+					<BlurReveal delay={0.15} className="w-full max-w-[561px]">
+						<ul>
+							{BENEFITS.map((benefit, i) => (
+								<li
+									key={benefit}
+									className={[
+										'py-7 font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80',
+										i > 0 ? 'border-t border-rangitoto/30' : '',
+										i === BENEFITS.length - 1 ? 'border-b border-rangitoto/30' : '',
+									].join(' ')}
+								>
 									{benefit}
-								</p>
-								<div className="border-b border-rangitoto/25" />
-							</div>
-						))}
+								</li>
+							))}
+						</ul>
 					</BlurReveal>
 
-					{/* CTA + Signature */}
-					<BlurReveal delay={0.2} className="flex flex-col items-center gap-6">
-						<Button
-							href="/services"
-							variant="outline"
-							className="text-rangitoto border-rangitoto/40"
-						>
+					{/* CTA */}
+					<BlurReveal delay={0.2}>
+						<Button href="/services" variant="outline" className="text-rangoon-green">
 							Discover our services
 						</Button>
-						<Image
-							src="/discover.svg"
-							alt="Discover"
-							width={183}
-							height={39}
-							className="h-8 md:h-10 w-auto"
-						/>
 					</BlurReveal>
 				</div>
 			</Container>
