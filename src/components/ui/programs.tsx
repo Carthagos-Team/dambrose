@@ -16,6 +16,87 @@ type ProgramCard = {
 	imageComponent?: ReactNode
 }
 
+function AlmaVisual() {
+	return (
+		<div
+			className="relative w-full h-full"
+			style={{ background: 'linear-gradient(to bottom, #808d95 10%, #b4a389 50%, #dedbbc)' }}
+			aria-hidden="true"
+		>
+			{/* White book card */}
+			<div
+				className="absolute bg-[#f2f1e3] overflow-hidden"
+				style={{ left: '25%', top: '10.75%', width: '50%', height: '78.5%', borderRadius: '2px' }}
+			>
+				{/* Alma title */}
+				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
+					<text
+						x="157"
+						y="46"
+						textAnchor="middle"
+						fontFamily="var(--font-display), serif"
+						fontStyle="italic"
+						fontSize="43"
+						letterSpacing="0.32"
+						fill="#c8b698"
+					>
+						Alma
+					</text>
+					<text
+						x="213"
+						y="28"
+						textAnchor="start"
+						fontFamily="'Public Sans', sans-serif"
+						fontSize="18"
+						fill="#c8b698"
+					>
+						™
+					</text>
+				</svg>
+
+				{/* Inner gradient card */}
+				<div
+					className="absolute"
+					style={{
+						left: '4.5%',
+						top: '16.6%',
+						width: '91.4%',
+						height: '80.4%',
+						borderRadius: '3%',
+						background: 'linear-gradient(to top, #808d95 10%, #b4a389 50%, #dedbbc)',
+					}}
+				>
+					{/* BY MICHAEL J. D'AMBROSE */}
+					<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+						<text
+							x="153.5"
+							y="205"
+							textAnchor="middle"
+							fontFamily="var(--font-sohne-breit), sans-serif"
+							fontSize="11.5"
+							letterSpacing="5"
+							fill="#f2efd0"
+						>
+							BY MICHAEL J.
+						</text>
+						<text
+							x="153.5"
+							y="226"
+							textAnchor="middle"
+							fontFamily="var(--font-sohne-breit), sans-serif"
+							fontSize="11.5"
+							letterSpacing="5"
+							fill="#f2efd0"
+						>
+							D&apos;AMBROSE
+						</text>
+					</svg>
+				</div>
+			</div>
+		</div>
+	)
+}
+
 function PraevaVisual() {
 	return (
 		<div
@@ -105,8 +186,8 @@ const CARDS: ProgramCard[] = [
 		ctaLabel: 'EXPLORE ALMA',
 		ctaHref: '/alma',
 		ctaBg: 'khaki',
-		image: '/programs/alma.png',
-		imageAlt: 'ALMA program',
+		imageAlt: "ALMA by Dr. D'Ambrose — primary care program",
+		imageComponent: <AlmaVisual />,
 	},
 	{
 		tag: "PRAEVA by Dr. D'Ambrose",
