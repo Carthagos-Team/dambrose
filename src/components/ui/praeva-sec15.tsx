@@ -7,14 +7,14 @@ import { RevealImage } from '@/components/ui/reveal-image'
 /**
  * SEC 15 — /praeva — Figma node 3782:6036
  * "HOW IT WORKS" — gradient bg, 3-step grid.
- * Desktop: one continuous horizontal line at top-[2.68rem] spans all columns,
+ * Desktop: one continuous horizontal line at top-[2.68em] spans all columns,
  * vertical dividers (border-r) connect downward from it.
- * Content starts at pt-[9.74rem] within each column (189.5px in Figma).
+ * Content starts at pt-[9.74em] within each column (189.5px in Figma).
  */
 
 const STEPS = [
 	{
-		src: '/praeva/praeva-how-1.webp',
+		src: '/praeva/sec02/how-img.webp',
 		alt: 'Person in formal attire — the application process for PRAEVA membership',
 		label: 'Application',
 		description:
@@ -22,7 +22,7 @@ const STEPS = [
 		indent: false,
 	},
 	{
-		src: '/praeva/praeva-how-2.webp',
+		src: '/praeva/sec04/step-img-2.webp',
 		alt: 'Clasped hands — the collaborative health strategy session',
 		label: 'Strategy',
 		description:
@@ -30,7 +30,7 @@ const STEPS = [
 		indent: true,
 	},
 	{
-		src: '/praeva/praeva-how-3.webp',
+		src: '/praeva/sec04/step-img-3.webp',
 		alt: 'Couple walking — the continuous oversight of ongoing care',
 		label: 'Ongoing Care',
 		description:
@@ -42,12 +42,11 @@ const STEPS = [
 export function PraevaSec15() {
 	return (
 		<section className="w-full bg-gradient-to-t from-[#272018] from-[3%] via-[#545c63] via-[50%] to-[#dedbbc]">
-			<Container className="py-[5.77rem] flex flex-col gap-[5.77rem]">
-
+			<Container className="py-[5.77em] flex flex-col gap-[5.77em]">
 				{/* Header row */}
 				<div className="flex items-end justify-between gap-4">
 					<BlurReveal>
-						<h2 className="font-display text-[2.57rem] leading-none tracking-[0.025em] text-[#ffffe4] uppercase">
+						<h2 className="font-display text-[2.57em] leading-none tracking-[0.025em] text-[#ffffe4] uppercase">
 							How it works
 						</h2>
 					</BlurReveal>
@@ -63,25 +62,16 @@ export function PraevaSec15() {
 					{STEPS.map((step, i) => (
 						<div key={step.label} className="flex flex-col gap-6">
 							<div className="w-full h-px bg-[rgba(185,189,192,0.2)]" />
-							<RevealImage
-								className="relative self-stretch h-[10rem] overflow-hidden"
-								delay={i * 0.07}
-							>
-								<Image
-									src={step.src}
-									alt={step.alt}
-									fill
-									className="object-cover"
-									sizes="100vw"
-								/>
+							<RevealImage className="relative self-stretch h-40 overflow-hidden" delay={i * 0.07}>
+								<Image src={step.src} alt={step.alt} fill className="object-cover" sizes="100vw" />
 							</RevealImage>
 							<BlurReveal delay={i * 0.07 + 0.1}>
-								<p className="font-display italic text-[1.13rem] leading-none tracking-[2px] text-[#ffffe4] uppercase">
+								<p className="font-display italic text-[1.13em] leading-none tracking-[0.125em] text-[#ffffe4] uppercase">
 									{step.label}
 								</p>
 							</BlurReveal>
 							<BlurReveal delay={i * 0.07 + 0.15}>
-								<p className="font-ui text-[0.72rem] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
+								<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
 									{step.description}
 								</p>
 							</BlurReveal>
@@ -91,43 +81,36 @@ export function PraevaSec15() {
 
 				{/* ── Desktop (≥ 1440px) — 3-column grid ── */}
 				<div className="hidden min-[1440px]:block relative">
-
 					{/* Single continuous horizontal line — all 3 columns share this */}
-					<div className="absolute top-[2.68rem] left-0 right-0 h-[0.8px] bg-[rgba(185,189,192,0.2)] pointer-events-none" />
+					<div className="absolute top-[2.68em] left-0 right-0 h-[0.05em] bg-[rgba(185,189,192,0.2)] pointer-events-none" />
 
 					<div className="grid grid-cols-3">
 						{STEPS.map((step, i) => (
 							<div
 								key={step.label}
 								className={[
-									'flex flex-col pt-[9.74rem]',
-									i === 0 ? 'pr-[2.06rem]' : '',
-									i === 1 ? 'px-[2.06rem]' : '',
-									i === 2 ? 'pl-[2.06rem]' : '',
+									'flex flex-col pt-[9.74em]',
+									i === 0 ? 'pr-[2.06em]' : '',
+									i === 1 ? 'px-[2.06em]' : '',
+									i === 2 ? 'pl-[2.06em]' : '',
 									i < STEPS.length - 1 ? 'border-r border-[rgba(185,189,192,0.2)]' : '',
 								].join(' ')}
 							>
 								<RevealImage
-									className="relative w-full h-[8.23rem] overflow-hidden"
+									className="relative w-full h-[8.23em] overflow-hidden"
 									delay={i * 0.08}
 								>
-									<Image
-										src={step.src}
-										alt={step.alt}
-										fill
-										className="object-cover"
-										sizes="33vw"
-									/>
+									<Image src={step.src} alt={step.alt} fill className="object-cover" sizes="33vw" />
 								</RevealImage>
 
-								<div className="flex flex-col gap-6 mt-[2.47rem]">
+								<div className="flex flex-col gap-6 mt-[2.47em]">
 									<BlurReveal delay={i * 0.08 + 0.1}>
-										<p className="font-display italic text-[1.13rem] leading-none tracking-[2px] text-[#ffffe4] uppercase">
+										<p className="font-display italic text-[1.13em] leading-none tracking-[0.125em] text-[#ffffe4] uppercase">
 											{step.label}
 										</p>
 									</BlurReveal>
 									<BlurReveal delay={i * 0.08 + 0.15}>
-										<p className="font-ui text-[0.72rem] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
+										<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
 											{step.description}
 										</p>
 									</BlurReveal>
@@ -135,9 +118,7 @@ export function PraevaSec15() {
 							</div>
 						))}
 					</div>
-
 				</div>
-
 			</Container>
 		</section>
 	)

@@ -35,7 +35,7 @@ export function HowMembershipWorks() {
 						{/* Left panel — hidden on mobile */}
 						<RevealImage className="hidden md:block relative overflow-hidden aspect-453/531">
 							<Image
-								src="/home/how-left.webp"
+								src="/home/sec05/container-1.webp"
 								alt="A curved flowering stem with buds against a deep blue backdrop"
 								fill
 								className="object-cover"
@@ -49,7 +49,7 @@ export function HowMembershipWorks() {
 							className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
 						>
 							<Image
-								src="/home/how-center.webp"
+								src="/home/sec05/container-3.webp"
 								alt="Two pink anthurium blooms on slender stems against a soft sky"
 								fill
 								className="object-cover"
@@ -57,7 +57,7 @@ export function HowMembershipWorks() {
 							<div className="absolute inset-0 bg-black/40" />
 							<div className="absolute inset-0 flex items-center justify-center p-8">
 								<div className="flex flex-col items-center gap-6 md:gap-8 text-center">
-									<h2 className="font-display text-2xl md:text-[2.5rem] text-ecru-white leading-tight">
+									<h2 className="font-display text-2xl md:text-[2.5em] text-ecru-white leading-tight">
 										How annual membership works:
 									</h2>
 									<Button
@@ -77,7 +77,7 @@ export function HowMembershipWorks() {
 							className="hidden md:block relative overflow-hidden aspect-453/440"
 						>
 							<Image
-								src="/home/how-right.webp"
+								src="/home/sec05/container-2.webp"
 								alt="A moth resting on a dark green vessel"
 								fill
 								className="object-cover"
@@ -97,7 +97,7 @@ export function HowMembershipWorks() {
 							>
 								<div className="grid grid-cols-[auto_auto] items-center gap-4 md:gap-6">
 									<span className="font-body text-xs text-rangitoto md:mt-2.4">{step.number}</span>
-									<span className="font-display text-2xl md:text-[2rem] text-rangitoto leading-none">
+									<span className="font-display text-2xl md:text-[2em] text-rangitoto leading-none">
 										{step.title}
 									</span>
 								</div>

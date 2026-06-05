@@ -102,7 +102,7 @@ export function PageTransition() {
 			// stack with gsap's yPercent and the cover would never reach the top).
 			style={{ backgroundColor: BG, opacity: 0, visibility: 'hidden', pointerEvents: 'none' }}
 		>
-			<BrasaoMark data-pt-brasao className="h-[clamp(7rem,30vw,15rem)] w-auto" />
+			<BrasaoMark data-pt-brasao className="h-[clamp(7em,30vw,15em)] w-auto" />
 		</div>
 	)
 }

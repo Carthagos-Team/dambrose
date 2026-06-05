@@ -49,9 +49,9 @@ export function MichaelConnect() {
 	return (
 		<section id="connect" className="w-full bg-ecru-white py-28 border-t border-black/10">
 			<Container>
-				<div className="flex flex-col items-center gap-[88px]">
+				<div className="flex flex-col items-center gap-22">
 					<BlurReveal>
-						<h2 className="font-display text-4xl md:text-[3.125rem] text-[#6B7167] leading-none tracking-wide text-center">
+						<h2 className="font-display text-4xl md:text-[3.125em] text-[#6B7167] leading-none tracking-wide text-center">
 							<em className="font-display italic">Connect</em> with Dr. Michael J. D&rsquo;Ambrose
 						</h2>
 					</BlurReveal>
@@ -60,7 +60,7 @@ export function MichaelConnect() {
 						<div className="relative w-full overflow-hidden">
 							<div className="relative aspect-1280/556 w-full">
 								<Image
-									src="/about-michael/connect-bg.jpg"
+									src="/about-dr-michael/contact/hero-image.webp"
 									alt=""
 									fill
 									className="object-cover"
@@ -69,19 +69,24 @@ export function MichaelConnect() {
 								<div className="absolute inset-0 bg-[#3C3C27]/18" aria-hidden="true" />
 							</div>
 
-							<div className="absolute inset-0 px-6 md:px-[80px] flex items-center">
+							<div className="absolute inset-0 px-6 md:px-20 flex items-center">
 								<div className="grid w-full grid-cols-1 md:grid-cols-2 gap-4">
 									{CHANNELS.map((c) => (
 										<div
 											key={c.title}
-											className="bg-ecru-white/90 backdrop-blur-sm p-6 flex flex-col justify-between gap-11 min-h-[200px]"
+											className="bg-ecru-white/90 backdrop-blur-sm p-6 flex flex-col justify-between gap-11 min-h-50"
 										>
 											<div className="text-rangoon-green">{c.icon}</div>
 											<div className="flex flex-col gap-4">
-												<p className="font-display text-2xl xl:text-[2rem] text-gray-olive leading-none tracking-wide whitespace-nowrap">
+												<p className="font-display text-2xl xl:text-[2em] text-gray-olive leading-none tracking-wide whitespace-nowrap">
 													{c.title}
 												</p>
-												<Button href={c.href} variant="opal" size="sm" className="w-fit rounded-sm!">
+												<Button
+													href={c.href}
+													variant="opal"
+													size="sm"
+													className="w-fit rounded-sm!"
+												>
 													{c.action}
 												</Button>
 											</div>

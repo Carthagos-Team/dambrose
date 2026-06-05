@@ -23,15 +23,15 @@ export function MichaelQuote() {
 							height={41}
 							className="w-44 h-auto"
 						/>
-						<p className="font-body text-[0.625rem] text-fire uppercase tracking-[0.3em] leading-none mt-3">
+						<p className="font-body text-[0.625em] text-fire uppercase tracking-[0.3em] leading-none mt-3">
 							Orlando — FL
 						</p>
 					</div>
 
 					<div className="flex flex-col items-center gap-8 max-w-2xl">
-						<blockquote className="font-display text-3xl md:text-4xl text-ecru-white leading-none tracking-wide">
-							&ldquo;People don&rsquo;t just need access to care. They need someone who carries their
-							story, protects their interests, and helps them decide.&rdquo;
+						<blockquote className="font-display text-3xl md:text-4xl text-ecru-white leading-none tracking-wide text-balance">
+							&ldquo;People don&rsquo;t just need access to care. They need someone who carries
+							their story, protects their interests, and helps them decide.&rdquo;
 						</blockquote>
 
 						<p className="font-body text-xs text-bison-hide/80 uppercase tracking-tight leading-relaxed">

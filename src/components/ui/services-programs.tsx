@@ -18,7 +18,7 @@ const CARDS = [
 	{
 		tag: 'PRAEVA by Dr. D’Ambrose',
 		description:
-			'PRAEVA is a longevity-focused program centered on risk assessment, prevention, and performance, supporting long-term wellness.',
+			'PRAEVA is a longevity-focused program centered on risk assessment, prevention, and performance, supporting long-term\u00A0wellness.',
 		ctaLabel: 'EXPLORE PRAEVA',
 		ctaHref: '/praeva',
 		ctaBg: 'teal' as const,

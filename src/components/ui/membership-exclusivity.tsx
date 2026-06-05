@@ -26,7 +26,7 @@ const cards = [
 	{
 		title: 'Your priorities honored',
 		description:
-			'Care adapts to how often you want to engage, your preferences, and what matters most to you. No pressure or prescription.',
+			'Care adapts to how often you want to engage, your preferences, and what matters most to you. No pressure or\u00A0prescription.',
 	},
 ]
 
@@ -45,7 +45,7 @@ export function MembershipExclusivity() {
 						/>
 						<span
 							aria-hidden="true"
-							className="font-body text-[0.5rem] md:text-[0.625rem] text-tia-maria leading-none tracking-wider mt-1"
+							className="font-body text-[0.5em] md:text-[0.625em] text-tia-maria leading-none tracking-wider mt-1"
 						>
 							®
 						</span>
@@ -65,7 +65,7 @@ export function MembershipExclusivity() {
 					{cards.map((card) => (
 						<article
 							key={card.title}
-							className="flex flex-col justify-between bg-[#ffffe4] min-h-[26em] px-5 pt-8.5 pb-13"
+							className="flex flex-col justify-between bg-[#ffffe4] min-h-104 px-5 pt-8.5 pb-13"
 						>
 							<h3 className="font-display italic text-[1.5em] text-corduroy leading-tight tracking-wider">
 								{card.title}

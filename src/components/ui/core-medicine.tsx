@@ -2,19 +2,19 @@ import Image from 'next/image'
 
 const IMAGES = [
 	{
-		src: '/images/sections/sec14-img-left.png',
+		src: '/alma/sec01/image-1.webp',
 		alt: '',
 		// 532×259 — flex basis ratio 532
 		basis: 'flex-[532]',
 	},
 	{
-		src: '/images/sections/sec14-img-middle.png',
+		src: '/alma/sec01/image-3.webp',
 		alt: '',
 		// 296×259
 		basis: 'flex-[296]',
 	},
 	{
-		src: '/images/sections/sec14-img-right.png',
+		src: '/alma/sec01/image-2.webp',
 		alt: '',
 		// 532×259
 		basis: 'flex-[532]',
@@ -51,7 +51,7 @@ export function CoreMedicine() {
 			</div>
 
 			{/* ── Description paragraph ───────────────────────────────── */}
-			<p className="font-body text-xs md:text-sm uppercase text-rangoon-green leading-relaxed tracking-tight text-center max-w-[40.8125em] mx-auto px-5">
+			<p className="font-body text-xs md:text-sm uppercase text-rangoon-green leading-relaxed tracking-tight text-center max-w-[54.4167em] md:max-w-[46.6429em] mx-auto px-5">
 				Sometimes nothing is wrong, but you want reassurance. Other times, your condition changes
 				and you don't want to start over with different doctors. ALMA exists for those moments and
 				everything in between. It's the confidence of having a dedicated health team who already
@@ -59,13 +59,13 @@ export function CoreMedicine() {
 			</p>
 
 			{/* ── Bottom bordered emphasis ────────────────────────────── */}
-			<div className="mx-auto px-5 w-full max-w-[55.1875em]">
+			<div className="mx-auto px-5 w-full max-w-220.75">
 				<div className="border border-shuttle-gray/30 px-6 py-8 flex flex-col items-center gap-9 text-center">
 					<p className="font-display text-xl md:text-2xl text-shuttle-gray uppercase leading-snug tracking-tight">
 						Whether days pass calmly or health demands attention, ALMA stays present, making
 						medicine feel steady rather than episodic.
 					</p>
-					<p className="font-body text-[0.6875rem] text-shuttle-gray uppercase tracking-[0.15em]">
+					<p className="font-body text-[0.6875em] text-shuttle-gray uppercase tracking-[0.15em]">
 						By Michael J. D'Ambrose
 					</p>
 				</div>

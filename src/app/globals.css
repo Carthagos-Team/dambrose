@@ -111,3 +111,28 @@ body {
 	color: var(--color-fg);
 	font-family: var(--font-ui);
 }
+
+/* ─── Line-break quality — avoid widows & orphans ───────────────── */
+/* Lives in @layer base so any inline utility (max-w-*, whitespace-nowrap,
+   text-balance/text-pretty) still wins by layer order. */
+@layer base {
+	/* Headings: balance line lengths so no single word strands alone. */
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
+	/* Body copy: tune only the last lines to prevent a one-word widow. */
+	p,
+	li {
+		text-wrap: pretty;
+	}
+	/* ≥1920px: cap the text MEASURE (not the layout). Full-bleed visuals
+	   stay full-bleed; only prose stops running edge-to-edge. */
+	@media (min-width: 1920px) {
+		p,
+		li {
+			max-width: 60ch;
+		}
+	}
+}

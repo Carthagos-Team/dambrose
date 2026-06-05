@@ -18,9 +18,9 @@ function PrincipleCard({ quote, body, delay = 0, className = '' }: PrincipleCard
 	return (
 		<BlurReveal
 			delay={delay}
-			className={`flex flex-col justify-between bg-[#ffffe4] min-h-[14rem] md:h-[18.1rem] px-[1rem] py-[1.7rem] shrink-0 ${className}`}
+			className={`flex flex-col justify-between bg-[#ffffe4] min-h-56 md:h-[18.1em] px-4 py-[1.7em] shrink-0 ${className}`}
 		>
-			<p className="font-display italic text-[1.2rem] text-corduroy tracking-[0.02em] leading-[1.1]">
+			<p className="font-display italic text-[1.2em] text-corduroy tracking-[0.02em] leading-[1.1]">
 				{quote}
 			</p>
 			<p className="font-body text-xs text-rangoon-green/80 uppercase leading-[1.4] tracking-[-0.04em]">
@@ -32,29 +32,27 @@ function PrincipleCard({ quote, body, delay = 0, className = '' }: PrincipleCard
 
 export function AboutSec12() {
 	return (
-		<section className="w-full bg-ecru-white py-12 md:py-[7em]">
+		<section className="w-full bg-ecru-white py-12 md:py-28">
 			<Container>
-				<div className="flex flex-col gap-12 md:gap-[5rem] items-center">
-
+				<div className="flex flex-col gap-12 md:gap-20 items-center">
 					{/* ── HEADER ──────────────────────────────────────── */}
-					<div className="flex flex-col gap-[3.2rem] items-center w-full max-w-[32.35rem] text-center">
+					<div className="flex flex-col gap-[3.2em] items-center w-full max-w-[32.35em] text-center">
 						<BlurReveal>
 							<span className="font-body text-xs text-gray-olive/80 uppercase leading-[1.3]">
 								05
 							</span>
 						</BlurReveal>
 						<BlurReveal delay={0.05}>
-							<h2 className="font-display text-[2.5rem] leading-none tracking-[0.01em] text-gray-olive">
+							<h2 className="font-display text-[2.5em] leading-none tracking-[0.01em] text-gray-olive">
 								The principles behind every decision.
 							</h2>
 						</BlurReveal>
 					</div>
 
 					{/* ── GRID ─────────────────────────────────────────── */}
-					<div className="flex flex-col gap-[16px] w-full">
-
+					<div className="flex flex-col gap-4 w-full">
 						{/* ROW 1: 2 fixed cards + 1 flex photo */}
-						<div className="flex flex-col gap-4 md:flex-row md:gap-[1rem] md:items-stretch">
+						<div className="flex flex-col gap-4 md:flex-row md:gap-4 md:items-stretch">
 							<PrincipleCard
 								quote="Health is built on continuity, not encounters."
 								body="Medicine gains meaning when it stays close and grows with the person it serves."
@@ -69,10 +67,10 @@ export function AboutSec12() {
 							/>
 							<RevealImage
 								delay={0.1}
-								className="relative w-full md:flex-1 min-w-0 min-h-[14rem] md:h-[18.1rem] overflow-hidden bg-bison-hide"
+								className="relative w-full md:flex-1 min-w-0 min-h-56 md:h-[18.1em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/about/sec12-window.png"
+									src="/about-us/sec05/image-small.webp"
 									alt="Sunlit armchair beside a window — a serene, residential care setting"
 									fill
 									className="object-cover object-center"
@@ -82,13 +80,13 @@ export function AboutSec12() {
 						</div>
 
 						{/* ROW 2: 1 flex photo + 3 flex cards */}
-						<div className="flex flex-col gap-4 md:flex-row md:gap-[1rem] md:items-stretch">
+						<div className="flex flex-col gap-4 md:flex-row md:gap-4 md:items-stretch">
 							<RevealImage
 								delay={0}
-								className="relative w-full md:flex-1 min-w-0 min-h-[14rem] md:h-[18.1rem] overflow-hidden bg-bison-hide"
+								className="relative w-full md:flex-1 min-w-0 min-h-56 md:h-[18.1em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/about/sec12-doctor.png"
+									src="/shared/team-mask-2.webp"
 									alt="Elderly gentleman writing in a journal — warmth of long-term physician care"
 									fill
 									className="object-cover object-center"

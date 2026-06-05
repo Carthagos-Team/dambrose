@@ -21,7 +21,7 @@ export function Testimonials() {
 	return (
 		<section className="relative w-full py-20 md:py-32 border-t border-black/10 overflow-hidden">
 			<Image
-				src="/features/landscape.png"
+				src="/shared/fullpage-section-bg.webp"
 				alt=""
 				fill
 				className="object-cover -z-10"
@@ -31,7 +31,7 @@ export function Testimonials() {
 
 			<Container>
 				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-[3.375rem] text-banana-mania text-center uppercase leading-tight max-w-72 mx-auto">
+					<h2 className="font-display text-4xl md:text-[3.375em] text-banana-mania text-center uppercase leading-tight max-w-72 mx-auto">
 						Trusted by those who expect more from medicine.
 					</h2>
 				</BlurReveal>
@@ -44,7 +44,7 @@ export function Testimonials() {
 									<div className="font-body text-xs text-rangoon-green uppercase tracking-wide">
 										{q.author}, {q.location}
 									</div>
-									<p className="font-display text-2xl md:text-[1.625rem] text-rangoon-green leading-relaxed">
+									<p className="font-display text-2xl md:text-[1.625em] text-rangoon-green leading-relaxed">
 										{q.quote}
 									</p>
 								</div>

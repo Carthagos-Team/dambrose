@@ -22,11 +22,11 @@ export function MembershipHolds() {
 			{/* Stamp */}
 			<div className="absolute top-4.75 right-6 md:right-[26.7%] z-10">
 				<Image
-					src="/stamp.svg"
+					src="/stamp.png"
 					alt="Here for every life chapter"
 					width={106}
 					height={106}
-					className="w-16 h-16 md:w-[6.5rem] md:h-[6.5rem]"
+					className="w-16 h-16 md:w-26 md:h-26"
 				/>
 			</div>
 

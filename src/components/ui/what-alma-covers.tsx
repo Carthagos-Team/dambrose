@@ -18,7 +18,7 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'image',
-		src: '/images/sections/sec02-card-presence.png',
+		src: '/alma/sec02/card-1.webp',
 		number: '02.',
 		title: 'Presence',
 		description:
@@ -33,7 +33,7 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'image',
-		src: '/images/sections/sec02-card-guidance.png',
+		src: '/alma/sec02/card-2.webp',
 		number: '04.',
 		title: 'Guidance',
 		description:

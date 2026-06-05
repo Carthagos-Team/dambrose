@@ -12,7 +12,7 @@ export function B2bHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/features/b2b-hero.png"
+						src="/b2b/hero/hero-bg.webp"
 						alt="Senior executive in tailored jacket resting hand on a leather journal with watch visible"
 						fill
 						className="object-cover"

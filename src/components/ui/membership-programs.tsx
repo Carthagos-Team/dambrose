@@ -186,7 +186,7 @@ export function MembershipPrograms() {
 		<section className="w-full bg-ecru-white py-28 md:py-36 border-t border-black/10">
 			<Container>
 				<div className="flex flex-col gap-22">
-					<BlurReveal className="w-full self-center max-w-[40em] flex flex-col items-center gap-16 text-center">
+					<BlurReveal className="w-full self-center max-w-160 flex flex-col items-center gap-16 text-center">
 						<p className="font-body text-xs text-olive-haze uppercase tracking-wide leading-none">
 							05
 						</p>
@@ -195,7 +195,7 @@ export function MembershipPrograms() {
 								ALMA is the <em className="font-display italic">foundation.</em> PRAEVA builds on
 								it.
 							</h2>
-							<p className="font-body text-sm text-rangoon-green uppercase tracking-tight leading-relaxed max-w-[33em]">
+							<p className="font-body text-sm text-rangoon-green uppercase tracking-tight leading-relaxed max-w-[37.7143em]">
 								You may apply to the core membership alone or the longevity-focused PROGRAM,
 								depending on your health goals and needs.
 							</p>

@@ -39,7 +39,7 @@ export function B2bCorporateMembership() {
 				<div className="grid grid-cols-1 md:grid-cols-3 items-start">
 					<RevealImage className="hidden md:block relative overflow-hidden aspect-453/531">
 						<Image
-							src="/features/botanical-stem.png"
+							src="/b2b/sec07/container-1.webp"
 							alt=""
 							fill
 							className="object-cover"
@@ -52,7 +52,7 @@ export function B2bCorporateMembership() {
 						className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
 					>
 						<Image
-							src="/features/anthurium.png"
+							src="/b2b/sec07/container-3.webp"
 							alt=""
 							fill
 							className="object-cover"
@@ -81,7 +81,7 @@ export function B2bCorporateMembership() {
 						className="hidden md:block relative overflow-hidden aspect-453/440"
 					>
 						<Image
-							src="/features/botanical-red.png"
+							src="/b2b/sec07/container-2.webp"
 							alt=""
 							fill
 							className="object-cover"

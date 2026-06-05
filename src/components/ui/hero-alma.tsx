@@ -9,7 +9,7 @@ const PHOTOS = [
 		className: 'left-35.25 top-0 w-40 h-28.75',
 	},
 	{
-		src: '/images/hero-alma/photo-top-right.png',
+		src: '/alma/hero/thumb-1.webp',
 		// 214×214 @ (1233, -43) inside cream — spills above
 		className: 'left-308.25 -top-10.75 w-53.5 h-53.5',
 	},
@@ -34,7 +34,7 @@ export function HeroAlma() {
 			<Container className="pt-5 pb-0">
 				{/* Desktop cream canvas — absolute scene root */}
 				<div className="relative hidden md:block">
-					<div className="relative w-full aspect-1360/600 rounded-lg bg-[#FFFFE4] overflow-hidden text-[clamp(0.625rem,1.1111vw,1rem)]">
+					<div className="relative w-full aspect-1360/600 rounded-lg bg-[#FFFFE4] overflow-hidden text-[clamp(0.625em,1.1111vw,1em)]">
 						{PHOTOS.map((p) => (
 							<div key={p.src} className={`absolute overflow-hidden ${p.className}`}>
 								<Image src={p.src} alt="" fill sizes="14em" className="object-cover" />
@@ -60,7 +60,7 @@ export function HeroAlma() {
 					{/* Bottom gradient strip — 946×112 centered under cream canvas */}
 					<div
 						aria-hidden="true"
-						className="mx-auto w-full max-w-236.5 h-28 text-[clamp(0.625rem,1.1111vw,1rem)] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
+						className="mx-auto w-full max-w-236.5 h-28 text-[clamp(0.625em,1.1111vw,1em)] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
 					/>
 				</div>
 
@@ -75,7 +75,7 @@ export function HeroAlma() {
 							src="/images/hero-alma/alma-card.png"
 							alt="Alma by Michael J. D'Ambrose"
 							fill
-							sizes="16rem"
+							sizes="16em"
 							priority
 							className="object-cover"
 						/>

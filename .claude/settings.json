@@ -36,7 +36,17 @@
       "Bash(curl -s http://localhost:3000/about-dr-michael)",
       "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --disable-javascript --no-pdf-header-footer --print-to-pdf=/tmp/michael.pdf \"http://localhost:3000/about-dr-michael\")",
       "Bash(/usr/local/bin/pdftoppm -png -r 50 /tmp/michael.pdf /tmp/mich)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(node .unit-convert.mjs)",
+      "Bash(node .unit-convert.mjs --apply)",
+      "Bash(npx ctx7@latest library \"Tailwind CSS\" \"do dynamic spacing utilities like w-, gap-, max-w- accept arbitrary fractional numbers such as max-w-81.6 or gap-9.88 in v4\")",
+      "Bash(npx ctx7@latest docs /websites/tailwindcss \"dynamic spacing scale: can width/margin/padding/gap utilities use any arbitrary number including decimals like mt-7.5 or w-29 in v4, and how does --spacing work\")",
+      "Bash(node .scale-pass.mjs)",
+      "Bash(node .scale-pass.mjs --apply)",
+      "Bash(grep -E 'src/.*\\\\.\\(tsx|css\\)$')",
+      "Bash(lsof -ti:3000)"
     ],
     "additionalDirectories": [
       "/Users/samuelcardoso/Downloads/🟢 UI (28 apr",

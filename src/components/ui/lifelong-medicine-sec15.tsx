@@ -17,13 +17,13 @@ type FeatureRowProps = {
 
 function FeatureRow({ icon, iconAlt = '', text, light = false }: FeatureRowProps) {
 	return (
-		<div className="flex items-center gap-[1.2rem]">
+		<div className="flex items-center gap-[1.2em]">
 			<Image
 				src={icon}
 				alt={iconAlt}
 				width={31}
 				height={38}
-				className="w-[1.55rem] h-[1.9rem] shrink-0"
+				className="w-[1.55em] h-[1.9em] shrink-0"
 				unoptimized
 			/>
 			<p
@@ -39,24 +39,22 @@ function FeatureRow({ icon, iconAlt = '', text, light = false }: FeatureRowProps
 
 export function LifelongMedicineSec15() {
 	return (
-		<section className="w-full bg-ecru-white py-12 md:py-[5.6rem] overflow-hidden">
+		<section className="w-full bg-ecru-white py-12 md:py-[5.6em] overflow-hidden">
 			<Container>
-				<div className="flex flex-col gap-10 md:gap-[5rem] items-center">
-
+				<div className="flex flex-col gap-10 md:gap-20 items-center">
 					{/* ── HEADING ─────────────────────────────────────── */}
 					<BlurReveal>
-						<h2 className="font-display text-[2.5rem] leading-none tracking-[0.025em] text-gray-olive text-center">
+						<h2 className="font-display text-[2.5em] leading-none tracking-[0.025em] text-gray-olive text-center">
 							A complete medical framework.
 						</h2>
 					</BlurReveal>
 
 					{/* ── CARDS ROW ───────────────────────────────────── */}
-					<div className="flex flex-col gap-4 w-full md:flex-row md:items-end md:gap-[1.2rem] max-w-[70em] mx-auto">
-
+					<div className="flex flex-col gap-4 w-full md:flex-row md:items-end md:gap-[1.2em] max-w-280 mx-auto">
 						{/* LEFT — Episodic Care */}
 						<BlurReveal
 							delay={0}
-							className="flex-1 border-[0.838px] border-heathered-gray flex flex-col p-[1.5rem]"
+							className="flex-1 border-[0.052375em] border-heathered-gray flex flex-col p-6"
 						>
 							{/* Photo */}
 							<RevealImage
@@ -73,17 +71,35 @@ export function LifelongMedicineSec15() {
 							</RevealImage>
 
 							{/* Content */}
-							<div className="flex flex-col gap-[2.4rem] pt-[1.2rem]">
-								<h3 className="font-display text-[1.8rem] leading-none tracking-[0.01em] text-rangoon-green">
+							<div className="flex flex-col gap-[2.4em] pt-[1.2em]">
+								<h3 className="font-display text-[1.8em] leading-none tracking-[0.01em] text-rangoon-green">
 									EPISODIC CARE
 								</h3>
-								<div className="flex flex-col gap-[0.8rem]">
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Care begins when symptoms appear" />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Health history is repeated, not carried" />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Decisions are made in isolation" />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Specialists act without shared context" />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Treatment responds to urgency" />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-dark.svg" text="Responsibility ends with the visit" />
+								<div className="flex flex-col gap-[0.8em]">
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Care begins when symptoms appear"
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Health history is repeated, not carried"
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Decisions are made in isolation"
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Specialists act without shared context"
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Treatment responds to urgency"
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-dark.svg"
+										text="Responsibility ends with the visit"
+									/>
 								</div>
 							</div>
 						</BlurReveal>
@@ -91,7 +107,7 @@ export function LifelongMedicineSec15() {
 						{/* RIGHT — Lifelong Medicine */}
 						<BlurReveal
 							delay={0.1}
-							className="relative flex-1 bg-gradient-to-b from-[#1c1a08] from-[7%] via-[#728b8b] via-[60%] to-[#dedbbc] flex flex-col px-[1.5rem] pt-[1.5rem] pb-[7rem]"
+							className="relative flex-1 bg-gradient-to-b from-[#1c1a08] from-[7%] via-[#728b8b] via-[60%] to-[#dedbbc] flex flex-col px-6 pt-6 pb-28"
 						>
 							{/* Photo */}
 							<RevealImage
@@ -108,17 +124,41 @@ export function LifelongMedicineSec15() {
 							</RevealImage>
 
 							{/* Content */}
-							<div className="flex flex-col gap-[2.4rem] pt-[1.2rem]">
-								<h3 className="font-display text-[1.8rem] leading-none tracking-[0.01em] text-ecru-white">
+							<div className="flex flex-col gap-[2.4em] pt-[1.2em]">
+								<h3 className="font-display text-[1.8em] leading-none tracking-[0.01em] text-ecru-white">
 									<em className="font-display italic">LIFELONG </em>MEDICINE
 								</h3>
-								<div className="flex flex-col gap-[0.8rem]">
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Care begins with foresight" light />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Health history informs every step" light />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Decisions are guided by lived context" light />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Specialists are coordinated within one direction" light />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Health is anticipated, not only treated" light />
-									<FeatureRow icon="/lifelong-medicine/sec15-icon-light.svg" text="Responsibility continues over time" light />
+								<div className="flex flex-col gap-[0.8em]">
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Care begins with foresight"
+										light
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Health history informs every step"
+										light
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Decisions are guided by lived context"
+										light
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Specialists are coordinated within one direction"
+										light
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Health is anticipated, not only treated"
+										light
+									/>
+									<FeatureRow
+										icon="/lifelong-medicine/sec15-icon-light.svg"
+										text="Responsibility continues over time"
+										light
+									/>
 								</div>
 							</div>
 
@@ -128,7 +168,7 @@ export function LifelongMedicineSec15() {
 								alt=""
 								width={240}
 								height={163}
-								className="absolute bottom-[1.5rem] right-[-76px] w-[12rem] h-auto pointer-events-none select-none"
+								className="absolute bottom-6 -right-19 w-48 h-auto pointer-events-none select-none"
 								aria-hidden="true"
 								unoptimized
 							/>

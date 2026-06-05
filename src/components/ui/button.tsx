@@ -6,7 +6,7 @@ const button = tv({
 	base: [
 		'inline-flex items-center justify-center',
 		'font-body text-sm md:text-xs uppercase tracking-wide',
-		'rounded-[2px]',
+		'rounded-[0.125em]',
 		'transition-opacity duration-200',
 		'hover:opacity-80',
 		'cursor-pointer select-none',
@@ -24,7 +24,7 @@ const button = tv({
 			'half-and-half': 'bg-[#ffffe4] text-[#282119] underline',
 		},
 		size: {
-			badge: 'px-[0.31rem] py-0',
+			badge: 'px-[0.31em] py-0',
 			sm: 'px-4 py-2.5',
 			md: 'px-5 h-12',
 		},

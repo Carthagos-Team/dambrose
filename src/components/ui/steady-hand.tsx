@@ -11,7 +11,7 @@ export function SteadyHand() {
 				<div className="flex flex-col gap-12 md:gap-24">
 					{/* Heading */}
 					<BlurReveal>
-						<h2 className="font-display text-3xl md:text-[3.125rem] text-corduroy text-center leading-tight">
+						<h2 className="font-display text-3xl md:text-[3.125em] text-corduroy text-center leading-tight">
 							Medicine guided by <em>a steady hand.</em>
 							<br />
 							This is the DAMBROSE method.
@@ -23,7 +23,7 @@ export function SteadyHand() {
 						{/* Left: Image */}
 						<RevealImage className="relative w-full md:w-[34%] aspect-463/368 overflow-hidden">
 							<Image
-								src="/features/elder.png"
+								src="/home/sec08/photo.webp"
 								alt="An older man smiling warmly during a conversation outdoors"
 								fill
 								className="object-cover"

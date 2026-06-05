@@ -5,28 +5,28 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const COLUMNS = [
 	{
-		image: '/features/doctor.png',
+		image: '/services/sec03/media-1.webp',
 		alt: 'Senior man with caregiver',
 		tall: true,
 		title: 'Complete care coordination',
 		body: 'Appointments, referrals, exams, and logistics are handled seamlessly, so care feels integrated and convenient.',
 	},
 	{
-		image: '/features/elder.png',
+		image: '/services/sec03/media-2.webp',
 		alt: 'Caregiver supporting patient',
 		tall: false,
 		title: 'Vetted specialist network',
 		body: 'Access to a carefully curated network of trusted specialists, selected through years of professional partnerships.',
 	},
 	{
-		image: '/features/landscape.png',
+		image: '/services/sec03/media-4.webp',
 		alt: 'Tranquil landscape',
 		tall: true,
 		title: 'Goal-aligned medical guidance',
 		body: 'Health strategy is built around personal priorities and values, ensuring decisions remain thoughtful and unpressured.',
 	},
 	{
-		image: '/features/hands.png',
+		image: '/services/sec03/media-3.webp',
 		alt: 'Hand examination',
 		tall: false,
 		title: 'Deliberate physician focus',
@@ -55,7 +55,7 @@ export function DambroseDifference() {
 							</RevealImage>
 
 							<BlurReveal className="flex flex-col gap-4" delay={i * 0.08 + 0.15}>
-								<h3 className="font-display italic text-3xl md:text-[2.375rem] text-corduroy leading-tight">
+								<h3 className="font-display italic text-3xl md:text-[2.375em] text-corduroy leading-tight">
 									{col.title}
 								</h3>
 								<p className="font-body text-xs text-rangitoto uppercase leading-relaxed tracking-tight">

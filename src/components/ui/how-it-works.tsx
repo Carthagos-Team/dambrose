@@ -15,7 +15,7 @@ const steps = [
 		number: '02.',
 		title: 'Deep dive',
 		description:
-			'Once accepted, an in-depth first visit reviews medical history, current health, concerns, and priorities, establishing a clear clinical baseline and a personal doctor-patient relationship.',
+			'Once accepted, an in-depth first visit reviews medical history, current health, concerns, and priorities, establishing a clear clinical baseline and a personal doctor-patient\u00A0relationship.',
 	},
 	{
 		number: '03.',
@@ -36,14 +36,14 @@ export function HowItWorks() {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-0 items-start">
 					{/* Left: woman in chair */}
 					<RevealImage className="relative aspect-453/531 overflow-hidden">
-						<Image src="/images/sections/sec04-img-left.png" alt="" fill className="object-cover" />
+						<Image src="/alma/sec04/container-1.webp" alt="" fill className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
 					{/* Center: orchid + headline + CTA (tallest) */}
 					<RevealImage delay={0.15} className="relative aspect-454/711 overflow-hidden">
 						<Image
-							src="/images/sections/sec04-img-center.png"
+							src="/alma/sec04/container-2.webp"
 							alt=""
 							fill
 							className="object-cover"

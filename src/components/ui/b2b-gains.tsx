@@ -33,7 +33,7 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'image',
-		src: '/features/b2b-gains-consultation.png',
+		src: '/b2b/sec02/showcase-small.webp',
 		alt: 'Executive in soft light during a private medical consultation',
 	},
 	{

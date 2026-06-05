@@ -5,7 +5,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const ITEMS = [
 	{
-		image: '/home/feature-exclusive.webp',
+		image: '/home/sec04/media-1.webp',
 		alt: 'A composed man with a notebook in a refined, light-filled room',
 		imageHeight: 'h-94',
 		title: 'Exclusive attention',
@@ -13,15 +13,15 @@ const ITEMS = [
 		delay: 0,
 	},
 	{
-		image: '/home/feature-coordinated.webp',
+		image: '/home/sec04/media-2.webp',
 		alt: 'A physician and patient in close conversation',
 		imageHeight: 'h-47',
 		title: 'Coordinated care',
-		body: 'Your doctor never hands you off, personally overseeing everything: diagnosis, specialist appointments, exams, hospital visits, and follow-up.',
+		body: 'Your doctor never hands you off, personally overseeing everything: diagnosis, specialist appointments, exams, hospital visits, and\u00A0follow-up.',
 		delay: 0.1,
 	},
 	{
-		image: '/home/feature-discretion.webp',
+		image: '/home/sec04/media-3.webp',
 		alt: 'Quiet rolling hills with a small pond at dusk',
 		imageHeight: 'h-94',
 		title: 'Discretion and availability',
@@ -29,7 +29,7 @@ const ITEMS = [
 		delay: 0.2,
 	},
 	{
-		image: '/home/feature-alignment.webp',
+		image: '/home/sec04/media-4.webp',
 		alt: 'Macro close-up of a human iris',
 		imageHeight: 'h-47',
 		title: 'Alignment with personal goals',
@@ -61,10 +61,10 @@ export function Features() {
 							</RevealImage>
 
 							<BlurReveal className="flex flex-col gap-7" delay={item.delay + 0.2}>
-								<h3 className="font-display italic text-[2.1rem] text-corduroy leading-[1.1] tracking-[0.02em]">
+								<h3 className="font-display italic text-[2.1em] text-corduroy leading-[1.1] tracking-[0.02em]">
 									{item.title}
 								</h3>
-								<p className="font-body text-[0.78rem] uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
+								<p className="font-body text-[0.78em] uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
 									{item.body}
 								</p>
 							</BlurReveal>

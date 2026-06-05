@@ -13,7 +13,7 @@ export function ServicesHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/features/hands.png"
+						src="/services/hero/hero-bg.webp"
 						alt="Two pairs of hands gently clasped — care, fully supported"
 						fill
 						sizes="100vw"

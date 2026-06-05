@@ -13,7 +13,7 @@ export function MichaelHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/about-michael/hero.jpg"
+						src="/membership/hero/hero-bg.webp"
 						alt="Dr. Michael J. D'Ambrose — Lifelong Medicine"
 						fill
 						priority
@@ -24,7 +24,7 @@ export function MichaelHero() {
 
 			<Container className="pt-8 pb-10 md:pt-4.5 md:pb-10">
 				<BlurReveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-					<h1 className="font-display text-5xl md:text-[3.25rem] text-gray-olive leading-none">
+					<h1 className="font-display text-5xl md:text-[3.25em] text-gray-olive leading-none">
 						Dr. Michael J. D&rsquo;Ambrose
 					</h1>
 					<div className="flex flex-col gap-4 md:items-start">

@@ -13,7 +13,7 @@ export function MembershipHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/membership/membership-hero.png"
+						src="/membership/hero/hero-bg.webp"
 						alt="DAMBROSE membership — a personal, physician-led medical relationship"
 						fill
 						sizes="100vw"
@@ -25,7 +25,7 @@ export function MembershipHero() {
 
 			<Container className="pt-8 pb-10 md:pt-4.5 md:pb-10">
 				<BlurReveal className="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-end">
-					<h1 className="font-display text-5xl md:text-[3.25rem] text-olive-haze leading-none">
+					<h1 className="font-display text-5xl md:text-[3.25em] text-olive-haze leading-none">
 						DAMBROSE <em className="font-display italic">membership</em>
 					</h1>
 					<div className="flex flex-col items-start gap-6 md:max-w-115.5 md:justify-self-end">

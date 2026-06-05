@@ -57,9 +57,9 @@ function TextCard({
 	return (
 		<BlurReveal
 			delay={delay}
-			className={`bg-[#ffffe4] flex flex-col justify-between w-full px-[1.03rem] py-[1.75rem] ${tall ? 'lg:h-[20.2rem]' : 'lg:h-[18.4rem]'}`}
+			className={`bg-[#ffffe4] flex flex-col justify-between w-full px-[1.03em] py-7 ${tall ? 'lg:h-[20.2em]' : 'lg:h-[18.4em]'}`}
 		>
-			<h3 className="font-display italic text-[1.235rem] leading-tight tracking-[0.02em] text-corduroy">
+			<h3 className="font-display italic text-[1.235em] leading-tight tracking-[0.02em] text-corduroy">
 				{title}
 			</h3>
 			<p className="font-body text-xs uppercase leading-[1.4] tracking-tight text-rangoon-green/80 mt-6 lg:mt-0">
@@ -71,41 +71,39 @@ function TextCard({
 
 export function LifelongMedicineSec17() {
 	return (
-		<section className="w-full bg-ecru-white py-12 md:py-[5.75rem]">
+		<section className="w-full bg-ecru-white py-12 md:py-23">
 			<Container>
-				<div className="flex flex-col gap-10 md:gap-[4.1rem]">
-
+				<div className="flex flex-col gap-10 md:gap-[4.1em]">
 					{/* ── HEADER ──────────────────────────────────────── */}
-					<BlurReveal className="flex flex-col items-center gap-[1.65rem] mx-auto max-w-[33.3rem]">
+					<BlurReveal className="flex flex-col items-center gap-[1.65em] mx-auto max-w-[33.3em]">
 						<Image
 							src="/lifelong-medicine/sec17-badge.svg"
 							alt=""
 							width={128}
 							height={40}
-							className="w-[6.6rem] h-auto"
+							className="w-[6.6em] h-auto"
 							aria-hidden="true"
 							unoptimized
 						/>
-						<h2 className="font-display text-[2.57rem] leading-none tracking-wide text-gray-olive text-center">
+						<h2 className="font-display text-[2.57em] leading-none tracking-wide text-gray-olive text-center">
 							The lifelong journey.
 						</h2>
 					</BlurReveal>
 
 					{/* ── GRID ────────────────────────────────────────── */}
-					<div className="flex flex-col gap-[0.82rem]">
-
+					<div className="flex flex-col gap-[0.82em]">
 						{/* ROW 1 — mobile: 1-col stack / desktop: 5 equal columns */}
-						<div className="grid grid-cols-1 lg:grid-cols-5 gap-[0.82rem]">
+						<div className="grid grid-cols-1 lg:grid-cols-5 gap-[0.82em]">
 							{ROW1_CARDS.map((card, i) => (
 								<TextCard key={card.title} {...card} delay={i * 0.06} />
 							))}
 							{/* Image card */}
 							<RevealImage
 								delay={0.24}
-								className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[18.4rem] overflow-hidden bg-bison-hide"
+								className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[18.4em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec17-room.jpg"
+									src="/lifelong-medicine/sec06/image-small.webp"
 									alt="Interior room — the serene environment of DAMBROSE care"
 									fill
 									className="object-cover object-center"
@@ -115,14 +113,14 @@ export function LifelongMedicineSec17() {
 						</div>
 
 						{/* ROW 2 — mobile: 1-col stack / desktop: wide image (col-span-2) + 3 cards */}
-						<div className="grid grid-cols-1 lg:grid-cols-5 gap-[0.82rem]">
+						<div className="grid grid-cols-1 lg:grid-cols-5 gap-[0.82em]">
 							{/* Wide image */}
 							<RevealImage
 								delay={0.05}
-								className="relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2rem] overflow-hidden bg-bison-hide"
+								className="relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec17-lounge.jpg"
+									src="/lifelong-medicine/sec10/image-2.webp"
 									alt="Lounge chair by window — the comfort of lifelong medicine"
 									fill
 									className="object-cover object-center"
@@ -134,7 +132,6 @@ export function LifelongMedicineSec17() {
 								<TextCard key={card.title} {...card} delay={(i + 1) * 0.06} tall />
 							))}
 						</div>
-
 					</div>
 				</div>
 			</Container>

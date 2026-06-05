@@ -13,7 +13,7 @@ export function Hero({ hold = false }: { hold?: boolean } = {}) {
 					hold={hold}
 				>
 					<Image
-						src="/home/hero.webp"
+						src="/home/hero/hero-bg.webp"
 						alt="A refined, light-filled living room — the considered environment of Dambrose care"
 						fill
 						priority

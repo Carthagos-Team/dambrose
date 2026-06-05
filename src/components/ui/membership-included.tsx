@@ -30,7 +30,7 @@ export function MembershipIncluded() {
 
 					<div className="absolute top-0 right-0 md:right-[8%]">
 						<Image
-							src="/stamp.svg"
+							src="/stamp.png"
 							alt="Here for every life chapter"
 							width={106}
 							height={106}

@@ -30,7 +30,7 @@ export function ContactForm() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
 						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square">
 							<Image
-								src="/contact/contact.png"
+								src="/contact-faq/sec01/hero-image.webp"
 								alt="A person’s hands resting on a sunlit windowsill beside fresh flowers"
 								fill
 								className="object-cover"

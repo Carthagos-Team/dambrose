@@ -6,21 +6,21 @@ const AFFILIATIONS = [
 	{
 		name: 'American Board of Family Medicine',
 		short: 'ABFM',
-		src: '/affiliations/abfm.png',
+		src: '/about-dr-michael/sec13/logo-1.webp',
 		width: 48,
 		height: 52,
 	},
 	{
 		name: 'American Academy of Family Physicians',
 		short: 'AAFP',
-		src: '/affiliations/aafp.png',
+		src: '/about-dr-michael/sec13/logo-2.webp',
 		width: 109,
 		height: 48,
 	},
 	{
 		name: 'Florida Medical Association',
 		short: 'FMA',
-		src: '/affiliations/fma.png',
+		src: '/about-dr-michael/sec13/logo-3.webp',
 		width: 131,
 		height: 52,
 	},
@@ -43,7 +43,7 @@ export function MichaelAffiliations() {
 			<Container>
 				<div className="flex flex-col items-center gap-20">
 					<BlurReveal>
-						<h2 className="font-display text-4xl md:text-[3.125rem] text-woodrush leading-none tracking-wide text-center">
+						<h2 className="font-display text-4xl md:text-[3.125em] text-woodrush leading-none tracking-wide text-center">
 							Professional affiliations
 						</h2>
 					</BlurReveal>
@@ -59,7 +59,7 @@ export function MichaelAffiliations() {
 								alt={a.name}
 								width={a.width}
 								height={a.height}
-								className="h-[52px] w-auto object-contain grayscale opacity-90"
+								className="h-13 w-auto object-contain grayscale opacity-90"
 							/>
 						))}
 					</BlurReveal>

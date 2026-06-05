@@ -35,15 +35,13 @@ const ITEMS = [
 export function PraevaSec13() {
 	return (
 		<section className="w-full bg-[#ffffe4]">
-			<Container className="py-16 md:pt-[5.77rem] md:pb-[1.65rem]">
-				<div className="flex flex-col gap-12 md:flex-row md:items-end md:gap-[4.06rem]">
-
+			<Container className="py-16 md:pt-[5.77em] md:pb-[1.65em]">
+				<div className="flex flex-col gap-12 md:flex-row md:items-end md:gap-[4.06em]">
 					{/* ── Left column: heading + portrait ─────────── */}
 					{/* align-items: flex-end → heading right-aligns within the column */}
-					<div className="flex flex-col gap-10 md:w-[19.55rem] md:gap-[2.47rem] md:items-end shrink-0">
-
+					<div className="flex flex-col gap-10 md:w-[19.55em] md:gap-[2.47em] md:items-end shrink-0">
 						<BlurReveal>
-							<h2 className="font-display text-[2rem] md:text-[2.57rem] leading-none tracking-[0.025em] text-[#222009] uppercase whitespace-nowrap md:whitespace-normal">
+							<h2 className="font-display text-[2em] md:text-[2.57em] leading-none tracking-[0.025em] text-[#222009] uppercase whitespace-nowrap md:whitespace-normal">
 								What
 								<br className="hidden md:block" />
 								<em className="italic"> PRAEVA </em>
@@ -52,34 +50,32 @@ export function PraevaSec13() {
 							</h2>
 						</BlurReveal>
 
-						<div className="relative w-full h-[11.32rem] overflow-hidden">
+						<div className="relative w-full h-[11.32em] overflow-hidden">
 							<RevealImage className="relative w-full h-full overflow-hidden" delay={0.05}>
 								<Image
 									src="/praeva/sec13-person.jpg"
 									alt="Person in motion — the vitality of a life guided by Praeva"
 									fill
 									className="object-cover object-center"
-									sizes="(max-width: 768px) 100vw, 19.55rem"
+									sizes="(max-width: 768px) 100vw, 19.55em"
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-[#1c1a08]/40 to-transparent pointer-events-none" />
 							</RevealImage>
 						</div>
-
 					</div>
 
 					{/* ── Right column: items + CTA ────────────────── */}
-					{/* w-[29.27rem] = 569px Figma fixed width (flex-1 below 1440px) */}
-					<div className="flex flex-col gap-[2.42rem] flex-1 min-w-0 min-[1440px]:flex-none min-[1440px]:w-[29.27rem]">
-
-						{/* gap-[3.29rem] = 64px Figma gap between items */}
-						<div className="flex flex-col gap-[3.29rem]">
+					{/* w-[29.27em] = 569px Figma fixed width (flex-1 below 1440px) */}
+					<div className="flex flex-col gap-[2.42em] flex-1 min-w-0 min-[1440px]:flex-none min-[1440px]:w-[29.27em]">
+						{/* gap-[3.29em] = 64px Figma gap between items */}
+						<div className="flex flex-col gap-[3.29em]">
 							{ITEMS.map((item, i) => (
 								<BlurReveal key={item.label} delay={i * 0.07}>
-									<div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between border-b border-[rgba(40,33,25,0.48)] pb-[2.47rem]">
-										<p className="font-display italic text-[1.34rem] leading-[1.27] text-[#282119] capitalize shrink-0 whitespace-nowrap">
+									<div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between border-b border-[rgba(40,33,25,0.48)] pb-[2.47em]">
+										<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119] capitalize shrink-0 whitespace-nowrap">
 											{item.label}
 										</p>
-										<p className="font-ui text-[0.72rem] leading-[1.4] tracking-[-0.029em] text-[#282119]/80 md:flex-1 md:min-w-0">
+										<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#282119]/80 md:flex-1 md:min-w-0">
 											{item.description}
 										</p>
 									</div>
@@ -92,9 +88,7 @@ export function PraevaSec13() {
 								Inquiry about membership
 							</Button>
 						</BlurReveal>
-
 					</div>
-
 				</div>
 			</Container>
 		</section>

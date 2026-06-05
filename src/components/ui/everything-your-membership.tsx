@@ -6,7 +6,7 @@ const benefits = [
 	'Always a direct line to your care team, day or night',
 	'Care whenever you need it, without delay',
 	'Visits that meet you wherever you are',
-	'Full healthcare coordination, from referral to follow-up',
+	'Full healthcare coordination, from referral to\u00A0follow-up',
 	'A physician present at any specialist visit',
 	'Your advocate in every hospital and clinical setting',
 	'Continuous, proactive care throughout the year',
@@ -24,21 +24,21 @@ export function EverythingYourMembership() {
 				delay={0.2}
 				className="hidden md:block absolute top-10 left-10 w-52.5 aspect-210/246 overflow-hidden"
 			>
-				<Image src="/images/sections/sec06-img-foot.png" alt="" fill className="object-cover" />
+				<Image src="/alma/sec06/image-small-1.webp" alt="" fill className="object-cover" />
 			</RevealImage>
 
 			<RevealImage
 				delay={0.3}
 				className="hidden md:block absolute top-75 right-10 w-81.25 aspect-325/311 overflow-hidden"
 			>
-				<Image src="/images/sections/sec06-img-woman.png" alt="" fill className="object-cover" />
+				<Image src="/alma/sec06/image-large.webp" alt="" fill className="object-cover" />
 			</RevealImage>
 
 			<RevealImage
 				delay={0.4}
 				className="hidden md:block absolute bottom-12 left-38.75 w-52.5 aspect-210/226 overflow-hidden"
 			>
-				<Image src="/images/sections/sec06-img-rocks.png" alt="" fill className="object-cover" />
+				<Image src="/alma/sec06/image-small-2.webp" alt="" fill className="object-cover" />
 			</RevealImage>
 
 			{/* ── Content stack ─────────────────────────────────────── */}

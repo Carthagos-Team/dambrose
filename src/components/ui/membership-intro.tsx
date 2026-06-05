@@ -23,7 +23,7 @@ export function MembershipIntro() {
 							start="top 95%"
 						>
 							<Image
-								src="/membership/intro-portrait.png"
+								src="/membership/sec01/scroll-image-5.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -32,7 +32,7 @@ export function MembershipIntro() {
 						</RevealImage>
 						<RevealImage className="relative w-full aspect-680/756 overflow-hidden" start="top 95%">
 							<Image
-								src="/membership/intro-stilllife.png"
+								src="/membership/sec01/scroll-image-2.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -44,7 +44,7 @@ export function MembershipIntro() {
 							start="top 95%"
 						>
 							<Image
-								src="/membership/intro-hallway.png"
+								src="/membership/sec01/scroll-image-1.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -59,7 +59,7 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/intro-portrait.png"
+								src="/membership/sec01/scroll-image-5.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -71,7 +71,7 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/intro-stilllife.png"
+								src="/membership/sec01/scroll-image-2.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -83,7 +83,7 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/intro-hallway.png"
+								src="/membership/sec01/scroll-image-1.webp"
 								alt=""
 								fill
 								className="object-cover"

@@ -22,7 +22,7 @@ export function B2bIntro() {
 						<div className="order-1 md:order-0 md:col-start-2 md:col-span-4 md:row-start-1">
 							<RevealImage className="relative w-full aspect-443/369 overflow-hidden bg-bison-hide">
 								<Image
-									src="/features/kitchen.png"
+									src="/b2b/sec01/intro-photo.webp"
 									alt="Bright residential interior with framed art"
 									fill
 									className="object-cover"
@@ -78,7 +78,7 @@ export function B2bIntro() {
 						<div className="order-1 md:order-0 md:col-start-8 md:col-span-4 md:row-start-1">
 							<RevealImage className="relative w-full aspect-443/369 overflow-hidden bg-bison-hide">
 								<Image
-									src="/features/kitchen.png"
+									src="/b2b/sec01/intro-photo.webp"
 									alt="Bright residential interior with framed art"
 									fill
 									className="object-cover"

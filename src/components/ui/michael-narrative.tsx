@@ -14,7 +14,7 @@ export function MichaelNarrative() {
 							start="top 90%"
 						>
 							<Image
-								src="/about-michael/portrait.jpg"
+								src="/shared/portrait-doctor-1.webp"
 								alt="Dr. Michael J. D'Ambrose portrait"
 								fill
 								sizes="(min-width: 1024px) 555px, 100vw"
@@ -93,7 +93,7 @@ export function MichaelNarrative() {
 							start="top 90%"
 						>
 							<Image
-								src="/about-michael/glasses.jpg"
+								src="/about-dr-michael/sec03/portrait.webp"
 								alt="Reading glasses resting on a leather journal"
 								fill
 								sizes="(min-width: 1024px) 555px, 100vw"
@@ -112,7 +112,7 @@ export function MichaelNarrative() {
 							start="top 90%"
 						>
 							<Image
-								src="/about-michael/patient.jpg"
+								src="/about-dr-michael/sec04/portrait.webp"
 								alt="A patient at home"
 								fill
 								sizes="(min-width: 1024px) 555px, 100vw"

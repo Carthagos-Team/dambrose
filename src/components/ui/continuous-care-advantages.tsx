@@ -11,7 +11,7 @@ const cards = [
 			'Care remains under the guidance of a dedicated health team who knows your history, context, and needs, ensuring decisions are informed and consistent.',
 	},
 	{
-		image: '/images/sections/sec05-img-2.png',
+		image: '/alma/sec05/image-1.webp',
 		title: 'Presence during illness and uncertainty',
 		description:
 			'From minor concerns to complex conditions, care stays close, offering reassurance, clarity, and medical judgment when it matters most.',
@@ -23,7 +23,7 @@ const cards = [
 			'As health changes over time, care adapts without disruption, allowing medical guidance to evolve alongside the patient rather than restart at every visit.',
 	},
 	{
-		image: '/images/sections/sec05-img-4.png',
+		image: '/alma/sec05/image-2.webp',
 		title: 'Experienced judgment you can rely on',
 		description:
 			'Care is led by physicians with broad clinical experience across settings, allowing decisions to be made with perspective, confidence, and medical depth.',
@@ -65,7 +65,7 @@ export function ContinuousCareAdvantages() {
 									)}
 								</RevealImage>
 
-								<h3 className="mt-6 font-display text-xl md:text-[1.375rem] italic text-rangoon-green leading-[1.15]">
+								<h3 className="mt-6 font-display text-xl md:text-[1.375em] italic text-rangoon-green leading-[1.15]">
 									{c.title}
 								</h3>
 

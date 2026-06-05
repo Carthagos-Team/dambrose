@@ -41,7 +41,7 @@ export function WhoWeServe() {
 						className="relative bg-white-rock px-4 py-6 md:px-10 md:py-12"
 					>
 						<Image
-							src="/stamp.svg"
+							src="/stamp.png"
 							alt="Here for every life chapter"
 							width={106}
 							height={106}
@@ -66,7 +66,7 @@ export function WhoWeServe() {
 												<span className="font-body text-xs text-rangoon-green uppercase tracking-wide">
 													{card.index}
 												</span>
-												<h3 className="font-display italic text-2xl md:text-[1.75rem] text-rangoon-green leading-snug text-right max-w-56">
+												<h3 className="font-display italic text-2xl md:text-[1.75em] text-rangoon-green leading-snug text-right max-w-56">
 													{card.title}
 												</h3>
 											</div>

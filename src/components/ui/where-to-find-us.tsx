@@ -22,7 +22,7 @@ export function WhereToFindUs() {
 					{/* Card */}
 					<BlurReveal
 						delay={0.1}
-						className="relative bg-woodrush overflow-hidden flex items-center justify-center min-h-[420px] md:min-h-[640px] w-full"
+						className="relative bg-woodrush overflow-hidden flex items-center justify-center min-h-105 md:min-h-160 w-full"
 					>
 						{/* Corner labels — top */}
 						<span className="absolute top-4 left-4 font-body text-[0.625em] md:text-xs text-ecru-white/30 uppercase tracking-tight">
@@ -86,12 +86,12 @@ export function WhereToFindUs() {
 							style={{ transform: 'rotate(13.12deg)' }}
 						>
 							<Image
-								src="/stamp.svg"
+								src="/stamp.png"
 								alt=""
 								width={140}
-								height={123}
+								height={140}
 								aria-hidden
-								className="w-20 md:w-[140px] h-auto opacity-90"
+								className="w-20 md:w-35 h-auto opacity-90"
 							/>
 						</div>
 					</BlurReveal>

@@ -154,25 +154,13 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 			<span
 				ref={circleRef}
 				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 m-auto size-[30px] rounded-full bg-rangoon-green opacity-0"
+				className="pointer-events-none absolute inset-0 m-auto size-7.5 rounded-full bg-rangoon-green opacity-0"
 			/>
 			{/* bars */}
-			<span className="relative z-10 flex flex-col items-center gap-[6px]">
-				<span
-					ref={topRef}
-					className="block h-px w-[18px]"
-					style={{ backgroundColor: closedColor }}
-				/>
-				<span
-					ref={midRef}
-					className="block h-px w-[18px]"
-					style={{ backgroundColor: closedColor }}
-				/>
-				<span
-					ref={botRef}
-					className="block h-px w-[18px]"
-					style={{ backgroundColor: closedColor }}
-				/>
+			<span className="relative z-10 flex flex-col items-center gap-1.5">
+				<span ref={topRef} className="block h-px w-4.5" style={{ backgroundColor: closedColor }} />
+				<span ref={midRef} className="block h-px w-4.5" style={{ backgroundColor: closedColor }} />
+				<span ref={botRef} className="block h-px w-4.5" style={{ backgroundColor: closedColor }} />
 			</span>
 		</button>
 	)
@@ -217,7 +205,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 										<div className="flex-1 min-h-0 overflow-y-auto px-10.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 											<nav className="flex min-h-full flex-col justify-end pt-20 pb-10">
 												<motion.ul
-													className="flex flex-col gap-[clamp(5px,0.42vw,11px)]"
+													className="flex flex-col gap-[clamp(0.3125em,0.42vw,0.6875em)]"
 													variants={listVariants}
 													initial="hidden"
 													animate="visible"
@@ -228,7 +216,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 															<TransitionLink
 																href={link.href}
 																onClick={() => toggle(false)}
-																className={`font-display text-[clamp(28px,min(2.78vw,4.6vh),64px)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
+																className={`font-display text-[clamp(1.75em,min(2.78vw,4.6vh),4em)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
 																	pathname === link.href
 																		? 'text-rangitoto after:origin-left after:scale-x-100'
 																		: 'text-olive-haze after:origin-right after:scale-x-0'

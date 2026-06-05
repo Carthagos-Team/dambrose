@@ -59,7 +59,7 @@ export function Footer() {
 								className="absolute -top-12 left-0 md:left-[12%] w-28 h-40 md:w-40 md:h-56 overflow-hidden"
 								delay={0.2}
 							>
-								<Image src="/footer/flower.png" alt="" fill className="object-cover" />
+								<Image src="/shared/footer-objects.webp" alt="" fill className="object-cover" />
 							</RevealImage>
 
 							{/* Rock — bottom-right, bleeds outside card */}
@@ -67,7 +67,7 @@ export function Footer() {
 								className="absolute bottom-[-5%] right-[-12%] md:right-[-8%] md:bottom-[8%] w-32 h-24 md:w-56 md:h-40 overflow-hidden"
 								delay={0.4}
 							>
-								<Image src="/footer/rock.png" alt="" fill className="object-cover" />
+								<Image src="/shared/footer-photo.webp" alt="" fill className="object-cover" />
 							</RevealImage>
 
 							<Container className="relative pt-12 pb-12 md:pt-31.2 md:pb-44">
@@ -89,7 +89,7 @@ export function Footer() {
 
 						<RevealImage className="w-64 md:w-216 md:h-161 overflow-hidden">
 							<Image
-								src="/footer/room.png"
+								src="/shared/cta-bg.webp"
 								width={864}
 								height={644}
 								alt="Dambrose clinic interior"

@@ -29,7 +29,7 @@ export function B2bLedByTeam() {
 					<div className="md:col-start-2 md:col-span-4 md:row-start-2">
 						<RevealImage className="relative w-full aspect-square overflow-hidden bg-bison-hide">
 							<Image
-								src="/features/hands.png"
+								src="/b2b/sec08/photo.webp"
 								alt="Dr. D’Ambrose reviewing a leather journal on a desk"
 								fill
 								className="object-cover"

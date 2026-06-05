@@ -11,7 +11,7 @@ export function MoreThan() {
 				<div className="flex flex-col gap-12 md:gap-28">
 					{/* ── Heading ────────────────────────────────────────────── */}
 					<BlurReveal>
-						<h2 className="font-display text-3xl md:text-[3.125rem] text-judge-gray text-center leading-tight">
+						<h2 className="font-display text-3xl md:text-[3.125em] text-judge-gray text-center leading-tight">
 							More than a family doctor.
 							<br />
 							More than concierge medicine.
@@ -23,7 +23,7 @@ export function MoreThan() {
 						{/* Left column */}
 						<div className="flex flex-col gap-4 md:pt-40 md:w-[41.5%] shrink-0">
 							<RevealImage className="relative w-full aspect-564/400 overflow-hidden bg-bison-hide">
-								<Image src="/features/botanical-red.png" alt="" fill className="object-cover" />
+								<Image src="/home/sec10/media-large.webp" alt="" fill className="object-cover" />
 							</RevealImage>
 
 							<BlurReveal delay={0.15}>
@@ -44,7 +44,7 @@ export function MoreThan() {
 						</div>
 
 						{/* Right column */}
-						<div className="flex flex-col gap-10 md:gap-[7.5rem] flex-1 mt-10 md:mt-0">
+						<div className="flex flex-col gap-10 md:gap-30 flex-1 mt-10 md:mt-0">
 							<BlurReveal delay={0.1}>
 								<p
 									className="font-body text-sm text-rangitoto/80 leading-relaxed"
@@ -62,7 +62,7 @@ export function MoreThan() {
 								className="relative w-full aspect-680/642 overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/features/kitchen.png"
+									src="/home/sec10/media-featured.webp"
 									alt="A man at the sink in a bright, sunlit home kitchen"
 									fill
 									className="object-cover"
