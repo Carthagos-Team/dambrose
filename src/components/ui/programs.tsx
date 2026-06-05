@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/image'
+import type { ReactNode, StaticImageData } from 'react'
 import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
@@ -13,6 +13,88 @@ type ProgramCard = {
 	ctaBg: 'opal' | 'khaki' | 'teal' | 'dark' | 'outline'
 	image?: StaticImageData | string
 	imageAlt?: string
+	imageComponent?: ReactNode
+}
+
+function PraevaVisual() {
+	return (
+		<div
+			className="relative w-full h-full"
+			style={{ background: 'linear-gradient(to top, #272018 3%, #545c63 50%, #dedbbc)' }}
+			aria-hidden="true"
+		>
+			{/* White book card */}
+			<div
+				className="absolute bg-[#f2f1e3] overflow-hidden"
+				style={{ left: '24.9%', top: '10.3%', width: '50.1%', height: '79.2%', borderRadius: '2px' }}
+			>
+				{/* Praeva title */}
+				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
+					<text
+						x="168"
+						y="46"
+						textAnchor="middle"
+						fontFamily="'Instrument Serif', serif"
+						fontStyle="italic"
+						fontSize="43"
+						letterSpacing="1.3"
+						fill="#7c848b"
+					>
+						Praeva
+					</text>
+					<text
+						x="248"
+						y="28"
+						textAnchor="start"
+						fontFamily="'Public Sans', sans-serif"
+						fontSize="18"
+						fill="#7c848b"
+					>
+						™
+					</text>
+				</svg>
+
+				{/* Inner gradient card */}
+				<div
+					className="absolute"
+					style={{
+						left: '4.5%',
+						top: '16.6%',
+						width: '91.4%',
+						height: '80.4%',
+						borderRadius: '3%',
+						background: 'linear-gradient(to bottom, #272018 3%, #545c63 50%, #dedbbc)',
+					}}
+				>
+					{/* BY MICHAEL J. D'AMBROSE */}
+					<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+						<text
+							x="153.5"
+							y="205"
+							textAnchor="middle"
+							fontFamily="var(--font-sohne-breit), sans-serif"
+							fontSize="11.5"
+							letterSpacing="5"
+							fill="#f2efd0"
+						>
+							BY MICHAEL J.
+						</text>
+						<text
+							x="153.5"
+							y="226"
+							textAnchor="middle"
+							fontFamily="var(--font-sohne-breit), sans-serif"
+							fontSize="11.5"
+							letterSpacing="5"
+							fill="#f2efd0"
+						>
+							D&apos;AMBROSE
+						</text>
+					</svg>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 const CARDS: ProgramCard[] = [
@@ -32,9 +114,9 @@ const CARDS: ProgramCard[] = [
 			'A longevity-focused program designed to anticipate risk, improve wellness, and preserve vitality.',
 		ctaLabel: 'EXPLORE PRAEVA',
 		ctaHref: '/praeva',
-		ctaBg: 'opal',
-		image: '/programs/praeva.png',
-		imageAlt: 'PRAEVA program',
+		ctaBg: 'teal',
+		imageAlt: 'PRAEVA by Dr. D\'Ambrose — longevity program',
+		imageComponent: <PraevaVisual />,
 	},
 ]
 
@@ -64,7 +146,7 @@ export function Programs() {
 						<div key={card.tag} className="flex flex-col">
 							{/* Image */}
 							<RevealImage className="w-full aspect-10/9 overflow-hidden bg-bison-hide">
-								{card.image && (
+								{card.imageComponent ?? (card.image && (
 									<Image
 										src={card.image}
 										alt={card.imageAlt ?? ''}
@@ -72,7 +154,7 @@ export function Programs() {
 										height={810}
 										className="w-full h-full object-cover"
 									/>
-								)}
+								))}
 							</RevealImage>
 
 							{/* Info */}
