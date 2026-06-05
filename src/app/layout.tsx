@@ -89,7 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			lang="en"
 			className={`${instrumentSerif.variable} ${martianMono.variable} ${publicSans.variable} ${sohneBreit.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col">
+			<body className="min-h-full flex flex-col" suppressHydrationWarning>
 				<JsonLd data={[practiceSchema, websiteSchema, physicianSchema]} />
 				<SmoothScroll />
 				<PageTransition />
