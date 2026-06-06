@@ -6,7 +6,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function B2bLedByTeam() {
 	return (
-		<section className="relative w-full bg-ecru-white py-16 md:py-28 border-t border-black/10">
+		<section className="relative w-full bg-ecru-white py-16 md:py-28">
 			{/* "08" label — absolutely centered (x-center, y-center) over the section */}
 			<span
 				aria-hidden="true"

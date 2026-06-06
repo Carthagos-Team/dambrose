@@ -27,7 +27,7 @@ const steps = [
 
 export function HowMembershipWorks({ hideOverlay = false }: { hideOverlay?: boolean } = {}) {
 	return (
-		<section className="w-full bg-ecru-white pt-10 pb-16 md:pb-28 border-t border-black/10">
+		<section className="w-full bg-ecru-white pt-10 pb-16 md:pb-28">
 			<div>
 				{/* ── Image panels ───────────────────────────────────────── */}
 				<Container>

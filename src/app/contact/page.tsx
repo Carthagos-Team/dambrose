@@ -2,6 +2,7 @@ import { JsonLd } from '@/components/json-ld'
 import { ContactForm } from '@/components/ui/contact-form'
 import { Faq } from '@/components/ui/faq'
 import { Header } from '@/components/ui/header'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { WhereToFindUs } from '@/components/ui/where-to-find-us'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbSchema, faqSchema } from '@/lib/structured-data'
@@ -28,6 +29,7 @@ export default function ContactPage() {
 			<JsonLd data={[breadcrumbSchema('Contact & FAQ', '/contact'), faqSchema]} />
 			<Header />
 			<main className="flex-1 w-full">
+				<SectionDivider />
 				<ContactForm />
 				<WhereToFindUs />
 				<Faq />

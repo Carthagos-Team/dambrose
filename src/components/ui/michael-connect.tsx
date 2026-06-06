@@ -47,7 +47,7 @@ const CHANNELS = [
 
 export function MichaelConnect() {
 	return (
-		<section id="connect" className="w-full bg-ecru-white py-28 border-t border-black/10">
+		<section id="connect" className="w-full bg-ecru-white py-28">
 			<Container>
 				<div className="flex flex-col items-center gap-22">
 					<BlurReveal>

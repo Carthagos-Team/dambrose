@@ -183,7 +183,7 @@ function TextCard({ program }: { program: Program }) {
 
 export function MembershipPrograms() {
 	return (
-		<section className="w-full bg-ecru-white py-28 md:py-36 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-28 md:py-36">
 			<Container>
 				<div className="flex flex-col gap-22">
 					<BlurReveal className="w-full self-center max-w-160 flex flex-col items-center gap-16 text-center">

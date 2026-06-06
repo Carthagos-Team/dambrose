@@ -6,7 +6,7 @@ import { RevealImage } from './reveal-image'
 
 export function MoreThan() {
 	return (
-		<section className="w-full bg-ecru-white py-16 md:py-28 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-28">
 					{/* ── Heading ────────────────────────────────────────────── */}

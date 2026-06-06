@@ -5,7 +5,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function Relationships() {
 	return (
-		<section className="relative w-full bg-ecru-white py-20 min-[1440px]:py-0 min-[1440px]:min-h-193 border-t border-black/10">
+		<section className="relative w-full bg-ecru-white py-20 min-[1440px]:py-0 min-[1440px]:min-h-193">
 			{/* Badge — left edge, outside container */}
 			<div className="hidden min-[1440px]:block absolute left-10 bottom-40 z-10">
 				<Image

@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/container'
 
 export function B2bCta() {
 	return (
-		<section className="w-full bg-ecru-white pt-16 pb-16 md:pt-28 md:pb-24 border-t border-black/10">
+		<section className="w-full bg-ecru-white pt-16 pb-16 md:pt-28 md:pb-24">
 			<Container>
 				<BlurReveal className="flex flex-col items-center text-center gap-8 md:gap-10 max-w-260 mx-auto">
 					<Image

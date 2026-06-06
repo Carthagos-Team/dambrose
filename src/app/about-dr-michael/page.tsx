@@ -7,6 +7,7 @@ import { MichaelHero } from '@/components/ui/michael-hero'
 import { MichaelNarrative } from '@/components/ui/michael-narrative'
 import { MichaelQuote } from '@/components/ui/michael-quote'
 import { MichaelStory } from '@/components/ui/michael-story'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { Testimonials } from '@/components/ui/testimonials'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbSchema } from '@/lib/structured-data'
@@ -39,12 +40,17 @@ export default function AboutDrMichaelPage() {
 			<Header />
 			<main className="flex-1 w-full">
 				<MichaelHero />
+				<SectionDivider />
 				<MichaelStory />
+				<SectionDivider />
 				<MichaelNarrative />
 				<MichaelQuote />
+				<SectionDivider />
 				<MichaelAffiliations />
+				<SectionDivider />
 				<MichaelCareer />
 				<Testimonials />
+				<SectionDivider />
 				<MichaelConnect />
 			</main>
 		</>

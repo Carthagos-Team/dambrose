@@ -24,7 +24,7 @@ export function WhoWeServe() {
 	return (
 		<section
 			data-wrapper="audience_section"
-			className="w-full bg-ecru-white py-16 md:py-28 border-t border-black/10"
+			className="w-full bg-ecru-white py-16 md:py-28"
 		>
 			<Container>
 				<div data-wrapper="audience_component" className="flex flex-col gap-12 md:gap-20">

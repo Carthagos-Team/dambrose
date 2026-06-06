@@ -8,6 +8,7 @@ import { MembershipHolds } from '@/components/ui/membership-holds'
 import { MoreThan } from '@/components/ui/more-than'
 import { Programs } from '@/components/ui/programs'
 import { Relationships } from '@/components/ui/relationships'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { SteadyHand } from '@/components/ui/steady-hand'
 import { pageMetadata } from '@/lib/seo'
 
@@ -35,13 +36,21 @@ export default function HomePage() {
 			<Header />
 			<main className="flex-1 w-full">
 				<Hero hold />
+				<SectionDivider />
 				<Relationships />
+				<SectionDivider />
 				<Programs />
+				<SectionDivider />
 				<MembershipHolds />
+				<SectionDivider />
 				<Features />
+				<SectionDivider />
 				<HowMembershipWorks hideOverlay />
+				<SectionDivider />
 				<MoreThan />
+				<SectionDivider />
 				<Foundation />
+				<SectionDivider />
 				<SteadyHand />
 			</main>
 		</>

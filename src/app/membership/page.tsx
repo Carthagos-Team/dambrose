@@ -6,6 +6,7 @@ import { MembershipHero } from '@/components/ui/membership-hero'
 import { MembershipIncluded } from '@/components/ui/membership-included'
 import { MembershipIntro } from '@/components/ui/membership-intro'
 import { MembershipPrograms } from '@/components/ui/membership-programs'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
@@ -36,6 +37,7 @@ export default function MembershipPage() {
 				<MembershipIntro />
 				<MembershipExclusivity />
 				<MembershipIncluded />
+				<SectionDivider />
 				<MembershipPrograms />
 				<MembershipApply />
 			</main>

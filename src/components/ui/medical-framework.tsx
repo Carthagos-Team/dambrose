@@ -41,7 +41,7 @@ export function MedicalFramework() {
 	return (
 		<section
 			data-wrapper="framework_section"
-			className="w-full bg-ecru-white py-16 md:py-28 border-t border-black/10"
+			className="w-full bg-ecru-white py-16 md:py-28"
 		>
 			<Container>
 				<div data-wrapper="framework_component" className="flex flex-col gap-14 md:gap-20">

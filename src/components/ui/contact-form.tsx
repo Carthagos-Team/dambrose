@@ -18,7 +18,7 @@ export function ContactForm() {
 	})
 
 	return (
-		<section className="w-full bg-ecru-white pt-16 pb-24 md:pt-28 md:pb-36 border-t border-black/10">
+		<section className="w-full bg-ecru-white pt-16 pb-24 md:pt-28 md:pb-36">
 			<Container>
 				<div className="flex flex-col gap-10 md:gap-16">
 					<BlurReveal>

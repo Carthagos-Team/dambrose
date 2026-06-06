@@ -7,6 +7,7 @@ import { B2bHero } from '@/components/ui/b2b-hero'
 import { B2bIntro } from '@/components/ui/b2b-intro'
 import { B2bLedByTeam } from '@/components/ui/b2b-led-by-team'
 import { Header } from '@/components/ui/header'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
@@ -34,11 +35,16 @@ export default function B2bPage() {
 			<Header />
 			<main className="flex-1 w-full">
 				<B2bHero />
+				<SectionDivider />
 				<B2bIntro />
+				<SectionDivider />
 				<B2bGains />
+				<SectionDivider />
 				<B2bAudience />
 				<B2bCorporateMembership />
+				<SectionDivider />
 				<B2bLedByTeam />
+				<SectionDivider />
 				<B2bCta />
 			</main>
 		</>

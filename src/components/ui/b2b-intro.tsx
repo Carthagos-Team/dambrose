@@ -5,7 +5,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function B2bIntro() {
 	return (
-		<section className="w-full bg-ecru-white py-20 md:py-30 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-20 md:py-30">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-30">
 					<BlurReveal>

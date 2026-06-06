@@ -16,7 +16,7 @@ type ProgramCard = {
 	imageComponent?: ReactNode
 }
 
-function AlmaVisual() {
+export function AlmaVisual({ tagline }: { tagline?: string } = {}) {
 	return (
 		<div
 			className="relative w-full h-full"
@@ -56,7 +56,7 @@ function AlmaVisual() {
 
 				{/* Inner gradient card */}
 				<div
-					className="absolute"
+					className="absolute flex items-center justify-center"
 					style={{
 						left: '4.5%',
 						top: '16.6%',
@@ -66,38 +66,23 @@ function AlmaVisual() {
 						background: 'linear-gradient(to top, #808d95 10%, #b4a389 50%, #dedbbc)',
 					}}
 				>
-					{/* BY MICHAEL J. D'AMBROSE */}
-					<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
-						<text
-							x="153.5"
-							y="205"
-							textAnchor="middle"
-							fontFamily="var(--font-sohne-breit), sans-serif"
-							fontSize="11.5"
-							letterSpacing="5"
-							fill="#f2efd0"
-						>
-							BY MICHAEL J.
-						</text>
-						<text
-							x="153.5"
-							y="226"
-							textAnchor="middle"
-							fontFamily="var(--font-sohne-breit), sans-serif"
-							fontSize="11.5"
-							letterSpacing="5"
-							fill="#f2efd0"
-						>
-							D&apos;AMBROSE
-						</text>
-					</svg>
+					{tagline ? (
+						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: '11.5px', letterSpacing: '5px', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
+							{tagline}
+						</p>
+					) : (
+						<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+							<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
+							<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
+						</svg>
+					)}
 				</div>
 			</div>
 		</div>
 	)
 }
 
-function PraevaVisual() {
+export function PraevaVisual({ tagline }: { tagline?: string } = {}) {
 	return (
 		<div
 			className="relative w-full h-full"
@@ -137,7 +122,7 @@ function PraevaVisual() {
 
 				{/* Inner gradient card */}
 				<div
-					className="absolute"
+					className="absolute flex items-center justify-center"
 					style={{
 						left: '4.5%',
 						top: '16.6%',
@@ -147,31 +132,16 @@ function PraevaVisual() {
 						background: 'linear-gradient(to bottom, #272018 3%, #545c63 50%, #dedbbc)',
 					}}
 				>
-					{/* BY MICHAEL J. D'AMBROSE */}
-					<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
-						<text
-							x="153.5"
-							y="205"
-							textAnchor="middle"
-							fontFamily="var(--font-sohne-breit), sans-serif"
-							fontSize="11.5"
-							letterSpacing="5"
-							fill="#f2efd0"
-						>
-							BY MICHAEL J.
-						</text>
-						<text
-							x="153.5"
-							y="226"
-							textAnchor="middle"
-							fontFamily="var(--font-sohne-breit), sans-serif"
-							fontSize="11.5"
-							letterSpacing="5"
-							fill="#f2efd0"
-						>
-							D&apos;AMBROSE
-						</text>
-					</svg>
+					{tagline ? (
+						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: '11.5px', letterSpacing: '5px', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
+							{tagline}
+						</p>
+					) : (
+						<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+							<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
+							<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
+						</svg>
+					)}
 				</div>
 			</div>
 		</div>
@@ -203,7 +173,7 @@ const CARDS: ProgramCard[] = [
 
 export function Programs() {
 	return (
-		<section className="w-full bg-ecru-white py-16 md:py-28 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				{/* ── Header ───────────────────────────────────────────── */}
 				<BlurReveal className="flex flex-col gap-8 md:grid md:grid-cols-12 md:gap-4 md:items-start">

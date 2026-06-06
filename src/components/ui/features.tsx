@@ -40,7 +40,7 @@ const ITEMS = [
 
 export function Features() {
 	return (
-		<section className="w-full bg-ecru-white py-16 md:py-24 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-16 md:py-24">
 			<Container className="flex flex-col gap-20">
 				{/* ── Heading ──────────────────────────────────────── */}
 				<BlurReveal>

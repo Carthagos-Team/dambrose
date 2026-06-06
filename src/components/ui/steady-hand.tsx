@@ -6,7 +6,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 export function SteadyHand() {
 	return (
-		<section className="w-full bg-ecru-white py-20 md:py-28 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-20 md:py-28">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-24">
 					{/* Heading */}

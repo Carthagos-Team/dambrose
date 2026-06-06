@@ -28,7 +28,7 @@ const AFFILIATIONS = [
 
 export function MichaelAffiliations() {
 	return (
-		<section className="relative w-full bg-ecru-white py-28 border-t border-black/10">
+		<section className="relative w-full bg-ecru-white py-28">
 			<BlurReveal delay={0.2} className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2">
 				<Image
 					src="/marks/badge-left.svg"

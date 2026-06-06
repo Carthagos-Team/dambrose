@@ -11,7 +11,7 @@ const SPECIALTIES: { label: string; chip: string }[] = [
 
 export function MichaelStory() {
 	return (
-		<section className="w-full bg-ecru-white py-28 md:py-36 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-28 md:py-36">
 			<Container>
 				<div className="flex flex-col items-center gap-20 md:gap-25">
 					<BlurReveal>

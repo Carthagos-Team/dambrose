@@ -60,7 +60,7 @@ const CARDS: Card[] = [
 
 export function B2bGains() {
 	return (
-		<section className="w-full bg-ecru-white py-16 md:py-28 border-t border-black/10">
+		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-20">
 					<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">

@@ -18,7 +18,7 @@ const BENEFITS = [
 
 export function MembershipHolds() {
 	return (
-		<section className="relative w-full bg-ecru-white py-20 md:py-28 border-t border-black/10">
+		<section className="relative w-full bg-ecru-white py-20 md:py-28">
 			{/* Stamp — Figma: left calc(65%-5px), top 38px, 105×105 */}
 			<div className="hidden min-[1440px]:block absolute left-[calc(65%-5px)] top-[52px] size-[105px] z-10 pointer-events-none">
 				<Image

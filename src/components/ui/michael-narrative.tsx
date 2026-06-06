@@ -2,11 +2,12 @@ import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
+import { SectionDivider } from '@/components/ui/section-divider'
 
 export function MichaelNarrative() {
 	return (
 		<>
-			<section className="w-full bg-ecru-white border-t border-black/10 py-24 md:py-28">
+			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[555fr_672fr] lg:gap-[7.4em] lg:items-stretch">
 						<RevealImage
@@ -51,7 +52,9 @@ export function MichaelNarrative() {
 				</Container>
 			</section>
 
-			<section className="w-full bg-ecru-white border-t border-black/10 py-24 md:py-28">
+			<SectionDivider />
+
+			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[672fr_555fr] lg:gap-[7.4em] lg:items-stretch">
 						<div className="flex flex-col order-2 lg:order-1">
@@ -104,7 +107,9 @@ export function MichaelNarrative() {
 				</Container>
 			</section>
 
-			<section className="w-full bg-ecru-white border-t border-black/10 py-24 md:py-28">
+			<SectionDivider />
+
+			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[555fr_672fr] lg:gap-[7.4em] lg:items-stretch">
 						<RevealImage

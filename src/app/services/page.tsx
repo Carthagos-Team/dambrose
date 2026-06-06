@@ -2,6 +2,7 @@ import { JsonLd } from '@/components/json-ld'
 import { DambroseDifference } from '@/components/ui/dambrose-difference'
 import { Header } from '@/components/ui/header'
 import { MedicalFramework } from '@/components/ui/medical-framework'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { ServicesHero } from '@/components/ui/services-hero'
 import { ServicesPrograms } from '@/components/ui/services-programs'
 import { Testimonials } from '@/components/ui/testimonials'
@@ -33,10 +34,13 @@ export default function ServicesPage() {
 			<Header />
 			<main className="flex-1 w-full">
 				<ServicesHero />
+				<SectionDivider />
 				<ServicesPrograms />
+				<SectionDivider />
 				<MedicalFramework />
 				<DambroseDifference />
 				<WhoWeServe />
+				<SectionDivider />
 				<Testimonials />
 			</main>
 		</>
