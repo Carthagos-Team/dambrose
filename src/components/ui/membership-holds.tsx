@@ -44,15 +44,15 @@ export function MembershipHolds() {
 			<Container>
 				<div className="flex flex-col items-center gap-16 md:gap-20 text-center">
 					{/* Heading + description — outer max-w-[620px] per Figma, heading inner max-w-[561px] */}
-					<div className="flex flex-col gap-[34px] items-center w-full max-w-[620px]">
+					<div className="flex flex-col gap-[34px] items-center w-full">
 						<BlurReveal className="w-full">
-							<h2 className="font-display text-4xl md:text-[3.125rem] text-corduroy leading-none tracking-[0.01em]">
+							<h2 className="font-display text-4xl md:text-[3.125rem] text-corduroy leading-none tracking-[0.01em] md:whitespace-nowrap">
 								What every membership holds:
 							</h2>
 						</BlurReveal>
 
 						<BlurReveal delay={0.1} className="w-full">
-							<p className="font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80 leading-relaxed">
+							<p className="font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80 leading-relaxed max-w-138 mx-auto">
 								Our membership is not a list of services — it is a commitment from a physician and a
 								care team who hold themselves accountable for your whole health. We coordinate all
 								details, advocate on your behalf, and remain present through each stage of care.
@@ -61,7 +61,7 @@ export function MembershipHolds() {
 					</div>
 
 					{/* Benefits list */}
-					<BlurReveal delay={0.15} className="w-full max-w-[561px]">
+					<BlurReveal delay={0.15} className="w-full max-w-125">
 						<ul>
 							{BENEFITS.map((benefit, i) => (
 								<li
