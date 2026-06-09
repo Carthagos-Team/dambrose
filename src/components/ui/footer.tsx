@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import { FooterCtaButton } from '@/components/ui/footer-cta-button'
 import { RevealImage } from '@/components/ui/reveal-image'
 import { TransitionLink } from '@/components/ui/transition-link'
 
@@ -79,9 +79,7 @@ export function Footer() {
 											Begin a <em className="font-display italic">new relationship</em> <br /> with
 											your health.
 										</h2>
-										<Button href="/membership" variant="opal" size="sm">
-											Inquiry about membership
-										</Button>
+										<FooterCtaButton />
 									</div>
 								</div>
 							</Container>
