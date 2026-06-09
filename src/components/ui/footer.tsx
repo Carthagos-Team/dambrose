@@ -79,7 +79,7 @@ export function Footer() {
 											Begin a <em className="font-display italic">new relationship</em> <br /> with
 											your health.
 										</h2>
-										<Button href="/contact" variant="opal" size="sm">
+										<Button href="/membership" variant="opal" size="sm">
 											Inquiry about membership
 										</Button>
 									</div>
