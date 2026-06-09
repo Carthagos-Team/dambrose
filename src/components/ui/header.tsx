@@ -180,7 +180,7 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 					</TransitionLink>
 				) : (
 					<div className="hidden md:inline-flex justify-end">
-						<Button variant="dark">Inquiry about membership</Button>
+						<Button href="/membership" variant="dark">Inquiry about membership</Button>
 					</div>
 				)}
 			</Container>
