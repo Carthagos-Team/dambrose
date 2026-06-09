@@ -33,7 +33,7 @@ export function B2bAudience() {
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-20">
 					<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
-						<span className="font-body text-xs text-gray-olive uppercase tracking-wide">02</span>
+						<span className="font-body text-xs text-gray-olive uppercase tracking-wide">03</span>
 						<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
 							Who is it <em className="font-display italic">for?</em>
 						</h2>
