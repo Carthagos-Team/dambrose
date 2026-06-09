@@ -5,11 +5,13 @@ import { Button } from '@/components/ui/button'
 
 export function FooterCtaButton() {
 	const pathname = usePathname()
-	const href = pathname === '/membership' ? '/about' : '/membership'
+	const onMembership = pathname === '/membership'
+	const href = onMembership ? '/about' : '/membership'
+	const label = onMembership ? 'Inquiry about us' : 'Inquiry about membership'
 
 	return (
 		<Button href={href} variant="opal" size="sm">
-			Inquiry about membership
+			{label}
 		</Button>
 	)
 }
