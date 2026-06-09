@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { MobileNav } from '@/components/ui/mobile-nav'
+import { NavCtaButton } from '@/components/ui/nav-cta-button'
 import { TransitionLink } from '@/components/ui/transition-link'
 import { tv, type VariantProps } from '@/lib/tv'
 
@@ -180,7 +180,7 @@ export function Header({ variant = 'default' }: HeaderVariants = {}) {
 					</TransitionLink>
 				) : (
 					<div className="hidden md:inline-flex justify-end">
-						<Button href="/membership" variant="dark">Inquiry about membership</Button>
+						<NavCtaButton />
 					</div>
 				)}
 			</Container>
