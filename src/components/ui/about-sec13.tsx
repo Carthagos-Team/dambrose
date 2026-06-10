@@ -20,45 +20,43 @@ export function AboutSec13() {
 					</BlurReveal>
 
 					{/* ── CONTENT ROW ─────────────────────────────────── */}
-					<div className="flex flex-col gap-10 w-full md:flex-row md:items-center md:justify-between">
+					<div className="flex flex-col gap-10 w-full md:flex-row md:items-end md:justify-between">
 						{/* Photo */}
 						<RevealImage
 							delay={0.05}
-							className="relative w-full md:w-[34%] aspect-[463/368] overflow-hidden bg-bison-hide shrink-0"
+							className="relative w-full md:w-[36.63%] aspect-[463/368] overflow-hidden bg-bison-hide shrink-0"
 						>
 							<Image
 								src="/about-us/sec06/photo.webp"
 								alt="Patient in conversation with physician — attentive, personal care at DAMBROSE"
 								fill
 								className="object-cover object-center"
-								sizes="(max-width: 768px) 100vw, 34vw"
+								sizes="(max-width: 768px) 100vw, 37vw"
 							/>
 						</RevealImage>
 
-						{/* Right block: "06" index + text + button */}
-						<div className="flex flex-col md:flex-row gap-4 md:gap-[3.45em] md:items-start md:w-[56%]">
-						<BlurReveal delay={0.15} className="flex flex-col gap-[3.2em] md:flex-1 min-w-0">
-								<div className="relative">
-									<p className="font-body text-sm text-rangitoto/80 uppercase leading-[1.4] tracking-[-0.04em]">
-										DAMBROSE partners with specialist physicians who value collaboration, clarity,
-										and thoughtful medicine. If you share a commitment to serving patients through
-										an integrated approach, let&rsquo;s work together.
-									</p>
-									<Image
-										src="/about/sec13-signature.svg"
-										alt=""
-										width={306}
-										height={65}
-										className="absolute -bottom-6 right-0 w-36 md:w-[15.3em] md:-bottom-9 h-auto pointer-events-none select-none"
-										aria-hidden="true"
-										unoptimized
-									/>
-								</div>
-								<Button variant="regent" size="sm" href="/contact" className="w-fit">
-									contact us
-								</Button>
-							</BlurReveal>
-						</div>
+						{/* Right block: text + button */}
+						<BlurReveal delay={0.15} className="flex flex-col gap-[3.2em] md:w-[39.87%] min-w-0">
+							<div className="relative">
+								<p className="font-body text-sm text-rangitoto/80 uppercase leading-[1.4] tracking-[-0.04em]">
+									DAMBROSE partners with specialist physicians who value collaboration, clarity,
+									and thoughtful medicine. If you share a commitment to serving patients through
+									an integrated approach, let&rsquo;s work together.
+								</p>
+								<Image
+									src="/about/sec13-signature.svg"
+									alt=""
+									width={306}
+									height={65}
+									className="absolute -bottom-6 right-0 w-36 md:w-[15.3em] md:-bottom-9 h-auto pointer-events-none select-none"
+									aria-hidden="true"
+									unoptimized
+								/>
+							</div>
+							<Button variant="regent" size="sm" href="/contact" className="w-fit">
+								contact us
+							</Button>
+						</BlurReveal>
 					</div>
 				</div>
 			</Container>
