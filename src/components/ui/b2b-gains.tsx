@@ -33,12 +33,12 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'image',
-		src: '/b2b/sec02/showcase-small.webp',
+		src: '/b2b/sec02/showcase.webp',
 		alt: 'Executive in soft light during a private medical consultation',
 	},
 	{
 		kind: 'image',
-		src: '/features/b2b-gains-bouquet.png',
+		src: '/b2b/sec02/bouquet.webp',
 		alt: 'Floral arrangement on a sunlit marble table beside a glass of water',
 	},
 	{
@@ -65,24 +65,18 @@ export function B2bGains() {
 				<div className="flex flex-col gap-12 md:gap-20">
 					<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
 						<span className="font-body text-xs text-gray-olive uppercase tracking-wide">02</span>
-						<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
-							What your <em className="font-display italic">leadership</em> gains.
-						</h2>
-						<div className="w-full flex justify-center">
-							<div className="relative inline-block">
-								<p className="font-body text-sm uppercase tracking-tight leading-relaxed text-cape-cod text-center max-w-136">
-									Six commitments that make corporate membership measurable to your team and quiet
-									for your executives.
-								</p>
-								<Image
-									src="/marks/lifelong-medicine-stamp.svg"
-									alt=""
-									width={133}
-									height={63}
-									className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-3 md:ml-5 w-26 h-auto"
-									aria-hidden="true"
-								/>
-							</div>
+						<div className="relative inline-flex">
+							<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
+								What your <em className="font-display italic">leadership</em> gains.
+							</h2>
+							<Image
+								src="/marks/lifelong-medicine-stamp.svg"
+								alt=""
+								width={133}
+								height={63}
+								className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-3 md:ml-5 w-26 h-auto"
+								aria-hidden="true"
+							/>
 						</div>
 					</BlurReveal>
 

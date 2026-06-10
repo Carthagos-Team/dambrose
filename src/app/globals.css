@@ -135,4 +135,8 @@ body {
 			max-width: 60ch;
 		}
 	}
+	/* Martian Mono is always uppercase per brand typography. */
+	.font-body {
+		text-transform: uppercase;
+	}
 }

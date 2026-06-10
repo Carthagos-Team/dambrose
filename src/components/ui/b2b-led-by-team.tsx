@@ -41,7 +41,7 @@ export function B2bLedByTeam() {
 					{/* Right block — cols 8-11, row 2 (Figma: bottom aligned with image bottom) */}
 					<div className="md:col-start-8 md:col-span-4 md:row-start-2 md:self-end flex flex-col gap-14">
 						<BlurReveal delay={0.1} className="relative">
-							<p className="font-body text-sm text-rangitoto uppercase leading-relaxed tracking-tight">
+							<p className="font-body text-sm text-rangitoto/80 uppercase leading-relaxed tracking-tight">
 								Dambrose is founded and led by Dr. Michael J. D&rsquo;Ambrose, a board-certified
 								physician with broad clinical experience across outpatient care, hospital medicine,
 								emergency medicine, and obstetrics. His approach combines clinical rigor with

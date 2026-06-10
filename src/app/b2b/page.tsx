@@ -1,7 +1,6 @@
 import { JsonLd } from '@/components/json-ld'
 import { B2bAudience } from '@/components/ui/b2b-audience'
 import { B2bCorporateMembership } from '@/components/ui/b2b-corporate-membership'
-import { B2bCta } from '@/components/ui/b2b-cta'
 import { B2bGains } from '@/components/ui/b2b-gains'
 import { B2bHero } from '@/components/ui/b2b-hero'
 import { B2bIntro } from '@/components/ui/b2b-intro'
@@ -44,8 +43,6 @@ export default function B2bPage() {
 				<B2bCorporateMembership />
 				<SectionDivider />
 				<B2bLedByTeam />
-				<SectionDivider />
-				<B2bCta />
 			</main>
 		</>
 	)

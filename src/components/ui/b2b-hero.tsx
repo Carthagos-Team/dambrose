@@ -15,7 +15,7 @@ export function B2bHero() {
 						src="/b2b/hero/hero-bg.webp"
 						alt="Senior executive in tailored jacket resting hand on a leather journal with watch visible"
 						fill
-						className="object-cover"
+						className="object-cover object-[center_75%]"
 						priority
 						sizes="100vw"
 					/>

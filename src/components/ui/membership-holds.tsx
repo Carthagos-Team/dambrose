@@ -81,7 +81,7 @@ export function MembershipHolds() {
 					{/* CTA */}
 					<BlurReveal delay={0.2}>
 						<Button href="/services" variant="outline" className="text-rangoon-green">
-							Discover our services
+							<span className="opacity-60">Discover our services</span>
 						</Button>
 					</BlurReveal>
 				</div>

@@ -10,6 +10,7 @@ const ROWS = [
 		image: '/b2b/sec02/showcase-wide-1.webp',
 		alt: 'Senior executive hand resting beside a bouquet of pink roses and white hydrangeas',
 		side: 'right' as const,
+		objectPosition: 'center 70%',
 	},
 	{
 		index: '02',
@@ -17,6 +18,7 @@ const ROWS = [
 		image: '/b2b/sec02/showcase-wide-2.webp',
 		alt: 'Executive in a dark suit walking out through french doors toward sunlit gardens',
 		side: 'left' as const,
+		objectPosition: 'center 50%',
 	},
 	{
 		index: '03',
@@ -24,6 +26,7 @@ const ROWS = [
 		image: '/b2b/sec02/showcase-wide-3.webp',
 		alt: 'Portrait of a senior woman with gold earrings in warm window light',
 		side: 'right' as const,
+		objectPosition: 'center 28%',
 	},
 ]
 
@@ -64,7 +67,7 @@ export function B2bAudience() {
 											delay={i * 0.08 + 0.1}
 											className="md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
 										>
-											<Image src={row.image} alt={row.alt} fill className="object-cover" />
+											<Image src={row.image} alt={row.alt} fill className="object-cover" style={{ objectPosition: row.objectPosition }} />
 										</RevealImage>
 									</>
 								) : (
@@ -73,7 +76,7 @@ export function B2bAudience() {
 											delay={i * 0.08}
 											className="md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
 										>
-											<Image src={row.image} alt={row.alt} fill className="object-cover" />
+											<Image src={row.image} alt={row.alt} fill className="object-cover" style={{ objectPosition: row.objectPosition }} />
 										</RevealImage>
 										<BlurReveal
 											delay={i * 0.08 + 0.1}

@@ -184,7 +184,7 @@ export function Programs() {
 						<h2 className="font-display text-3xl md:text-5xl text-olive-haze leading-tight">
 							Access prevention, treatment, and renewal in one continuous path.
 						</h2>
-						<p className="font-body text-sm text-gray-olive">
+						<p className="font-body text-sm text-rangitoto/80 tracking-tight">
 							DAMBROSE offers a physician-led approach shaped around individual health goals, from
 							prevention to renewal.
 						</p>
@@ -213,7 +213,7 @@ export function Programs() {
 								<span className="font-body text-xs text-olive-haze uppercase tracking-wide">
 									{card.tag}
 								</span>
-								<p className="font-body text-sm text-gray-olive">{card.description}</p>
+								<p className="font-body text-sm text-rangitoto/80 tracking-tight">{card.description}</p>
 							</div>
 
 							{/* CTA */}

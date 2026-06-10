@@ -101,11 +101,11 @@ export function HowMembershipWorks({ hideOverlay = false }: { hideOverlay?: bool
 							>
 								<div className="grid grid-cols-[auto_auto] items-center gap-4 md:gap-6">
 									<span className="font-body text-xs text-rangitoto md:mt-2.4">{step.number}</span>
-									<span className="font-display text-2xl md:text-[2em] text-rangitoto leading-none">
+									<span className="font-display text-2xl md:text-[2em] text-rangitoto italic leading-tight tracking-[0.04rem]">
 										{step.title}
 									</span>
 								</div>
-								<p className="font-body text-xs uppercase tracking-wider text-rangitoto leading-relaxed">
+								<p className="font-body text-xs uppercase tracking-wider text-rangitoto/80 leading-relaxed">
 									{step.description}
 								</p>
 							</div>
