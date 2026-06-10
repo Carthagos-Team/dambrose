@@ -37,13 +37,7 @@ export function AboutSec13() {
 
 						{/* Right block: "06" index + text + button */}
 						<div className="flex flex-col md:flex-row gap-4 md:gap-[3.45em] md:items-start md:w-[56%]">
-							<BlurReveal delay={0.1}>
-								<span className="font-body text-xs text-olive-haze/60 uppercase leading-[1.3] w-[4.6em] block">
-									06
-								</span>
-							</BlurReveal>
-
-							<BlurReveal delay={0.15} className="flex flex-col gap-[3.2em] md:flex-1 min-w-0">
+						<BlurReveal delay={0.15} className="flex flex-col gap-[3.2em] md:flex-1 min-w-0">
 								<div className="relative">
 									<p className="font-body text-sm text-rangitoto/80 uppercase leading-[1.4] tracking-[-0.04em]">
 										DAMBROSE partners with specialist physicians who value collaboration, clarity,

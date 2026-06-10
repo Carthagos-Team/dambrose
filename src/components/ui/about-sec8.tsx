@@ -41,27 +41,20 @@ export function AboutSec8() {
 							</RevealImage>
 						</div>
 
-						{/* RIGHT: ornament + [01 · body] */}
+						{/* RIGHT: ornament + body */}
 						<div className="flex flex-col gap-[2.85em] md:w-[37%] shrink-0">
 							<Image
 								src="/about/sec8-mark.svg"
 								alt=""
 								width={65}
 								height={80}
-								className="opacity-80"
+								className="opacity-80 self-start"
 								aria-hidden="true"
 								unoptimized
 							/>
 
-							<BlurReveal className="flex flex-col md:flex-row md:items-center gap-2 md:gap-13 w-full">
-								<span
-									className="font-body text-xs uppercase text-gray-olive/80 leading-[1.3] shrink-0 w-6"
-									aria-hidden="true"
-								>
-									01
-								</span>
-
-								<div className="flex flex-col gap-[1.4em] font-body text-sm uppercase text-rangitoto/80 leading-[1.4] tracking-[-0.04em] w-full">
+							<BlurReveal>
+								<div className="flex flex-col gap-[1.4em] font-body text-sm uppercase text-rangitoto/80 leading-[1.4] tracking-[-0.04em]">
 									<p>Medicine has drifted too far from the people it serves.</p>
 									<p>
 										Rushed appointments. Fragmented care. A maze of referrals, specialists, and

@@ -21,20 +21,48 @@ export function AboutSec10() {
 						</h2>
 					</BlurReveal>
 
-					<div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-6 md:gap-y-[2.4em]">
+					<div className="grid grid-cols-1 gap-y-6 md:grid-cols-3 md:gap-x-12 md:gap-y-[2.4em]">
 						{/* Michael photo — desktop row 1 col 1 */}
-						<RevealImage className="relative w-full aspect-[628/799] overflow-hidden bg-bison-hide md:order-1">
+						<RevealImage className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-1">
 							<Image
 								src="/shared/portrait-doctor-1.webp"
 								alt="Dr. Michael J. D'Ambrose — Founder and Physician at DAMBROSE"
 								fill
 								className="object-cover object-top"
-								sizes="(max-width: 768px) 100vw, 50vw"
+								sizes="(max-width: 768px) 100vw, 33vw"
+							/>
+						</RevealImage>
+
+						{/* Elaina photo — desktop row 1 col 2 */}
+						<RevealImage
+							delay={0.1}
+							className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-2"
+						>
+							<Image
+								src="/about-us/sec03/image-2.webp"
+								alt="Elaina Aldrin, APRN — Nurse Practitioner at DAMBROSE"
+								fill
+								className="object-cover object-top"
+								sizes="(max-width: 768px) 100vw, 33vw"
+							/>
+						</RevealImage>
+
+						{/* Kalee photo — desktop row 1 col 3 */}
+						<RevealImage
+							delay={0.2}
+							className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-3"
+						>
+							<Image
+								src="/about-us/sec10/kalee.jpg"
+								alt="Kalee Lucente — Executive Administrative Assistant at DAMBROSE"
+								fill
+								className="object-cover object-top"
+								sizes="(max-width: 768px) 100vw, 33vw"
 							/>
 						</RevealImage>
 
 						{/* Michael text — desktop row 2 col 1 */}
-						<div className="flex flex-col gap-[1.2em] md:gap-[2.4em] md:order-3">
+						<div className="flex flex-col gap-[1.2em] md:gap-[2.4em] md:order-4">
 							<BlurReveal delay={0.1} className="flex flex-col gap-[1.2em] uppercase">
 								<h3 className="font-display text-[1.3em] leading-[1.3] tracking-[0.02em] text-zeus max-w-[12.8462em]">
 									<em className="font-display italic">Dr. Michael J. D&rsquo;Ambrose, M.D., </em>
@@ -58,24 +86,10 @@ export function AboutSec10() {
 							</BlurReveal>
 						</div>
 
-						{/* Elaina photo — desktop row 1 col 2 */}
-						<RevealImage
-							delay={0.1}
-							className="relative w-full aspect-[628/799] overflow-hidden bg-bison-hide md:order-2"
-						>
-							<Image
-								src="/about-us/sec03/image-2.webp"
-								alt="Elaina Aldrin, APRN — Nurse Practitioner at DAMBROSE"
-								fill
-								className="object-cover object-top"
-								sizes="(max-width: 768px) 100vw, 50vw"
-							/>
-						</RevealImage>
-
 						{/* Elaina text — desktop row 2 col 2 */}
 						<BlurReveal
 							delay={0.2}
-							className="flex flex-col gap-[1.2em] uppercase md:pb-[4.8em] md:order-4"
+							className="flex flex-col gap-[1.2em] uppercase md:pb-[4.8em] md:order-5"
 						>
 							<h3 className="font-display text-[1.3em] leading-[1.3] tracking-[0.02em] text-zeus max-w-[8.4615em]">
 								<em className="font-display italic">
@@ -92,6 +106,29 @@ export function AboutSec10() {
 								Elaina supports the practice through clinical care, patient coordination, and
 								relationship management, while maintaining a strong focus on women&rsquo;s health
 								and whole-person wellbeing.
+							</p>
+						</BlurReveal>
+
+						{/* Kalee text — desktop row 2 col 3 */}
+						<BlurReveal
+							delay={0.3}
+							className="flex flex-col gap-[1.2em] uppercase md:pb-[4.8em] md:order-6"
+						>
+							<h3 className="font-display text-[1.3em] leading-[1.3] tracking-[0.02em] text-zeus">
+								<em className="font-display italic">
+									Kalee Lucente,
+									<br />
+								</em>
+								Executive Administrative Assistant
+							</h3>
+							<p className="font-body text-xs text-rangitoto/80 leading-[1.4] tracking-[-0.04em]">
+								Kalee brings over four years of experience in healthcare administration within a
+								private primary care practice. She earned her Bachelor&rsquo;s degree in Healthcare
+								Administration and Management in 2023 and has built her career around creating a
+								welcoming, organized, and patient-focused experience. Kalee serves as a primary
+								point of contact for patients and is passionate about building meaningful, long-term
+								relationships with them, contributing to a care environment that feels personal,
+								attentive, and supportive.
 							</p>
 						</BlurReveal>
 					</div>

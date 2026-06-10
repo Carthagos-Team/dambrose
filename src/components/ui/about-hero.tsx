@@ -32,7 +32,7 @@ export function AboutHero() {
 						Medicine that stays personal as{' '}
 						<em className="font-display italic leading-none">life unfolds.</em>
 					</h1>
-					<p className="font-body text-gray-olive uppercase text-xs md:max-w-[35.1667em] md:text-[0.75em] md:text-right leading-[1.4] tracking-tight shrink-0">
+					<p className="font-body text-gray-olive uppercase text-xs md:max-w-[35.1667em] md:text-[0.75em] leading-[1.4] tracking-tight shrink-0">
 						DAMBROSE is a private practice that evolves with you, ensuring you&rsquo;re always cared
 						for—from moments of crisis to the quieter stretches in between.
 					</p>

@@ -44,11 +44,6 @@ export function Relationships() {
 							<Image src="/botanical.svg" alt="" width={66} height={80} aria-hidden="true" />
 						</div>
 
-						{/* 01 label — positioned between image and description */}
-						<BlurReveal delay={0.15} className="hidden min-[1440px]:block absolute left-[760px] top-[184px]">
-							<span className="font-body text-xs text-gray-olive/80">01</span>
-						</BlurReveal>
-
 						{/* Description */}
 						<div className="hidden min-[1440px]:flex min-[1440px]:absolute min-[1440px]:left-[883px] min-[1440px]:top-[210px] flex-col gap-4 w-[403px]">
 							<BlurReveal delay={0.1}>
@@ -65,7 +60,6 @@ export function Relationships() {
 
 						{/* Mobile: description below image */}
 						<div className="min-[1440px]:hidden mt-8 flex flex-col gap-4">
-							<span className="font-body text-xs text-gray-olive/80">01</span>
 							<p
 								className="font-body text-sm text-rangitoto/80 leading-relaxed"
 								style={{ letterSpacing: '-0.04em' }}

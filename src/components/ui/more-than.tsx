@@ -19,16 +19,16 @@ export function MoreThan() {
 					</BlurReveal>
 
 					{/* ── Two-column layout ───────────────────────────────────── */}
-					<div className="flex flex-col md:flex-row md:gap-20 md:items-start">
+					<div className="flex flex-col md:flex-row md:gap-20">
 						{/* Left column */}
-						<div className="flex flex-col gap-4 md:pt-40 md:w-[41.5%] shrink-0">
+						<div className="flex flex-col md:pt-40 md:w-[41.5%] shrink-0">
 							<RevealImage className="relative w-full aspect-564/400 overflow-hidden bg-bison-hide">
 								<Image src="/home/sec10/media-large.webp" alt="" fill className="object-cover" />
 							</RevealImage>
 
-							<BlurReveal delay={0.15}>
+							<BlurReveal delay={0.15} className="mt-4">
 								<p
-									className="font-body text-sm uppercase text-rangitoto/80 leading-relaxed mt-4"
+									className="font-body text-sm uppercase text-rangitoto/80 leading-relaxed"
 									style={{ letterSpacing: '-0.04em' }}
 								>
 									DAMBROSE goes further by keeping medicine accountable and personal, bringing
@@ -36,11 +36,11 @@ export function MoreThan() {
 								</p>
 							</BlurReveal>
 
-							<span className="font-body text-xs text-olive-haze/60">06</span>
-
-							<Button href="/philosophy" className="w-fit" variant="fire">
-								Learn about our philosophy →
-							</Button>
+							<BlurReveal delay={0.25} className="mt-auto pt-[3.2em]">
+								<Button href="/philosophy" className="w-fit" variant="fire">
+									Learn about our philosophy →
+								</Button>
+							</BlurReveal>
 						</div>
 
 						{/* Right column */}

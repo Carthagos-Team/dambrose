@@ -15,7 +15,7 @@ export function AboutSec9() {
 					<div className="flex flex-col gap-[1.2em] md:w-[38%] shrink-0">
 						<RevealImage className="relative w-full aspect-[514/433] overflow-hidden bg-bison-hide">
 							<Image
-								src="/shared/team-mask-1.webp"
+								src="/about/sec9-left.png"
 								alt="Crystal wellness tray with essential oil bottle — a detail from the DAMBROSE practice"
 								fill
 								className="object-cover"
@@ -67,17 +67,22 @@ export function AboutSec9() {
 									/>
 								</RevealImage>
 
-								<BlurReveal delay={0.15}>
-									<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
-										We connect what&rsquo;s scattered. We guide what&rsquo;s complex. We turn
-										uncertainty into clarity and urgency into calm&mdash; from prevention and
-										treatment to renewal.
-									</p>
-									<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80 mt-[0.6857em]">
-										Because real medicine isn&rsquo;t a service. It&rsquo;s a companionship. A
-										steady hand. A held history. A life understood across time.
-									</p>
-								</BlurReveal>
+							<BlurReveal delay={0.15} className="flex flex-col gap-[0.6857em]">
+								<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
+									We connect what&rsquo;s scattered.{' '}<br />
+									We guide what&rsquo;s complex.{' '}<br />
+									We turn uncertainty into clarity{' '}<br />
+									and urgency into calm&mdash;{' '}<br />
+									from prevention and treatment to renewal.
+								</p>
+								<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
+									Because real medicine isn&rsquo;t a service.{' '}<br />
+									It&rsquo;s a companionship.{' '}<br />
+									A steady hand.{' '}<br />
+									A held history.{' '}<br />
+									A life understood across time.
+								</p>
+							</BlurReveal>
 							</div>
 						</div>
 
