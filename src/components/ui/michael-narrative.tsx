@@ -10,41 +10,60 @@ export function MichaelNarrative() {
 			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[555fr_672fr] lg:gap-[7.4em] lg:items-stretch">
-						<RevealImage
-							className="relative w-full aspect-555/800 overflow-hidden bg-bison-hide"
-							start="top 90%"
-						>
-							<Image
-								src="/shared/portrait-doctor-1.webp"
-								alt="Dr. Michael J. D'Ambrose portrait"
-								fill
-								sizes="(min-width: 1024px) 555px, 100vw"
-								className="object-cover"
-							/>
-						</RevealImage>
-
-						<div className="flex flex-col">
-							<BlurReveal delay={0.1} className="flex flex-col gap-12">
-								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
-									Dr. D&rsquo;Ambrose&rsquo;s approach to medicine was shaped far from traditional
-									healthcare systems.
-								</h3>
-								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[44ch]">
-									Trained in Ireland and later practicing in rural America, he learned medicine in
-									environments where one doctor carried full responsibility — from emergency and
-									hospital medicine to obstetrics and long-term primary care. In Montana, he served
-									as the sole physician for an entire community, managing every aspect of their
-									health personally.
+						<div className="flex flex-col gap-4">
+							<BlurReveal>
+								<p className="font-body text-xs text-gray-olive uppercase tracking-tight leading-relaxed">
+									A message from our founder
 								</p>
 							</BlurReveal>
-
-							<BlurReveal delay={0.2} className="mt-auto pt-16">
+							<RevealImage
+								className="relative w-full aspect-555/800 overflow-hidden bg-bison-hide"
+								start="top 90%"
+							>
 								<Image
-									src="/marks/dambrose-badge.svg"
+									src="/shared/portrait-doctor-1.webp"
+									alt="Dr. Michael J. D'Ambrose portrait"
+									fill
+									sizes="(min-width: 1024px) 555px, 100vw"
+									className="object-cover"
+								/>
+							</RevealImage>
+						</div>
+
+						<div className="relative flex flex-col">
+							<BlurReveal delay={0.1} className="flex flex-col gap-12">
+								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
+									This practice was born from witnessing failure.
+								</h3>
+								<div className="flex flex-col gap-6 max-w-[44ch]">
+									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
+										Long before medicine became a profession for me, it became a conviction. As a
+										child, I watched someone I loved consumed by illness, and I watched a healthcare
+										system consume what remained of her dignity. She was a person with fears, with
+										people who loved her, with a life that mattered. The system never saw that. More
+										than motivating me to become a doctor, that experience defined the kind I would
+										never be.
+									</p>
+									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
+										Conventional medicine does not fail patients by accident — it fails them by
+										design. When physicians are pushed to see patients as revenue lines, the person
+										disappears and a case remains. A doctor cannot serve the institution and the
+										individual simultaneously when those interests are in conflict. I chose the
+										individual.
+									</p>
+								</div>
+							</BlurReveal>
+
+							<BlurReveal
+								delay={0.2}
+								className="mt-auto pt-16 self-center lg:mt-0 lg:pt-0 lg:self-auto lg:absolute lg:right-[6.792rem] lg:bottom-[-2.22406rem]"
+							>
+								<Image
+									src="/marks/dambrose-seal.svg"
 									alt="Dambrose — Lifelong Medicine"
-									width={300}
-									height={260}
-									className="w-72 h-auto"
+									width={314}
+									height={271}
+									className="w-60 h-auto lg:w-[19.625rem] lg:h-[16.90994rem] lg:rotate-[15deg]"
 								/>
 							</BlurReveal>
 						</div>
@@ -57,37 +76,43 @@ export function MichaelNarrative() {
 			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[672fr_555fr] lg:gap-[7.4em] lg:items-stretch">
-						<div className="flex flex-col order-2 lg:order-1">
+						<div className="relative flex flex-col order-2 lg:order-1 lg:min-h-full">
 							<BlurReveal delay={0.1} className="flex flex-col gap-12">
-								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none max-w-[18ch]">
-									That experience formed his belief early on in comprehensive, relationship-based
-									practice.
+								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
+									Health is not the absence of illness. It is the fullness of life.
 								</h3>
-								<div className="flex flex-col gap-6 max-w-[44ch]">
-									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
-										For Michael, medicine works best when accountability is centralized, when
-										knowledge is carried forward, and when patients are known beyond charts and
-										visits. The distant, clinical &ldquo;white coat&rdquo; model contrasts with his
-										commitment to being a real human presence people can trust, call directly, and
-										rely on.
-									</p>
-									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
-										Over time, he became increasingly aware of what modern healthcare had lost:
-										continuity, context, and presence. Systems built around speed and specialization
-										left patients navigating complexity alone, while physicians were forced into
-										fragmented roles.
-									</p>
-								</div>
+								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[30.6em]">
+									At DAMBROSE, we do not wait for you to become unwell before we take your health
+									seriously. We apply the most advanced diagnostics and evidence available, not
+									because our patients expect it, but because anything less would betray their
+									trust. We do not scale. We do not compromise. Every care plan is built from the
+									ground up, every patient relationship singular, every interaction shaped by what
+									medicine can be when freed from a system designed for volume.
+								</p>
 							</BlurReveal>
 
-							<BlurReveal delay={0.2} className="mt-auto pt-16">
-								<Image
-									src="/marks/lifelong-medicine-frame.svg"
-									alt="Lifelong Medicine — Dambrose"
-									width={260}
-									height={81}
-									className="h-20 w-auto"
-								/>
+							<BlurReveal
+								delay={0.2}
+								className="mt-16 self-start lg:mt-0 lg:absolute lg:left-0 lg:bottom-0"
+							>
+								<div className="flex h-[15.45em] w-[5.175em] items-center justify-center">
+									<div className="-rotate-90">
+										<div className="relative w-[15.45em] h-[5.175em] border-[0.095687em] border-shuttle-gray">
+											<div
+												className="absolute font-body text-[0.58em] text-shuttle-gray tracking-[0.33em] uppercase leading-[2.586em]"
+												style={{ left: '1.1724em', top: '0.431em', width: '24.2931em' }}
+											>
+												<div className="flex items-baseline justify-between">
+													<span>lifelong</span>
+													<div className="h-px bg-shuttle-gray flex-1 mx-2 mb-0.75" />
+													<span>medicine</span>
+												</div>
+												<p className="text-center">dambrose</p>
+												<p className="text-center">orlando · fl</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</BlurReveal>
 						</div>
 
@@ -99,6 +124,7 @@ export function MichaelNarrative() {
 								src="/about-dr-michael/sec03/portrait.webp"
 								alt="Reading glasses resting on a leather journal"
 								fill
+								quality={80}
 								sizes="(min-width: 1024px) 555px, 100vw"
 								className="object-cover"
 							/>
