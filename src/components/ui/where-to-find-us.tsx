@@ -22,7 +22,7 @@ export function WhereToFindUs() {
 					{/* Card */}
 					<BlurReveal
 						delay={0.1}
-						className="relative bg-woodrush overflow-hidden flex items-center justify-center min-h-105 md:min-h-160 w-full"
+						className="relative bg-woodrush flex items-center justify-center min-h-105 md:min-h-160 w-full"
 					>
 						{/* Corner labels — top */}
 						<span className="absolute top-4 left-4 font-body text-[0.625em] md:text-xs text-ecru-white/30 uppercase tracking-tight">
@@ -32,15 +32,15 @@ export function WhereToFindUs() {
 							Find us
 						</span>
 
-						{/* Contact info — centered */}
-						<div className="flex flex-col gap-10 md:gap-16 py-16 px-6 md:px-8 w-full">
+						{/* Contact info — content-width block, centered in the card (Figma 4188:223) */}
+						<div className="flex flex-col gap-10 md:gap-16 py-16 px-6 w-fit max-w-full">
 							<div className="flex flex-col gap-3 md:gap-4">
 								<span className="font-body text-xs md:text-sm text-ecru-white/80 uppercase tracking-tight">
 									Phone
 								</span>
 								<a
 									href="tel:+14078830456"
-									className="font-display text-2xl md:text-4xl text-ecru-white leading-none hover:text-opal transition-colors"
+									className="font-display text-2xl md:text-[2.22em] text-ecru-white leading-none hover:text-opal transition-colors"
 								>
 									+1 407-883-0456
 								</a>
@@ -50,7 +50,7 @@ export function WhereToFindUs() {
 								<span className="font-body text-xs md:text-sm text-ecru-white/80 uppercase tracking-tight">
 									Orlando
 								</span>
-								<address className="not-italic font-display text-2xl md:text-4xl text-ecru-white leading-tight md:leading-none">
+								<address className="not-italic font-display text-2xl md:text-[2.22em] text-ecru-white leading-tight md:leading-none">
 									200 South Orange Ave
 									<br />
 									Suite 1475
@@ -65,7 +65,7 @@ export function WhereToFindUs() {
 								</span>
 								<a
 									href="mailto:michael.dambrose@mjdmd.com"
-									className="font-display text-xl md:text-4xl text-ecru-white leading-tight md:leading-none hover:text-opal transition-colors break-all"
+									className="font-display text-xl md:text-[2.22em] text-ecru-white leading-tight md:leading-none hover:text-opal transition-colors break-all"
 								>
 									michael.dambrose@mjdmd.com
 								</a>
@@ -80,18 +80,15 @@ export function WhereToFindUs() {
 							Find us
 						</span>
 
-						{/* Stamp */}
-						<div
-							className="absolute bottom-4 right-4 md:bottom-8 md:right-8 pointer-events-none"
-							style={{ transform: 'rotate(13.12deg)' }}
-						>
+						{/* Stamp — pre-tilted SVG (rotation baked in); 4em from bottom, half outside the card's right edge */}
+						<div className="absolute bottom-8 right-4 w-36 md:w-56 md:bottom-16 md:right-auto md:left-full md:-translate-x-1/2 pointer-events-none">
 							<Image
-								src="/stamp.png"
+								src="/marks/find-us-stamp.svg"
 								alt=""
-								width={140}
-								height={140}
+								width={268}
+								height={245}
 								aria-hidden
-								className="w-20 md:w-35 h-auto opacity-90"
+								className="w-full h-auto"
 							/>
 						</div>
 					</BlurReveal>

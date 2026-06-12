@@ -9,13 +9,16 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
+const ROLE_OPTIONS = ['Patient', 'Specialist doctor', 'Company', 'Other']
+
 export function ContactForm() {
 	const messageId = useId()
+	const roleId = useId()
 	const [form, setForm] = useState({
 		firstName: '',
 		lastName: '',
 		email: '',
-		tel: '',
+		role: '',
 		message: '',
 	})
 	const [status, setStatus] = useState<Status>('idle')
@@ -58,7 +61,7 @@ export function ContactForm() {
 					</BlurReveal>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square">
+						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square md:aspect-620/652">
 							<Image
 								src="/contact-faq/sec01/hero-image.webp"
 								alt="A person's hands resting on a sunlit windowsill beside fresh flowers"
@@ -77,61 +80,113 @@ export function ContactForm() {
 								</p>
 							</BlurReveal>
 						) : (
-							<BlurReveal delay={0.1} className="flex flex-col justify-between gap-7 md:h-full">
-								<form onSubmit={handleSubmit} noValidate className="flex flex-col gap-7">
-									<div className="flex flex-col gap-7">
+							<BlurReveal delay={0.1} className="flex flex-col md:h-full">
+								<form onSubmit={handleSubmit} noValidate className="flex flex-col md:h-full gap-12">
+									{/* Fields */}
+									<div className="flex flex-col gap-12">
+										{/* First Name + Last Name */}
 										<div className="grid grid-cols-2 gap-6">
 											<Field
 												label="First Name"
+												placeholder="First name..."
 												value={form.firstName}
 												onChange={(v) => setForm((f) => ({ ...f, firstName: v }))}
 												required
 											/>
 											<Field
 												label="Last Name"
+												placeholder="Last name..."
 												value={form.lastName}
 												onChange={(v) => setForm((f) => ({ ...f, lastName: v }))}
 											/>
 										</div>
+
+										{/* Email */}
 										<Field
 											label="Email"
+											placeholder="Your best email..."
 											type="email"
 											value={form.email}
 											onChange={(v) => setForm((f) => ({ ...f, email: v }))}
 											required
 										/>
-										<Field
-											label="Tel No."
-											type="tel"
-											value={form.tel}
-											onChange={(v) => setForm((f) => ({ ...f, tel: v }))}
-										/>
-										<div className="flex flex-col gap-2">
+
+										{/* You're a... */}
+										<div className="flex flex-col gap-4">
+											<label
+												htmlFor={roleId}
+												className="font-body text-sm text-rangitoto/80 uppercase tracking-tight"
+											>
+												You&rsquo;re a...
+											</label>
+											<div className="relative">
+												<select
+													id={roleId}
+													value={form.role}
+													onChange={(e) => setForm((f) => ({ ...f, role: e.target.value }))}
+													className={`w-full appearance-none bg-transparent border-b border-judge-gray/60 focus:border-judge-gray font-body text-xs uppercase tracking-tight focus:outline-none py-3 pr-6 transition-colors cursor-pointer ${form.role === '' ? 'text-rangitoto/40' : 'text-rangoon-green'}`}
+												>
+													<option value="" disabled hidden>
+														Select an option...
+													</option>
+													{ROLE_OPTIONS.map((opt) => (
+														<option key={opt} value={opt}>
+															{opt}
+														</option>
+													))}
+												</select>
+												<svg
+													className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-rangitoto/60"
+													viewBox="0 0 16 16"
+													fill="none"
+													aria-hidden="true"
+												>
+													<path
+														d="M4 6l4 4 4-4"
+														stroke="currentColor"
+														strokeWidth="1.5"
+														strokeLinecap="round"
+														strokeLinejoin="round"
+													/>
+												</svg>
+											</div>
+										</div>
+
+										{/* Your Message Here */}
+										<div className="flex flex-col gap-12">
 											<label
 												htmlFor={messageId}
-												className="font-body text-xs text-olive-haze uppercase tracking-widest"
+												className="font-body text-sm text-rangitoto/80 uppercase tracking-tight"
 											>
 												Your Message Here
 											</label>
 											<textarea
 												id={messageId}
 												required
-												className="w-full bg-transparent border-b border-bison-hide font-body text-sm text-rangoon-green focus:outline-none focus:border-blue-smoke resize-none py-2 leading-relaxed min-h-32 transition-colors"
+												rows={1}
+												placeholder="How can we help? Write here..."
+												className="w-full bg-transparent border-b border-judge-gray/60 focus:border-judge-gray font-body text-xs uppercase tracking-tight text-rangoon-green placeholder:text-rangitoto/40 placeholder:uppercase focus:outline-none resize-none overflow-hidden py-3 leading-relaxed transition-colors"
 												value={form.message}
-												onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+												onChange={(e) => {
+													const el = e.target
+													el.style.height = 'auto'
+													el.style.height = `${el.scrollHeight}px`
+													setForm((f) => ({ ...f, message: el.value }))
+												}}
 											/>
 										</div>
 									</div>
 
-									<div className="flex flex-col gap-3">
+									{/* Button — anchored bottom-left (Figma gap-[151px]) */}
+									<div className="flex flex-col gap-3 md:mt-auto">
 										<Button
 											variant="dark"
 											size="md"
 											type="submit"
 											disabled={status === 'loading'}
-											className={status === 'loading' ? 'opacity-60 cursor-not-allowed' : ''}
+											className={`w-fit${status === 'loading' ? ' opacity-60 cursor-not-allowed' : ''}`}
 										>
-											{status === 'loading' ? 'Sending…' : 'Send Request'}
+											{status === 'loading' ? 'Sending…' : 'Send Message'}
 										</Button>
 
 										{status === 'error' && (
@@ -156,12 +211,14 @@ export function ContactForm() {
 
 function Field({
 	label,
+	placeholder,
 	type = 'text',
 	value,
 	onChange,
 	required,
 }: {
 	label: string
+	placeholder: string
 	type?: string
 	value: string
 	onChange: (v: string) => void
@@ -169,15 +226,16 @@ function Field({
 }) {
 	const id = useId()
 	return (
-		<div className="flex flex-col gap-2">
-			<label htmlFor={id} className="font-body text-xs text-olive-haze uppercase tracking-widest">
+		<div className="flex flex-col gap-4">
+			<label htmlFor={id} className="font-body text-sm text-rangitoto/80 uppercase tracking-tight">
 				{label}
 			</label>
 			<input
 				id={id}
 				type={type}
 				required={required}
-				className="w-full bg-transparent border-b border-bison-hide font-body text-sm text-rangoon-green focus:outline-none focus:border-blue-smoke py-2 transition-colors"
+				placeholder={placeholder}
+				className="w-full bg-transparent border-b border-judge-gray/60 focus:border-judge-gray font-body text-xs uppercase tracking-tight text-rangoon-green placeholder:text-rangitoto/40 placeholder:uppercase focus:outline-none py-3 transition-colors"
 				value={value}
 				onChange={(e) => onChange(e.target.value)}
 			/>
