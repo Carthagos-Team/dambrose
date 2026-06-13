@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Container } from '@/components/ui/container'
 import { FooterCtaButton } from '@/components/ui/footer-cta-button'
+import { FooterCtaHeading } from '@/components/ui/footer-cta-heading'
 import { RevealImage } from '@/components/ui/reveal-image'
 import { TransitionLink } from '@/components/ui/transition-link'
 
@@ -75,10 +76,7 @@ export function Footer() {
 									{/* Room — absolute, centered, bottom */}
 									<div className="relative w-full z-10 flex flex-col items-center gap-8 md:gap-12 text-center">
 										<CtaMark />
-										<h2 className="font-display text-4xl md:text-7xl text-blue-smoke leading-tight">
-											Begin a <em className="font-display italic">new relationship</em> <br /> with
-											your health.
-										</h2>
+										<FooterCtaHeading />
 										<FooterCtaButton />
 									</div>
 								</div>

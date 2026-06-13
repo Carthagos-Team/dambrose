@@ -28,9 +28,8 @@ export function ServicesHero() {
 					<h1 className="font-display text-5xl md:text-6xl text-olive-haze leading-[1.15]">
 						Care, fully <em className="font-display italic">supported.</em>
 					</h1>
-					<p className="text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5">
-						Services shaped around a lifelong relationship — comprehensive, personal, and always
-						within reach.
+					<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs md:max-w-140">
+						Services shaped around a lifelong relationship.
 					</p>
 				</BlurReveal>
 			</Container>

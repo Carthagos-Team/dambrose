@@ -25,11 +25,11 @@ export function Hero({ hold = false }: { hold?: boolean } = {}) {
 
 			{/* Content strip */}
 			<Container className="pt-8 pb-10 md:pt-4.5 md:pb-10">
-				<BlurReveal hold={hold} delay={hold ? 0.9 : undefined} className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+				<BlurReveal hold={hold} delay={hold ? 0.9 : undefined} className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
 					<h1 className="font-display text-5xl md:text-6xl text-olive-haze leading-[1.15]">
 						Lifelong care that <em className="font-display italic">knows</em> you.
 					</h1>
-					<p className="text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5">
+					<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-142">
 						Discover a private medical practice built on personal oversight and continuity across
 						every stage of life.
 					</p>

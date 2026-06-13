@@ -24,12 +24,12 @@ export function MembershipHero() {
 			</Container>
 
 			<Container className="pt-8 pb-10 md:pt-4.5 md:pb-10">
-				<BlurReveal className="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-end">
+				<BlurReveal className="grid grid-cols-1 md:grid-cols-2 gap-8 md:items-start">
 					<h1 className="font-display text-5xl md:text-[3.25em] text-olive-haze leading-none">
 						DAMBROSE <em className="font-display italic">membership</em>
 					</h1>
 					<div className="flex flex-col items-start gap-6 md:max-w-115.5 md:justify-self-end">
-						<p className="text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs">
+						<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs">
 							A personal medical relationship where time is part of the treatment.
 						</p>
 						<Button href="/inquiry" variant="dark" size="sm">
