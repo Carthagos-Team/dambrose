@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import { BlurReveal } from '@/components/ui/blur-reveal'
-import { Container } from '@/components/ui/container'
+import { TestimonialDeck } from '@/components/ui/testimonial-deck'
 
 const QUOTES = [
 	{
@@ -15,52 +13,18 @@ const QUOTES = [
 		quote:
 			'The transition into a more attentive practice has changed how I think about medicine. Visits feel calm and unhurried, follow-ups are personal, and every recommendation is shaped around the life I actually live. There is a steadiness and care here I never knew was possible.',
 	},
+	{
+		author: 'Robert Hale',
+		location: 'Bone Valley, TX',
+		quote:
+			'For the first time, I feel like my doctor truly knows me. Nothing is rushed, nothing is forgotten, and every decision is made with my full history in mind. The continuity of care has given me a confidence in my health I had not felt in decades.',
+	},
 ]
 
 export function Testimonials() {
 	return (
-		<section className="relative w-full overflow-hidden py-20 md:py-24">
-			<Image
-				src="/shared/fullpage-section-bg.webp"
-				alt=""
-				fill
-				className="object-cover -z-10"
-				aria-hidden="true"
-			/>
-			<div className="absolute inset-0 -z-10 bg-black/20" aria-hidden="true" />
-
-			<Container>
-				<div className="flex flex-col items-center gap-12">
-					<BlurReveal className="w-full">
-						<h2 className="font-display text-4xl md:text-[3.375em] text-half-and-half text-center uppercase leading-tight tracking-wide">
-							Trusted by those who expect more from medicine.
-						</h2>
-					</BlurReveal>
-
-					<div className="flex w-full flex-col gap-4">
-						{QUOTES.map((q, i) => (
-							<BlurReveal key={q.author} delay={i * 0.1} className="w-full">
-								<figure className="flex flex-col items-center gap-10 md:gap-16 text-center bg-white-rock/90 rounded-lg overflow-hidden px-6 py-10 md:px-16 md:py-12">
-									<figcaption className="font-body text-sm uppercase tracking-wider text-zeus">
-										<span className="font-semibold">{q.author}, </span>
-										<span className="font-extralight">{q.location}</span>
-									</figcaption>
-									<Image
-										src="/marks/lifelong-medicine-frame.svg"
-										alt="Lifelong Medicine"
-										width={260}
-										height={81}
-										className="h-16 md:h-20 w-auto"
-									/>
-									<blockquote className="font-ui text-xl md:text-2xl text-zeus/80 leading-snug tracking-wider text-pretty">
-										{q.quote}
-									</blockquote>
-								</figure>
-							</BlurReveal>
-						))}
-					</div>
-				</div>
-			</Container>
+		<section className="relative w-full">
+			<TestimonialDeck quotes={QUOTES} />
 		</section>
 	)
 }
