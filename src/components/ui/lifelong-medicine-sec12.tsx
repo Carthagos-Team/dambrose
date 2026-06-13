@@ -13,7 +13,7 @@ export function LifelongMedicineSec12() {
 				<div className="flex flex-col gap-10 md:gap-15">
 					{/* ── HEADING ─────────────────────────────────────── */}
 					<BlurReveal>
-						<h2 className="font-display text-[2.5em] leading-none tracking-[0.025em] text-gray-olive md:max-w-[38%]">
+						<h2 className="font-display text-[2.5em] leading-none tracking-[0.025em] text-gray-olive md:ml-[40.7%] md:max-w-[38%]">
 							What if medicine took the time it needs{' '}
 							<em className="font-display italic">to heal?</em>
 						</h2>
@@ -85,7 +85,10 @@ export function LifelongMedicineSec12() {
 									delay={0.15}
 									className="flex flex-col gap-4 md:flex-row md:items-start md:gap-18"
 								>
-									<span className="font-body text-xs text-gray-olive/80 uppercase leading-[1.3] shrink-0">
+									<span
+										className="invisible font-body text-xs uppercase leading-[1.3] shrink-0"
+										aria-hidden="true"
+									>
 										01
 									</span>
 									<p className="font-body text-[0.7em] text-rangitoto/80 uppercase leading-[1.4] tracking-[-0.04em]">
