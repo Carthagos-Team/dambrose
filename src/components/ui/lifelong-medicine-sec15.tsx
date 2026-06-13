@@ -50,7 +50,7 @@ export function LifelongMedicineSec15() {
 					</BlurReveal>
 
 					{/* ── CARDS ROW ───────────────────────────────────── */}
-					<div className="flex flex-col gap-4 w-full md:flex-row md:items-end md:gap-[1.2em] max-w-280 mx-auto">
+					<div className="flex flex-col gap-4 w-full md:flex-row md:items-end md:gap-[1.5em] max-w-[67.75em] mx-auto">
 						{/* LEFT — Episodic Care */}
 						<BlurReveal
 							delay={0}
@@ -59,7 +59,7 @@ export function LifelongMedicineSec15() {
 							{/* Photo */}
 							<RevealImage
 								delay={0.05}
-								className="relative w-full aspect-[4/3] md:aspect-[630/232] overflow-hidden bg-bison-hide"
+								className="relative w-full aspect-[4/3] md:aspect-470/289 overflow-hidden bg-bison-hide"
 							>
 								<Image
 									src="/lifelong-medicine/sec15-episodic.png"
@@ -112,7 +112,7 @@ export function LifelongMedicineSec15() {
 							{/* Photo */}
 							<RevealImage
 								delay={0.15}
-								className="relative w-full aspect-[4/3] md:aspect-[630/232] overflow-hidden"
+								className="relative w-full aspect-[4/3] md:aspect-470/289 overflow-hidden"
 							>
 								<Image
 									src="/lifelong-medicine/sec15-lifelong.jpg"
@@ -132,32 +132,26 @@ export function LifelongMedicineSec15() {
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Care begins with foresight"
-										light
 									/>
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Health history informs every step"
-										light
 									/>
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Decisions are guided by lived context"
-										light
 									/>
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Specialists are coordinated within one direction"
-										light
 									/>
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Health is anticipated, not only treated"
-										light
 									/>
 									<FeatureRow
 										icon="/lifelong-medicine/sec15-icon-light.svg"
 										text="Responsibility continues over time"
-										light
 									/>
 								</div>
 							</div>
