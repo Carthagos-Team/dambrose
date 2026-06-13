@@ -47,13 +47,13 @@ export function MedicalFramework() {
 				<div data-wrapper="framework_component" className="flex flex-col gap-14 md:gap-20">
 					<div data-wrapper="framework_header">
 						<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
-							<span className="font-body text-xs text-gray-olive uppercase tracking-wide">02</span>
+							<span className="invisible font-body text-xs uppercase tracking-wide" aria-hidden="true">02</span>
 							<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
 								A complete medical framework.
 							</h2>
 							<div data-wrapper="framework_header_meta" className="w-full flex justify-center">
 								<div className="relative inline-block">
-									<p className="font-body text-sm uppercase tracking-tight leading-relaxed text-cape-cod text-center max-w-136">
+									<p className="font-body text-sm uppercase tracking-tight leading-relaxed text-rangitoto text-center max-w-136">
 										Your annual membership includes unlimited access to a fully integrated range of
 										services.
 									</p>
@@ -62,7 +62,7 @@ export function MedicalFramework() {
 										alt=""
 										width={133}
 										height={63}
-										className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-3 md:ml-5 w-26 h-auto"
+										className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 ml-3 md:ml-5 w-[9.36rem] h-auto"
 										aria-hidden="true"
 									/>
 								</div>
