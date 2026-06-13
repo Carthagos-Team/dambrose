@@ -29,7 +29,7 @@ export function LifelongMedicineHero() {
 					<h1 className="font-display text-[2.6em] leading-none tracking-[0.01em] text-gray-olive">
 						Our <em className="font-display italic">philosophy.</em>
 					</h1>
-					<p className="font-body text-xs uppercase leading-[1.4] tracking-[-0.04em] text-gray-olive md:max-w-[31%] md:text-right">
+					<p className="font-body text-xs uppercase leading-[1.4] tracking-[-0.04em] text-gray-olive md:flex md:w-[26.375rem] md:flex-col md:items-start md:text-left">
 						Care designed to endure, evolve, and remain present through every stage of life.
 					</p>
 				</BlurReveal>
