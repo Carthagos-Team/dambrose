@@ -23,6 +23,7 @@ const button = tv({
 			dune: 'bg-[#cac7a8] text-[#545c63]',
 			outline: 'border border-current bg-transparent text-current',
 			'half-and-half': 'bg-[#ffffe4] text-[#282119] underline',
+			shuttle: 'bg-shuttle-gray/70 text-half-and-half',
 		},
 		size: {
 			badge: 'px-[0.31em] py-0',

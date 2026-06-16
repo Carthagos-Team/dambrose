@@ -30,24 +30,24 @@ const cards = [
 	},
 ] as const
 
-const PLACEHOLDER_GRADIENT = 'linear-gradient(180deg, #808D95 10%, #B4A389 50%, #DEDBBC 100%)'
+const PLACEHOLDER_GRADIENT = 'linear-gradient(0deg, #808D95 10%, #B4A389 50%, #DEDBBC 100%)'
 
 export function ContinuousCareAdvantages() {
 	return (
 		<section
-			className="w-full py-24 md:py-28"
+			className="w-full py-16 md:py-[4.35rem]"
 			style={{
-				background: 'linear-gradient(180deg, #DEDBBC 0%, #B4A389 50%, #808D95 90%)',
+				background: 'linear-gradient(0deg, #DEDBBC 0%, #B4A389 50%, #808D95 90%)',
 			}}
 		>
 			<Container>
 				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-6xl text-ecru-white leading-[1.05] text-center max-w-2xl mx-auto">
+					<h2 className="font-futura text-5xl uppercase text-half-and-half leading-none tracking-wide text-center max-w-[33.6875rem] mx-auto">
 						The advantages of continuous care.
 					</h2>
 				</BlurReveal>
 
-				<div className="mt-16 md:mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div className="mt-16 md:mt-[5.65rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.2rem]">
 					{cards.map((c, i) => (
 						<BlurReveal key={c.title} delay={0.1 * (i + 1)}>
 							<article className="flex flex-col p-4 h-full" style={{ backgroundColor: '#FFFFE4' }}>
@@ -65,11 +65,11 @@ export function ContinuousCareAdvantages() {
 									)}
 								</RevealImage>
 
-								<h3 className="mt-6 font-display text-xl md:text-[1.375em] italic text-rangoon-green leading-[1.15]">
+								<h3 className="mt-6 font-futura text-[1.1rem] uppercase text-[#282119] tracking-wider leading-[1.3]">
 									{c.title}
 								</h3>
 
-								<p className="mt-auto pt-12 font-body text-xs uppercase leading-relaxed tracking-tight text-rangoon-green">
+								<p className="mt-[13.5rem] font-body text-xs uppercase leading-relaxed tracking-tight text-[#282119] opacity-80">
 									{c.description}
 								</p>
 							</article>

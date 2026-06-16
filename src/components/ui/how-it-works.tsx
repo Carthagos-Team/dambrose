@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
-import { TransitionLink } from '@/components/ui/transition-link'
 
 const steps = [
 	{
@@ -48,20 +47,7 @@ export function HowItWorks() {
 							fill
 							className="object-cover"
 						/>
-						<div className="absolute inset-0 bg-black/30" />
-						<div className="absolute inset-0 flex flex-col items-center justify-center gap-8 md:gap-10 px-6 text-center">
-							<BlurReveal delay={0.25}>
-								<h2 className="font-display text-4xl md:text-6xl text-ecru-white leading-[0.95]">
-									How it works
-								</h2>
-							</BlurReveal>
-							<TransitionLink
-								href="/contact"
-								className="inline-flex items-center justify-center px-5 h-9 border border-ecru-white/90 text-ecru-white font-body text-xs uppercase tracking-wider hover:bg-ecru-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ecru-white cursor-pointer"
-							>
-								Inquiry
-							</TransitionLink>
-						</div>
+						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
 					{/* Right: gradient panel */}
@@ -69,26 +55,26 @@ export function HowItWorks() {
 						<div
 							className="absolute inset-0"
 							style={{
-								background: 'linear-gradient(135deg, #DEDBBC 0%, #B4A389 50%, #808D95 100%)',
+								background: 'linear-gradient(180deg, #DEDBBC 0%, #B4A389 50%, #808D95 90%)',
 							}}
 						/>
 					</RevealImage>
 				</div>
 
 				{/* ── Three steps under cards ───────────────────────────── */}
-				<div className="mt-12 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
+				<div className="mt-12 md:mt-[5.6rem] grid grid-cols-1 md:grid-cols-3 gap-x-10 md:gap-x-[1.9rem] gap-y-10">
 					{steps.map((s, i) => (
 						<BlurReveal key={s.number} delay={0.1 * (i + 1)}>
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 items-start">
-								<div className="flex items-baseline gap-3">
-									<span className="font-body text-xs text-shuttle-gray tracking-tight">
+								<div className="flex items-start gap-3">
+									<span className="font-body text-xs text-[#626f77] opacity-60 leading-[1.9]">
 										{s.number}
 									</span>
-									<h3 className="font-display text-2xl text-shuttle-gray italic leading-tight">
+									<h3 className="font-futura text-[1.2rem] uppercase text-[#626f77] tracking-wider leading-tight">
 										{s.title}
 									</h3>
 								</div>
-								<p className="font-body text-xs leading-relaxed tracking-tight text-rangoon-green">
+								<p className="font-body text-xs leading-relaxed tracking-tight text-[#282119] opacity-80">
 									{s.description}
 								</p>
 							</div>

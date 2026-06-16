@@ -25,7 +25,7 @@ export function CoreMedicine() {
 	return (
 		<section className="w-full bg-half-and-half py-28 flex flex-col gap-22">
 			{/* ── Headline ────────────────────────────────────────────── */}
-			<h2 className="font-display text-4xl md:text-5xl text-shuttle-gray text-center leading-[1.05] uppercase max-w-3xl mx-auto px-5 tracking-wide">
+			<h2 className="font-futura text-5xl text-center uppercase max-w-3xl mx-auto px-5" style={{ color: '#626F77', lineHeight: '100%', letterSpacing: '0.03125rem' }}>
 				Core medicine without interruption.
 			</h2>
 
@@ -51,7 +51,7 @@ export function CoreMedicine() {
 			</div>
 
 			{/* ── Description paragraph ───────────────────────────────── */}
-			<p className="font-body text-xs md:text-sm uppercase text-rangoon-green leading-relaxed tracking-tight text-center max-w-[54.4167em] md:max-w-[46.6429em] mx-auto px-5">
+			<p className="font-body text-xs md:text-sm uppercase leading-relaxed tracking-tight text-center max-w-[54.4167em] md:max-w-[46.6429em] mx-auto px-5" style={{ color: 'rgba(40, 33, 25, 0.8)' }}>
 				Sometimes nothing is wrong, but you want reassurance. Other times, your condition changes
 				and you don't want to start over with different doctors. ALMA exists for those moments and
 				everything in between. It's the confidence of having a dedicated health team who already
@@ -61,11 +61,11 @@ export function CoreMedicine() {
 			{/* ── Bottom bordered emphasis ────────────────────────────── */}
 			<div className="mx-auto px-5 w-full max-w-220.75">
 				<div className="border border-shuttle-gray/30 px-6 py-8 flex flex-col items-center gap-9 text-center">
-					<p className="font-display text-xl md:text-2xl text-shuttle-gray uppercase leading-snug tracking-tight">
+					<p className="font-futura uppercase text-center" style={{ color: '#626F77', fontSize: '21.722px', lineHeight: '130%', letterSpacing: '0.217px' }}>
 						Whether days pass calmly or health demands attention, ALMA stays present, making
 						medicine feel steady rather than episodic.
 					</p>
-					<p className="font-body text-[0.6875em] text-shuttle-gray uppercase tracking-[0.15em]">
+					<p className="font-accent text-[0.6875em] text-shuttle-gray uppercase tracking-[0.15em]">
 						By Michael J. D'Ambrose
 					</p>
 				</div>
