@@ -29,43 +29,29 @@ export function LifelongMedicineSec16() {
 						<BlurReveal delay={0.1}>
 							<blockquote className="font-display text-[1.85em] leading-[1.25] tracking-[0.01em] text-gray-olive">
 								<p>
-									Over the years, I realized that the most important medical decisions rarely come
+									&ldquo;Over the years, I realized that the most important medical decisions rarely
+									come
 									from isolated visits. They come from time. From knowing a person&rsquo;s history,
 									their patterns, their fears, and how their health evolves between appointments.
 								</p>
 								<p className="mt-[0.78em]">
 									Lifelong medicine is the way I was trained to think. It&rsquo;s medicine that
 									remembers, that stays accountable, and that doesn&rsquo;t disappear when things
-									get complex or too quiet.
+									get complex or too quiet.&rdquo;
 								</p>
 							</blockquote>
 						</BlurReveal>
 
-						{/* Signature group */}
-						<BlurReveal delay={0.2} className="relative h-[8.8em] mt-16 md:mt-0">
-							{/* Wordmark — anchored bottom-left */}
-							<div className="absolute left-0 bottom-0">
-								<Image
-									src="/lifelong-medicine/sec16-wordmark.svg"
-									alt="Dambrose"
-									width={298}
-									height={62}
-									className="w-[18.6em] h-auto"
-									unoptimized
-								/>
-							</div>
-
-							{/* Badge — upper-right, bleeds above */}
-							<div className="absolute right-0 -top-[0.8em]">
-								<Image
-									src="/lifelong-medicine/sec16-badge.png"
-									alt=""
-									width={143}
-									height={143}
-									className="w-[8.9em] h-[8.9em]"
-									aria-hidden="true"
-								/>
-							</div>
+						{/* Signature — single composed vector: wordmark + "M.J.D" badge (Figma node 4303-150) */}
+						<BlurReveal delay={0.2} className="mt-16 md:mt-0">
+							<Image
+								src="/lifelong-medicine/sec16-signature.svg"
+								alt="Dambrose — here for every life chapter"
+								width={396}
+								height={152}
+								className="w-[24.75em] max-w-full h-auto"
+								unoptimized
+							/>
 						</BlurReveal>
 					</div>
 				</div>

@@ -27,10 +27,9 @@ export function B2bHero() {
 					<h1 className="font-display text-5xl md:text-6xl text-olive-haze leading-[1.05] max-w-208">
 						Longevity and peak performance for the people your company cannot afford to lose.
 					</h1>
-					<p className="text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5 md:pt-4">
-						Offer your senior executive team a private medical relationship — physician-led,
-						ongoing, and built to protect the health, clarity, and stamina across every year they
-						serve.
+					<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5 md:pt-4">
+						Offer your executive team a private health membership designed for leaders who value
+						convenience, trusted guidance, and complete oversight.
 					</p>
 				</BlurReveal>
 			</Container>

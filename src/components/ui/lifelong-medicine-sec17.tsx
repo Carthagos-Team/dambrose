@@ -120,7 +120,7 @@ export function LifelongMedicineSec17() {
 								className="relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec10/image-2.webp"
+									src="/lifelong-medicine/sec17/lounge.webp"
 									alt="Lounge chair by window — the comfort of lifelong medicine"
 									fill
 									className="object-cover object-center"

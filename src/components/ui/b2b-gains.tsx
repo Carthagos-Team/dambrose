@@ -80,7 +80,7 @@ export function B2bGains() {
 						</div>
 					</BlurReveal>
 
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 						{CARDS.map((card, i) => {
 							if (card.kind === 'image') {
 								return (
@@ -88,7 +88,7 @@ export function B2bGains() {
 										// biome-ignore lint/suspicious/noArrayIndexKey: stable position
 										key={`img-${i}`}
 										delay={(i % 4) * 0.08}
-										className="relative w-full aspect-328/362 overflow-hidden bg-bison-hide"
+										className="relative w-full min-h-[20.5rem] overflow-hidden bg-bison-hide"
 									>
 										<Image src={card.src} alt={card.alt} fill className="object-cover" />
 									</RevealImage>
@@ -98,13 +98,13 @@ export function B2bGains() {
 								<BlurReveal
 									key={card.title}
 									delay={(i % 4) * 0.08}
-									className="bg-[#ffffe4] aspect-328/362"
+									className="bg-[#ffffe4] min-h-[20.5rem]"
 								>
-									<div className="flex flex-col h-full px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7">
-										<h3 className="font-display italic text-2xl text-corduroy leading-snug">
+									<div className="flex flex-col h-full px-5 py-8 md:px-6 md:py-9">
+										<h3 className="font-display italic text-[1.35rem] text-corduroy leading-tight tracking-wider">
 											{card.title}
 										</h3>
-										<p className="mt-auto font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
+										<p className="mt-auto font-body text-xs text-rangoon-green/80 uppercase leading-relaxed tracking-tight">
 											{card.body}
 										</p>
 									</div>
