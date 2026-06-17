@@ -52,10 +52,10 @@ const PRAEVA: Program = {
 		'A longevity-focused program harnessing state-of-the-art technology to reduce risk, strengthen resilience, and preserve vitality.',
 	benefitsTitle: 'Includes everything in your ALMA membership, plus:',
 	benefits: [
-		'Advanced diagnostics, measured over time',
-		'A deeper understanding of your individual risk',
-		'Personalized longevity strategy',
-		'Ongoing recalibration as your body evolves',
+		'A COMPLETE MAP OF YOUR BIOLOGY, UPDATED CONTINUOUSLY',
+		'RISKS IDENTIFIED AND ADDRESSED BEFORE THEY SURFACE',
+		'A LONGEVITY STRATEGY BUILT AROUND YOUR LIFE',
+		'ONGOING RECALIBRATION WITH YOUR PHYSICIAN',
 	],
 	primary: { label: 'Explore Praeva', href: '/praeva' },
 	secondary: { label: 'Ask about pricing', href: '/contact' },
@@ -139,23 +139,23 @@ function TextCard({ program }: { program: Program }) {
 		<div className="bg-[#ffffe4] p-5 flex flex-col justify-between gap-8 aspect-680/664">
 			<div className="flex flex-col gap-12">
 				<div className="flex flex-col gap-6">
-					<p className="font-body text-xs text-olive-haze uppercase tracking-wide leading-relaxed whitespace-pre-line">
+					<p className="font-body font-semibold text-xs text-olive-haze uppercase tracking-[0] leading-[1.3] opacity-60 whitespace-pre-line">
 						{program.tag}
 					</p>
-					<p className="font-body text-sm text-rangoon-green uppercase tracking-tight leading-relaxed">
+					<p className="font-body text-sm text-rangitoto opacity-80 leading-[1.4] tracking-[-0.04em]">
 						{program.description}
 					</p>
 				</div>
 
 				<div className="flex flex-col gap-8">
-					<p className="font-body text-xs text-rangoon-green uppercase tracking-tight">
+					<p className="font-body font-semibold text-xs text-rangoon-green opacity-80 uppercase tracking-[-0.04em] leading-[1.4]">
 						{program.benefitsTitle}
 					</p>
 					<ul className="flex flex-col gap-3">
 						{program.benefits.map((benefit) => (
 							<li key={benefit} className="flex items-center gap-4">
 								<BenefitMark className="text-gray-olive" />
-								<span className="font-body text-xs text-rangoon-green uppercase tracking-tight leading-relaxed">
+								<span className="font-body text-xs text-rangoon-green opacity-80 uppercase tracking-[-0.04em] leading-[1.4]">
 									{benefit}
 								</span>
 							</li>
@@ -187,15 +187,12 @@ export function MembershipPrograms() {
 			<Container>
 				<div className="flex flex-col gap-22">
 					<BlurReveal className="w-full self-center max-w-160 flex flex-col items-center gap-16 text-center">
-						<p className="font-body text-xs text-olive-haze uppercase tracking-wide leading-none">
-							05
-						</p>
-						<div className="flex flex-col items-center gap-8">
+<div className="flex flex-col items-center gap-8">
 							<h2 className="font-display text-4xl md:text-5xl text-olive-haze leading-none">
-								ALMA is the <em className="font-display italic">foundation.</em> PRAEVA builds on
+								<em className="font-display italic">ALMA</em> is the <em className="font-display italic">foundation.</em> <em className="font-display italic">PRAEVA</em> builds on
 								it.
 							</h2>
-							<p className="font-body text-sm text-rangoon-green uppercase tracking-tight leading-relaxed max-w-[37.7143em]">
+							<p className="font-body text-sm text-rangitoto opacity-80 uppercase tracking-tight leading-relaxed max-w-[37.7143em]">
 								You may apply to the core membership alone or the longevity-focused PROGRAM,
 								depending on your health goals and needs.
 							</p>

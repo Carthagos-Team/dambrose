@@ -8,7 +8,7 @@ export function MembershipIntro() {
 		<section className="w-full bg-rangitoto py-28 md:py-36">
 			<Container>
 				<BlurReveal>
-					<p className="font-display text-2xl md:text-3xl text-ecru-white leading-snug max-w-[34ch]">
+					<p className="font-display text-2xl md:text-[2.25rem] text-ecru-white leading-[1.2] max-w-[48.3125rem]">
 						You may be seeking guidance, facing a difficult diagnosis, or preparing for the years
 						ahead. DAMBROSE is designed for all of it. By remaining intentionally limited, the
 						annual membership preserves the time and focus a health team needs to truly know you and
@@ -32,7 +32,7 @@ export function MembershipIntro() {
 						</RevealImage>
 						<RevealImage className="relative w-full aspect-680/756 overflow-hidden" start="top 95%">
 							<Image
-								src="/membership/sec01/scroll-image-2.webp"
+								src="/membership/sec01/scroll-image-2b.webp"
 								alt=""
 								fill
 								className="object-cover"
@@ -71,7 +71,7 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/sec01/scroll-image-2.webp"
+								src="/membership/sec01/scroll-image-2b.webp"
 								alt=""
 								fill
 								className="object-cover"

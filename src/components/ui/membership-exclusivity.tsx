@@ -60,17 +60,17 @@ export function MembershipExclusivity() {
 
 				<BlurReveal
 					delay={0.15}
-					className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4"
+					className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-[1em]"
 				>
 					{cards.map((card) => (
 						<article
 							key={card.title}
 							className="flex flex-col justify-between bg-[#ffffe4] min-h-104 px-5 pt-8.5 pb-13"
 						>
-							<h3 className="font-display italic text-[1.5em] text-corduroy leading-tight tracking-wider">
+							<h3 className="font-display italic text-[1.5em] text-corduroy leading-[1.1] tracking-[0.02em]">
 								{card.title}
 							</h3>
-							<p className="font-body text-xs uppercase text-rangoon-green leading-relaxed tracking-tight">
+							<p className="font-body text-xs uppercase text-rangoon-green leading-[1.4] tracking-[-0.04em]">
 								{card.description}
 							</p>
 						</article>
