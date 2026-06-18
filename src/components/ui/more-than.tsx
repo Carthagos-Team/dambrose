@@ -23,7 +23,7 @@ export function MoreThan() {
 						{/* Left column */}
 						<div className="flex flex-col md:pt-40 md:w-[41.5%] shrink-0">
 							<RevealImage className="relative w-full aspect-564/400 overflow-hidden bg-bison-hide">
-								<Image src="/home/sec10/media-large.webp" alt="" aria-hidden="true" fill className="object-cover" />
+								<Image src="/home/sec10/media-large.webp" alt="" fill className="object-cover" />
 							</RevealImage>
 
 							<BlurReveal delay={0.15} className="mt-4">
