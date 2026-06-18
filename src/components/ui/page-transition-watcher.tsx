@@ -36,7 +36,14 @@ export function PageTransitionWatcher() {
 				lenis.scrollTo(0, { immediate: true })
 				lenis.start()
 			}
-			ScrollTrigger.refresh()
+			// Wait for the new route to paint before recalculating scroll triggers.
+			requestAnimationFrame(() => {
+				requestAnimationFrame(() => {
+					ScrollTrigger.refresh(true)
+					// Fallback for lazy images / font swap shifting trigger positions.
+					window.setTimeout(() => ScrollTrigger.refresh(true), 150)
+				})
+			})
 		})
 	}, [pathname])
 

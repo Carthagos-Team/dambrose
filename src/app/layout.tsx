@@ -3,7 +3,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Instrument_Serif, Martian_Mono, Public_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
-import { preload } from 'react-dom'
 import { JsonLd } from '@/components/json-ld'
 import { SmoothScroll } from '@/components/smooth-scroll'
 import { Footer } from '@/components/ui/footer'
@@ -12,11 +11,6 @@ import { PageTransitionWatcher } from '@/components/ui/page-transition-watcher'
 import { siteConfig } from '@/lib/site'
 import { physicianSchema, practiceSchema, websiteSchema } from '@/lib/structured-data'
 import './globals.css'
-
-// Preload the @font-face font that Next.js doesn't auto-preload (loaded via
-// globals.css, not next/font). Called at module level — React 19 recommended
-// pattern — avoids any render-cycle interference with GSAP animations.
-preload('/fonts/FuturaBT-Book.woff2', { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' })
 
 const instrumentSerif = Instrument_Serif({
 	variable: '--font-display',
