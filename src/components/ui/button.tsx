@@ -24,6 +24,7 @@ const button = tv({
 			outline: 'border border-current bg-transparent text-current',
 			'half-and-half': 'bg-[#ffffe4] text-[#282119] underline',
 			shuttle: 'bg-shuttle-gray/70 text-half-and-half',
+			'hit-gray': 'bg-[#a8b5bd] text-[#626f77]',
 		},
 		size: {
 			badge: 'px-[0.31em] py-0',
