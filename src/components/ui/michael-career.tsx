@@ -35,16 +35,6 @@ export function MichaelCareer() {
 						<h2 className="font-display text-4xl md:text-[3.125em] text-[#6B7167] leading-none tracking-wide text-center max-w-43.5 md:max-w-[8.7em]">
 							A career built across every layer of care.
 						</h2>
-						<BlurReveal delay={0.2}>
-							<Image
-								src="/marks/stamp.svg"
-								alt=""
-								width={228}
-								height={200}
-								className="absolute -top-6 -right-4 md:-top-10 md:-right-16 w-28 md:w-36 h-auto animate-[spin_22s_linear_infinite]"
-								aria-hidden="true"
-							/>
-						</BlurReveal>
 					</BlurReveal>
 
 					<BlurReveal delay={0.1} className="w-full max-w-122 flex flex-col gap-12">
