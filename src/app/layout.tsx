@@ -90,6 +90,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			className={`${instrumentSerif.variable} ${martianMono.variable} ${publicSans.variable} ${sohneBreit.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col" suppressHydrationWarning>
+				{/* React 19 hoists this <link> to <head> — preloads the @font-face font that
+				    Next.js doesn't auto-preload (declared in globals.css, not via next/font). */}
+				<link
+					rel="preload"
+					href="/fonts/FuturaBT-Book.woff2"
+					as="font"
+					type="font/woff2"
+					crossOrigin="anonymous"
+				/>
 				<JsonLd data={[practiceSchema, websiteSchema, physicianSchema]} />
 				<SmoothScroll />
 				<PageTransition />

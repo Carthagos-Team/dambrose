@@ -1,4 +1,4 @@
-import { test, expect, type Page, type BrowserContext } from '@playwright/test'
+import { test, expect, type Page } from '@playwright/test'
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -18,11 +18,14 @@ async function noHorizontalScroll(page: Page) {
 
 async function gotoAndWait(page: Page, path: string) {
 	await page.goto(path)
-	await page.waitForLoadState('domcontentloaded')
-	await page.waitForTimeout(300)
-	// Nudge the scroll so GSAP ScrollTrigger fires for elements near the fold
-	await page.mouse.wheel(0, 80)
-	await page.waitForTimeout(300)
+	await page.waitForLoadState('networkidle')
+	// Scroll enough to trigger GSAP ScrollTrigger for hero elements near the fold
+	// (default BlurReveal uses start:"top 80%" — some heroes have text below the image)
+	await page.evaluate(() => window.scrollTo(0, 200))
+	await page.waitForTimeout(600)
+	// Scroll back to top so layout checks start from position 0
+	await page.evaluate(() => window.scrollTo(0, 0))
+	await page.waitForTimeout(200)
 }
 
 // Check that two elements are stacked (second is below first, not beside it)
@@ -97,7 +100,8 @@ test.describe('Lifelong Medicine — essential elements', () => {
 
 	test('h1 is visible', async ({ page }) => {
 		await gotoAndWait(page, '/lifelong-medicine')
-		await expect(page.locator('h1').first()).toBeVisible()
+		// BlurReveal animates h1 via GSAP after ScrollTrigger fires — allow extra time
+		await expect(page.locator('h1').first()).toBeVisible({ timeout: 8000 })
 	})
 
 	test('hero image loads with non-zero dimensions', async ({ page }) => {

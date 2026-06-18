@@ -97,6 +97,7 @@ export function WhatAlmaCovers() {
 									<Image
 										src={c.src}
 										alt=""
+										aria-hidden="true"
 										fill
 										sizes="(min-width: 1024px) 20em, 100vw"
 										className="object-cover"
