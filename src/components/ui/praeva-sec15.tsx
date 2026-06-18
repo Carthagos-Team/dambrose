@@ -14,15 +14,16 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const STEPS = [
 	{
-		src: '/praeva/sec02/how-img.webp',
+		src: '/praeva/sec15/application.webp',
 		alt: 'Person in formal attire — the application process for PRAEVA membership',
+		pos: 'object-[center_72%]',
 		label: 'Application',
 		description:
 			'Prospective members apply through a selective process to ensure alignment and allow the dedicated health team to maintain the level of access and attention essential to PRAEVA.',
 		indent: false,
 	},
 	{
-		src: '/praeva/sec04/step-img-2.webp',
+		src: '/praeva/sec15/strategy.webp',
 		alt: 'Clasped hands — the collaborative health strategy session',
 		label: 'Strategy',
 		description:
@@ -30,7 +31,7 @@ const STEPS = [
 		indent: true,
 	},
 	{
-		src: '/praeva/sec04/step-img-3.webp',
+		src: '/praeva/sec15/ongoing-care.webp',
 		alt: 'Couple walking — the continuous oversight of ongoing care',
 		label: 'Ongoing Care',
 		description:
@@ -63,7 +64,13 @@ export function PraevaSec15() {
 						<div key={step.label} className="flex flex-col gap-6">
 							<div className="w-full h-px bg-[rgba(185,189,192,0.2)]" />
 							<RevealImage className="relative self-stretch h-40 overflow-hidden" delay={i * 0.07}>
-								<Image src={step.src} alt={step.alt} fill className="object-cover" sizes="100vw" />
+								<Image
+									src={step.src}
+									alt={step.alt}
+									fill
+									className={`object-cover ${step.pos ?? ''}`}
+									sizes="100vw"
+								/>
 							</RevealImage>
 							<BlurReveal delay={i * 0.07 + 0.1}>
 								<p className="font-display italic text-[1.13em] leading-none tracking-[0.125em] text-[#ffffe4] uppercase">
@@ -100,7 +107,13 @@ export function PraevaSec15() {
 									className="relative w-full h-[8.23em] overflow-hidden"
 									delay={i * 0.08}
 								>
-									<Image src={step.src} alt={step.alt} fill className="object-cover" sizes="33vw" />
+									<Image
+										src={step.src}
+										alt={step.alt}
+										fill
+										className={`object-cover ${step.pos ?? ''}`}
+										sizes="33vw"
+									/>
 								</RevealImage>
 
 								<div className="flex flex-col gap-6 mt-[2.47em]">
