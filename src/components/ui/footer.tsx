@@ -117,7 +117,12 @@ export function Footer() {
 					<div className="flex flex-col items-center">
 						<div className={styles.ctaCard()}>
 							{/* Flower — top-left, bleeds above card */}
+							{/* key={pathname}: the Footer is persistent in the root layout and never
+							    remounts on client-side navigation, so its once:true reveal triggers
+							    would only ever arm on the first load. Re-keying per route re-runs
+							    useGSAP and re-arms the reveal on every page (mirrors page sections). */}
 							<RevealImage
+								key={`flower-${pathname}`}
 								className="absolute -top-12 left-0 md:left-[12%] w-28 h-40 md:w-40 md:h-56 overflow-hidden"
 								delay={0.2}
 							>
@@ -126,6 +131,7 @@ export function Footer() {
 
 							{/* Rock — bottom-right, bleeds outside card */}
 							<RevealImage
+								key={`rock-${pathname}`}
 								className="absolute bottom-[-5%] right-[-12%] md:right-[-8%] md:bottom-[8%] w-32 h-24 md:w-56 md:h-40 overflow-hidden"
 								delay={0.4}
 							>
@@ -144,7 +150,7 @@ export function Footer() {
 							</Container>
 						</div>
 
-						<RevealImage className="w-64 md:w-216 md:h-161 overflow-hidden">
+						<RevealImage key={`cta-bg-${pathname}`} className="w-64 md:w-216 md:h-161 overflow-hidden">
 							<Image
 								src="/shared/cta-bg.webp"
 								width={864}

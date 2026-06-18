@@ -77,6 +77,11 @@ export function TransitionLink({
 
 		window.__lenis?.stop()
 		await animateLeave()
+		// Covered by the opaque overlay — reset to the top so the incoming route's
+		// ScrollTriggers are created at scroll 0, not against the previous page's
+		// scroll position (which left once:true reveals stuck hidden).
+		window.scrollTo(0, 0)
+		window.__lenis?.scrollTo(0, { immediate: true, force: true })
 		router.push(href)
 	}
 
