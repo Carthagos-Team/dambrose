@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 
 type Card = {
@@ -75,17 +76,21 @@ export function WhatAlmaCovers() {
 			<div className="relative mx-auto max-w-340">
 				{/* ── Title (4238:135): Futura Book 50px, Nevada #626F77, "COVERS" indented.
 				    Indents in REM (not em) — em would resolve against the h2's ~50px font. ── */}
-				<h2 className="font-futura text-4xl md:text-5xl uppercase leading-none tracking-wide text-[#626F77] md:ml-[10.35rem]">
-					What Alma
-					<span className="block md:ml-[10.25rem]">covers</span>
-				</h2>
+				<BlurReveal>
+					<h2 className="font-futura text-4xl md:text-5xl uppercase leading-none tracking-wide text-[#626F77] md:ml-[10.35rem]">
+						What Alma
+						<span className="block md:ml-[10.25rem]">covers</span>
+					</h2>
+				</BlurReveal>
 
 				{/* ── 4 cards row (4238:138): 4 × 325/418, gap 20px ── */}
 				<div className="mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-					{CARDS.map((c) => (
-						<article
+					{CARDS.map((c, index) => (
+						<BlurReveal
+							as="article"
 							key={c.number}
 							className={`relative aspect-325/418 overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
+							delay={index * 0.1}
 						>
 							{c.kind === 'image' && (
 								<>
@@ -114,16 +119,16 @@ export function WhatAlmaCovers() {
 									{c.description}
 								</p>
 							</div>
-						</article>
+						</BlurReveal>
 					))}
 				</div>
 
 				{/* ── Inquiry button (4238:167): bottom-right, over the gradient panel ── */}
-				<div className="mt-10 flex justify-start">
+				<BlurReveal delay={0.4} className="mt-10 flex justify-start">
 					<Button href="/membership" variant="shuttle" size="sm">
 						Inquiry about membership
 					</Button>
-				</div>
+				</BlurReveal>
 			</div>
 		</section>
 	)

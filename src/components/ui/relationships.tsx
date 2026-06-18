@@ -60,14 +60,16 @@ export function Relationships() {
 
 						{/* Mobile: description below image */}
 						<div className="min-[1440px]:hidden mt-8 flex flex-col gap-4">
-							<p
-								className="font-body text-sm text-rangitoto/80 leading-relaxed"
-								style={{ letterSpacing: '-0.04em' }}
-							>
-								Care doesn&apos;t begin with symptoms or end with treatment. It deepens through
-								presence, familiarity, and attention. Your doctor sees the person behind the
-								condition, carries your history forward, notices what others might miss.
-							</p>
+							<BlurReveal>
+								<p
+									className="font-body text-sm text-rangitoto/80 leading-relaxed"
+									style={{ letterSpacing: '-0.04em' }}
+								>
+									Care doesn&apos;t begin with symptoms or end with treatment. It deepens through
+									presence, familiarity, and attention. Your doctor sees the person behind the
+									condition, carries your history forward, notices what others might miss.
+								</p>
+							</BlurReveal>
 						</div>
 					</div>
 				</div>
