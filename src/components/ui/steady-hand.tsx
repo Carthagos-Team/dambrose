@@ -11,7 +11,7 @@ export function SteadyHand() {
 				<div className="flex flex-col gap-12 md:gap-24">
 					{/* Heading */}
 					<BlurReveal>
-						<h2 className="font-display text-3xl md:text-[3.125em] text-corduroy text-center leading-tight">
+						<h2 className="font-display text-3xl md:text-[3.125em] text-corduroy md:text-center leading-tight">
 							Medicine guided by <em>a steady hand.</em>
 							<br />
 							This is the DAMBROSE method.

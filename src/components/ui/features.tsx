@@ -44,7 +44,7 @@ export function Features() {
 			<Container className="flex flex-col gap-20">
 				{/* ── Heading ──────────────────────────────────────── */}
 				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-5xl text-corduroy text-center leading-tight">
+					<h2 className="font-display text-4xl md:text-5xl text-corduroy md:text-center leading-tight">
 						What changes when care <em className="font-display italic">truly knows</em> you.
 					</h2>
 				</BlurReveal>

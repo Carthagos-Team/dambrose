@@ -17,7 +17,7 @@ export function Relationships() {
 			</div>
 
 			<Container className="h-full">
-				<div className="flex flex-col gap-10 min-[1440px]:gap-20">
+				<div className="flex flex-col gap-[3.2rem] min-[1440px]:gap-20">
 					{/* ── Heading (right 59%) ──────────────────────────────── */}
 					<BlurReveal className="flex">
 						<div className="hidden min-[1440px]:block min-[1440px]:w-[41%] shrink-0" />
@@ -27,7 +27,7 @@ export function Relationships() {
 					</BlurReveal>
 
 					{/* ── Image + right content ─────────────────────────────── */}
-					<div className="relative flex flex-col min-[1440px]:flex-row min-[1440px]:items-start min-[1440px]:min-h-[428px]">
+					<div className="relative flex flex-col gap-[3.2rem] min-[1440px]:gap-0 min-[1440px]:flex-row min-[1440px]:items-start min-[1440px]:min-h-[428px]">
 						{/* Image */}
 						<RevealImage className="relative w-full min-[1440px]:absolute min-[1440px]:left-[167px] min-[1440px]:top-0 aspect-501/368 min-[1440px]:w-[501px] overflow-hidden">
 							<Image
@@ -58,8 +58,13 @@ export function Relationships() {
 							</BlurReveal>
 						</div>
 
+						{/* Mobile botanical — Figma node 4344:181 */}
+						<div className="min-[1440px]:hidden flex justify-end">
+							<Image src="/botanical.svg" alt="" width={36} height={44} aria-hidden="true" />
+						</div>
+
 						{/* Mobile: description below image */}
-						<div className="min-[1440px]:hidden mt-8 flex flex-col gap-4">
+						<div className="min-[1440px]:hidden flex flex-col gap-4">
 							<BlurReveal>
 								<p
 									className="font-body text-sm text-rangitoto/80 leading-relaxed"
@@ -70,6 +75,26 @@ export function Relationships() {
 									condition, carries your history forward, notices what others might miss.
 								</p>
 							</BlurReveal>
+						</div>
+					</div>
+
+					{/* Mobile label — Figma node 4344:198 */}
+					<div className="min-[1440px]:hidden flex justify-end">
+						<div
+							className="relative w-[10.3rem] h-[3.45rem] border border-blue-smoke flex flex-col items-center justify-center"
+							style={{
+								fontFamily: 'var(--font-sohne-breit), sans-serif',
+								fontSize: '0.39rem',
+								letterSpacing: '0.13rem',
+								lineHeight: '0.8rem',
+								color: 'var(--color-blue-smoke, #728b8b)',
+								textAlign: 'center',
+								textTransform: 'uppercase',
+							}}
+						>
+							<p>{'lifelong          medicine'}</p>
+							<p>dambrose</p>
+							<p>orlando - fl</p>
 						</div>
 					</div>
 				</div>
