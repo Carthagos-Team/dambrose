@@ -45,7 +45,7 @@ export function EverythingYourMembership() {
 			<div className="relative z-10 flex flex-col items-center gap-14 md:gap-22 px-5 md:px-10">
 				<div className="relative flex flex-col items-center">
 					<BlurReveal>
-						<h2 className="font-futura text-[3.125em] text-[#282119] text-center leading-none tracking-[0.03125rem] uppercase max-w-[11em]">
+						<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-[3.125em] text-[#282119] text-center leading-none tracking-[0.03125rem] uppercase max-w-[11em]">
 							Everything your membership holds
 						</h2>
 					</BlurReveal>

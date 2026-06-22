@@ -6,8 +6,9 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 /**
  * SEC 10 — /about — Figma node 3586:120
- * Mobile: photo → text per person (natural DOM order).
- * Desktop: md:order-* pulls photos to row 1, texts to row 2.
+ * DOM is interleaved photo→text per person so mobile (single column, no
+ * order) flows correctly. Desktop: md:order-* pulls the 3 photos to row 1
+ * (order 1-3) and the 3 texts to row 2 (order 4-6).
  */
 export function AboutSec10() {
 	return (
@@ -23,38 +24,10 @@ export function AboutSec10() {
 
 					<div className="grid grid-cols-1 gap-y-6 md:grid-cols-3 md:gap-x-12 md:gap-y-[2.4em]">
 						{/* Michael photo — desktop row 1 col 1 */}
-						<RevealImage className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-1">
+						<RevealImage className="relative w-full aspect-[3/4] md:aspect-[395/799] overflow-hidden bg-bison-hide md:order-1">
 							<Image
 								src="/shared/portrait-doctor-1.webp"
 								alt="Dr. Michael J. D'Ambrose — Founder and Physician at DAMBROSE"
-								fill
-								className="object-cover object-top"
-								sizes="(max-width: 768px) 100vw, 33vw"
-							/>
-						</RevealImage>
-
-						{/* Elaina photo — desktop row 1 col 2 */}
-						<RevealImage
-							delay={0.1}
-							className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-2"
-						>
-							<Image
-								src="/about-us/sec03/image-2.webp"
-								alt="Elaina Aldrin, APRN — Nurse Practitioner at DAMBROSE"
-								fill
-								className="object-cover object-top"
-								sizes="(max-width: 768px) 100vw, 33vw"
-							/>
-						</RevealImage>
-
-						{/* Kalee photo — desktop row 1 col 3 */}
-						<RevealImage
-							delay={0.2}
-							className="relative w-full aspect-[395/799] overflow-hidden bg-bison-hide md:order-3"
-						>
-							<Image
-								src="/about-us/sec10/kalee.jpg"
-								alt="Kalee Lucente — Executive Administrative Assistant at DAMBROSE"
 								fill
 								className="object-cover object-top"
 								sizes="(max-width: 768px) 100vw, 33vw"
@@ -86,6 +59,20 @@ export function AboutSec10() {
 							</BlurReveal>
 						</div>
 
+						{/* Elaina photo — desktop row 1 col 2 */}
+						<RevealImage
+							delay={0.1}
+							className="relative w-full aspect-[3/4] md:aspect-[395/799] overflow-hidden bg-bison-hide md:order-2"
+						>
+							<Image
+								src="/about-us/sec03/image-2.webp"
+								alt="Elaina Aldrin, APRN — Nurse Practitioner at DAMBROSE"
+								fill
+								className="object-cover object-top"
+								sizes="(max-width: 768px) 100vw, 33vw"
+							/>
+						</RevealImage>
+
 						{/* Elaina text — desktop row 2 col 2 */}
 						<BlurReveal
 							delay={0.2}
@@ -108,6 +95,20 @@ export function AboutSec10() {
 								and whole-person wellbeing.
 							</p>
 						</BlurReveal>
+
+						{/* Kalee photo — desktop row 1 col 3 */}
+						<RevealImage
+							delay={0.2}
+							className="relative w-full aspect-[3/4] md:aspect-[395/799] overflow-hidden bg-bison-hide md:order-3"
+						>
+							<Image
+								src="/about-us/sec10/kalee.jpg"
+								alt="Kalee Lucente — Executive Administrative Assistant at DAMBROSE"
+								fill
+								className="object-cover object-top"
+								sizes="(max-width: 768px) 100vw, 33vw"
+							/>
+						</RevealImage>
 
 						{/* Kalee text — desktop row 2 col 3 */}
 						<BlurReveal

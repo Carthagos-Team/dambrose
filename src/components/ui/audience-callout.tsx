@@ -20,13 +20,13 @@ export function AudienceCallout() {
 			<div className="mx-auto w-full max-w-340 px-5 md:px-10">
 				<div className="flex flex-col gap-20">
 					<BlurReveal>
-						<h2 className="font-futura text-5xl text-[#545c63] leading-none uppercase text-center w-full">
+						<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl text-[#545c63] leading-none uppercase text-center w-full">
 							For individuals and families,{'\n'}at every stage of life, who need:
 						</h2>
 					</BlurReveal>
 
 					<div
-						className="rounded-lg p-6 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-[1.1rem]"
+						className="p-6 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-[1.1rem]"
 						style={{ backgroundColor: '#FFFFE4' }}
 					>
 						{tiles.map((t, i) => (

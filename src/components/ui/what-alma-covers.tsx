@@ -30,7 +30,7 @@ const CARDS: Card[] = [
 	{
 		kind: 'image',
 		src: '/alma/sec02/card-1.webp',
-		overlay: 'bg-[rgba(0,0,0,0.40)]',
+		overlay: 'bg-[rgba(0,0,0,0.56)] md:bg-[rgba(0,0,0,0.40)]',
 		number: '02.',
 		title: 'Presence',
 		headerColor: 'text-half-and-half',
@@ -48,7 +48,8 @@ const CARDS: Card[] = [
 	{
 		kind: 'image',
 		src: '/alma/sec02/card-2.webp',
-		overlay: 'bg-[linear-gradient(180deg,rgba(102,102,102,0.30)_0%,rgba(0,0,0,0.30)_100%)]',
+		overlay:
+			'bg-[linear-gradient(180deg,rgba(102,102,102,0.56)_0%,rgba(0,0,0,0.56)_100%)] md:bg-[linear-gradient(180deg,rgba(102,102,102,0.30)_0%,rgba(0,0,0,0.30)_100%)]',
 		number: '04.',
 		title: 'Guidance',
 		headerColor: 'text-half-and-half',
@@ -60,10 +61,10 @@ const CARDS: Card[] = [
 
 export function WhatAlmaCovers() {
 	return (
-		<section className="relative w-full overflow-hidden bg-half-and-half px-10 pt-28 pb-8">
+		<section className="relative w-full overflow-hidden bg-half-and-half px-5 md:px-10 pt-16 md:pt-28 pb-16 md:pb-8">
 			{/* ── Decorative gradient panels — bleed off the frame, behind cards.
 			    Positions ported from Figma node 4238:131 (1440-wide frame), ÷20 → em. ── */}
-			<div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+			<div aria-hidden="true" className="hidden md:block absolute inset-0 pointer-events-none">
 				{/* Big right field (4238:132): top light → bottom blue-grey.
 				    Left edge aligns with card 3 (grid center + half-gap); bleeds to the right edge. */}
 				<div className="absolute top-0 left-[calc(50%+0.625em)] right-0 h-[62.8em] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]" />
@@ -77,14 +78,14 @@ export function WhatAlmaCovers() {
 				{/* ── Title (4238:135): Futura Book 50px, Nevada #626F77, "COVERS" indented.
 				    Indents in REM (not em) — em would resolve against the h2's ~50px font. ── */}
 				<BlurReveal>
-					<h2 className="font-futura text-4xl md:text-5xl uppercase leading-none tracking-wide text-[#626F77] md:ml-[10.35rem]">
+					<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl uppercase leading-[1.1] md:leading-none tracking-wide text-[#626F77] md:ml-[10.35rem]">
 						What Alma
 						<span className="block md:ml-[10.25rem]">covers</span>
 					</h2>
 				</BlurReveal>
 
 				{/* ── 4 cards row (4238:138): 4 × 325/418, gap 20px ── */}
-				<div className="mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+				<div className="mt-16 md:mt-22 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5">
 					{CARDS.map((c, index) => (
 						<BlurReveal
 							as="article"
@@ -124,8 +125,18 @@ export function WhatAlmaCovers() {
 				</div>
 
 				{/* ── Inquiry button (4238:167): bottom-right, over the gradient panel ── */}
-				<BlurReveal delay={0.4} className="mt-10 flex justify-start">
-					<Button href="/membership" variant="shuttle" size="sm">
+				<BlurReveal delay={0.4} className="mt-16 md:mt-10 flex justify-start">
+					{/* Mobile: full-width outline (Figma 4379:778) */}
+					<Button
+						href="/membership"
+						variant="outline"
+						size="sm"
+						className="md:hidden w-full text-half-and-half"
+					>
+						<span className="opacity-60">Inquiry about membership</span>
+					</Button>
+					{/* Desktop: inalterado */}
+					<Button href="/membership" variant="shuttle" size="sm" className="hidden md:inline-flex">
 						Inquiry about membership
 					</Button>
 				</BlurReveal>

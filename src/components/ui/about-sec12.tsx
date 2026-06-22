@@ -79,7 +79,7 @@ export function AboutSec12() {
 						<div className="flex flex-col gap-4 md:flex-row md:gap-4 md:items-stretch">
 						<RevealImage
 							delay={0}
-							className="relative w-full md:flex-1 min-w-0 min-h-56 md:h-[18.1em] overflow-hidden bg-bison-hide"
+							className="relative w-full md:flex-1 min-w-0 min-h-56 md:h-[18.1em] overflow-hidden bg-bison-hide order-last md:order-none"
 						>
 							<Image
 								src="/about-us/sec12/journal.webp"
