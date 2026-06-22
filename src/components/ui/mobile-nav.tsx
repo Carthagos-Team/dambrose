@@ -298,9 +298,6 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 												>
 													Privacy Policy
 												</a>
-												<p className="font-body text-[clamp(0.68rem,3.2vw,0.9rem)] md:text-xs text-ecru-white tracking-tight leading-tight">
-													All Rights Reserved © 2025
-												</p>
 											</div>
 										</div>
 									</motion.div>
