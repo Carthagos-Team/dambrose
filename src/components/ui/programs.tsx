@@ -67,7 +67,7 @@ export function AlmaVisual({ tagline }: { tagline?: string } = {}) {
 					}}
 				>
 					{tagline ? (
-						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: '11.5px', letterSpacing: '5px', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
+						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: 'clamp(6.5px, 2.1vw, 11.5px)', letterSpacing: '0.435em', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
 							{tagline}
 						</p>
 					) : (
@@ -133,7 +133,7 @@ export function PraevaVisual({ tagline }: { tagline?: string } = {}) {
 					}}
 				>
 					{tagline ? (
-						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: '11.5px', letterSpacing: '5px', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
+						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: 'clamp(6.5px, 2.1vw, 11.5px)', letterSpacing: '0.435em', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
 							{tagline}
 						</p>
 					) : (

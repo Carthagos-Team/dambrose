@@ -17,9 +17,10 @@ export function MembershipIntro() {
 				</BlurReveal>
 
 				<div className="mt-16 md:mt-24">
-					<div className="flex flex-col gap-6 lg:hidden">
+					<div className="flex flex-col gap-12 lg:hidden">
+						{/* Consulta — parcial, inset à esquerda (estilo Praeva "chairs") */}
 						<RevealImage
-							className="relative w-full max-w-112 aspect-445/246 overflow-hidden"
+							className="relative w-[18.41em] aspect-445/246 overflow-hidden"
 							start="top 95%"
 						>
 							<Image
@@ -27,30 +28,38 @@ export function MembershipIntro() {
 								alt=""
 								fill
 								className="object-cover"
-								sizes="100vw"
+								sizes="80vw"
 							/>
 						</RevealImage>
-						<RevealImage className="relative w-full aspect-680/756 overflow-hidden" start="top 95%">
-							<Image
-								src="/membership/sec01/scroll-image-2b.webp"
-								alt=""
-								fill
-								className="object-cover"
-								sizes="100vw"
-							/>
-						</RevealImage>
-						<RevealImage
-							className="relative w-[60%] self-center aspect-332/392 overflow-hidden"
-							start="top 95%"
-						>
-							<Image
-								src="/membership/sec01/scroll-image-1.webp"
-								alt=""
-								fill
-								className="object-cover"
-								sizes="60vw"
-							/>
-						</RevealImage>
+
+						{/* Dupla: still-life (destaque, flex-1) + corredor (acento, pequeno) */}
+						<div className="flex items-start gap-4">
+							<RevealImage
+								className="relative flex-1 aspect-680/756 overflow-hidden"
+								start="top 95%"
+							>
+								<Image
+									src="/membership/sec01/scroll-image-2b.webp"
+									alt=""
+									fill
+									className="object-cover"
+									sizes="60vw"
+								/>
+							</RevealImage>
+							<RevealImage
+								className="relative w-[8.56em] aspect-332/392 overflow-hidden shrink-0"
+								start="top 95%"
+								delay={0.05}
+							>
+								<Image
+									src="/membership/sec01/scroll-image-1.webp"
+									alt=""
+									fill
+									className="object-cover"
+									sizes="40vw"
+								/>
+							</RevealImage>
+						</div>
 					</div>
 
 					<div className="hidden lg:block relative w-full aspect-1360/1118">

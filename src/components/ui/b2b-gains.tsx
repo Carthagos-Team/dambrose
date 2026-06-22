@@ -13,6 +13,8 @@ type Card =
 			kind: 'image'
 			src: string
 			alt: string
+			/** Mobile: empurra a imagem para o fim para não ficar colada na outra. Reset em sm (grid multi-col). */
+			pushLastMobile?: boolean
 	  }
 
 const CARDS: Card[] = [
@@ -40,6 +42,7 @@ const CARDS: Card[] = [
 		kind: 'image',
 		src: '/b2b/sec02/bouquet.webp',
 		alt: 'Floral arrangement on a sunlit marble table beside a glass of water',
+		pushLastMobile: true,
 	},
 	{
 		kind: 'text',
@@ -63,7 +66,7 @@ export function B2bGains() {
 		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-20">
-					<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
+					<BlurReveal className="flex flex-col items-start text-left md:items-center md:text-center gap-6 md:gap-8">
 						<span className="font-body text-xs text-gray-olive uppercase tracking-wide">02</span>
 						<div className="relative inline-flex">
 							<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
@@ -88,7 +91,7 @@ export function B2bGains() {
 										// biome-ignore lint/suspicious/noArrayIndexKey: stable position
 										key={`img-${i}`}
 										delay={(i % 4) * 0.08}
-										className="relative w-full min-h-[20.5rem] overflow-hidden bg-bison-hide"
+										className={`relative w-full min-h-[20.5rem] overflow-hidden bg-bison-hide ${card.pushLastMobile ? 'order-last sm:order-none' : ''}`}
 									>
 										<Image src={card.src} alt={card.alt} fill className="object-cover" />
 									</RevealImage>

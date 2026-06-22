@@ -40,7 +40,7 @@ export function DambroseDifference() {
 		<section className="w-full bg-white-rock py-16 md:py-[94px]">
 			<Container>
 				<BlurReveal>
-					<h2 className="font-display text-4xl md:text-[50px] text-corduroy text-center leading-none tracking-[0.5px]">
+					<h2 className="font-display text-4xl md:text-[50px] text-corduroy text-left md:text-center leading-none tracking-[0.5px]">
 						The DAMBROSE <em className="font-display italic">difference.</em>
 					</h2>
 				</BlurReveal>

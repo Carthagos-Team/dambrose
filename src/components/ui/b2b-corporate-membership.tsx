@@ -102,7 +102,7 @@ export function B2bCorporateMembership() {
 								<span className="font-body text-xs text-ecru-white uppercase shrink-0 pt-1">
 									{step.number}
 								</span>
-								<span className="font-display italic text-2xl md:text-[1.44em] text-ecru-white leading-tight max-w-[6.3em]">
+								<span className="font-display italic text-2xl md:text-[1.44em] text-ecru-white leading-tight md:max-w-[6.3em]">
 									{step.title}
 								</span>
 							</div>

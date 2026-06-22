@@ -32,13 +32,13 @@ export function B2bIntro() {
 						</div>
 
 						{/* Round seal — Figma: left 69.1%, top of row band (~6.6%), ~101px */}
-						<div className="order-2 flex justify-center md:block md:absolute md:left-[69.1%] md:top-[6.6%]">
+						<div className="order-2 flex justify-end md:block md:absolute md:left-[69.1%] md:top-[6.6%]">
 							<Image
 								src="/b2b/sec01/seal.svg"
 								alt=""
 								width={102}
 								height={115}
-								className="w-22 md:w-25 h-auto"
+								className="w-[48px] md:w-25 h-auto"
 								aria-hidden="true"
 							/>
 						</div>
@@ -61,14 +61,32 @@ export function B2bIntro() {
 							</BlurReveal>
 						</div>
 
-						{/* Vertical stamp — Figma: far left, vertically centered. Mobile: rotated 90° */}
-						<div className="order-5 flex justify-center md:block md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 py-6 md:py-0">
+						{/* Badge — desktop: stamp vertical (far-left, center). Mobile: caixa com borda (Figma 4384:867), à direita. */}
+						<div className="order-5 flex justify-end md:block md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2">
+							{/* Mobile: caixa de texto (mesmo padrão de relationships.tsx) */}
+							<div
+								className="md:hidden relative w-[10.3rem] h-[3.45rem] border border-blue-smoke flex flex-col items-center justify-center"
+								style={{
+									fontFamily: 'var(--font-sohne-breit), sans-serif',
+									fontSize: '0.39rem',
+									letterSpacing: '0.13rem',
+									lineHeight: '0.8rem',
+									color: 'var(--color-blue-smoke, #728b8b)',
+									textAlign: 'center',
+									textTransform: 'uppercase',
+								}}
+							>
+								<p>{'lifelong          medicine'}</p>
+								<p>dambrose</p>
+								<p>orlando - fl</p>
+							</div>
+							{/* Desktop: stamp vertical (inalterado) */}
 							<Image
 								src="/marks/badge-left.svg"
 								alt=""
 								width={69}
 								height={207}
-								className="h-12 md:h-52 w-auto rotate-90 md:rotate-0 origin-center"
+								className="hidden md:block h-52 w-auto"
 								aria-hidden="true"
 							/>
 						</div>

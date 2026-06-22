@@ -35,7 +35,7 @@ export function B2bAudience() {
 		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-20">
-					<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
+					<BlurReveal className="flex flex-col items-start text-left md:items-center md:text-center gap-6 md:gap-8">
 						<span className="font-body text-xs text-gray-olive uppercase tracking-wide">03</span>
 						<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
 							Who is it <em className="font-display italic">for?</em>
@@ -74,7 +74,7 @@ export function B2bAudience() {
 									<>
 										<RevealImage
 											delay={i * 0.08}
-											className="md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
+											className="order-last md:order-none md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
 										>
 											<Image src={row.image} alt={row.alt} fill className="object-cover" style={{ objectPosition: row.objectPosition }} />
 										</RevealImage>

@@ -42,7 +42,7 @@ export function ContinuousCareAdvantages() {
 		>
 			<Container>
 				<BlurReveal>
-					<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl uppercase text-half-and-half leading-none tracking-wide text-center max-w-[33.6875rem] mx-auto">
+					<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl uppercase text-half-and-half leading-none tracking-wide text-left md:text-center max-w-[33.6875rem] mx-auto">
 						The advantages of continuous care.
 					</h2>
 				</BlurReveal>

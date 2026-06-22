@@ -30,7 +30,7 @@ export function WhoWeServe() {
 				<div data-wrapper="audience_component" className="flex flex-col gap-12 md:gap-20">
 					<div data-wrapper="audience_header">
 						<BlurReveal>
-							<h2 className="font-display text-4xl md:text-5xl text-gray-olive text-center leading-tight max-w-88 mx-auto">
+							<h2 className="font-display text-4xl md:text-5xl text-gray-olive text-left md:text-center leading-tight max-w-88 md:mx-auto">
 								For individuals and families, at every stage of life, who are:
 							</h2>
 						</BlurReveal>

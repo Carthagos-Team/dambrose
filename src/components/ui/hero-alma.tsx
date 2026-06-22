@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
+import { RevealImage } from '@/components/ui/reveal-image'
 import { TransitionLink } from '@/components/ui/transition-link'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
@@ -115,22 +116,55 @@ export function HeroAlma() {
 					/>
 				</div>
 
-				{/* Mobile fallback — Alma card centered, no scatter */}
-				<BlurReveal className="md:hidden flex justify-center py-10" start="top 100%">
-					<TransitionLink
-						href="/alma"
-						aria-label="Discover Alma by Michael J. D'Ambrose"
-						className="block w-64 aspect-396/472 relative rounded-sm overflow-hidden"
-					>
-						<Image
-							src="/images/hero-alma/alma-card.png"
-							alt="Alma by Michael J. D'Ambrose"
-							fill
-							sizes="16em"
-							priority
-							className="object-cover"
-						/>
-					</TransitionLink>
+				{/* Mobile scene — Figma node 4378:714: creme + card centralizado + 2 fotos recortadas.
+				    Reveal em camadas (igual ao Hero desktop): fade do conjunto + clip-wipe do card
+				    + stagger das fotos via RevealImage. */}
+				<BlurReveal className="md:hidden py-10" y={8}>
+					<div className="relative w-full aspect-335/440 rounded-[4px] bg-[#ffffe4] overflow-hidden">
+						{/* Mãos — clip-wipe, canto sup-esq, recortada (stagger) */}
+						<RevealImage
+							delay={0.2}
+							className="absolute left-[-9%] top-[-7%] w-[47.2%] aspect-square overflow-hidden"
+						>
+							<Image
+								src="/images/hero-alma/photo-top-left.png"
+								alt=""
+								fill
+								sizes="50vw"
+								className="object-cover"
+							/>
+						</RevealImage>
+						{/* Poltrona — clip-wipe, canto inf-dir, recortada (stagger) */}
+						<RevealImage
+							delay={0.32}
+							className="absolute left-[50.1%] top-[71.8%] w-[66%] aspect-square overflow-hidden"
+						>
+							<Image
+								src="/alma/hero/photo-bottom-right.webp"
+								alt=""
+								fill
+								sizes="66vw"
+								className="object-cover"
+							/>
+						</RevealImage>
+						{/* Card Alma — clip-wipe, centralizado, por cima (link preservado) */}
+						<TransitionLink
+							href="/alma"
+							aria-label="Discover Alma by Michael J. D'Ambrose"
+							className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70.5%] aspect-396/472 block rounded-sm overflow-hidden"
+						>
+							<RevealImage delay={0.08} className="absolute inset-0">
+								<Image
+									src="/images/hero-alma/alma-card.png"
+									alt="Alma by Michael J. D'Ambrose"
+									fill
+									sizes="70vw"
+									priority
+									className="object-cover"
+								/>
+							</RevealImage>
+						</TransitionLink>
+					</div>
 				</BlurReveal>
 			</Container>
 		</section>

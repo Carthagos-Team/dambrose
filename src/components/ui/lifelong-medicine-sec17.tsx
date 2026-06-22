@@ -117,7 +117,7 @@ export function LifelongMedicineSec17() {
 							{/* Wide image */}
 							<RevealImage
 								delay={0.05}
-								className="relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2em] overflow-hidden bg-bison-hide"
+								className="order-last lg:order-none relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2em] overflow-hidden bg-bison-hide"
 							>
 								<Image
 									src="/lifelong-medicine/sec17/lounge.webp"
