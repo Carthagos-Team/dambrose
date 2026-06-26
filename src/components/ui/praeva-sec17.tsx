@@ -11,7 +11,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const FEATURES = [
 	'Advanced diagnostics, measured over time',
-	"Imaging designed to find what hasn't surfaced yet",
+	"IMAGING DESIGNED TO STAY AHEAD",
 	'A deeper understanding of your individual risk',
 	'Personalized longevity strategy',
 	'Structured reviews and check-ins throughout the year',

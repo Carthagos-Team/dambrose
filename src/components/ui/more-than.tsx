@@ -25,10 +25,7 @@ export function MoreThan() {
 								className="font-body text-sm uppercase text-rangitoto/80 leading-[1.4]"
 								style={{ letterSpacing: '-0.04em' }}
 							>
-								Traditional healthcare is fragmented and inefficient, shaped by multiple
-								providers, rushed encounters, and constant handoffs. While alternative models
-								improve access, they often remain episodic—leaving specialists and hospital care
-								loosely connected.
+								TRADITIONAL HEALTHCARE IS FRAGMENTED AND INEFFICIENT, SHAPED BY MULTIPLE PROVIDERS, RUSHED ENCOUNTERS, AND CONSTANT HANDOFFS. WHILE ALTERNATIVE MODELS IMPROVE ACCESS, THEY OFTEN REMAIN EPISODIC — LEAVING CARE POORLY CONNECTED.
 							</p>
 						</BlurReveal>
 
@@ -94,10 +91,7 @@ export function MoreThan() {
 									className="font-body text-sm uppercase text-rangitoto/80 leading-relaxed"
 									style={{ letterSpacing: '-0.04em' }}
 								>
-									Traditional healthcare is fragmented and inefficient, shaped by multiple
-									providers, rushed encounters, and constant handoffs. While alternative models
-									improve access, they often remain episodic—leaving specialists and hospital care
-									loosely connected.
+									TRADITIONAL HEALTHCARE IS FRAGMENTED AND INEFFICIENT, SHAPED BY MULTIPLE PROVIDERS, RUSHED ENCOUNTERS, AND CONSTANT HANDOFFS. WHILE ALTERNATIVE MODELS IMPROVE ACCESS, THEY OFTEN REMAIN EPISODIC — LEAVING CARE POORLY CONNECTED.
 								</p>
 							</BlurReveal>
 

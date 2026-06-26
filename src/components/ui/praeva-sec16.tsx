@@ -15,7 +15,7 @@ const FEATURES = [
 	{
 		title: 'Foresight over reaction',
 		description:
-			"The quiet assurance of a health picture watched closely enough that problems are found early, when they're still small.",
+			"The assurance of being understood at such depth that problems are prevented — or addressed before they take hold.",
 	},
 	{
 		title: 'A personalized path to longevity',

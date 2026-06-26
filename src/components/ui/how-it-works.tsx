@@ -14,13 +14,13 @@ const steps = [
 		number: '02.',
 		title: 'Deep dive',
 		description:
-			'Once accepted, an in-depth first visit reviews medical history, current health, concerns, and priorities, establishing a clear clinical baseline and a personal doctor-patient\u00A0relationship.',
+			'ONCE ACCEPTED, AN IN-DEPTH FIRST VISIT REVIEWS MEDICAL HISTORY, CURRENT HEALTH, CONCERNS, AND PRIORITIES TO ESTABLISH A CLEAR CLINICAL BASELINE AND THE FOUNDATION OF A PERSONAL DOCTOR-PATIENT RELATIONSHIP.',
 	},
 	{
 		number: '03.',
 		title: 'Ongoing care',
 		description:
-			'Care continues through unlimited access, regular follow-ups, and physician-led coordination across specialists, treatments, emergencies, and life changes.',
+			'Care continues through unlimited access, routine follow-ups, and physician-led coordination across specialists, treatments, emergencies, and life changes.',
 	},
 ] as const
 

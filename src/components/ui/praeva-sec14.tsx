@@ -35,7 +35,7 @@ const CARDS = [
 		alt: 'Man at the ocean horizon — the longevity that comes from foresight',
 		label: 'Longevity',
 		description:
-			'Patients playing the long game — healthy today and committed to staying that way through medicine that treats the future as seriously as the present.',
+			'People who are healthy and want medicine that treats prevention with the same seriousness as illness.',
 	},
 ]
 

@@ -13,7 +13,7 @@ const ITEMS = [
 	{
 		label: 'Evaluation',
 		description:
-			'Comprehensive baseline assessments using advanced diagnostics to understand your long-term tendencies and health at its deepest level.',
+			'Comprehensive baseline assessments using advanced diagnostics to understand your biology, your patterns, and your health from the ground up.',
 	},
 	{
 		label: 'Prevention',

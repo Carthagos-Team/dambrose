@@ -90,7 +90,7 @@ export function WhatAlmaCovers() {
 						<BlurReveal
 							as="article"
 							key={c.number}
-							className={`relative aspect-325/418 overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
+							className={`relative aspect-325/418 lg:aspect-auto lg:h-[26.125rem] overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
 							delay={index * 0.1}
 						>
 							{c.kind === 'image' && (

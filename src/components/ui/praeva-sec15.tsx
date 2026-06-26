@@ -19,7 +19,7 @@ const STEPS = [
 		pos: 'object-[center_72%]',
 		label: 'Application',
 		description:
-			'Prospective members apply through a selective process to ensure alignment and allow the dedicated health team to maintain the level of access and attention essential to PRAEVA.',
+			'Prospective members apply through a selective process to ensure the practice is the right fit for both.',
 		indent: false,
 	},
 	{
@@ -27,7 +27,7 @@ const STEPS = [
 		alt: 'Clasped hands — the collaborative health strategy session',
 		label: 'Strategy',
 		description:
-			'Once accepted, an in-depth interview explores medical history, current health, risk factors, lifestyle, and long-term goals, forming the foundation for the preventive strategy.',
+			'Once accepted, a comprehensive assessment maps health history, genetic context, lifestyle, and risk — building the foundation for a strategy designed not to treat illness, but to prevent it.',
 		indent: true,
 	},
 	{

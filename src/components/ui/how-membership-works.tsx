@@ -9,13 +9,13 @@ const steps = [
 		number: '01.',
 		title: 'Application',
 		description:
-			'Prospective members apply through a selective process to assess mutual fit and ensure we can offer the deserved level of availability.',
+			'PROSPECTIVE MEMBERS APPLY THROUGH A SELECTIVE PROCESS TO ASSESS MUTUAL FIT.',
 	},
 	{
 		number: '02.',
 		title: 'Deep dive',
 		description:
-			'Once accepted, an in-depth first visit explores your medical history, current health, and long-term goals to create a tailored plan.',
+			'ONCE ACCEPTED, AN IN-DEPTH FIRST VISIT EXPLORES YOUR MEDICAL HISTORY, CURRENT HEALTH, LONG-TERM GOALS, AND PERSONAL PHILOSOPHY TO CREATE A TAILORED PLAN.',
 	},
 	{
 		number: '03.',
