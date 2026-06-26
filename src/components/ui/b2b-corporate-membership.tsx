@@ -9,19 +9,19 @@ const STEPS = [
 		number: '01.',
 		title: 'Company inquiry',
 		description:
-			'In a confidential discussion, Dr. D’Ambrose understands your company’s leadership needs and explains what the membership encompasses.',
+			'AN INITIAL CONVERSATION TO UNDERSTAND YOUR COMPANY’S NEEDS AND DETERMINE WHETHER DAMBROSE IS THE RIGHT FIT.',
 	},
 	{
 		number: '02.',
 		title: 'Onboarding & Assessment',
 		description:
-			'Each executive begins with an in-depth medical intake, followed by a comprehensive advanced assessment using state-of-the-art diagnostics.',
+			'EACH MEMBER BEGINS WITH AN IN-DEPTH MEDICAL INTAKE, FOLLOWED BY A COMPREHENSIVE ASSESSMENT USING ADVANCED DIAGNOSTICS.',
 	},
 	{
 		number: '03.',
 		title: 'Ongoing physician‑led oversight',
 		description:
-			'Dambrose provides continuous access, coordinated care, and long-term medical guidance designed to remain present across the years.',
+			'DAMBROSE PROVIDES CONTINUOUS ACCESS, COORDINATED CARE, AND LONG-TERM MEDICAL GUIDANCE.',
 	},
 ]
 

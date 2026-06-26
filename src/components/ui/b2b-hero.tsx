@@ -25,11 +25,10 @@ export function B2bHero() {
 			<Container className="pt-8 pb-10 md:pt-4.5 md:pb-10">
 				<BlurReveal className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
 					<h1 className="font-display text-5xl md:text-6xl text-olive-haze leading-[1.05] max-w-208">
-						Longevity and peak performance for the people your company cannot afford to lose.
+						Longevity and peak performance for the people who carry your company forward.
 					</h1>
-					<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5 md:pt-4">
-						Offer your executive team a private health membership designed for leaders who value
-						convenience, trusted guidance, and complete oversight.
+					<p className="font-body text-gray-olive uppercase leading-relaxed tracking-tight text-sm md:text-xs max-w-115.5 md:max-w-160">
+						A PRIVATE HEALTH MEMBERSHIP FOR LEADERS WHO EXPECT CONTINUITY, TRUSTED GUIDANCE, AND TOTAL CLARITY ON THEIR HEALTH.
 					</p>
 				</BlurReveal>
 			</Container>

@@ -19,8 +19,8 @@ export function MembershipApply() {
 							className="w-full bg-zeus flex flex-col items-center gap-12 md:gap-16 px-8 py-14 md:px-30 md:py-20"
 						>
 							<p className="font-body text-sm text-ecru-white uppercase tracking-tight leading-relaxed text-center max-w-144">
-								Membership begins with an application to ensure mutual fit and availability. The
-								form takes a few minutes, and every submission is reviewed personally within a week.
+								Membership is by application. Each request is reviewed personally by the practice
+								— a reflection of the care taken with every relationship that follows.
 							</p>
 							<Button href="/apply" variant="regent" size="sm">
 								Start application

@@ -11,22 +11,22 @@ const cards = [
 	{
 		title: 'Your peace assured',
 		description:
-			'Knowing you can reach your dedicated team at any moment changes how health feels. You’re never left to figure things out alone.',
+			'Knowing you can reach your dedicated team at any moment changes how health feels. You are never left to navigate your health alone.',
 	},
 	{
 		title: 'Your voice represented',
 		description:
-			'When care involves specialists or hospitals, your health team stays by your side to guide decisions with authority.',
+			'When care involves specialists or hospitals, your health team stays by your side to guide decisions with clarity and confidence.',
 	},
 	{
 		title: 'Your privacy untouched',
 		description:
-			'Every interaction and decision is handled with safety and discretion, ensuring care remains truly personal.',
+			'Every interaction and decision is handled with complete discretion, ensuring care remains truly personal.',
 	},
 	{
 		title: 'Your priorities honored',
 		description:
-			'Care adapts to how often you want to engage, your preferences, and what matters most to you. No pressure or\u00A0prescription.',
+			'Care adapts to how often you want to engage, your preferences, and what matters most to you. Always on your terms.',
 	},
 ]
 

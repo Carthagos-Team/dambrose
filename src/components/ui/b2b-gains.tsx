@@ -21,17 +21,17 @@ const CARDS: Card[] = [
 	{
 		kind: 'text',
 		title: 'A relationship that follows through',
-		body: 'Care does not end after assessment day. If something is discovered, the same dedicated care team that found it manages the resolution — coordinating specialists, adjusting care plans, staying involved through treatment and recovery. Executives are never handed off.',
+		body: 'CARE DOES NOT END AT ASSESSMENT. YOUR DEDICATED TEAM COORDINATES EVERY SPECIALIST, ADJUSTS CARE PLANS, AND REMAINS INVOLVED THROUGH TREATMENT AND RECOVERY.',
 	},
 	{
 		kind: 'text',
-		title: 'Advanced, state-of-the-art assessment',
-		body: 'Dambrose deploys advanced diagnostics — from genomic and metabolic profiling to cardiac imaging and continuous biomarker tracking — that go well beyond hospital executive programs. Every finding connects to a plan and a next step.',
+		title: 'Assessment that looks deeper',
+		body: 'DAMBROSE GOES WELL BEYOND THE STANDARD EXECUTIVE PHYSICAL. ADVANCED DIAGNOSTICS BUILD A COMPLETE PICTURE OF HEALTH — AND EVERY FINDING HAS A PLAN BEHIND IT.',
 	},
 	{
 		kind: 'text',
-		title: 'Speed to the right specialist, immediately',
-		body: 'When an executive needs a cardiologist, an oncologist, or a surgeon, waiting weeks for an appointment is not an option. Dambrose navigates them to the right specialist within days — and their physician attends every consultation as a personal advocate.',
+		title: 'The right specialist, at the right time',
+		body: 'DAMBROSE IDENTIFIES THE RIGHT SPECIALIST AND ENSURES THEY ARE SEEN WITHOUT DELAY — WITH THEIR PERSONAL DOCTOR PRESENT AT EVERY CONSULTATION.',
 	},
 	{
 		kind: 'image',
@@ -47,17 +47,17 @@ const CARDS: Card[] = [
 	{
 		kind: 'text',
 		title: 'Longevity and sustained performance',
-		body: 'Leadership demands mental acuity, physical resilience, and sustained energy over decades. Dambrose builds individualized longevity strategies that treat health as a long-term asset — calibrated continuously, not checked once a year.',
+		body: 'DAMBROSE BUILDS INDIVIDUALIZED LONGEVITY STRATEGIES THAT TREAT HEALTH AS A LONG-TERM ASSET — CALIBRATED CONTINUOUSLY, NOT CHECKED ONCE A YEAR.',
 	},
 	{
 		kind: 'text',
 		title: 'Absolute privacy and confidentiality',
-		body: 'Dambrose operates under strict HIPAA compliance: individual health information is never shared with the sponsoring company, all communication is encrypted, and your executives’ medical lives remain entirely their own.',
+		body: "YOUR EXECUTIVES' HEALTH INFORMATION IS NEVER SHARED WITH THE SPONSORING COMPANY. WHAT HAPPENS IN THEIR CARE REMAINS ENTIRELY THEIR OWN.",
 	},
 	{
 		kind: 'text',
 		title: 'Care that meets your executives where they are',
-		body: 'Your executives should never rearrange their day around a medical appointment. Dambrose brings care to the office or the home, on their terms and their schedule — with same-day availability and direct access to the health team any hour of any day.',
+		body: 'DAMBROSE BRINGS CARE TO THE OFFICE OR THE HOME — ON THEIR TERMS AND THEIR SCHEDULE, WITH SAME-DAY AVAILABILITY AND DIRECT ACCESS ANY HOUR.',
 	},
 ]
 

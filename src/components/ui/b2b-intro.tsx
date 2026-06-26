@@ -9,9 +9,9 @@ export function B2bIntro() {
 			<Container>
 				<div className="flex flex-col gap-12 md:gap-30">
 					<BlurReveal>
-						<h2 className="font-display text-3xl md:text-[2.75em] min-[1920px]:text-5xl text-gray-olive leading-tight md:leading-none tracking-wide md:ml-[12.8%] md:max-w-[87%] min-[1920px]:max-w-[74.4%]">
-							Executive physicals find problems. We prevent them — and when they arise, we stay
-							until they&rsquo;re resolved.
+						<h2 className="font-display text-3xl md:text-[2.75em] min-[1920px]:text-5xl text-gray-olive leading-tight md:leading-none tracking-wide md:ml-[12.8%] md:max-w-[74.4%]">
+						Executive physicals find problems. We prevent them — and when they arise, 
+						we remain by your side through every step of healing.
 						</h2>
 					</BlurReveal>
 
@@ -125,7 +125,7 @@ export function B2bIntro() {
 							</BlurReveal>
 							<BlurReveal delay={0.2}>
 								<p className="font-body text-sm text-rangitoto/80 uppercase leading-relaxed tracking-tight">
-									The luxury is not convenience. It&rsquo;s knowing someone is always paying
+									The luxury is not only convenience. It&rsquo;s knowing someone is always paying
 									attention.
 								</p>
 							</BlurReveal>
