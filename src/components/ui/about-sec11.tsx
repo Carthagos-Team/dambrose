@@ -15,14 +15,14 @@ export function AboutSec11() {
 					<div className="flex flex-col gap-[2.4em] md:w-[49%] md:min-h-160 shrink-0">
 						<BlurReveal>
 							<h2 className="font-display text-[2.5em] leading-none tracking-[0.01em] text-gray-olive max-w-[12.4em]">
-								The pulse behind <em className="font-display italic">our purpose.</em>
+								The purpose behind <em className="font-display italic">the practice.</em>
 							</h2>
 						</BlurReveal>
 						<BlurReveal delay={0.1}>
 							<p className="font-body text-xs text-rangoon-green/80 uppercase leading-[1.4] tracking-[-0.04em] max-w-[32.6667em]">
-								DAMBROSE&rsquo;s mission is to remain close, no matter what happens. Over time,
-								confidence settles, decisions grow clearer, and active care becomes a constant in
-								living&mdash;day by day, year by year.
+								DAMBROSE&rsquo;s mission is to practice medicine the way most people have always
+								hoped it could be: attentive to the whole person, present across all life chapters,
+								and genuinely invested in the person, not just the patient.
 							</p>
 						</BlurReveal>
 						<BlurReveal delay={0.05} className="hidden md:block mt-auto">

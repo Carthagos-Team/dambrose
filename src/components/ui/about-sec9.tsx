@@ -25,14 +25,15 @@ export function AboutSec9() {
 
 						<BlurReveal>
 							<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80">
-								We believe the greatest luxury in healthcare is not access, speed, or convenience.
-								It is being genuinely known in a way that brings peace to uncertainty.
+								We believe the greatest luxury in healthcare goes beyond access, speed, or
+								convenience. It is being genuinely known &mdash; in a way that brings clarity to
+								uncertainty.
 							</p>
 							<p className="font-body text-sm uppercase leading-[1.4] tracking-[-0.04em] text-rangitoto/80 mt-[0.6857em]">
 								That&rsquo;s why, at DAMBROSE, we begin where most care ends. We stay present in
-								every chapter&mdash;close enough to notice the small changes only a doctor who sees
-								the whole of you can recognize: your history, your patterns, your worries, your
-								goals.
+								every chapter &mdash; close enough to notice the small changes only a doctor who
+								sees the whole of you can recognize: your history, your patterns, your concerns,
+								your goals.
 							</p>
 						</BlurReveal>
 					</div>

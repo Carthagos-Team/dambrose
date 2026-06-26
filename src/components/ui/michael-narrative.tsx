@@ -45,11 +45,10 @@ export function MichaelNarrative() {
 										never be.
 									</p>
 									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
-										Conventional medicine does not fail patients by accident — it fails them by
-										design. When physicians are pushed to see patients as revenue lines, the person
-										disappears and a case remains. A doctor cannot serve the institution and the
-										individual simultaneously when those interests are in conflict. I chose the
-										individual.
+										My commitment has always been to practice medicine the way it deserves to be
+										practiced &mdash; with full presence, complete knowledge of the patient, and no
+										competing priorities. That is not possible inside a system designed for volume.
+										DAMBROSE was built on the understanding that it can be.
 									</p>
 								</div>
 							</BlurReveal>
@@ -82,12 +81,10 @@ export function MichaelNarrative() {
 									Health is not the absence of illness. It is the fullness of life.
 								</h3>
 								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[30.6em]">
-									At DAMBROSE, we do not wait for you to become unwell before we take your health
-									seriously. We apply the most advanced diagnostics and evidence available, not
-									because our patients expect it, but because anything less would betray their
-									trust. We do not scale. We do not compromise. Every care plan is built from the
-									ground up, every patient relationship singular, every interaction shaped by what
-									medicine can be when freed from a system designed for volume.
+									Medicine at DAMBROSE is practiced without compromise: every care plan built from
+									the ground up, every patient relationship singular, every standard unaffected by
+									scale. Not because patients expect it &mdash; because anything less would be
+									insufficient.
 								</p>
 							</BlurReveal>
 
@@ -157,12 +154,13 @@ export function MichaelNarrative() {
 									DAMBROSE was created as a direct response.
 								</h3>
 								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[44ch]">
-									Today, Dr. D&rsquo;Ambrose leads a deliberately limited private practice where he
-									remains involved in every patient relationship. He attends specialist
-									appointments, coordinates care across disciplines, and serves as a constant
-									medical companion through diagnosis, recovery, and prevention. His role is not
-									only to treat illness, but to guide decisions by filtering noise, anticipating
-									risk, and helping patients move forward with clarity and confidence.
+									Today, I lead a deliberately limited private practice built on the standard I have
+									always held. Every physician at DAMBROSE remains present in each patient
+									relationship &mdash; attending specialist appointments, coordinating care across
+									disciplines, and serving as a constant medical companion through diagnosis,
+									recovery, and prevention. Our role is not only to treat illness, but to guide
+									decisions by filtering noise, anticipating risk, and helping patients move forward
+									with clarity and confidence.
 								</p>
 
 								<div className="border border-gray-olive/50 px-8 py-6 md:px-10 md:py-8 max-w-[42ch]">

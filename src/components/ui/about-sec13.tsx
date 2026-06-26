@@ -40,8 +40,8 @@ export function AboutSec13() {
 							<div className="relative">
 								<p className="font-body text-sm text-rangitoto/80 uppercase leading-[1.4] tracking-[-0.04em]">
 									DAMBROSE partners with specialist physicians who value collaboration, clarity,
-									and thoughtful medicine. If you share a commitment to serving patients through
-									an integrated approach, let&rsquo;s work together.
+									and thoughtful medicine. These relationships are built on shared values and mutual
+									trust.
 								</p>
 								<Image
 									src="/about/sec13-signature.svg"

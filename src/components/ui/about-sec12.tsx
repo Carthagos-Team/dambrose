@@ -92,19 +92,19 @@ export function AboutSec12() {
 						</RevealImage>
 							<PrincipleCard
 								quote="Expertise must feel human."
-								body="Knowledge matters, but so does how it's delivered: with clarity, empathy, and calm."
+								body="Knowledge is most valuable when delivered with clarity and empathy — and that is how it is always shared here."
 								delay={0.05}
 								className="md:flex-1 md:min-w-0 md:w-auto"
 							/>
 							<PrincipleCard
 								quote="Complexity should feel effortless."
-								body="Guidance should simplify care so people can focus on living, not managing their health."
+								body="When medicine is this attentive, health becomes something tended to — not something managed."
 								delay={0.1}
 								className="md:flex-1 md:min-w-0 md:w-auto"
 							/>
 							<PrincipleCard
-								quote="Integrity and restraint define excellence."
-								body="Confidentiality, careful judgment, and respect for every individual define how we show up."
+								quote="Integrity and discretion define excellence."
+								body="The standard here is complete discretion, sound judgment, and genuine respect for every person we serve."
 								delay={0.15}
 								className="md:flex-1 md:min-w-0 md:w-auto"
 							/>
