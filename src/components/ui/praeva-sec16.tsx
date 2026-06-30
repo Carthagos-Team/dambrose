@@ -25,7 +25,7 @@ const FEATURES = [
 	{
 		title: 'Continuity that ensures peace of mind',
 		description:
-			'The mental load of managing your own health — tracking, remembering, following up — is coordinated by a team that knows you and your routine.',
+			'The mental load of managing your own health — tracking, remembering, following up — is alleviated and coordinated by a team that knows you and your routine.',
 	},
 	{
 		title: 'Expertise you can trust',

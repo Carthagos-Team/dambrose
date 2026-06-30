@@ -56,7 +56,7 @@ export function B2bIntro() {
 								<p className="font-body text-sm text-rangitoto/80 uppercase leading-relaxed tracking-tight">
 									Most executive health programs compress a series of standard tests into one or two
 									intensive days. The executive returns to work with a binder of results and, often,
-									no clear path forward. No one calls. No one follows up. No one owns the outcome.
+									no clear path forward.
 								</p>
 							</BlurReveal>
 						</div>
