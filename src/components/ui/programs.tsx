@@ -152,7 +152,7 @@ const CARDS: ProgramCard[] = [
 	{
 		tag: "ALMA by Dr. D'Ambrose",
 		description:
-			'A primary care program focused on diagnosis, treatment, urgent care, and ongoing health management.',
+			'A primary care focused on disease prevention, diagnosis, treatment, urgent care, and ongoing health management.',
 		ctaLabel: 'EXPLORE ALMA',
 		ctaHref: '/alma',
 		ctaBg: 'khaki',
@@ -162,7 +162,7 @@ const CARDS: ProgramCard[] = [
 	{
 		tag: "PRAEVA by Dr. D'Ambrose",
 		description:
-			'A longevity-focused program designed to anticipate risk, improve wellness, and preserve vitality.',
+			'An exceptional longevity-focused program designed to anticipate risk, improve wellness, and preserve vitality.',
 		ctaLabel: 'EXPLORE PRAEVA',
 		ctaHref: '/praeva',
 		ctaBg: 'teal',
