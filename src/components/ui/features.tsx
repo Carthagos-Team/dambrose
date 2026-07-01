@@ -6,7 +6,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 const ITEMS = [
 	{
 		image: '/home/sec04/media-1.webp',
-		alt: 'A composed man with a notebook in a refined, light-filled room',
+		alt: 'Glass pitcher, dried flowers, and books on a glass table in warm light',
 		imageHeight: 'h-94',
 		title: 'Exclusive attention',
 		body: 'Care is offered within a private, members-only structure, intentionally limited so the physician can dedicate the necessary time to each patient.',
@@ -14,7 +14,7 @@ const ITEMS = [
 	},
 	{
 		image: '/home/sec04/media-2.webp',
-		alt: 'A physician and patient in close conversation',
+		alt: 'White magnolia blossom against a terracotta wall',
 		imageHeight: 'h-47',
 		title: 'Coordinated care',
 		body: 'Your doctor never hands you off, personally overseeing everything: diagnosis, specialist appointments, exams, hospital visits, and\u00A0follow-up.',
