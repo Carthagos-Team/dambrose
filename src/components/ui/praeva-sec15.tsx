@@ -31,8 +31,8 @@ const STEPS = [
 		indent: true,
 	},
 	{
-		src: '/praeva/sec15/ongoing-care.webp',
-		alt: 'Couple walking — the continuous oversight of ongoing care',
+		src: '/praeva/sec15/ongoing-care-fern.webp',
+		alt: 'Young fern frond unfurling in soft light against a dark background',
 		label: 'Ongoing Care',
 		description:
 			'Care unfolds over time through continuous medical oversight, regular evaluations, and prompt adjustments as health and life evolve.',
