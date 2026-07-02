@@ -24,8 +24,8 @@ export function B2bLedByTeam() {
 						<div className="md:ml-[11.7%] md:w-[33.4%]">
 							<RevealImage className="relative w-full aspect-square overflow-hidden bg-bison-hide">
 								<Image
-									src="/b2b/sec08/photo.webp"
-									alt="Dr. D’Ambrose reviewing a leather journal on a desk"
+									src="/b2b/sec08/photo-chair.webp"
+									alt="Brown leather armchair in sunlight with window shadow patterns on a green wall"
 									fill
 									className="object-cover"
 									sizes="(min-width: 768px) 443px, 100vw"
@@ -44,7 +44,7 @@ export function B2bLedByTeam() {
 									<p className="font-body text-sm text-rangitoto/80 uppercase leading-relaxed tracking-tight">
 										Dambrose is founded and led by Dr. Michael J. D&rsquo;Ambrose, a board-certified
 										physician with broad clinical experience across outpatient care, hospital
-										medicine, emergency medicine, and obstetrics. His approach combines clinical
+										medicine, and emergency medicine. His approach combines clinical
 										rigor with long-term attention, bringing healthcare back to a model of personal
 										accountability.
 									</p>

@@ -12,10 +12,10 @@ export function B2bHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/b2b/hero/hero-bg.webp"
-						alt="Senior executive in tailored jacket resting hand on a leather journal with watch visible"
+						src="/b2b/hero/hero-coast-hd.webp"
+						alt="Coastal cliffs and calm ocean viewed through golden grasses"
 						fill
-						className="object-cover object-[center_75%]"
+						className="object-cover object-center"
 						priority
 						sizes="100vw"
 					/>

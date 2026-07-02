@@ -40,8 +40,8 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'image',
-		src: '/b2b/sec02/bouquet.webp',
-		alt: 'Floral arrangement on a sunlit marble table beside a glass of water',
+		src: '/b2b/sec02/rock-formation.webp',
+		alt: 'Weathered rock face with honeycomb erosion in dramatic light and shadow',
 		pushLastMobile: true,
 	},
 	{

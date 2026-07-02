@@ -52,7 +52,7 @@ export function B2bCorporateMembership() {
 						className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
 					>
 						<Image
-							src="/b2b/sec07/container-3.webp"
+							src="/b2b/sec07/container-3-lounge.webp"
 							alt=""
 							fill
 							className="object-cover"
@@ -70,7 +70,7 @@ export function B2bCorporateMembership() {
 									variant="outline"
 									className="text-ecru-white border-ecru-white/60"
 								>
-									Inquiry
+									Inquire
 								</Button>
 							</div>
 						</div>
