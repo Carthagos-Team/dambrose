@@ -41,12 +41,7 @@ export function HowItWorks() {
 
 					{/* Center: orchid + headline + CTA (tallest) */}
 					<RevealImage delay={0.15} className="relative aspect-454/711 overflow-hidden">
-						<Image
-							src="/alma/sec04/container-2.webp"
-							alt=""
-							fill
-							className="object-cover"
-						/>
+						<Image src="/alma/sec04/container-2.webp" alt="" fill className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
@@ -65,7 +60,7 @@ export function HowItWorks() {
 				<div className="mt-12 md:mt-[5.6rem] grid grid-cols-1 md:grid-cols-3 gap-x-10 md:gap-x-[1.9rem] gap-y-10">
 					{steps.map((s, i) => (
 						<BlurReveal key={s.number} delay={0.1 * (i + 1)}>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 items-start">
+							<div className="grid grid-cols-1 min-[1200px]:grid-cols-2 gap-x-6 gap-y-2 items-start">
 								<div className="flex items-start gap-3">
 									<span className="font-body text-xs text-[#626f77] opacity-60 leading-[1.9]">
 										{s.number}

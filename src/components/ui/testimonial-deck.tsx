@@ -61,7 +61,7 @@ export function TestimonialDeck({ quotes }: { quotes: Quote[] }) {
 											className="h-16 w-auto md:absolute md:left-1/2 md:top-[12.5rem] md:h-[4.2rem] md:-translate-x-1/2"
 										/>
 
-										<blockquote className="font-ui text-[1.25rem] text-zeus/80 leading-[1.1] tracking-[0.02em] text-pretty md:absolute md:left-1/2 md:top-[23.5rem] md:w-[53rem] md:text-[1.5rem] md:-translate-x-1/2 md:-translate-y-1/2">
+										<blockquote className="font-ui text-[1.25rem] text-zeus/80 leading-[1.1] tracking-[0.02em] text-pretty md:absolute md:left-1/2 md:top-[23.5rem] md:w-[min(53rem,calc(100%_-_4rem))] md:text-[1.5rem] md:-translate-x-1/2 md:-translate-y-1/2">
 											{q.quote}
 										</blockquote>
 									</figure>

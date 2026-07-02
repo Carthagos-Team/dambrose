@@ -70,9 +70,13 @@ export function PraevaSec18() {
 			</div>
 
 			{/* ── Testimonial cards ── */}
-			<div className="flex flex-col md:flex-row gap-8 md:gap-[1.65em] w-full">
+			<div className="flex flex-col items-center min-[1200px]:flex-row min-[1200px]:items-stretch gap-8 min-[1200px]:gap-[1.65em] w-full">
 				{TESTIMONIALS.map((t, i) => (
-					<BlurReveal key={t.name} delay={i * 0.09} className="flex-1 min-w-0">
+					<BlurReveal
+						key={t.name}
+						delay={i * 0.09}
+						className="w-full md:max-w-[21.92em] min-[1200px]:max-w-none min-[1200px]:flex-1 min-[1200px]:min-w-0"
+					>
 						<div
 							className={`relative h-140 md:h-[28.8em] overflow-hidden rounded-[0.25em] ${t.bg}`}
 						>

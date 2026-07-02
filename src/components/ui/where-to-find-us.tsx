@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/container'
 export function WhereToFindUs() {
 	return (
 		<section
-			className="w-full pt-16 md:pt-24"
+			className="w-full overflow-x-clip pt-16 md:pt-24"
 			style={{
 				background: 'linear-gradient(to bottom, #4a6363 0%, #383f39 40%, #222009 100%)',
 			}}

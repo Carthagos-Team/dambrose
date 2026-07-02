@@ -41,13 +41,18 @@ export function MedicalFramework() {
 	return (
 		<section
 			data-wrapper="framework_section"
-			className="w-full bg-ecru-white py-16 md:py-28"
+			className="w-full overflow-x-clip bg-ecru-white py-16 md:py-28"
 		>
 			<Container>
 				<div data-wrapper="framework_component" className="flex flex-col gap-14 md:gap-20">
 					<div data-wrapper="framework_header">
 						<BlurReveal className="flex flex-col items-center text-center gap-6 md:gap-8">
-							<span className="invisible font-body text-xs uppercase tracking-wide" aria-hidden="true">02</span>
+							<span
+								className="invisible font-body text-xs uppercase tracking-wide"
+								aria-hidden="true"
+							>
+								02
+							</span>
 							<h2 className="font-display text-4xl md:text-5xl text-gray-olive leading-none">
 								A complete medical framework.
 							</h2>
