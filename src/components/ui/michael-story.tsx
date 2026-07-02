@@ -5,7 +5,6 @@ const SPECIALTIES: { label: string; chip: string }[] = [
 	{ label: 'Primary care', chip: 'bg-putty/85' },
 	{ label: 'Hospital medicine', chip: 'bg-sandy-brown/85' },
 	{ label: 'Emergency care', chip: 'bg-regent-gray/55' },
-	{ label: 'Obstetrics', chip: 'bg-green-spring/70' },
 	{ label: 'Complex case management', chip: 'bg-my-pink/80' },
 ]
 
@@ -23,12 +22,12 @@ export function MichaelStory() {
 					<BlurReveal delay={0.1} className="w-full">
 						<div className="flex flex-col items-center gap-10 md:gap-12">
 							<div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-20">
-								{SPECIALTIES.slice(0, 3).map((s) => (
+								{SPECIALTIES.slice(0, 2).map((s) => (
 									<Chip key={s.label} label={s.label} chip={s.chip} />
 								))}
 							</div>
 							<div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-20">
-								{SPECIALTIES.slice(3).map((s) => (
+								{SPECIALTIES.slice(2).map((s) => (
 									<Chip key={s.label} label={s.label} chip={s.chip} />
 								))}
 							</div>
