@@ -30,7 +30,7 @@ export function MichaelNarrative() {
 							</RevealImage>
 						</div>
 
-						<div className="relative flex flex-col">
+						<div className="relative flex flex-col lg:@container">
 							<BlurReveal delay={0.1} className="flex flex-col gap-12">
 								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
 									This practice was born from witnessing failure.
@@ -53,16 +53,20 @@ export function MichaelNarrative() {
 								</div>
 							</BlurReveal>
 
+							{/* Selo — de lg até a coluna atingir ~580px (~1280px de viewport) o tamanho/offset
+							    escala com a largura real da coluna (cqw), não a rem fixa, para não invadir o
+							    parágrafo em telas de tablet mais estreitas que o design desktop. Acima disso
+							    o clamp satura em 1rem e o resultado é idêntico ao valor fixo original. */}
 							<BlurReveal
 								delay={0.2}
-								className="mt-auto pt-16 self-center lg:mt-0 lg:pt-0 lg:self-auto lg:absolute lg:right-[6.792rem] lg:bottom-[-2.22406rem]"
+								className="mt-auto pt-16 self-center lg:mt-0 lg:pt-0 lg:self-auto lg:absolute lg:right-[6.792em] lg:bottom-[-2.22406em] lg:text-[clamp(0px,3.1034cqw,1rem)]"
 							>
 								<Image
 									src="/marks/dambrose-seal.svg"
 									alt="Dambrose — Lifelong Medicine"
 									width={314}
 									height={271}
-									className="w-60 h-auto lg:w-[19.625rem] lg:h-[16.90994rem] lg:rotate-[15deg]"
+									className="w-60 h-auto lg:w-[19.625em] lg:rotate-[15deg]"
 								/>
 							</BlurReveal>
 						</div>
@@ -75,7 +79,7 @@ export function MichaelNarrative() {
 			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[672fr_555fr] lg:gap-[7.4em] lg:items-stretch">
-						<div className="relative flex flex-col order-2 lg:order-1 lg:min-h-full">
+						<div className="relative flex flex-col order-2 lg:order-1 lg:min-h-full lg:@container">
 							<BlurReveal delay={0.1} className="flex flex-col gap-12">
 								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
 									Health is not the absence of illness. It is the fullness of life.
@@ -88,9 +92,11 @@ export function MichaelNarrative() {
 								</p>
 							</BlurReveal>
 
+							{/* Carimbo — mesma lógica fluida do selo acima: escala com a coluna (cqw) até
+							    ~1280px de viewport, depois satura em 1rem (idêntico ao valor fixo original). */}
 							<BlurReveal
 								delay={0.2}
-								className="mt-16 self-start lg:mt-0 lg:absolute lg:left-0 lg:bottom-0"
+								className="mt-16 self-start lg:mt-0 lg:absolute lg:left-0 lg:bottom-0 lg:text-[clamp(0px,3.1034cqw,1rem)]"
 							>
 								<div className="flex h-[15.45em] w-[5.175em] items-center justify-center">
 									<div className="-rotate-90">
