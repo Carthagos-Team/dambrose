@@ -86,13 +86,13 @@ export function AboutSec10() {
 								Nurse practitioner
 							</h3>
 							<p className="font-body text-xs text-rangitoto/80 leading-[1.4] tracking-[-0.04em]">
-								Elaina Aldrin is dedicated to providing compassionate, attentive care rooted in
-								clinical excellence. She brings extensive experience in oncology, having worked at
-								Moffitt Cancer Center and Orlando Health Cancer Institute, and holds a certification
-								in blood and marrow transplant. With a background in both business and nursing,
-								Elaina supports the practice through clinical care, patient coordination, and
-								relationship management, while maintaining a strong focus on women&rsquo;s health
-								and whole-person wellbeing.
+								Elaina Aldrin, APRN, is a board-certified Nurse Practitioner specializing in
+								disease prevention. Before primary care, she spent six years as an oncology nurse at
+								Moffitt Cancer Center and Orlando Health Cancer Institute &mdash; an experience
+								that instilled a deep commitment to early detection. With backgrounds in nursing
+								and business, she is as present in clinical care as in patient coordination and
+								relationship management, strengthening both outcomes and the overall care
+								experience.
 							</p>
 						</BlurReveal>
 

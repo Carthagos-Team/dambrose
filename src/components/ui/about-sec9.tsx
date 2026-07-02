@@ -15,8 +15,8 @@ export function AboutSec9() {
 					<div className="flex flex-col gap-[1.2em] md:w-[38%] shrink-0">
 						<RevealImage className="relative w-full aspect-[514/433] overflow-hidden bg-bison-hide">
 							<Image
-								src="/about/sec9-left.png"
-								alt="Crystal wellness tray with essential oil bottle — a detail from the DAMBROSE practice"
+								src="/about/sec9-left.webp"
+								alt="Sunlit white rock formation with warm mineral veins and deep crevices"
 								fill
 								className="object-cover"
 								sizes="(max-width: 768px) 100vw, 38vw"

@@ -83,9 +83,9 @@ export function AboutSec12() {
 						>
 							<Image
 								src="/about-us/sec12/journal.webp"
-								alt="Elderly gentleman writing in a journal — warmth of long-term physician care"
+								alt="Rolling green hills and a still pond reflecting the sky in sunlit countryside"
 								fill
-								className="object-cover object-top"
+								className="object-cover object-center"
 								sizes="(max-width: 768px) 100vw, (min-width: 1920px) 25vw, 25vw"
 								quality={90}
 							/>
