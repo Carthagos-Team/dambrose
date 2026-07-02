@@ -24,7 +24,7 @@ export function EverythingYourMembership() {
 				delay={0.2}
 				className="hidden md:block absolute top-10 left-10 w-52.5 aspect-210/246 overflow-hidden"
 			>
-				<Image src="/alma/sec06/image-small-1.webp" alt="" fill className="object-cover" />
+				<Image src="/alma/sec06/image-small-left.webp" alt="" fill className="object-cover" />
 			</RevealImage>
 
 			<RevealImage
