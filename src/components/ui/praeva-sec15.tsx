@@ -23,8 +23,8 @@ const STEPS = [
 		indent: false,
 	},
 	{
-		src: '/praeva/sec15/strategy.webp',
-		alt: 'Clasped hands — the collaborative health strategy session',
+		src: '/praeva/sec15/strategy-poppies-2.webp',
+		alt: 'Red poppies in warm sunlight among tall grasses',
 		label: 'Strategy',
 		description:
 			'Once accepted, a comprehensive assessment maps health history, genetic context, lifestyle, and risk — building the foundation for a strategy designed not to treat illness, but to prevent it.',
