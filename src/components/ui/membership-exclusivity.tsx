@@ -60,7 +60,7 @@ export function MembershipExclusivity() {
 
 				<BlurReveal
 					delay={0.15}
-					className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-[1em]"
+					className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-[1200px]:grid-cols-5 gap-[1em]"
 				>
 					{cards.map((card) => (
 						<article

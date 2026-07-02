@@ -1,10 +1,10 @@
 'use client'
 
-import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
+import { useRef } from 'react'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
@@ -76,11 +76,14 @@ export function HeroAlma() {
 				Alma — Core Primary Care &amp; Internal Medicine by Dr. Michael J. D&apos;Ambrose
 			</h1>
 			<Container className="pt-5 pb-0">
-				{/* Desktop cream canvas — absolute scene root */}
-				<div className="relative hidden md:block">
+				{/* Desktop cream canvas — absolute scene root.
+				    No tablet (md→lg) o font-size do canvas passa a ser proporcional à
+				    LARGURA do próprio canvas (container-query), para a cena absoluta
+				    encolher junto e não vazar. ≥lg permanece idêntico ao original. */}
+				<div className="relative hidden md:block md:max-[1199px]:@container">
 					<div
 						data-alma-canvas
-						className="relative w-full aspect-1360/600 rounded-lg bg-[#FFFFE4] overflow-hidden text-[clamp(0.625em,1.1111vw,1em)] min-[1920px]:text-[calc(1.1765vw-0.9412px)]"
+						className="relative w-full aspect-1360/600 rounded-lg bg-[#FFFFE4] overflow-hidden text-[clamp(0.625em,1.1111vw,1em)] md:max-[1199px]:text-[1.176cqw] min-[1920px]:text-[calc(1.1765vw-0.9412px)]"
 					>
 						{PHOTOS.map((p) => (
 							<div
@@ -112,7 +115,7 @@ export function HeroAlma() {
 					{/* Bottom gradient strip — 946×112 centered under cream canvas */}
 					<div
 						aria-hidden="true"
-						className="mx-auto w-full max-w-236.5 h-28 text-[clamp(0.625em,1.1111vw,1em)] min-[1920px]:text-[calc(1.1765vw-0.9412px)] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
+						className="mx-auto w-full max-w-236.5 h-28 text-[clamp(0.625em,1.1111vw,1em)] md:max-[1199px]:text-[1.176cqw] min-[1920px]:text-[calc(1.1765vw-0.9412px)] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
 					/>
 				</div>
 

@@ -8,8 +8,7 @@ const steps = [
 	{
 		number: '01.',
 		title: 'Application',
-		description:
-			'PROSPECTIVE MEMBERS APPLY THROUGH A SELECTIVE PROCESS TO ASSESS MUTUAL FIT.',
+		description: 'PROSPECTIVE MEMBERS APPLY THROUGH A SELECTIVE PROCESS TO ASSESS MUTUAL FIT.',
 	},
 	{
 		number: '02.',
@@ -95,10 +94,12 @@ export function HowMembershipWorks({ hideOverlay = false }: { hideOverlay?: bool
 						{steps.map((step) => (
 							<div
 								key={step.number}
-								className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-start gap-6"
+								className="grid grid-cols-1 min-[1200px]:grid-cols-[auto_1fr] items-start gap-6"
 							>
 								<div className="flex items-end gap-3 md:gap-6">
-									<span className="font-body text-xs text-rangitoto/60 leading-[1.3] md:mt-2.4">{step.number}</span>
+									<span className="font-body text-xs text-rangitoto/60 leading-[1.3] md:mt-2.4">
+										{step.number}
+									</span>
 									<span className="font-display text-2xl md:text-[2em] text-rangitoto italic leading-[1.1] tracking-[0.48px]">
 										{step.title}
 									</span>

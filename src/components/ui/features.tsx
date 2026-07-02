@@ -50,7 +50,7 @@ export function Features() {
 				</BlurReveal>
 
 				{/* ── Grid ─────────────────────────────────────────── */}
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10">
+				<div className="grid grid-cols-1 md:grid-cols-2 min-[1200px]:grid-cols-4 gap-x-5 gap-y-10">
 					{ITEMS.map((item) => (
 						<div key={item.title} className="flex flex-col gap-10">
 							<RevealImage

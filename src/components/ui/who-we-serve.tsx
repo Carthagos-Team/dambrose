@@ -22,10 +22,7 @@ const CARDS = [
 
 export function WhoWeServe() {
 	return (
-		<section
-			data-wrapper="audience_section"
-			className="w-full bg-ecru-white py-16 md:py-28"
-		>
+		<section data-wrapper="audience_section" className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
 				<div data-wrapper="audience_component" className="flex flex-col gap-12 md:gap-20">
 					<div data-wrapper="audience_header">
@@ -54,7 +51,10 @@ export function WhoWeServe() {
 						>
 							{CARDS.map((card, i) => (
 								<div data-wrapper="audience_card_wrapper" key={card.index}>
-									<BlurReveal delay={i * 0.1} className="bg-opal aspect-square h-full">
+									<BlurReveal
+										delay={i * 0.1}
+										className="bg-opal aspect-square md:max-[1199px]:aspect-auto h-full"
+									>
 										<div
 											data-wrapper="audience_card_content"
 											className="flex flex-col h-full p-6 md:p-8"

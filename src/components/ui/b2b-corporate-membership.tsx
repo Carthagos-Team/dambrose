@@ -96,7 +96,7 @@ export function B2bCorporateMembership() {
 					{STEPS.map((step) => (
 						<div
 							key={step.number}
-							className="flex flex-col md:flex-row md:items-start gap-3 md:gap-4"
+							className="flex flex-col min-[1200px]:flex-row min-[1200px]:items-start gap-3 min-[1200px]:gap-4"
 						>
 							<div className="flex items-start gap-3 md:shrink-0">
 								<span className="font-body text-xs text-ecru-white uppercase shrink-0 pt-1">
