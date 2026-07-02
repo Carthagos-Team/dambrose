@@ -24,7 +24,7 @@ export function SteadyHand() {
 						<RevealImage className="relative w-full md:w-[34%] aspect-463/368 overflow-hidden">
 							<Image
 								src="/home/sec08/photo.webp"
-								alt="An older man smiling warmly during a conversation outdoors"
+								alt="A winding river flowing through golden marsh grass toward distant hills at sunset"
 								fill
 								className="object-cover"
 							/>

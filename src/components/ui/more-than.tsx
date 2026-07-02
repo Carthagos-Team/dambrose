@@ -46,7 +46,7 @@ export function MoreThan() {
 						<RevealImage delay={0.2} className="mb-10 relative w-full aspect-335/365 overflow-hidden bg-bison-hide">
 							<Image
 								src="/home/sec10/media-large.webp"
-								alt="A man at the sink in a bright, sunlit home kitchen"
+								alt="White columns and palm frond shadows on a sunlit building facade"
 								fill
 								className="object-cover"
 							/>
@@ -64,7 +64,7 @@ export function MoreThan() {
 						{/* Left column */}
 						<div className="flex flex-col pt-40 w-[41.5%] shrink-0">
 							<RevealImage className="relative w-full aspect-564/400 overflow-hidden bg-bison-hide">
-								<Image src="/home/sec10/media-large.webp" alt="" fill className="object-cover" />
+								<Image src="/home/sec10/media-large.webp" alt="White columns and palm frond shadows on a sunlit building facade" fill className="object-cover" />
 							</RevealImage>
 
 							<BlurReveal delay={0.15} className="mt-4">
