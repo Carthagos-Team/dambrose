@@ -33,7 +33,7 @@ export function AboutSec8() {
 							<RevealImage className="relative overflow-hidden bg-bison-hide w-full md:flex-1 min-w-0 aspect-[501/368]">
 								<Image
 									src="/about-us/sec01/intro-photo.webp"
-									alt="Hand resting on a marble surface beside white flowers in a glass vase"
+									alt="White orchids in a pot lit by a diagonal beam of sunlight against a dark wall"
 									fill
 									className="object-cover"
 									sizes="(max-width: 768px) 100vw, 52vw"
@@ -61,7 +61,7 @@ export function AboutSec8() {
 										complex systems.
 									</p>
 									<p>
-										But health is not episodic. And care should not begin at crisis or disappear
+										But health is not episodic. Care should not begin at crisis or disappear
 										when symptoms fade.
 									</p>
 								</div>
