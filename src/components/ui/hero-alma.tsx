@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const PHOTOS = [
 	{
-		src: '/images/hero-alma/photo-top-left.png',
+		src: '/images/hero-alma/photo-top-left.webp',
 		// 160×115 @ (141, 0) inside cream
 		className: 'left-35.25 top-0 w-40 h-28.75',
 	},
@@ -127,7 +127,7 @@ export function HeroAlma() {
 							className="absolute left-[-9%] top-[-7%] w-[47.2%] aspect-square overflow-hidden"
 						>
 							<Image
-								src="/images/hero-alma/photo-top-left.png"
+								src="/images/hero-alma/photo-top-left.webp"
 								alt=""
 								fill
 								sizes="50vw"
