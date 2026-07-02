@@ -9,7 +9,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-const ROLE_OPTIONS = ['Patient', 'Specialist doctor', 'Company', 'Other']
+const ROLE_OPTIONS = ['Patient', 'Healthcare professional', 'Company']
 
 export function ContactForm() {
 	const messageId = useId()

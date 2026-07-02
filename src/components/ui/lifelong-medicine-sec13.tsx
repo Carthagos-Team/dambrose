@@ -54,10 +54,10 @@ export function LifelongMedicineSec13() {
 								className="relative w-full aspect-[680/642] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec02/media-2.webp"
-									alt="Woman standing in warm sunlight — the embodiment of lifelong wellbeing at DAMBROSE"
+									src="/lifelong-medicine/sec02/media-2-spa.webp"
+									alt="Stone bathtub filling with water under sunlight with sparkling reflections"
 									fill
-									className="object-cover object-top"
+									className="object-cover object-center"
 									sizes="(max-width: 768px) 100vw, 50vw"
 								/>
 							</RevealImage>

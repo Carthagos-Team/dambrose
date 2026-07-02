@@ -62,8 +62,8 @@ export function LifelongMedicineSec15() {
 								className="relative w-full aspect-[4/3] md:aspect-470/289 overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec15-episodic.png"
-									alt="Dried flower stem — the stillness of episodic-only care"
+									src="/lifelong-medicine/sec15-episodic-dining.webp"
+									alt="Marble table with bowl of oranges and woven chairs in sunlit dining space"
 									fill
 									className="object-cover object-center"
 									sizes="(max-width: 768px) 100vw, 50vw"
