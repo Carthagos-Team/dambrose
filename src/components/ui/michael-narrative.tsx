@@ -173,11 +173,12 @@ export function MichaelNarrative() {
 
 							<BlurReveal delay={0.2} className="self-end -mt-4 md:-mt-6">
 								<Image
-									src="/marks/dambrose-circle.svg"
-									alt="Dambrose — Lifelong Medicine"
-									width={314}
-									height={271}
-									className="w-44 md:w-52 h-auto"
+									src="/lifelong-medicine/sec16-signature.svg"
+									alt="Dambrose — here for every life chapter"
+									width={396}
+									height={152}
+									className="w-48 md:w-60 h-auto"
+									unoptimized
 								/>
 							</BlurReveal>
 						</div>

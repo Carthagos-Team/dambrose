@@ -11,7 +11,7 @@ const MILESTONES = [
 
 export function MichaelCareer() {
 	return (
-		<section className="relative w-full bg-ecru-white py-28 overflow-hidden">
+		<section className="hidden relative w-full bg-ecru-white py-28 overflow-hidden">
 			<Image
 				src="/shared/photo-detail-small.webp"
 				alt=""
