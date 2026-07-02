@@ -56,7 +56,7 @@ export function AboutSec12() {
 							/>
 							<PrincipleCard
 								quote="Time is part of the treatment."
-								body="Where others hurry, we remain. Where attention fades, we listen carefully."
+								body="Where others hurry, we remain. Where attention fades, we listen."
 								delay={0.05}
 								className="md:w-[24%]"
 							/>
