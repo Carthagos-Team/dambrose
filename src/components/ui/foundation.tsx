@@ -16,7 +16,7 @@ export function Foundation() {
 					Medicine
 				</span>
 				<span className="absolute bottom-4 left-5 font-body text-xs text-ecru-white/60 uppercase tracking-widest">
-					Deep Dive
+					Steps Away
 				</span>
 				<span className="absolute bottom-4 right-5 font-body text-xs text-ecru-white/60 uppercase tracking-widest">
 					Dambrose
@@ -24,7 +24,7 @@ export function Foundation() {
 
 				{/* Center label */}
 				<span className="font-body text-xs text-ecru-white/60 uppercase tracking-widest">
-					Foundation
+					That Never
 				</span>
 			</BlurReveal>
 

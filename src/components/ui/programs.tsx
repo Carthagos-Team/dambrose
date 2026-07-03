@@ -178,7 +178,7 @@ export function Programs() {
 				{/* ── Header ───────────────────────────────────────────── */}
 				<BlurReveal className="flex flex-col gap-8 md:grid md:grid-cols-12 md:gap-4 md:items-start">
 					<p className="md:col-span-3 font-body text-xs text-olive-haze uppercase tracking-wide">
-						PROGRAMS
+						Our programs
 					</p>
 					<div className="md:col-span-6 flex flex-col gap-8">
 						<h2 className="font-display text-3xl md:text-5xl text-olive-haze leading-tight">
