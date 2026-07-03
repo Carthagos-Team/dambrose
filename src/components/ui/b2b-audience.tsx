@@ -7,14 +7,14 @@ const ROWS = [
 	{
 		index: '01',
 		body: 'Founders, C-suite executives, directors, and senior leadership.',
-		image: '/b2b/sec02/showcase-wide-1.webp',
-		alt: 'Senior executive hand resting beside a bouquet of pink roses and white hydrangeas',
+		image: '/b2b/sec02/showcase-wide-desk.webp',
+		alt: 'Brass desk lamp and stacked books in sunlight with rainbow refraction through shutters',
 		side: 'right' as const,
-		objectPosition: 'center 70%',
+		objectPosition: 'center center',
 	},
 	{
 		index: '02',
-		body: 'High-responsibility roles with limited time and high pressure.',
+		body: 'Employees with limited time and high pressure.',
 		image: '/b2b/sec02/showcase-wide-2.webp',
 		alt: 'Executive in a dark suit walking out through french doors toward sunlit gardens',
 		side: 'left' as const,
@@ -22,7 +22,7 @@ const ROWS = [
 	},
 	{
 		index: '03',
-		body: 'Executives traveling frequently or managing complex schedules.',
+		body: 'Frequent travelers and managing complex schedules.',
 		image: '/b2b/sec02/showcase-wide-3.webp',
 		alt: 'Portrait of a senior woman with gold earrings in warm window light',
 		side: 'right' as const,

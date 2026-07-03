@@ -9,7 +9,7 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-const ROLE_OPTIONS = ['Patient', 'Specialist doctor', 'Company', 'Other']
+const ROLE_OPTIONS = ['Patient', 'Healthcare professional', 'Company']
 
 export function ContactForm() {
 	const messageId = useId()
@@ -63,8 +63,8 @@ export function ContactForm() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
 						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square md:aspect-620/652">
 							<Image
-								src="/contact-faq/sec01/hero-image.webp"
-								alt="A person's hands resting on a sunlit windowsill beside fresh flowers"
+								src="/contact-faq/sec01/hero-orchid.webp"
+								alt="White orchid in a stone planter in a sunlit corner with hardwood floors"
 								fill
 								className="object-cover"
 							/>

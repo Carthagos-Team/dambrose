@@ -13,8 +13,8 @@ export function LifelongMedicineHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/lifelong-medicine/hero/hero-bg.webp"
-						alt="Patient and physician in attentive conversation — the heart of DAMBROSE Lifelong Medicine"
+						src="/lifelong-medicine/hero/hero-olive-grove.webp"
+						alt="Sunlit olive grove with trees framing a path toward a distant building"
 						fill
 						className="object-cover object-center"
 						sizes="100vw"

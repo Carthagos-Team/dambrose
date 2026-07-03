@@ -8,10 +8,10 @@ const cards = [
 		image: null, // placeholder gradient
 		title: 'One team, full accountability',
 		description:
-			'Care remains under the guidance of a dedicated health team who knows your history, context, and needs, ensuring decisions are informed and consistent.',
+			'Care remains under the guidance of a dedicated health team who knows your history, context, and needs. Ensuring decisions are informed and consistent.',
 	},
 	{
-		image: '/alma/sec05/image-1.webp',
+		image: '/alma/sec05/image-presence.webp',
 		title: 'Presence during illness and uncertainty',
 		description:
 			'From minor concerns to complex conditions, care stays close, offering reassurance, clarity, and medical judgment when it matters most.',
@@ -26,7 +26,7 @@ const cards = [
 		image: '/alma/sec05/image-2.webp',
 		title: 'Experienced judgment you can rely on',
 		description:
-			'Care is led by physicians with broad clinical experience across settings, allowing decisions to be made with perspective, confidence, and medical depth.',
+			'Care is led by physicians with broad clinical expertise, allowing decisions to be made with perspective, confidence, and medical depth.',
 	},
 ] as const
 

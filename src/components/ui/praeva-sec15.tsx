@@ -23,16 +23,16 @@ const STEPS = [
 		indent: false,
 	},
 	{
-		src: '/praeva/sec15/strategy.webp',
-		alt: 'Clasped hands — the collaborative health strategy session',
+		src: '/praeva/sec15/strategy-poppies-2.webp',
+		alt: 'Red poppies in warm sunlight among tall grasses',
 		label: 'Strategy',
 		description:
 			'Once accepted, a comprehensive assessment maps health history, genetic context, lifestyle, and risk — building the foundation for a strategy designed not to treat illness, but to prevent it.',
 		indent: true,
 	},
 	{
-		src: '/praeva/sec15/ongoing-care.webp',
-		alt: 'Couple walking — the continuous oversight of ongoing care',
+		src: '/praeva/sec15/ongoing-care-fern.webp',
+		alt: 'Young fern frond unfurling in soft light against a dark background',
 		label: 'Ongoing Care',
 		description:
 			'Care unfolds over time through continuous medical oversight, regular evaluations, and prompt adjustments as health and life evolve.',

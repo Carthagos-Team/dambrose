@@ -53,16 +53,20 @@ export function MichaelNarrative() {
 								</div>
 							</BlurReveal>
 
+							{/* Selo — abaixo de 1280px o texto ainda pode ocupar mais linhas do que o design
+							    desktop previa; manter o selo em fluxo normal (tratamento mobile) até lá evita
+							    que ele invada o parágrafo. Só em ≥1280px (largura em que a coluna acomoda o
+							    texto como no Figma) ele assume o posicionamento absoluto original. */}
 							<BlurReveal
 								delay={0.2}
-								className="mt-auto pt-16 self-center lg:mt-0 lg:pt-0 lg:self-auto lg:absolute lg:right-[6.792rem] lg:bottom-[-2.22406rem]"
+								className="mt-auto pt-16 self-center min-[1280px]:mt-0 min-[1280px]:pt-0 min-[1280px]:self-auto min-[1280px]:absolute min-[1280px]:right-[6.792rem] min-[1280px]:bottom-[-2.22406rem]"
 							>
 								<Image
 									src="/marks/dambrose-seal.svg"
 									alt="Dambrose — Lifelong Medicine"
 									width={314}
 									height={271}
-									className="w-60 h-auto lg:w-[19.625rem] lg:h-[16.90994rem] lg:rotate-[15deg]"
+									className="w-60 h-auto min-[1280px]:w-[19.625rem] min-[1280px]:h-[16.90994rem] min-[1280px]:rotate-[15deg]"
 								/>
 							</BlurReveal>
 						</div>
@@ -88,9 +92,11 @@ export function MichaelNarrative() {
 								</p>
 							</BlurReveal>
 
+							{/* Carimbo — mesma lógica do selo acima: fica em fluxo normal (tratamento
+							    mobile) até 1280px, evitando invadir o parágrafo em tablet. */}
 							<BlurReveal
 								delay={0.2}
-								className="mt-16 self-start lg:mt-0 lg:absolute lg:left-0 lg:bottom-0"
+								className="mt-16 self-start min-[1280px]:mt-0 min-[1280px]:absolute min-[1280px]:left-0 min-[1280px]:bottom-0"
 							>
 								<div className="flex h-[15.45em] w-[5.175em] items-center justify-center">
 									<div className="-rotate-90">
@@ -173,11 +179,12 @@ export function MichaelNarrative() {
 
 							<BlurReveal delay={0.2} className="self-end -mt-4 md:-mt-6">
 								<Image
-									src="/marks/dambrose-circle.svg"
-									alt="Dambrose — Lifelong Medicine"
-									width={314}
-									height={271}
-									className="w-44 md:w-52 h-auto"
+									src="/lifelong-medicine/sec16-signature.svg"
+									alt="Dambrose — here for every life chapter"
+									width={396}
+									height={152}
+									className="w-48 md:w-60 h-auto"
+									unoptimized
 								/>
 							</BlurReveal>
 						</div>
