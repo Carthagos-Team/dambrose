@@ -45,7 +45,7 @@ const LINKS = [
 	{ label: 'Services', href: '/services' },
 	{ label: 'Alma', href: '/alma', italic: true },
 	{ label: 'Praeva', href: '/praeva', italic: true },
-	{ label: 'B2B', href: '/b2b' },
+	{ label: 'Corporate Memberships', href: '/b2b' },
 	{ label: 'About us', href: '/about' },
 	{ label: 'About Dr. Michael', href: '/about-dr-michael' },
 	{ label: 'Lifelong Medicine', href: '/lifelong-medicine' },
@@ -205,7 +205,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 										<div className="flex-1 min-h-0 overflow-y-auto px-10.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 											<nav className="flex min-h-full flex-col justify-end pt-20 pb-6 md:pb-10">
 												<motion.ul
-													className="flex flex-col gap-[0.4em] md:gap-[clamp(0.3125em,0.42vw,0.6875em)]"
+													className="flex flex-col gap-[0.4em] md:gap-[0.875em]"
 													variants={listVariants}
 													initial="hidden"
 													animate="visible"
