@@ -1,5 +1,4 @@
 import { Features } from '@/components/ui/features'
-import { Foundation } from '@/components/ui/foundation'
 import { Header } from '@/components/ui/header'
 import { Hero } from '@/components/ui/hero'
 import { HomeLoader } from '@/components/ui/home-loader'
@@ -48,8 +47,6 @@ export default function HomePage() {
 				<HowMembershipWorks hideOverlay />
 				<SectionDivider />
 				<MoreThan />
-				<SectionDivider />
-				<Foundation />
 				<SectionDivider />
 				<SteadyHand />
 			</main>
