@@ -50,20 +50,6 @@ export function AboutSec11() {
 							sizes="(max-width: 768px) 100vw, 41vw"
 						/>
 					</RevealImage>
-
-					{/* ── OVERLAY IMAGE — absolute, bridges columns ─── */}
-					<RevealImage
-						delay={0.2}
-						className="hidden md:absolute md:block left-[46%] top-[42%] w-[19%] aspect-[259/373] overflow-hidden bg-bison-hide"
-					>
-						<Image
-							src="/about-us/sec04/portrait-small.webp"
-							alt="Orchids resting on a poolside — serene DAMBROSE setting"
-							fill
-							className="object-cover object-center"
-							sizes="19vw"
-						/>
-					</RevealImage>
 				</div>
 			</Container>
 		</section>
