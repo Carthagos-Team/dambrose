@@ -8,29 +8,30 @@ import { RevealImage } from '@/components/ui/reveal-image'
  * Comparison: EPISODIC CARE (bordered light card) vs LIFELONG MEDICINE (dark gradient card)
  */
 
-type FeatureRowProps = {
-	icon: string
-	iconAlt?: string
-	text: string
-	light?: boolean
+function FeatureMark({ className = '' }: { className?: string }) {
+	return (
+		<span
+			aria-hidden="true"
+			className={`block w-[1.55em] h-[1.9em] shrink-0 bg-current ${className}`}
+			style={{
+				maskImage: 'url(/lifelong-medicine/sec15-icon-dark.svg)',
+				maskSize: 'contain',
+				maskRepeat: 'no-repeat',
+				maskPosition: 'center',
+				WebkitMaskImage: 'url(/lifelong-medicine/sec15-icon-dark.svg)',
+				WebkitMaskSize: 'contain',
+				WebkitMaskRepeat: 'no-repeat',
+				WebkitMaskPosition: 'center',
+			}}
+		/>
+	)
 }
 
-function FeatureRow({ icon, iconAlt = '', text, light = false }: FeatureRowProps) {
+function FeatureRow({ text }: { text: string }) {
 	return (
 		<div className="flex items-center gap-[1.2em]">
-			<Image
-				src={icon}
-				alt={iconAlt}
-				width={31}
-				height={38}
-				className="w-[1.55em] h-[1.9em] shrink-0"
-				unoptimized
-			/>
-			<p
-				className={`font-body text-xs uppercase leading-[1.4] tracking-[-0.04em] flex-1 ${
-					light ? 'text-ecru-white/80' : 'text-rangoon-green/80'
-				}`}
-			>
+			<FeatureMark className="text-rangoon-green/80" />
+			<p className="font-body text-xs uppercase leading-[1.4] tracking-[-0.04em] flex-1 text-rangoon-green/80">
 				{text}
 			</p>
 		</div>
@@ -76,30 +77,12 @@ export function LifelongMedicineSec15() {
 									EPISODIC CARE
 								</h3>
 								<div className="flex flex-col gap-[0.8em]">
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Care begins when symptoms appear"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Health history is repeated, not carried"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Decisions are made in isolation"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Specialists act without shared context"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Treatment responds to urgency"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-dark.svg"
-										text="Responsibility ends with the visit"
-									/>
+									<FeatureRow text="Care begins when symptoms appear" />
+									<FeatureRow text="Health history is repeated, not carried" />
+									<FeatureRow text="Decisions are made in isolation" />
+									<FeatureRow text="Specialists act without shared context" />
+									<FeatureRow text="Treatment responds to urgency" />
+									<FeatureRow text="Responsibility ends with the visit" />
 								</div>
 							</div>
 						</BlurReveal>
@@ -125,34 +108,16 @@ export function LifelongMedicineSec15() {
 
 							{/* Content */}
 							<div className="flex flex-col gap-[2.4em] pt-[1.2em]">
-								<h3 className="font-display text-[1.8em] leading-none tracking-[0.01em] text-ecru-white">
+								<h3 className="font-display text-[1.8em] leading-none tracking-[0.01em] text-rangoon-green">
 									<em className="font-display italic">LIFELONG </em>MEDICINE
 								</h3>
 								<div className="flex flex-col gap-[0.8em]">
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Care begins with foresight"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Health history informs every step"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Decisions are guided by lived context"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Specialists are coordinated within one direction"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Health is anticipated, not only treated"
-									/>
-									<FeatureRow
-										icon="/lifelong-medicine/sec15-icon-light.svg"
-										text="Responsibility continues over time"
-									/>
+									<FeatureRow text="Care begins with foresight" />
+									<FeatureRow text="Health history informs every step" />
+									<FeatureRow text="Decisions are guided by lived context" />
+									<FeatureRow text="Specialists are coordinated within one direction" />
+									<FeatureRow text="Health is anticipated, not only treated" />
+									<FeatureRow text="Responsibility continues over time" />
 								</div>
 							</div>
 
