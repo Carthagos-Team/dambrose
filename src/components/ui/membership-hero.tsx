@@ -12,13 +12,25 @@ export function MembershipHero() {
 					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
+					{/* Mobile: portrait crop — landscape source lacks height for tall object-cover frames */}
 					<Image
-						src="/membership/hero/hero-bg.webp"
+						src="/membership/hero/hero-membership-mobile.webp"
 						alt="DAMBROSE membership — a personal, physician-led medical relationship"
 						fill
 						sizes="100vw"
 						priority
-						className="object-cover"
+						className="object-cover object-center md:hidden"
+						quality={95}
+					/>
+					{/* Desktop: full landscape stationery flat-lay */}
+					<Image
+						src="/membership/hero/hero-membership.webp"
+						alt="DAMBROSE membership — a personal, physician-led medical relationship"
+						fill
+						sizes="100vw"
+						priority
+						className="object-cover object-center hidden md:block"
+						quality={95}
 					/>
 				</RevealImage>
 			</Container>
