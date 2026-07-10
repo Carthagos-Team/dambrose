@@ -31,7 +31,8 @@ export function LifelongMedicineSec13() {
 									src="/lifelong-medicine/sec02/media-1.webp"
 									alt="Person running along a canyon trail — the energy of lifelong health"
 									fill
-									className="object-cover object-center"
+									className="object-cover object-[50%_72%]"
+									quality={90}
 									sizes="(max-width: 768px) 100vw, 41vw"
 								/>
 							</RevealImage>
@@ -54,10 +55,11 @@ export function LifelongMedicineSec13() {
 								className="relative w-full aspect-[680/642] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec02/media-2-spa.webp"
-									alt="Stone bathtub filling with water under sunlight with sparkling reflections"
+									src="/lifelong-medicine/sec02/media-forest.webp"
+									alt="Sunlit evergreen forest with moss-covered ground and light beams through the canopy"
 									fill
 									className="object-cover object-center"
+									quality={90}
 									sizes="(max-width: 768px) 100vw, 50vw"
 								/>
 							</RevealImage>

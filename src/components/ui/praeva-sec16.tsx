@@ -46,11 +46,12 @@ export function PraevaSec16() {
 						start="top 95%"
 					>
 						<Image
-							src="/praeva/sec05/square.webp"
-							alt="Close-up of a human iris — the precision of advanced diagnostics"
+							src="/praeva/sec05/square-flowers.webp"
+							alt="Pink bougainvillea against a sunlit white wall"
 							fill
-							className="object-cover"
-							sizes="(max-width: 1439px) 100vw, 35.54em"
+							className="object-cover object-center"
+							quality={90}
+							sizes="(max-width: 1439px) 100vw, 13em"
 						/>
 					</RevealImage>
 

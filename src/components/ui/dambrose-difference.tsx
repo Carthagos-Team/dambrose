@@ -5,33 +5,32 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const COLUMNS = [
 	{
-		image: '/services/sec03/media-1.webp',
-		alt: 'Senior man with caregiver',
+		image: '/services/sec03/media-1-globe.webp',
+		alt: 'Globe and houseplants in sunlit interior',
 		tall: true,
 		title: 'Complete care coordination',
 		body: 'Appointments, referrals, exams, and logistics are handled seamlessly, so care feels integrated and convenient.',
 	},
 	{
-		image: '/services/sec03/media-3.webp',
-		alt: 'Patient seated in a calm consultation setting',
+		image: '/services/sec03/media-2-hallway.webp',
+		alt: 'Sunlit hallway with wooden console and plant',
 		tall: false,
 		title: 'Vetted specialist network',
 		body: 'Access to a carefully curated network of trusted specialists, selected through years of professional partnerships.',
 	},
 	{
-		image: '/services/sec03/media-4.webp',
-		alt: 'Tranquil landscape',
+		image: '/services/sec03/media-3-armchair.webp',
+		alt: 'Beige armchair in a calm sunlit room',
 		tall: true,
 		title: 'Goal-aligned medical guidance',
 		body: 'Health strategy is built around personal priorities and values, ensuring decisions remain thoughtful and unpressured.',
 	},
 	{
-		image: '/services/sec03/media-2.webp',
-		alt: 'Physician examining a patient',
+		image: '/services/sec03/media-4-blazer.webp',
+		alt: 'Checkered blazer on a wooden hanger',
 		tall: false,
 		title: 'Deliberate physician focus',
 		body: 'Membership is limited, allowing time, attention, and clinical presence to remain centered on each individual.',
-		imgPosition: 'object-[50%_92%]',
 	},
 ]
 
@@ -56,7 +55,9 @@ export function DambroseDifference() {
 									src={col.image}
 									alt={col.alt}
 									fill
-									className={`object-cover ${'imgPosition' in col ? col.imgPosition : 'object-center'}`}
+									className="object-cover object-center"
+									quality={90}
+									sizes="(max-width: 1024px) 100vw, (max-width: 1439px) 50vw, 325px"
 								/>
 							</RevealImage>
 

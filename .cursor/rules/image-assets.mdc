@@ -1,0 +1,47 @@
+---
+description: Convert PNG/JPG assets to WebP before committing to public/
+alwaysApply: true
+---
+
+# Image Assets — WebP First
+
+When replacing or adding raster images under `public/`, **never commit PNG or JPG as the final asset**. Convert to WebP first, then reference the `.webp` path in components.
+
+## Workflow
+
+1. Save the source PNG/JPG temporarily (chat attachment, Downloads, or Figma export).
+2. Convert with `sharp-cli` from the project root:
+
+```bash
+# Card / section images
+npx --yes sharp-cli -i "path/to/source.png" -o "public/.../asset.webp" -f webp -q 90
+
+# Full-bleed heroes
+npx --yes sharp-cli -i "path/to/source.png" -o "public/.../hero.webp" -f webp -q 95
+```
+
+3. Update `<Image src="...">` (or data arrays) to point at the `.webp` file.
+4. Delete the intermediate PNG/JPG from `public/` — do not leave both formats.
+5. Set `quality` on `<Image>` when needed (`90` editorial, `95` heroes). Allowed values are in `next.config.ts` → `images.qualities`.
+
+## Quality tiers
+
+| Use case | sharp `-q` | `<Image quality>` |
+|---|---|---|
+| Cards, thumbnails, sections | 90 | 90 |
+| Full-bleed heroes | 95 | 95 |
+| Default / body | — | 80 (default) |
+
+## Exceptions (keep original format)
+
+- `opengraph-image.*`, `twitter-image.*`, `apple-icon.*` — Next.js metadata conventions
+- `manifest.ts` icon entries
+- Brand assets that require PNG transparency in non-WebP contexts (rare)
+
+## Anti-patterns
+
+- Referencing `.png` / `.jpg` in `public/` from components
+- Using chat-attached images as source — Cursor downscales them (~50%); use Desktop/Downloads originals instead
+- Pre-compressing to WebP then letting `/_next/image` re-compress at `q=80` without raising `quality`
+- Leaving duplicate PNG + WebP pairs in `public/`
+- Reusing old filenames when replacing images — use a new name to bust Next.js/browser cache

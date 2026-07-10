@@ -119,10 +119,12 @@ export function PraevaSec12() {
 					<div className="flex flex-col gap-[1.6em] w-[19.91em] shrink-0">
 						<RevealImage className="relative w-full aspect-[463/242] overflow-hidden" delay={0.08}>
 							<Image
-								src="/praeva/sec01/photo-2.webp"
-								alt="Aerial landscape — the long-term perspective of preventive care"
+								src="/praeva/sec01/photo-2-editorial.webp"
+								alt="Runner in motion — the long-term perspective of preventive care"
 								fill
-								className="object-cover"
+								className="object-cover object-center"
+								quality={90}
+								sizes="(min-width: 1440px) 20em, 100vw"
 							/>
 						</RevealImage>
 						<BlurReveal delay={0.12}>

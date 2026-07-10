@@ -29,8 +29,8 @@ const ITEMS = [
 		delay: 0.2,
 	},
 	{
-		image: '/home/sec04/media-4.webp',
-		alt: 'Macro close-up of a human iris',
+		image: '/home/sec04/media-rock.webp',
+		alt: 'Sunlit white quartz rock formation against a clear sky',
 		imageHeight: 'h-47',
 		title: 'Alignment with personal goals',
 		body: 'Medical strategy is shaped around what matters to you, respecting your priorities and values without pressure or unnecessary intervention.',

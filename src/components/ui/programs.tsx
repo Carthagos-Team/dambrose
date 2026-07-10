@@ -26,7 +26,7 @@ export function AlmaVisual({ tagline }: { tagline?: string } = {}) {
 			{/* White book card */}
 			<div
 				className="absolute bg-[#f2f1e3] overflow-hidden"
-				style={{ left: '25%', top: '10.75%', width: '50%', height: '78.5%', borderRadius: '2px' }}
+				style={{ left: '25%', top: '10.75%', width: '50%', height: '78.5%', borderRadius: 0 }}
 			>
 				{/* Alma title */}
 				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
@@ -62,7 +62,7 @@ export function AlmaVisual({ tagline }: { tagline?: string } = {}) {
 						top: '16.6%',
 						width: '91.4%',
 						height: '80.4%',
-						borderRadius: '3%',
+						borderRadius: 0,
 						background: 'linear-gradient(to top, #808d95 10%, #b4a389 50%, #dedbbc)',
 					}}
 				>
@@ -92,7 +92,7 @@ export function PraevaVisual({ tagline }: { tagline?: string } = {}) {
 			{/* White book card */}
 			<div
 				className="absolute bg-[#f2f1e3] overflow-hidden"
-				style={{ left: '24.9%', top: '10.3%', width: '50.1%', height: '79.2%', borderRadius: '2px' }}
+				style={{ left: '24.9%', top: '10.3%', width: '50.1%', height: '79.2%', borderRadius: 0 }}
 			>
 				{/* Praeva title */}
 				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
@@ -128,7 +128,7 @@ export function PraevaVisual({ tagline }: { tagline?: string } = {}) {
 						top: '16.6%',
 						width: '91.4%',
 						height: '80.4%',
-						borderRadius: '3%',
+						borderRadius: 0,
 						background: 'linear-gradient(to bottom, #272018 3%, #545c63 50%, #dedbbc)',
 					}}
 				>

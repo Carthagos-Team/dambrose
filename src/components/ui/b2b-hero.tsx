@@ -12,12 +12,13 @@ export function B2bHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/b2b/hero/hero-coast-hd.webp"
+						src="/b2b/hero/hero-coast.webp"
 						alt="Coastal cliffs and calm ocean viewed through golden grasses"
 						fill
 						className="object-cover object-center"
 						priority
-						sizes="100vw"
+						quality={95}
+						sizes="(min-width: 1920px) 100vw, (min-width: 1280px) 1360px, 100vw"
 					/>
 				</RevealImage>
 			</Container>

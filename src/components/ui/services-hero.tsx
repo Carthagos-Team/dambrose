@@ -13,12 +13,13 @@ export function ServicesHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/services/hero/hero-bg.webp"
-						alt="Two pairs of hands gently clasped — care, fully supported"
+						src="/services/hero/hero-services.webp"
+						alt="Sunlit golf course with palm trees at golden hour"
 						fill
 						sizes="100vw"
 						priority
-						className="object-cover"
+						className="object-cover object-center"
+						quality={95}
 					/>
 				</RevealImage>
 			</Container>
