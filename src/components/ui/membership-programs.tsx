@@ -24,7 +24,7 @@ type Program = {
 
 const ALMA: Program = {
 	brand: 'Alma',
-	tag: "ALMA by Dr. D'Amrose\nCore medicine without interruption.",
+	tag: "ALMA by Dr. D'Ambrose\nCore medicine without interruption.",
 	description:
 		'A primary care program focused on diagnosis, treatment, urgent care, and ongoing clinical management.',
 	benefitsTitle: "what's included:",
@@ -47,7 +47,7 @@ const ALMA: Program = {
 
 const PRAEVA: Program = {
 	brand: 'Praeva',
-	tag: "PRAEVA by Dr. D'Amrose\nHealth guided with foresight.",
+	tag: "PRAEVA by Dr. D'Ambrose\nHealth guided with foresight.",
 	description:
 		'A longevity-focused program harnessing state-of-the-art technology to reduce risk, strengthen resilience, and preserve vitality.',
 	benefitsTitle: 'Includes everything in your ALMA membership, plus:',
