@@ -13,11 +13,13 @@ export function MichaelHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/membership/hero/hero-bg.webp"
+						src="/membership/hero/hero-envelopes.webp"
 						alt="Dr. Michael J. D'Ambrose — Lifelong Medicine"
 						fill
+						sizes="100vw"
 						priority
-						className="object-cover"
+						className="object-cover object-center"
+						quality={95}
 					/>
 				</RevealImage>
 			</Container>

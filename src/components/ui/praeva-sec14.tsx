@@ -23,16 +23,16 @@ const CARDS = [
 	},
 	{
 		key: 'presence',
-		src: '/praeva/sec03/card-2.webp',
-		alt: 'Athletic person in motion — the presence of full-body wellness',
+		src: '/praeva/sec03/card-3-longevity.webp',
+		alt: 'Athlete in motion outdoors — the presence of full-body wellness',
 		label: 'Presence',
 		description:
 			'People who want their health held by a team that stays attentive enough to recognize patterns and familiar enough to act on them early.',
 	},
 	{
 		key: 'longevity',
-		src: '/praeva/sec03/card-3.webp',
-		alt: 'Man at the ocean horizon — the longevity that comes from foresight',
+		src: '/praeva/sec03/card-2-presence.webp',
+		alt: 'Man smiling outdoors in athletic wear — the longevity that comes from foresight',
 		label: 'Longevity',
 		description:
 			'People who are healthy and want medicine that treats prevention with the same seriousness as illness.',
@@ -48,6 +48,7 @@ function Card({ card, delay = 0 }: { card: (typeof CARDS)[number]; delay?: numbe
 					alt={card.alt}
 					fill
 					className="object-cover"
+					quality={90}
 					sizes="(max-width: 1439px) 100vw, 50vw"
 				/>
 			</RevealImage>

@@ -24,10 +24,11 @@ export function B2bLedByTeam() {
 						<div className="md:ml-[11.7%] md:w-[33.4%]">
 							<RevealImage className="relative w-full aspect-square overflow-hidden bg-bison-hide">
 								<Image
-									src="/b2b/sec08/photo-chair.webp"
+									src="/b2b/sec08/photo-standard.webp"
 									alt="Brown leather armchair in sunlight with window shadow patterns on a green wall"
 									fill
 									className="object-cover"
+									quality={90}
 									sizes="(min-width: 768px) 443px, 100vw"
 								/>
 							</RevealImage>

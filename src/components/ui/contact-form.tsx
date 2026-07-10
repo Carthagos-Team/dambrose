@@ -63,10 +63,12 @@ export function ContactForm() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
 						<RevealImage className="relative w-full overflow-hidden bg-bison-hide aspect-square md:aspect-620/652">
 							<Image
-								src="/contact-faq/sec01/hero-orchid.webp"
+								src="/contact-faq/sec01/hero-contact.webp"
 								alt="White orchid in a stone planter in a sunlit corner with hardwood floors"
 								fill
 								className="object-cover"
+								quality={90}
+								sizes="(min-width: 768px) 646px, 100vw"
 							/>
 						</RevealImage>
 

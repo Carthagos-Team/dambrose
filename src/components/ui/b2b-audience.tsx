@@ -7,26 +7,26 @@ const ROWS = [
 	{
 		index: '01',
 		body: 'Founders, C-suite executives, directors, and senior leadership.',
-		image: '/b2b/sec02/showcase-wide-desk.webp',
-		alt: 'Brass desk lamp and stacked books in sunlight with rainbow refraction through shutters',
+		image: '/b2b/sec02/showcase-blazer.webp',
+		alt: 'Brown patterned blazer draped over a leather office chair in sunlit executive office',
 		side: 'right' as const,
 		objectPosition: 'center center',
 	},
 	{
 		index: '02',
 		body: 'Employees with limited time and high pressure.',
-		image: '/b2b/sec02/showcase-wide-2.webp',
-		alt: 'Executive in a dark suit walking out through french doors toward sunlit gardens',
+		image: '/b2b/sec02/showcase-books-lamp.webp',
+		alt: 'Brass desk lamp and stacked books in sunlight with rainbow refraction through shutters',
 		side: 'left' as const,
-		objectPosition: 'center 50%',
+		objectPosition: 'center center',
 	},
 	{
 		index: '03',
 		body: 'Frequent travelers and managing complex schedules.',
-		image: '/b2b/sec02/showcase-wide-3.webp',
-		alt: 'Portrait of a senior woman with gold earrings in warm window light',
+		image: '/b2b/sec02/showcase-travel-bag.webp',
+		alt: 'Dark leather travel bag resting on a surface beside a window with soft curtain light',
 		side: 'right' as const,
-		objectPosition: 'center 28%',
+		objectPosition: 'center center',
 	},
 ]
 
@@ -67,7 +67,15 @@ export function B2bAudience() {
 											delay={i * 0.08 + 0.1}
 											className="md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
 										>
-											<Image src={row.image} alt={row.alt} fill className="object-cover" style={{ objectPosition: row.objectPosition }} />
+											<Image
+												src={row.image}
+												alt={row.alt}
+												fill
+												className="object-cover"
+												quality={90}
+												sizes="(min-width: 768px) 1020px, 100vw"
+												style={{ objectPosition: row.objectPosition }}
+											/>
 										</RevealImage>
 									</>
 								) : (
@@ -76,7 +84,15 @@ export function B2bAudience() {
 											delay={i * 0.08}
 											className="order-last md:order-none md:col-span-9 relative w-full aspect-1016/362 overflow-hidden bg-bison-hide"
 										>
-											<Image src={row.image} alt={row.alt} fill className="object-cover" style={{ objectPosition: row.objectPosition }} />
+											<Image
+												src={row.image}
+												alt={row.alt}
+												fill
+												className="object-cover"
+												quality={90}
+												sizes="(min-width: 768px) 1020px, 100vw"
+												style={{ objectPosition: row.objectPosition }}
+											/>
 										</RevealImage>
 										<BlurReveal
 											delay={i * 0.08 + 0.1}

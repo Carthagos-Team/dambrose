@@ -19,9 +19,10 @@ const PHOTOS = [
 		className: 'left-35.25 top-0 w-40 h-28.75',
 	},
 	{
-		src: '/alma/hero/thumb-1.webp',
-		// 214×214 @ (1233, -43) inside cream — spills above
-		className: 'left-308.25 -top-10.75 w-53.5 h-53.5',
+		src: '/alma/hero/thumb-1-top-right.webp',
+		// 214×214 @ (1233, -43) inside cream — spills above (visible 214×171)
+		className: 'left-295.5 -top-10.75 w-53.5 h-53.5',
+		imageClass: 'object-cover object-bottom',
 	},
 	{
 		src: '/images/hero-alma/photo-bottom-left.png',
@@ -29,9 +30,10 @@ const PHOTOS = [
 		className: 'left-27.5 top-103.25 w-55.25 h-46.75',
 	},
 	{
-		src: '/alma/hero/photo-bottom-right.webp',
-		// 158×158 @ (1154, 472) inside cream — spills below
+		src: '/alma/hero/photo-bottom-right-bonsai.webp',
+		// 158×158 @ (1154, 472) inside cream — spills below (visible 158×128)
 		className: 'left-288.5 top-118 w-39.5 h-39.5',
+		imageClass: 'object-cover object-top',
 	},
 ] as const
 
@@ -91,7 +93,14 @@ export function HeroAlma() {
 								key={p.src}
 								className={`absolute overflow-hidden ${p.className}`}
 							>
-								<Image src={p.src} alt="" fill sizes="14em" className="object-cover" />
+								<Image
+									src={p.src}
+									alt=""
+									fill
+									sizes="14em"
+									className={'imageClass' in p ? p.imageClass : 'object-cover object-center'}
+									quality={90}
+								/>
 							</div>
 						))}
 
@@ -143,11 +152,12 @@ export function HeroAlma() {
 							className="absolute left-[50.1%] top-[71.8%] w-[66%] aspect-square overflow-hidden"
 						>
 							<Image
-								src="/alma/hero/photo-bottom-right.webp"
+								src="/alma/hero/photo-bottom-right-bonsai.webp"
 								alt=""
 								fill
 								sizes="66vw"
-								className="object-cover"
+								className="object-cover object-top"
+								quality={90}
 							/>
 						</RevealImage>
 						{/* Card Alma — clip-wipe, centralizado, por cima (link preservado) */}

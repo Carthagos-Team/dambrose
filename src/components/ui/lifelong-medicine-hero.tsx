@@ -13,12 +13,13 @@ export function LifelongMedicineHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/lifelong-medicine/hero/hero-olive-grove.webp"
+						src="/lifelong-medicine/hero/hero-lifelong.webp"
 						alt="Sunlit olive grove with trees framing a path toward a distant building"
 						fill
 						className="object-cover object-center"
-						sizes="100vw"
 						priority
+						quality={95}
+						sizes="(min-width: 1920px) 100vw, (min-width: 1280px) 1360px, 100vw"
 					/>
 				</RevealImage>
 			</Container>

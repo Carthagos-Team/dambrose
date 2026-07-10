@@ -24,10 +24,11 @@ export function MembershipIntro() {
 							start="top 95%"
 						>
 							<Image
-								src="/membership/sec01/scroll-image-5.webp"
+								src="/membership/sec01/scroll-medium.webp"
 								alt=""
 								fill
 								className="object-cover"
+								quality={90}
 								sizes="80vw"
 							/>
 						</RevealImage>
@@ -39,10 +40,11 @@ export function MembershipIntro() {
 								start="top 95%"
 							>
 								<Image
-									src="/membership/sec01/scroll-image-2b.webp"
+									src="/membership/sec01/scroll-large.webp"
 									alt=""
 									fill
 									className="object-cover"
+									quality={90}
 									sizes="60vw"
 								/>
 							</RevealImage>
@@ -52,10 +54,11 @@ export function MembershipIntro() {
 								delay={0.05}
 							>
 								<Image
-									src="/membership/sec01/scroll-image-1.webp"
+									src="/membership/sec01/scroll-small.webp"
 									alt=""
 									fill
 									className="object-cover"
+									quality={90}
 									sizes="40vw"
 								/>
 							</RevealImage>
@@ -68,10 +71,11 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/sec01/scroll-image-5.webp"
+								src="/membership/sec01/scroll-medium.webp"
 								alt=""
 								fill
 								className="object-cover"
+								quality={90}
 								sizes="33vw"
 							/>
 						</RevealImage>
@@ -80,10 +84,11 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/sec01/scroll-image-2b.webp"
+								src="/membership/sec01/scroll-large.webp"
 								alt=""
 								fill
 								className="object-cover"
+								quality={90}
 								sizes="50vw"
 							/>
 						</RevealImage>
@@ -92,10 +97,11 @@ export function MembershipIntro() {
 							start="top 90%"
 						>
 							<Image
-								src="/membership/sec01/scroll-image-1.webp"
+								src="/membership/sec01/scroll-small.webp"
 								alt=""
 								fill
 								className="object-cover"
+								quality={90}
 								sizes="25vw"
 							/>
 						</RevealImage>

@@ -39,11 +39,12 @@ export function B2bCorporateMembership() {
 				<div className="grid grid-cols-1 md:grid-cols-3 items-start">
 					<RevealImage className="hidden md:block relative overflow-hidden aspect-453/531">
 						<Image
-							src="/b2b/sec07/container-1.webp"
+							src="/b2b/sec07/image-medium.webp"
 							alt=""
 							fill
 							className="object-cover"
 							sizes="(min-width: 768px) 33vw, 100vw"
+							quality={90}
 						/>
 					</RevealImage>
 
@@ -52,11 +53,12 @@ export function B2bCorporateMembership() {
 						className="relative overflow-hidden aspect-4/5 md:aspect-454/711"
 					>
 						<Image
-							src="/b2b/sec07/container-3-lounge.webp"
+							src="/b2b/sec07/image-large.webp"
 							alt=""
 							fill
 							className="object-cover"
 							sizes="(min-width: 768px) 33vw, 100vw"
+							quality={90}
 						/>
 						<div className="absolute inset-0 flex items-center justify-center p-8">
 							<div className="flex flex-col items-center gap-6 md:gap-8 text-center">
@@ -81,11 +83,12 @@ export function B2bCorporateMembership() {
 						className="hidden md:block relative overflow-hidden aspect-453/440"
 					>
 						<Image
-							src="/b2b/sec07/container-2.webp"
+							src="/b2b/sec07/image-small.webp"
 							alt=""
 							fill
 							className="object-cover"
 							sizes="(min-width: 768px) 33vw, 100vw"
+							quality={90}
 						/>
 					</RevealImage>
 				</div>
