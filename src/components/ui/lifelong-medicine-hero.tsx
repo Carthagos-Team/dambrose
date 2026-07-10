@@ -9,7 +9,7 @@ export function LifelongMedicineHero() {
 			{/* ── IMAGE — fills remaining height ───────────────── */}
 			<Container className="flex-1">
 				<RevealImage
-					className="relative h-full w-full overflow-hidden bg-bison-hide"
+					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
 					<Image

@@ -9,7 +9,7 @@ export function MichaelHero() {
 		<section className="w-full bg-ecru-white flex flex-col h-[calc(100dvh-5em)] md:h-[calc(100dvh-4.5em)]">
 			<Container className="flex-1">
 				<RevealImage
-					className="relative h-full w-full overflow-hidden bg-bison-hide"
+					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
 					<Image

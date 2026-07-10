@@ -9,7 +9,7 @@ export function ServicesHero() {
 			<Container className="flex-1">
 				{/* Image — true full bleed, no lateral padding */}
 				<RevealImage
-					className="relative h-full w-full overflow-hidden bg-bison-hide"
+					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
 					<Image
