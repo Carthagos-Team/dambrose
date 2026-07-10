@@ -5,9 +5,10 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const ITEMS = [
 	{
-		image: '/home/sec04/media-1.webp',
-		alt: 'Glass pitcher, dried flowers, and books on a glass table in warm light',
+		image: '/home/sec04/media-door.webp',
+		alt: 'Study desk with books, dried flowers, and open notebook seen through a white paneled door',
 		imageHeight: 'h-94',
+		objectPosition: '68% center',
 		title: 'Exclusive attention',
 		body: 'Care is offered within a private, members-only structure, intentionally limited so the physician can dedicate the necessary time to each patient.',
 		delay: 0,
@@ -57,7 +58,15 @@ export function Features() {
 								className={`relative w-full ${item.imageHeight} overflow-hidden bg-bison-hide`}
 								delay={item.delay}
 							>
-								<Image src={item.image} alt={item.alt} fill className="object-cover" />
+								<Image
+									src={item.image}
+									alt={item.alt}
+									fill
+									className="object-cover"
+									quality={90}
+									sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+									style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
+								/>
 							</RevealImage>
 
 							<BlurReveal className="flex flex-col gap-7" delay={item.delay + 0.2}>

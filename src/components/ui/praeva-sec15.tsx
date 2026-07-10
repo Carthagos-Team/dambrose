@@ -14,9 +14,9 @@ import { RevealImage } from '@/components/ui/reveal-image'
 
 const STEPS = [
 	{
-		src: '/praeva/sec15/application.webp',
-		alt: 'Person in formal attire — the application process for PRAEVA membership',
-		pos: 'object-[center_72%]',
+		src: '/praeva/sec15/application-olive.webp',
+		alt: 'Olive branch with silvery leaves in warm golden light',
+		pos: 'object-center',
 		label: 'Application',
 		description:
 			'Prospective members apply through a selective process to ensure the practice is the right fit for both.',
@@ -70,6 +70,7 @@ export function PraevaSec15() {
 									fill
 									className={`object-cover ${step.pos ?? ''}`}
 									sizes="100vw"
+									quality={90}
 								/>
 							</RevealImage>
 							<BlurReveal delay={i * 0.07 + 0.1}>
@@ -113,6 +114,7 @@ export function PraevaSec15() {
 										fill
 										className={`object-cover ${step.pos ?? ''}`}
 										sizes="33vw"
+										quality={90}
 									/>
 								</RevealImage>
 

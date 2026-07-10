@@ -153,11 +153,12 @@ export function Footer() {
 
 						<RevealImage key={`cta-bg-${pathname}`} className="w-64 md:w-216 md:h-161 overflow-hidden">
 							<Image
-								src="/shared/cta-bg.webp"
-								width={864}
-								height={644}
+								src="/shared/footer-clinic.webp"
+								width={1728}
+								height={1016}
 								alt="Dambrose clinic interior"
 								className="object-cover w-full h-full"
+								quality={90}
 							/>
 						</RevealImage>
 					</div>

@@ -6,29 +6,33 @@ import { RevealImage } from '@/components/ui/reveal-image'
 const cards = [
 	{
 		image: null, // placeholder gradient
+		alt: '',
 		title: 'One team, full accountability',
 		description:
 			'Care remains under the guidance of a dedicated health team who knows your history, context, and needs. Ensuring decisions are informed and consistent.',
 	},
 	{
-		image: '/alma/sec05/image-presence.webp',
+		image: '/alma/sec05/image-eucalyptus.webp',
+		alt: 'Fresh eucalyptus leaves on linen in warm sunlight',
 		title: 'Presence during illness and uncertainty',
 		description:
 			'From minor concerns to complex conditions, care stays close, offering reassurance, clarity, and medical judgment when it matters most.',
 	},
 	{
 		image: null,
+		alt: '',
 		title: 'Continuity across life stages',
 		description:
 			'As health changes over time, care adapts without disruption, allowing medical guidance to evolve alongside the patient rather than restart at every visit.',
 	},
 	{
-		image: '/alma/sec05/image-2.webp',
+		image: '/alma/sec05/image-macro.webp',
+		alt: 'Close-up of veined marble stone in dramatic light',
 		title: 'Experienced judgment you can rely on',
 		description:
 			'Care is led by physicians with broad clinical expertise, allowing decisions to be made with perspective, confidence, and medical depth.',
 	},
-] as const
+] 
 
 const PLACEHOLDER_GRADIENT = 'linear-gradient(0deg, #808D95 10%, #B4A389 50%, #DEDBBC 100%)'
 
@@ -56,7 +60,14 @@ export function ContinuousCareAdvantages() {
 									className="relative aspect-square w-full overflow-hidden"
 								>
 									{c.image ? (
-										<Image src={c.image} alt="" fill className="object-cover" />
+										<Image
+											src={c.image}
+											alt={c.alt}
+											fill
+											className="object-cover"
+											quality={90}
+											sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+										/>
 									) : (
 										<div
 											className="absolute inset-0"
