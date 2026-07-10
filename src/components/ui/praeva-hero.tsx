@@ -25,11 +25,13 @@ export function PraevaHero() {
 							className="relative w-full h-full overflow-hidden bg-[#545c63]"
 						>
 							<Image
-								src="/praeva/hero/hero-bg.webp"
+								src="/praeva/hero/hero-bg-ocean.webp"
 								alt="Ocean and rock landscape — the horizon of preventive care"
 								fill
-								className="object-cover object-[center_20%]"
+								className="object-cover object-center"
+								quality={95}
 								priority
+								sizes="100vw"
 							/>
 						</RevealImage>
 					</Container>
