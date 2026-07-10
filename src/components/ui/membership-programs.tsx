@@ -96,7 +96,7 @@ function BenefitMark({ className = '' }: { className?: string }) {
 
 function VisualCard({ program }: { program: Program }) {
 	return (
-		<div className="bg-[#ffffe4] p-5 aspect-680/664">
+		<div className="bg-[#ffffe4] p-5 w-full aspect-680/664 min-[1200px]:h-full">
 			{program.image ? (
 				<div className="relative w-full h-full overflow-hidden">
 					<Image
@@ -104,7 +104,7 @@ function VisualCard({ program }: { program: Program }) {
 						alt={program.imageAlt ?? `${program.brand} program`}
 						fill
 						className="object-cover"
-						sizes="(min-width: 768px) 50vw, 100vw"
+						sizes="(min-width: 1200px) 50vw, 100vw"
 					/>
 				</div>
 			) : (
@@ -136,7 +136,7 @@ function VisualCard({ program }: { program: Program }) {
 
 function TextCard({ program }: { program: Program }) {
 	return (
-		<div className="bg-[#ffffe4] p-5 flex flex-col justify-between gap-8 aspect-680/664">
+		<div className="bg-[#ffffe4] p-5 flex flex-col justify-between gap-8 min-[1200px]:h-full">
 			<div className="flex flex-col gap-12">
 				<div className="flex flex-col gap-6">
 					<p className="font-body font-semibold text-xs text-olive-haze uppercase tracking-[0] leading-[1.3] opacity-60 whitespace-pre-line">
@@ -199,17 +199,17 @@ export function MembershipPrograms() {
 						</div>
 					</BlurReveal>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 min-[1200px]:grid-cols-2 gap-4">
 						<BlurReveal>
 							<VisualCard program={ALMA} />
 						</BlurReveal>
 						<BlurReveal delay={0.1}>
 							<TextCard program={ALMA} />
 						</BlurReveal>
-						<BlurReveal delay={0.15} className="md:order-4">
+						<BlurReveal delay={0.15} className="min-[1200px]:order-4">
 							<VisualCard program={PRAEVA} />
 						</BlurReveal>
-						<BlurReveal delay={0.2} className="md:order-3">
+						<BlurReveal delay={0.2} className="min-[1200px]:order-3">
 							<TextCard program={PRAEVA} />
 						</BlurReveal>
 					</div>
