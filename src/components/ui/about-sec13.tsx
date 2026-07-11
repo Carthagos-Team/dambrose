@@ -31,6 +31,7 @@ export function AboutSec13() {
 								alt="Patient in conversation with physician — attentive, personal care at DAMBROSE"
 								fill
 								className="object-cover object-center"
+								quality={90}
 								sizes="(max-width: 768px) 100vw, 37vw"
 							/>
 						</RevealImage>

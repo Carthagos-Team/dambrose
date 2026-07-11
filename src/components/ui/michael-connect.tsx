@@ -52,7 +52,7 @@ export function MichaelConnect() {
 				<div className="flex flex-col items-center gap-22">
 					<BlurReveal>
 						<h2 className="font-display text-4xl md:text-[3.125em] text-[#6B7167] leading-none tracking-wide text-center">
-							<em className="font-display italic">Connect</em> with Dr. Michael J. D&rsquo;Ambrose
+							<em className="font-display italic pr-[0.15em]">Connect</em> with Dr. Michael J. D&rsquo;Ambrose
 						</h2>
 					</BlurReveal>
 

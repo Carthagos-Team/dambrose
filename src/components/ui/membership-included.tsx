@@ -20,22 +20,20 @@ export function MembershipIncluded() {
 	return (
 		<section className="relative w-full bg-ecru-white py-24 md:py-30">
 			<Container>
-				<div className="flex flex-col items-center gap-16 md:gap-20 text-center">
-					<BlurReveal>
+				<div className="flex flex-col items-center gap-16 md:gap-20 overflow-visible text-center">
+					<BlurReveal className="overflow-visible">
 						<div className="relative inline-block">
 							<h2 className="relative z-10 font-display text-4xl md:text-5xl text-corduroy leading-tight max-w-[24ch]">
 								Everything included in your annual{' '}
 								<em className="font-display italic">membership.</em>
 							</h2>
-							<div className="absolute top-0 right-0 z-0">
-								<Image
-									src="/stamp.png"
-									alt="Here for every life chapter"
-									width={118}
-									height={118}
-									className="w-20 h-20 md:w-[7.375rem] md:h-[7.375rem]"
-								/>
-							</div>
+							<Image
+								src="/stamp.png"
+								alt="Here for every life chapter"
+								width={118}
+								height={118}
+								className="pointer-events-none absolute top-0 right-0 translate-x-1/2 -translate-y-1/4 w-20 h-20 md:w-[7.375rem] md:h-[7.375rem]"
+							/>
 						</div>
 					</BlurReveal>
 
