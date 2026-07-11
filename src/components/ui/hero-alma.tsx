@@ -5,6 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import { useRef } from 'react'
+import { AlmaCardArt } from '@/components/ui/alma-card-art'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
@@ -14,23 +15,26 @@ gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const PHOTOS = [
 	{
-		src: '/images/hero-alma/photo-top-left.webp',
+		src: '/alma/hero/pampas-top-left.webp',
 		// 160×115 @ (141, 0) inside cream
 		className: 'left-35.25 top-0 w-40 h-28.75',
 	},
 	{
-		src: '/alma/hero/thumb-1-top-right.webp',
+		src: '/alma/hero/room-top-right.webp',
 		// 214×214 @ (1233, -43) inside cream — spills above (visible 214×171)
 		className: 'left-295.5 -top-10.75 w-53.5 h-53.5',
 		imageClass: 'object-cover object-bottom',
 	},
 	{
-		src: '/images/hero-alma/photo-bottom-left.png',
-		// 221×187 @ (110, 413) inside cream
-		className: 'left-27.5 top-103.25 w-55.25 h-46.75',
+		src: '/alma/hero/chair-bottom-left.webp',
+		// 221×187 @ (110, 413) inside cream — ancorado pela base (bottom-0) para
+		// encostar na borda inferior do creme em qualquer viewport. A foto está na
+		// mesma proporção da caixa (442×374 = 1.18), então mostra a cena inteira
+		// sem recorte/zoom — só cola no rodapé.
+		className: 'left-27.5 bottom-0 w-55.25 h-46.75',
 	},
 	{
-		src: '/alma/hero/photo-bottom-right-bonsai.webp',
+		src: '/alma/hero/bonsai-bottom-right.webp',
 		// 158×158 @ (1154, 472) inside cream — spills below (visible 158×128)
 		className: 'left-288.5 top-118 w-39.5 h-39.5',
 		imageClass: 'object-cover object-top',
@@ -110,14 +114,7 @@ export function HeroAlma() {
 							aria-label="Discover Alma by Michael J. D'Ambrose"
 							className="absolute left-120.5 top-16 w-99 h-118 block transition-opacity duration-300 hover:opacity-95 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ecru-white"
 						>
-							<Image
-								src="/images/hero-alma/alma-card.png"
-								alt="Alma by Michael J. D'Ambrose"
-								fill
-								sizes="25em"
-								priority
-								className="object-cover"
-							/>
+							<AlmaCardArt className="absolute inset-0 h-full w-full" />
 						</TransitionLink>
 					</div>
 
@@ -139,11 +136,12 @@ export function HeroAlma() {
 							className="absolute left-[-9%] top-[-7%] w-[47.2%] aspect-square overflow-hidden"
 						>
 							<Image
-								src="/images/hero-alma/photo-top-left.webp"
+								src="/alma/hero/pampas-top-left.webp"
 								alt=""
 								fill
 								sizes="50vw"
 								className="object-cover"
+								quality={90}
 							/>
 						</RevealImage>
 						{/* Poltrona — clip-wipe, canto inf-dir, recortada (stagger) */}
@@ -152,7 +150,7 @@ export function HeroAlma() {
 							className="absolute left-[50.1%] top-[71.8%] w-[66%] aspect-square overflow-hidden"
 						>
 							<Image
-								src="/alma/hero/photo-bottom-right-bonsai.webp"
+								src="/alma/hero/bonsai-bottom-right.webp"
 								alt=""
 								fill
 								sizes="66vw"
@@ -167,14 +165,7 @@ export function HeroAlma() {
 							className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70.5%] aspect-396/472 block rounded-sm overflow-hidden"
 						>
 							<RevealImage delay={0.08} className="absolute inset-0">
-								<Image
-									src="/images/hero-alma/alma-card.png"
-									alt="Alma by Michael J. D'Ambrose"
-									fill
-									sizes="70vw"
-									priority
-									className="object-cover"
-								/>
+								<AlmaCardArt className="absolute inset-0 h-full w-full" />
 							</RevealImage>
 						</TransitionLink>
 					</div>
