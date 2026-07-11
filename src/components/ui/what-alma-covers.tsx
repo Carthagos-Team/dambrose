@@ -3,9 +3,8 @@ import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 
 type Card = {
-	number: string
 	title: string
-	/** Header (number + title) color. Figma: gradient cards = Zeus dark, image cards = light. */
+	/** Header title color. Figma: gradient cards = Zeus dark, image cards = light. */
 	headerColor: string
 	description: string
 	/** Optional Figma-spec max-width for the description (desktop only). */
@@ -20,7 +19,6 @@ const ZEUS = 'text-[#282119]' // Alma / Zeus
 const CARDS: Card[] = [
 	{
 		kind: 'gradient',
-		number: '01.',
 		title: 'Care',
 		headerColor: ZEUS,
 		description:
@@ -31,7 +29,6 @@ const CARDS: Card[] = [
 		kind: 'image',
 		src: '/alma/sec02/card-1.webp',
 		overlay: 'bg-[rgba(0,0,0,0.56)] md:bg-[rgba(0,0,0,0.40)]',
-		number: '02.',
 		title: 'Presence',
 		headerColor: 'text-half-and-half',
 		description:
@@ -39,7 +36,6 @@ const CARDS: Card[] = [
 	},
 	{
 		kind: 'gradient',
-		number: '03.',
 		title: 'Coordination',
 		headerColor: ZEUS,
 		description:
@@ -50,7 +46,6 @@ const CARDS: Card[] = [
 		src: '/alma/sec02/card-2.webp',
 		overlay:
 			'bg-[linear-gradient(180deg,rgba(102,102,102,0.56)_0%,rgba(0,0,0,0.56)_100%)] md:bg-[linear-gradient(180deg,rgba(102,102,102,0.30)_0%,rgba(0,0,0,0.30)_100%)]',
-		number: '04.',
 		title: 'Guidance',
 		headerColor: 'text-half-and-half',
 		description:
@@ -89,7 +84,7 @@ export function WhatAlmaCovers() {
 					{CARDS.map((c, index) => (
 						<BlurReveal
 							as="article"
-							key={c.number}
+							key={c.title}
 							className={`relative aspect-325/418 lg:aspect-auto lg:h-[26.125rem] overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
 							delay={index * 0.1}
 						>
@@ -107,12 +102,11 @@ export function WhatAlmaCovers() {
 							)}
 
 							<div className="relative flex h-full w-full flex-col justify-between">
-								<div className={`flex items-start justify-between gap-3 uppercase ${c.headerColor}`}>
-									<span className="font-body text-xs leading-[1.3] opacity-60">{c.number}</span>
-									<h3 className="font-futura text-base text-right leading-none -tracking-wide">
-										{c.title}
-									</h3>
-								</div>
+								<h3
+									className={`font-futura text-base uppercase text-left leading-none -tracking-wide ${c.headerColor}`}
+								>
+									{c.title}
+								</h3>
 
 								<p
 									className={`font-body text-xs uppercase leading-relaxed tracking-tight text-half-and-half opacity-80 ${c.descMaxW ?? ''}`}
