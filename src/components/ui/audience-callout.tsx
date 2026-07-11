@@ -21,7 +21,9 @@ export function AudienceCallout() {
 				<div className="flex flex-col gap-20">
 					<BlurReveal>
 						<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl text-[#545c63] leading-none uppercase text-left md:text-center w-full">
-							For individuals and families{'\n'}at every stage of life who need:
+							For individuals and families
+							<br />
+							at every stage of life who need:
 						</h2>
 					</BlurReveal>
 

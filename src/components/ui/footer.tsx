@@ -70,6 +70,15 @@ type FooterColumn = { label: string; links: FooterLink[] }
 
 const NAV: FooterColumn[] = [
 	{
+		label: 'Services',
+		links: [
+			{ text: 'Services', href: '/services' },
+			{ text: 'Alma', href: '/alma', italic: true },
+			{ text: 'Praeva', href: '/praeva', italic: true },
+			{ text: 'Corporate', href: '/b2b' },
+		],
+	},
+	{
 		label: 'Main Pages',
 		links: [
 			{ text: 'Homepage', href: '/' },
@@ -77,15 +86,6 @@ const NAV: FooterColumn[] = [
 			{ text: 'About us', href: '/about' },
 			{ text: 'About Dr. Michael', href: '/about-dr-michael' },
 			{ text: 'Lifelong medicine', href: '/lifelong-medicine' },
-		],
-	},
-	{
-		label: 'Services',
-		links: [
-			{ text: 'Services', href: '/services' },
-			{ text: 'Alma', href: '/alma', italic: true },
-			{ text: 'Praeva', href: '/praeva', italic: true },
-			{ text: 'Corporate', href: '/b2b' },
 		],
 	},
 	{
