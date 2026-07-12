@@ -16,6 +16,14 @@ const features = [
 	'In-home laboratory services',
 ]
 
+// The two longest items run edge-to-edge on mobile; cap their width there so they
+// wrap to two balanced lines (keeping "to your health team" / "and coordination"
+// grouped) consistently across every mobile breakpoint. Full width restored at md+.
+const TWO_LINE_ON_MOBILE = new Set([
+	'Uninterrupted direct access to your health team',
+	'Appointment scheduling and coordination',
+])
+
 export function MembershipIncluded() {
 	return (
 		<section className="relative w-full bg-ecru-white py-24 md:py-30">
@@ -32,7 +40,7 @@ export function MembershipIncluded() {
 								alt="Here for every life chapter"
 								width={118}
 								height={118}
-								className="pointer-events-none absolute top-0 right-0 translate-x-1/2 -translate-y-1/4 w-20 h-20 md:w-[7.375rem] md:h-[7.375rem]"
+								className="pointer-events-none absolute top-0 right-0 translate-x-1/2 -translate-y-1/4 hidden md:block md:w-[7.375rem] md:h-[7.375rem]"
 							/>
 						</div>
 					</BlurReveal>
@@ -40,7 +48,12 @@ export function MembershipIncluded() {
 					<BlurReveal delay={0.1} className="w-full max-w-120 mx-auto text-center">
 						{features.map((feature) => (
 							<div key={feature}>
-								<p className="font-body text-sm text-rangitoto uppercase tracking-[-0.035rem] leading-[1.4] opacity-80 py-8">
+								<p
+									className={[
+										'font-body text-sm text-rangitoto uppercase tracking-[-0.035rem] leading-[1.4] opacity-80 py-8 text-balance',
+										TWO_LINE_ON_MOBILE.has(feature) ? 'max-w-[26ch] md:max-w-none mx-auto' : '',
+									].join(' ')}
+								>
 									{feature}
 								</p>
 								<div className="border-b border-rangitoto" />

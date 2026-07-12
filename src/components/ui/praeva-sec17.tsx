@@ -113,7 +113,7 @@ export function PraevaSec17() {
 										size="badge"
 										className="tracking-[-0.04em] opacity-80 pointer-events-auto"
 									>
-										Plus everything included in Alma →
+										Plus everything included in Alma
 									</Button>
 								</div>
 							</BlurReveal>

@@ -61,12 +61,19 @@ export function WhoWeServe() {
 										>
 											<div
 												data-wrapper="audience_card_header"
-												className="flex items-start justify-between gap-4"
+												className="flex items-center min-[1200px]:items-start justify-between gap-4"
 											>
 												<span className="font-body text-xs text-rangoon-green uppercase tracking-wide">
 													{card.index}
 												</span>
-												<h3 className="font-display italic text-xl min-[540px]:text-[1.5rem] min-[1200px]:text-[1.75em] text-rangoon-green leading-none min-[1200px]:leading-snug text-right whitespace-nowrap min-[1200px]:whitespace-normal min-[1200px]:max-w-56">
+												<h3
+													className={[
+														'font-display italic text-xl min-[540px]:text-[1.5rem] min-[1200px]:text-[1.75em] text-rangoon-green leading-none min-[1200px]:leading-snug text-right min-[1200px]:max-w-56',
+														// Longest title: cap width below 1200px so it wraps to two lines
+														// (per Figma) instead of stretching flush against the number.
+														i === CARDS.length - 1 ? 'max-w-[18ch]' : '',
+													].join(' ')}
+												>
 													{card.title}
 												</h3>
 											</div>
