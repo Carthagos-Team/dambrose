@@ -35,7 +35,7 @@ export function MichaelNarrative() {
 								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
 									This practice was born from witnessing failure.
 								</h3>
-								<div className="flex flex-col gap-6 max-w-[44ch]">
+								<div className="flex flex-col gap-6 max-w-none min-[1280px]:max-w-[44ch]">
 									<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed">
 										Long before medicine became a profession for me, it became a conviction. As a
 										child, I watched someone I loved consumed by illness, and I watched a healthcare
@@ -66,7 +66,7 @@ export function MichaelNarrative() {
 									alt="Dambrose — Lifelong Medicine"
 									width={314}
 									height={271}
-									className="w-60 h-auto min-[1280px]:w-[19.625rem] min-[1280px]:h-[16.90994rem] min-[1280px]:rotate-[15deg]"
+									className="w-42 h-auto min-[1280px]:w-[19.625rem] min-[1280px]:h-[16.90994rem] min-[1280px]:rotate-[15deg]"
 								/>
 							</BlurReveal>
 						</div>
@@ -79,12 +79,12 @@ export function MichaelNarrative() {
 			<section className="w-full bg-ecru-white py-24 md:py-28">
 				<Container>
 					<div className="flex flex-col gap-12 lg:grid lg:grid-cols-[672fr_555fr] lg:gap-[7.4em] lg:items-stretch">
-						<div className="relative flex flex-col order-2 lg:order-1 lg:min-h-full">
+						<div className="relative flex flex-col order-2 lg:order-1 min-[1280px]:min-h-full">
 							<BlurReveal delay={0.1} className="flex flex-col gap-12">
 								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none">
 									Health is not the absence of illness. It is the fullness of life.
 								</h3>
-								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[30.6em]">
+								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-none min-[1280px]:max-w-[30.6em]">
 									Medicine at DAMBROSE is practiced without compromise: every care plan built from
 									the ground up, every patient relationship singular, every standard unaffected by
 									scale. Not because patients expect it &mdash; because anything less would be
@@ -96,10 +96,10 @@ export function MichaelNarrative() {
 							    mobile) até 1280px, evitando invadir o parágrafo em tablet. */}
 							<BlurReveal
 								delay={0.2}
-								className="mt-16 self-start min-[1280px]:mt-0 min-[1280px]:absolute min-[1280px]:left-0 min-[1280px]:bottom-0"
+								className="mt-8 self-start min-[1280px]:mt-0 min-[1280px]:absolute min-[1280px]:left-0 min-[1280px]:bottom-0"
 							>
-								<div className="flex h-[15.45em] w-[5.175em] items-center justify-center">
-									<div className="-rotate-90">
+								<div className="flex w-[15.45em] h-[5.175em] min-[1280px]:h-[15.45em] min-[1280px]:w-[5.175em] items-center justify-center">
+									<div className="rotate-0 min-[1280px]:!-rotate-90">
 										<div className="relative w-[15.45em] h-[5.175em] border-[0.095687em] border-shuttle-gray">
 											<div
 												className="absolute font-body text-[0.58em] text-shuttle-gray tracking-[0.33em] uppercase leading-[2.586em]"
@@ -159,7 +159,7 @@ export function MichaelNarrative() {
 								<h3 className="font-display text-3xl md:text-5xl text-gray-olive leading-none max-w-[18ch]">
 									DAMBROSE was created as a direct response.
 								</h3>
-								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-[44ch]">
+								<p className="font-body text-xs text-rangoon-green/80 uppercase tracking-tight leading-relaxed max-w-none min-[1280px]:max-w-[44ch]">
 									Today, I lead a deliberately limited private practice built on the standard I have
 									always held. Every physician at DAMBROSE remains present in each patient
 									relationship &mdash; attending specialist appointments, coordinating care across
