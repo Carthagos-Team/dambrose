@@ -67,18 +67,7 @@ export function PraevaSec12() {
 						</p>
 					</BlurReveal>
 
-					{/* Single leaf — right-aligned */}
-					<div className="flex justify-end">
-						<RevealImage className="relative w-[8.56em] h-[9.63em] overflow-hidden" delay={0.05}>
-							<Image
-								src="/praeva/sec12-leaf.jpg"
-								alt="Plant leaf — the organic texture of wellness"
-								fill
-								className="object-cover"
-								sizes="137px"
-							/>
-						</RevealImage>
-					</div>
+					{/* Leaf stays desktop-only — feels orphaned in the stacked mobile/tablet layout */}
 				</Container>
 			</div>
 
@@ -128,7 +117,7 @@ export function PraevaSec12() {
 							/>
 						</RevealImage>
 						<BlurReveal delay={0.12}>
-							<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#282119]/80">
+							<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80">
 								Some people feel healthiest when they understand what&apos;s ahead. They pay
 								attention to how they age, how they recover, how their energy and wellbeing change
 								over time. <strong className="font-bold">PRAEVA</strong> is for this level of

@@ -156,3 +156,20 @@ body {
 		text-transform: uppercase;
 	}
 }
+
+@layer utilities {
+	/* Body copy: fixed px below 1440, em fluid on editorial desktop */
+	.text-body-copy {
+		font-size: 0.875rem; /* 14px mobile */
+	}
+	@media (min-width: 768px) {
+		.text-body-copy {
+			font-size: 1rem; /* 16px tablet */
+		}
+	}
+	@media (min-width: 1440px) {
+		.text-body-copy {
+			font-size: 0.72em; /* desktop — scales with root */
+		}
+	}
+}

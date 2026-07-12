@@ -75,7 +75,7 @@ export function PraevaSec13() {
 										<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119] capitalize shrink-0 whitespace-nowrap">
 											{item.label}
 										</p>
-										<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#282119]/80 md:flex-1 md:min-w-0">
+										<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80 md:flex-1 md:min-w-0">
 											{item.description}
 										</p>
 									</div>

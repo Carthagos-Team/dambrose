@@ -98,7 +98,7 @@ export function PraevaSec17() {
 							{FEATURES.map((text, i) => (
 								<BlurReveal key={text} delay={0.05 + i * 0.07}>
 									<div className={i > 0 ? 'border-t border-[#808d95] pt-[1.65em]' : ''}>
-										<p className="font-body text-[0.72em] leading-[1.4] tracking-[-0.04em] text-[#ffffe4]/80 text-center uppercase">
+										<p className="font-body text-body-copy leading-[1.4] tracking-[-0.04em] text-[#ffffe4]/80 text-center uppercase">
 											{text}
 										</p>
 									</div>

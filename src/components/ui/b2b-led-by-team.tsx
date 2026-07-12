@@ -11,10 +11,8 @@ export function B2bLedByTeam() {
 				<div className="flex flex-col gap-y-10 md:gap-y-16">
 					{/* Title */}
 					<BlurReveal>
-						<h2 className="font-display text-3xl md:text-5xl text-corduroy leading-[1.05]">
-							Led by one health team,
-							<br />
-							with <em className="font-display italic">one standard.</em>
+						<h2 className="font-display text-3xl md:text-5xl text-corduroy leading-[1.05] md:whitespace-nowrap">
+							Led by one health team, with <em className="font-display italic">one standard.</em>
 						</h2>
 					</BlurReveal>
 

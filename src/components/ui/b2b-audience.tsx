@@ -46,19 +46,19 @@ export function B2bAudience() {
 						{ROWS.map((row, i) => (
 							<div
 								key={row.index}
-								className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 items-stretch"
+								className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 md:items-start"
 							>
 								{row.side === 'right' ? (
 									<>
 										<BlurReveal
 											delay={i * 0.08}
-											className="md:col-span-3 bg-[#ffffe4] aspect-328/362 md:aspect-auto"
+											className="md:col-span-3 bg-[#ffffe4] md:self-start"
 										>
-											<div className="flex flex-col h-full px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-30">
+											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em]">
 												<span className="font-display italic text-2xl text-corduroy leading-snug">
 													{row.index}
 												</span>
-												<p className="mt-auto font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
+												<p className="font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
 													{row.body}
 												</p>
 											</div>
@@ -96,13 +96,13 @@ export function B2bAudience() {
 										</RevealImage>
 										<BlurReveal
 											delay={i * 0.08 + 0.1}
-											className="md:col-span-3 bg-[#ffffe4] aspect-328/362 md:aspect-auto"
+											className="md:col-span-3 bg-[#ffffe4] md:self-start"
 										>
-											<div className="flex flex-col h-full px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-30">
+											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em]">
 												<span className="font-display italic text-2xl text-corduroy leading-snug">
 													{row.index}
 												</span>
-												<p className="mt-auto font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
+												<p className="font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
 													{row.body}
 												</p>
 											</div>

@@ -42,22 +42,22 @@ export function WhoWeServe() {
 							alt="Here for every life chapter"
 							width={106}
 							height={106}
-							className="absolute -top-8 -left-4 md:-top-12 md:-left-8 w-16 h-16 md:w-26 md:h-26 z-10"
+							className="hidden min-[1200px]:block absolute -top-12 -left-8 w-26 h-26 z-10"
 						/>
 
 						<div
 							data-wrapper="audience_grid"
-							className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5"
+							className="grid grid-cols-1 min-[1200px]:grid-cols-3 gap-5"
 						>
 							{CARDS.map((card, i) => (
 								<div data-wrapper="audience_card_wrapper" key={card.index}>
 									<BlurReveal
 										delay={i * 0.1}
-										className="bg-opal aspect-square md:max-[1199px]:aspect-auto h-full"
+										className="bg-opal h-full aspect-auto min-[1200px]:aspect-square"
 									>
 										<div
 											data-wrapper="audience_card_content"
-											className="flex flex-col h-full p-6 md:p-8"
+											className="flex flex-col h-full gap-36 p-6 min-[540px]:p-8 min-[1200px]:gap-0"
 										>
 											<div
 												data-wrapper="audience_card_header"
@@ -66,11 +66,11 @@ export function WhoWeServe() {
 												<span className="font-body text-xs text-rangoon-green uppercase tracking-wide">
 													{card.index}
 												</span>
-												<h3 className="font-display italic text-2xl md:text-[1.75em] text-rangoon-green leading-snug text-right max-w-56">
+												<h3 className="font-display italic text-xl min-[540px]:text-[1.5rem] min-[1200px]:text-[1.75em] text-rangoon-green leading-none min-[1200px]:leading-snug text-right whitespace-nowrap min-[1200px]:whitespace-normal min-[1200px]:max-w-56">
 													{card.title}
 												</h3>
 											</div>
-											<p className="mt-auto font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight">
+											<p className="min-[1200px]:mt-auto font-body text-xs text-rangoon-green uppercase leading-relaxed tracking-tight md:max-w-[42ch] min-[1200px]:max-w-none">
 												{card.body}
 											</p>
 										</div>

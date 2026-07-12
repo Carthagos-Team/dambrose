@@ -79,7 +79,7 @@ export function PraevaSec15() {
 								</p>
 							</BlurReveal>
 							<BlurReveal delay={i * 0.07 + 0.15}>
-								<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
+								<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
 									{step.description}
 								</p>
 							</BlurReveal>
@@ -125,7 +125,7 @@ export function PraevaSec15() {
 										</p>
 									</BlurReveal>
 									<BlurReveal delay={i * 0.08 + 0.15}>
-										<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
+										<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#ffffe4]/80">
 											{step.description}
 										</p>
 									</BlurReveal>

@@ -58,7 +58,7 @@ function Card({ card, delay = 0 }: { card: (typeof CARDS)[number]; delay?: numbe
 					<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119] capitalize shrink-0 whitespace-nowrap">
 						{card.label}
 					</p>
-					<p className="font-ui text-[0.72em] leading-[1.4] tracking-[-0.029em] text-[#282119]/80 min-[1440px]:flex-1 min-[1440px]:min-w-0">
+					<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80 min-[1440px]:flex-1 min-[1440px]:min-w-0">
 						{card.description}
 					</p>
 				</div>
