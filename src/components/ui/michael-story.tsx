@@ -40,15 +40,15 @@ export function MichaelStory() {
 }
 
 function Chip({ label, chip }: { label: string; chip: string }) {
+	// The marker highlights the first word (the keyword). Wrapping just that word in an
+	// inline background lets the highlight fit the word at any length, instead of the old
+	// fixed-width bar that clipped longer words like "Emergency".
+	const [first, ...rest] = label.split(' ')
+	const tail = rest.join(' ')
 	return (
-		<span className="relative inline-flex items-center px-2.5 py-2">
-			<span
-				aria-hidden="true"
-				className={`absolute left-0 top-1/2 -translate-y-1/2 h-7 w-28 ${chip}`}
-			/>
-			<span className="relative font-body text-lg text-rangoon-green/80 uppercase tracking-tight leading-none">
-				{label}
-			</span>
+		<span className="font-body text-lg text-rangoon-green/80 uppercase tracking-tight leading-none">
+			<span className={`box-decoration-clone px-[0.55em] py-[0.32em] ${chip}`}>{first}</span>
+			{tail ? ` ${tail}` : ''}
 		</span>
 	)
 }
