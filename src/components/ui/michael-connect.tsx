@@ -1,9 +1,19 @@
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 
-const CHANNELS = [
+type Channel = {
+	icon: ReactNode
+	title: string
+	action: string
+	href: string
+	target?: string
+	rel?: string
+}
+
+const CHANNELS: Channel[] = [
 	{
 		icon: (
 			<svg
@@ -20,7 +30,9 @@ const CHANNELS = [
 		),
 		title: 'Follow on LinkedIn',
 		action: 'go to linkedin',
-		href: 'https://www.linkedin.com',
+		href: 'https://www.linkedin.com/in/michael-d-ambrose-a619bb361',
+		target: '_blank',
+		rel: 'noopener noreferrer',
 	},
 	{
 		icon: (
@@ -41,15 +53,38 @@ const CHANNELS = [
 		),
 		title: 'michael.dambrose@mjdmd.com',
 		action: 'send email',
-		href: 'mailto:michael.dambrose@mjdmd.com',
+		href: 'mailto:michael.dambrose@mjdmd.com?subject=Contact%20Website',
 	},
 ]
 
+function ContactChannelCard({ channel }: { channel: Channel }) {
+	return (
+		<div className="bg-ecru-white/90 backdrop-blur-sm p-6 flex flex-col justify-between gap-8 min-[1280px]:gap-11 min-[1280px]:min-h-50">
+			<div className="text-rangoon-green">{channel.icon}</div>
+			<div className="flex flex-col gap-4">
+				<p className="font-display text-xl sm:text-2xl min-[1280px]:text-[2em] text-gray-olive leading-none tracking-wide max-[1279px]:whitespace-normal min-[1280px]:whitespace-nowrap">
+					{channel.title}
+				</p>
+				<Button
+					href={channel.href}
+					target={channel.target}
+					rel={channel.rel}
+					variant="opal"
+					size="sm"
+					className="w-fit min-h-11 min-[1280px]:min-h-0 rounded-sm!"
+				>
+					{channel.action}
+				</Button>
+			</div>
+		</div>
+	)
+}
+
 export function MichaelConnect() {
 	return (
-		<section id="connect" className="w-full bg-ecru-white py-28">
+		<section id="connect" className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
-				<div className="flex flex-col items-center gap-22">
+				<div className="flex flex-col items-center gap-14 min-[1280px]:gap-22">
 					<BlurReveal>
 						<h2 className="font-display text-4xl md:text-[3.125em] text-[#6B7167] leading-none tracking-wide text-center">
 							<em className="font-display italic pr-[0.15em]">Connect</em> with Dr. Michael J. D&rsquo;Ambrose
@@ -57,8 +92,13 @@ export function MichaelConnect() {
 					</BlurReveal>
 
 					<BlurReveal delay={0.1} className="relative w-full">
-						<div className="relative w-full overflow-hidden">
-							<div className="relative aspect-1280/556 w-full">
+						{/*
+						  Wrapper único: imagem de fundo cobre toda a área.
+						  Abaixo de 1280px a altura cresce com os cards empilhados (fluxo normal).
+						  Em desktop o aspect-ratio fixo + overlay centralizado (Figma).
+						*/}
+						<div className="relative w-full overflow-hidden min-[1280px]:aspect-1280/556">
+							<div className="absolute inset-0">
 								<Image
 									src="/about-dr-michael/contact/hero-image.webp"
 									alt=""
@@ -69,28 +109,10 @@ export function MichaelConnect() {
 								<div className="absolute inset-0 bg-[#3C3C27]/18" aria-hidden="true" />
 							</div>
 
-							<div className="absolute inset-0 px-6 md:px-20 flex items-center">
-								<div className="grid w-full grid-cols-1 md:grid-cols-2 gap-4">
+							<div className="relative px-5 py-8 md:px-10 md:py-10 min-[1280px]:absolute min-[1280px]:inset-0 min-[1280px]:flex min-[1280px]:items-center min-[1280px]:px-20 min-[1280px]:py-0">
+								<div className="flex w-full flex-col gap-4 min-[1280px]:grid min-[1280px]:grid-cols-2">
 									{CHANNELS.map((c) => (
-										<div
-											key={c.title}
-											className="bg-ecru-white/90 backdrop-blur-sm p-6 flex flex-col justify-between gap-11 min-h-50"
-										>
-											<div className="text-rangoon-green">{c.icon}</div>
-											<div className="flex flex-col gap-4">
-												<p className="font-display text-2xl xl:text-[2em] text-gray-olive leading-none tracking-wide whitespace-nowrap">
-													{c.title}
-												</p>
-												<Button
-													href={c.href}
-													variant="opal"
-													size="sm"
-													className="w-fit rounded-sm!"
-												>
-													{c.action}
-												</Button>
-											</div>
-										</div>
+										<ContactChannelCard key={c.title} channel={c} />
 									))}
 								</div>
 							</div>
