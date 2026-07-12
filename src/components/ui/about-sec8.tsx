@@ -10,7 +10,7 @@ export function AboutSec8() {
 	return (
 		<section className="w-full bg-ecru-white py-[6.05em]">
 			<Container>
-				<div className="flex flex-col gap-10 md:gap-[4.3em] items-center">
+				<div className="flex flex-col gap-10 md:gap-[4.3em] items-start md:items-center">
 					<BlurReveal>
 						<h2 className="font-display text-[2.5em] leading-none tracking-[0.01em] text-gray-olive w-full max-w-[8.16em] shrink-0 text-left">
 							The original meaning of care, <em className="font-display italic">restored.</em>
@@ -48,7 +48,7 @@ export function AboutSec8() {
 								alt=""
 								width={65}
 								height={80}
-								className="opacity-80 self-start"
+								className="hidden md:block opacity-80 self-start"
 								aria-hidden="true"
 								unoptimized
 							/>
