@@ -6,9 +6,8 @@ import { AboutSec10 } from '@/components/ui/about-sec10'
 import { AboutSec11 } from '@/components/ui/about-sec11'
 import { AboutSec12 } from '@/components/ui/about-sec12'
 import { AboutSec13 } from '@/components/ui/about-sec13'
-import { Container } from '@/components/ui/container'
 import { Header } from '@/components/ui/header'
-import { SectionDividerReveal } from '@/components/ui/section-divider-reveal'
+import { SectionDivider } from '@/components/ui/section-divider'
 import { pageMetadata } from '@/lib/seo'
 import { breadcrumbSchema } from '@/lib/structured-data'
 
@@ -34,16 +33,17 @@ export default function AboutPage() {
 			<Header />
 			<main className="flex-1 w-full bg-bg">
 				<AboutHero />
-				<section className="w-full bg-ecru-white">
-					<Container>
-						<SectionDividerReveal />
-					</Container>
-				</section>
+				<SectionDivider />
 				<AboutSec8 />
+				<SectionDivider />
 				<AboutSec9 />
+				<SectionDivider />
 				<AboutSec10 />
+				<SectionDivider />
 				<AboutSec11 />
+				<SectionDivider />
 				<AboutSec12 />
+				<SectionDivider />
 				<AboutSec13 />
 			</main>
 		</>
