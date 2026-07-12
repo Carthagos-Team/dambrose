@@ -23,9 +23,21 @@ export function FooterCtaHeading({ variant = 'default' }: { variant?: FooterVari
 	if (pathname === '/services') {
 		return (
 			<h2 className={headingClass}>
-				Experience medicine grounded in{' '}
+				Experience medicine
+				<br className="hidden min-[540px]:max-[767px]:block" aria-hidden />
+				{' '}
+				grounded in{' '}
 				<em className="font-display italic">
-					listening, <br /> understanding, and calm expertise.
+					listening
+					<span className="min-[540px]:max-[767px]:hidden">,</span>
+					<br
+						className="hidden max-[539px]:block min-[540px]:max-[767px]:hidden min-[1280px]:block"
+						aria-hidden
+					/>
+					<br className="hidden min-[540px]:max-[767px]:block" aria-hidden />
+					understanding,
+					<br className="hidden min-[540px]:max-[767px]:block" aria-hidden />
+					{' '}and calm expertise.
 				</em>
 			</h2>
 		)
