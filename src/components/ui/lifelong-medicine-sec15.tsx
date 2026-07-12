@@ -127,7 +127,7 @@ export function LifelongMedicineSec15() {
 								alt=""
 								width={240}
 								height={163}
-								className="absolute bottom-6 -right-19 w-48 h-auto pointer-events-none select-none"
+								className="absolute bottom-4 right-4 w-[6.25rem] h-auto pointer-events-none select-none min-[1280px]:bottom-6 min-[1280px]:-right-19 min-[1280px]:w-48"
 								aria-hidden="true"
 								unoptimized
 							/>

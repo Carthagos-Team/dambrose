@@ -73,9 +73,11 @@ export function WhatAlmaCovers() {
 				{/* ── Title (4238:135): Futura Book 50px, Nevada #626F77, "COVERS" indented.
 				    Indents in REM (not em) — em would resolve against the h2's ~50px font. ── */}
 				<BlurReveal>
-					<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl uppercase leading-[1.1] md:leading-none tracking-wide text-[#626F77] md:ml-[10.35rem]">
-						What Alma
-						<span className="block md:ml-[10.25rem]">covers</span>
+					<h2 className="font-futura text-[clamp(2rem,9vw,2.5rem)] md:text-5xl uppercase leading-[1.1] md:leading-none tracking-wide text-[#626F77] min-[540px]:whitespace-nowrap min-[1200px]:whitespace-normal min-[1200px]:ml-[10.35rem]">
+						What Alma{' '}
+						<span className="block min-[540px]:inline min-[1200px]:block min-[1200px]:ml-[10.25rem]">
+							covers
+						</span>
 					</h2>
 				</BlurReveal>
 
