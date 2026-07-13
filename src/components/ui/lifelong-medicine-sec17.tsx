@@ -120,11 +120,11 @@ export function LifelongMedicineSec17() {
 								className="order-last lg:order-none relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-2 lg:h-[20.2em] overflow-hidden bg-bison-hide"
 							>
 								<Image
-									src="/lifelong-medicine/sec17/lounge-chair.webp"
+									src="/lifelong-medicine/sec17/chaise-lounge.webp"
 									alt="White chaise lounge by open French doors with sunlight and garden view"
 									fill
 									className="object-cover object-[50%_58%]"
-									quality={90}
+									quality={95}
 									sizes="(max-width: 1024px) 100vw, 40vw"
 								/>
 							</RevealImage>

@@ -146,11 +146,12 @@ export function MichaelNarrative() {
 							start="top 90%"
 						>
 							<Image
-								src="/about-dr-michael/sec04/portrait.webp"
+								src="/about-dr-michael/sec04/portrait-woman.webp"
 								alt="A patient at home"
 								fill
 								sizes="(min-width: 1024px) 555px, 100vw"
 								className="object-cover"
+								quality={90}
 							/>
 						</RevealImage>
 

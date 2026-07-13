@@ -30,12 +30,13 @@ const ITEMS = [
 		delay: 0.2,
 	},
 	{
-		image: '/home/sec04/media-rock.webp',
+		image: '/home/sec04/media-quartz.webp',
 		alt: 'Sunlit white quartz rock formation against a clear sky',
 		imageHeight: 'h-47',
 		title: 'Alignment with personal goals',
 		body: 'Medical strategy is shaped around what matters to you, respecting your priorities and values without pressure or unnecessary intervention.',
 		delay: 0.3,
+		quality: 95,
 	},
 ]
 
@@ -63,7 +64,7 @@ export function Features() {
 									alt={item.alt}
 									fill
 									className="object-cover"
-									quality={90}
+									quality={item.quality ?? 90}
 									sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
 									style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
 								/>

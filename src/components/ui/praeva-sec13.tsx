@@ -53,11 +53,12 @@ export function PraevaSec13() {
 						<div className="relative w-full h-[11.32em] overflow-hidden">
 							<RevealImage className="relative w-full h-full overflow-hidden" delay={0.05}>
 								<Image
-									src="/praeva/sec13-prism.webp"
-									alt="Golden sunburst with rainbow light flares against a dark background"
+									src="/praeva/sec13-running.webp"
+									alt="Motion-blurred runner in silhouette, mid-stride"
 									fill
 									className="object-cover object-center"
 									sizes="(max-width: 768px) 100vw, 19.55em"
+									quality={90}
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-[#1c1a08]/40 to-transparent pointer-events-none" />
 							</RevealImage>
