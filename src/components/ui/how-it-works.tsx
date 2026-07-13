@@ -33,35 +33,32 @@ export function HowItWorks() {
 			<Container>
 				{/* ── Three image cards (staggered heights, top-aligned) ──
 				    Mobile: centered horizontal strip that overflows/clips (per Figma node
-				    4793-691) — panels stay ~305px and the orchid sits centered. From md up it
-				    reverts to the 3-column grid (display:grid overrides the flex row). */}
+				    4793-691) — panels stay ~305px and the woman (center, tallest) sits
+				    centered. From md up it reverts to the 3-column grid (display:grid
+				    overrides the flex row). */}
 				<div className="-mx-5 md:mx-0 flex justify-center overflow-hidden gap-0 items-start md:grid md:grid-cols-3 md:justify-normal md:overflow-visible">
-					{/* Left: woman in chair */}
+					{/* Left: orchid */}
 					<RevealImage className="relative w-[81vw] shrink-0 md:w-auto aspect-453/531 overflow-hidden">
-						<Image src="/alma/sec04/container-1.webp" alt="" fill className="object-cover" />
+						<Image src="/alma/sec04/orchid.webp" alt="" fill quality={95} className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
-					{/* Center: orchid + headline + CTA (tallest) */}
+					{/* Center: woman in chair (tallest) */}
 					<RevealImage
 						delay={0.15}
 						className="relative w-[81vw] shrink-0 md:w-auto aspect-454/711 overflow-hidden"
 					>
-						<Image src="/alma/sec04/container-2.webp" alt="" fill className="object-cover" />
+						<Image src="/alma/sec04/woman.webp" alt="" fill quality={95} className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
-					{/* Right: gradient panel */}
+					{/* Right: interior */}
 					<RevealImage
 						delay={0.3}
 						className="relative w-[81vw] shrink-0 md:w-auto aspect-453/440 overflow-hidden"
 					>
-						<div
-							className="absolute inset-0"
-							style={{
-								background: 'linear-gradient(180deg, #DEDBBC 0%, #B4A389 50%, #808D95 90%)',
-							}}
-						/>
+						<Image src="/alma/sec04/interior.webp" alt="" fill quality={95} className="object-cover" />
+						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 				</div>
 
