@@ -2,8 +2,60 @@ import type { ReactNode } from 'react'
 import Image, { type StaticImageData } from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Container } from '@/components/ui/container'
+import { AlmaProgramLogo, PraevaProgramLogo } from '@/components/ui/program-logos'
 import { RevealImage } from '@/components/ui/reveal-image'
 import { Button } from './button'
+
+export const PROGRAM_VISUAL_ASPECT = 'aspect-[335/365] lg:aspect-10/9'
+
+export const ALMA_TAGLINE = 'Core medicine without interruption.'
+export const PRAEVA_TAGLINE = 'Health guided with foresight.'
+
+const TAGLINE_STYLE = {
+	fontFamily: 'var(--font-sohne-breit), sans-serif',
+	fontSize: 'clamp(7.5px, 2.5vw, 11.5px)',
+	letterSpacing: '0.435em',
+	color: '#f2efd0',
+	textAlign: 'center' as const,
+	textTransform: 'uppercase' as const,
+	lineHeight: '1.8',
+	padding: '0 8%',
+}
+
+/** Figma 4788:683 — white book overlay on outer gradient */
+const ALMA_BOOK_CARD = {
+	left: '19.5%',
+	width: '61%',
+	top: '10.75%',
+	height: '78.5%',
+}
+
+const PRAEVA_BOOK_CARD = {
+	left: '19.5%',
+	width: '61%',
+	top: '10.3%',
+	height: '79.2%',
+}
+
+/** Figma 4785:665 — Alma program card interior */
+const ALMA_CARD_LAYOUT = {
+	paddingY: '3.6%',
+	paddingX: '4.2%',
+	gap: '2.5%',
+	logoWidth: '65.5%',
+	logoHeight: '11.5%',
+	innerWidth: '100%',
+}
+
+/** Figma 4785:645 — Praeva program card interior */
+const PRAEVA_CARD_LAYOUT = {
+	paddingY: '3.6%',
+	paddingX: '4.2%',
+	gap: '2.9%',
+	logoWidth: '55.2%',
+	logoHeight: '10.3%',
+	innerWidth: '100%',
+}
 
 type ProgramCard = {
 	tag: string
@@ -25,57 +77,48 @@ export function AlmaVisual({ tagline }: { tagline?: string } = {}) {
 		>
 			{/* White book card */}
 			<div
-				className="absolute bg-[#f2f1e3] overflow-hidden"
-				style={{ left: '25%', top: '10.75%', width: '50%', height: '78.5%', borderRadius: 0 }}
+				className="absolute flex flex-col items-center overflow-hidden bg-[#f2f1e3]"
+				style={{
+					left: ALMA_BOOK_CARD.left,
+					top: ALMA_BOOK_CARD.top,
+					width: ALMA_BOOK_CARD.width,
+					height: ALMA_BOOK_CARD.height,
+					borderRadius: 0,
+				}}
 			>
-				{/* Alma title */}
-				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
-					<text
-						x="157"
-						y="46"
-						textAnchor="middle"
-						fontFamily="var(--font-display), serif"
-						fontStyle="italic"
-						fontSize="43"
-						letterSpacing="0.32"
-						fill="#c8b698"
-					>
-						Alma
-					</text>
-					<text
-						x="213"
-						y="28"
-						textAnchor="start"
-						fontFamily="'Public Sans', sans-serif"
-						fontSize="18"
-						fill="#c8b698"
-					>
-						™
-					</text>
-				</svg>
-
-				{/* Inner gradient card */}
 				<div
-					className="absolute flex items-center justify-center"
+					className="box-border flex h-full w-full flex-col items-center"
 					style={{
-						left: '4.5%',
-						top: '16.6%',
-						width: '91.4%',
-						height: '80.4%',
-						borderRadius: 0,
-						background: 'linear-gradient(to top, #808d95 10%, #b4a389 50%, #dedbbc)',
+						paddingTop: ALMA_CARD_LAYOUT.paddingY,
+						paddingBottom: ALMA_CARD_LAYOUT.paddingY,
+						paddingLeft: ALMA_CARD_LAYOUT.paddingX,
+						paddingRight: ALMA_CARD_LAYOUT.paddingX,
+						gap: ALMA_CARD_LAYOUT.gap,
 					}}
 				>
-					{tagline ? (
-						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: 'clamp(6.5px, 2.1vw, 11.5px)', letterSpacing: '0.435em', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
-							{tagline}
-						</p>
-					) : (
-						<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
-							<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
-							<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
-						</svg>
-					)}
+					<AlmaProgramLogo
+						className="shrink-0"
+						style={{ width: ALMA_CARD_LAYOUT.logoWidth, height: ALMA_CARD_LAYOUT.logoHeight }}
+					/>
+
+					{/* Inner gradient card */}
+					<div
+						className="relative flex min-h-0 flex-1 items-center justify-center"
+						style={{
+							width: ALMA_CARD_LAYOUT.innerWidth,
+							borderRadius: 0,
+							background: 'linear-gradient(to top, #808d95 10%, #b4a389 50%, #dedbbc)',
+						}}
+					>
+						{tagline ? (
+							<p style={TAGLINE_STYLE}>{tagline}</p>
+						) : (
+							<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+								<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
+								<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
+							</svg>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -91,57 +134,48 @@ export function PraevaVisual({ tagline }: { tagline?: string } = {}) {
 		>
 			{/* White book card */}
 			<div
-				className="absolute bg-[#f2f1e3] overflow-hidden"
-				style={{ left: '24.9%', top: '10.3%', width: '50.1%', height: '79.2%', borderRadius: 0 }}
+				className="absolute flex flex-col items-center overflow-hidden bg-[#f2f1e3]"
+				style={{
+					left: PRAEVA_BOOK_CARD.left,
+					top: PRAEVA_BOOK_CARD.top,
+					width: PRAEVA_BOOK_CARD.width,
+					height: PRAEVA_BOOK_CARD.height,
+					borderRadius: 0,
+				}}
 			>
-				{/* Praeva title */}
-				<svg className="absolute inset-x-0 top-0" width="100%" height="20%" viewBox="0 0 336 60" preserveAspectRatio="xMidYMid meet">
-					<text
-						x="168"
-						y="46"
-						textAnchor="middle"
-						fontFamily="'Instrument Serif', serif"
-						fontStyle="italic"
-						fontSize="43"
-						letterSpacing="1.3"
-						fill="#7c848b"
-					>
-						Praeva
-					</text>
-					<text
-						x="248"
-						y="28"
-						textAnchor="start"
-						fontFamily="'Public Sans', sans-serif"
-						fontSize="18"
-						fill="#7c848b"
-					>
-						™
-					</text>
-				</svg>
-
-				{/* Inner gradient card */}
 				<div
-					className="absolute flex items-center justify-center"
+					className="box-border flex h-full w-full flex-col items-center"
 					style={{
-						left: '4.5%',
-						top: '16.6%',
-						width: '91.4%',
-						height: '80.4%',
-						borderRadius: 0,
-						background: 'linear-gradient(to bottom, #272018 3%, #545c63 50%, #dedbbc)',
+						paddingTop: PRAEVA_CARD_LAYOUT.paddingY,
+						paddingBottom: PRAEVA_CARD_LAYOUT.paddingY,
+						paddingLeft: PRAEVA_CARD_LAYOUT.paddingX,
+						paddingRight: PRAEVA_CARD_LAYOUT.paddingX,
+						gap: PRAEVA_CARD_LAYOUT.gap,
 					}}
 				>
-					{tagline ? (
-						<p style={{ fontFamily: 'var(--font-sohne-breit), sans-serif', fontSize: 'clamp(6.5px, 2.1vw, 11.5px)', letterSpacing: '0.435em', color: '#f2efd0', textAlign: 'center', textTransform: 'uppercase', lineHeight: '1.8', padding: '0 12%' }}>
-							{tagline}
-						</p>
-					) : (
-						<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
-							<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
-							<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
-						</svg>
-					)}
+					<PraevaProgramLogo
+						className="shrink-0"
+						style={{ width: PRAEVA_CARD_LAYOUT.logoWidth, height: PRAEVA_CARD_LAYOUT.logoHeight }}
+					/>
+
+					{/* Inner gradient card */}
+					<div
+						className="relative flex min-h-0 flex-1 items-center justify-center"
+						style={{
+							width: PRAEVA_CARD_LAYOUT.innerWidth,
+							borderRadius: 0,
+							background: 'linear-gradient(to bottom, #272018 3%, #545c63 50%, #dedbbc)',
+						}}
+					>
+						{tagline ? (
+							<p style={TAGLINE_STYLE}>{tagline}</p>
+						) : (
+							<svg className="absolute inset-0 w-full h-full" viewBox="0 0 307 382" preserveAspectRatio="xMidYMid meet">
+								<text x="153.5" y="205" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">BY MICHAEL J.</text>
+								<text x="153.5" y="226" textAnchor="middle" fontFamily="var(--font-sohne-breit), sans-serif" fontSize="11.5" letterSpacing="5" fill="#f2efd0">D&apos;AMBROSE</text>
+							</svg>
+						)}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -157,7 +191,7 @@ const CARDS: ProgramCard[] = [
 		ctaHref: '/alma',
 		ctaBg: 'khaki',
 		imageAlt: "ALMA by Dr. D'Ambrose — primary care program",
-		imageComponent: <AlmaVisual />,
+		imageComponent: <AlmaVisual tagline={ALMA_TAGLINE} />,
 	},
 	{
 		tag: "PRAEVA by Dr. D'Ambrose",
@@ -167,7 +201,7 @@ const CARDS: ProgramCard[] = [
 		ctaHref: '/praeva',
 		ctaBg: 'teal',
 		imageAlt: 'PRAEVA by Dr. D\'Ambrose — longevity program',
-		imageComponent: <PraevaVisual />,
+		imageComponent: <PraevaVisual tagline={PRAEVA_TAGLINE} />,
 	},
 ]
 
@@ -192,11 +226,11 @@ export function Programs() {
 				</BlurReveal>
 
 				{/* ── Cards ────────────────────────────────────────────── */}
-				<div className="mt-16 md:mt-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-2">
+				<div className="mt-16 md:mt-28 flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-2">
 					{CARDS.map((card) => (
 						<div key={card.tag} className="flex flex-col">
 							{/* Image */}
-							<RevealImage className="w-full aspect-10/9 overflow-hidden bg-bison-hide">
+							<RevealImage className={`w-full ${PROGRAM_VISUAL_ASPECT} overflow-hidden bg-bison-hide`}>
 								{card.imageComponent ?? (card.image && (
 									<Image
 										src={card.image}

@@ -1,12 +1,18 @@
 'use client'
 
-import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
+import {
+	AlmaVisual,
+	PraevaVisual,
+	ALMA_TAGLINE,
+	PRAEVA_TAGLINE,
+	PROGRAM_VISUAL_ASPECT,
+} from '@/components/ui/programs'
 
 type Program = {
-	brand: string
+	brand: 'alma' | 'praeva'
 	tag: string
 	description: string
 	benefitsTitle: string
@@ -15,15 +21,10 @@ type Program = {
 	secondary: { label: string; href: string }
 	primaryVariant: 'khaki' | 'teal'
 	accentClass: string
-	outerGradient: string
-	innerGradient: string
-	caption: string
-	image?: string
-	imageAlt?: string
 }
 
 const ALMA: Program = {
-	brand: 'Alma',
+	brand: 'alma',
 	tag: "ALMA by Dr. D'Ambrose\nCore medicine without interruption.",
 	description:
 		'A primary care program focused on diagnosis, treatment, urgent care, and ongoing clinical management.',
@@ -38,15 +39,10 @@ const ALMA: Program = {
 	secondary: { label: 'Ask about pricing', href: '/contact' },
 	primaryVariant: 'khaki',
 	accentClass: 'text-indian-khaki',
-	outerGradient: 'bg-[linear-gradient(to_top,#808d95_10%,#b4a389_50%,#dedbbc_100%)]',
-	innerGradient: 'bg-[linear-gradient(to_bottom,#808d95_10%,#b4a389_50%,#dedbbc_100%)]',
-	caption: 'Core medicine without interruption.',
-	image: '/membership/membership_alma.svg',
-	imageAlt: 'Alma program',
 }
 
 const PRAEVA: Program = {
-	brand: 'Praeva',
+	brand: 'praeva',
 	tag: "PRAEVA by Dr. D'Ambrose\nHealth guided with foresight.",
 	description:
 		'A longevity-focused program harnessing state-of-the-art technology to reduce risk, strengthen resilience, and preserve vitality.',
@@ -61,11 +57,6 @@ const PRAEVA: Program = {
 	secondary: { label: 'Ask about pricing', href: '/contact' },
 	primaryVariant: 'teal',
 	accentClass: 'text-william',
-	outerGradient: 'bg-[linear-gradient(to_bottom,#272018_3%,#545c63_50%,#dedbbc_100%)]',
-	innerGradient: 'bg-[linear-gradient(to_top,#272018_3%,#545c63_50%,#dedbbc_100%)]',
-	caption: 'Health guided with foresight.',
-	image: '/membership/membership_praeva.svg',
-	imageAlt: 'Praeva program',
 }
 
 function BenefitMark({ className = '' }: { className?: string }) {
@@ -96,39 +87,13 @@ function BenefitMark({ className = '' }: { className?: string }) {
 
 function VisualCard({ program }: { program: Program }) {
 	return (
-		<div className="bg-[#ffffe4] p-5 w-full aspect-680/664 min-[1200px]:h-full">
-			{program.image ? (
-				<div className="relative w-full h-full overflow-hidden">
-					<Image
-						src={program.image}
-						alt={program.imageAlt ?? `${program.brand} program`}
-						fill
-						className="object-cover"
-						sizes="(min-width: 1200px) 50vw, 100vw"
-					/>
-				</div>
+		<div
+			className={`bg-[#ffffe4] w-full ${PROGRAM_VISUAL_ASPECT} min-[1200px]:h-full overflow-hidden`}
+		>
+			{program.brand === 'alma' ? (
+				<AlmaVisual tagline={ALMA_TAGLINE} />
 			) : (
-				<div
-					className={`relative w-full h-full flex flex-col items-center pt-[5%] ${program.outerGradient}`}
-				>
-					<div className="w-[53.5%] aspect-336/475 bg-ecru-white flex flex-col items-center pt-[3.6%] gap-[3%]">
-						<div className="flex items-start gap-1">
-							<span className={`font-display italic text-4xl leading-none ${program.accentClass}`}>
-								{program.brand}
-							</span>
-							<span className={`font-body text-[0.55em] leading-none ${program.accentClass}`}>
-								™
-							</span>
-						</div>
-						<div
-							className={`relative w-[91%] aspect-307/382 rounded-[0.625em] flex items-end justify-center pb-3 px-4 ${program.innerGradient}`}
-						>
-							<p className="font-body text-[0.625em] text-banana-mania uppercase tracking-tight leading-snug text-center max-w-[80%]">
-								{program.caption}
-							</p>
-						</div>
-					</div>
-				</div>
+				<PraevaVisual tagline={PRAEVA_TAGLINE} />
 			)}
 		</div>
 	)

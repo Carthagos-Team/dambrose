@@ -52,9 +52,9 @@ export function B2bAudience() {
 									<>
 										<BlurReveal
 											delay={i * 0.08}
-											className="md:col-span-3 bg-[#ffffe4] md:self-start"
+											className="md:col-span-3 bg-[#ffffe4] md:self-start min-[1200px]:self-stretch"
 										>
-											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em]">
+											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em] min-[1200px]:h-full min-[1200px]:justify-between min-[1200px]:gap-0">
 												<span className="font-display italic text-2xl text-corduroy leading-snug">
 													{row.index}
 												</span>
@@ -96,9 +96,9 @@ export function B2bAudience() {
 										</RevealImage>
 										<BlurReveal
 											delay={i * 0.08 + 0.1}
-											className="md:col-span-3 bg-[#ffffe4] md:self-start"
+											className="md:col-span-3 bg-[#ffffe4] md:self-start min-[1200px]:self-stretch"
 										>
-											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em]">
+											<div className="flex flex-col px-5 pt-8 pb-6 md:px-6 md:pt-9 md:pb-7 gap-[10em] min-[1200px]:h-full min-[1200px]:justify-between min-[1200px]:gap-0">
 												<span className="font-display italic text-2xl text-corduroy leading-snug">
 													{row.index}
 												</span>

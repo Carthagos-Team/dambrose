@@ -81,12 +81,12 @@ export function Relationships() {
 					{/* Mobile label — Figma node 4344:198 */}
 					<div className="min-[1440px]:hidden flex justify-end">
 						<div
-							className="relative w-[10.3rem] h-[3.45rem] border border-blue-smoke flex flex-col items-center justify-center"
+							className="relative w-[12.88rem] h-[4.31rem] border border-blue-smoke flex flex-col items-center justify-center"
 							style={{
 								fontFamily: 'var(--font-sohne-breit), sans-serif',
-								fontSize: '0.39rem',
-								letterSpacing: '0.13rem',
-								lineHeight: '0.8rem',
+								fontSize: '0.49rem',
+								letterSpacing: '0.16rem',
+								lineHeight: '1rem',
 								color: 'var(--color-blue-smoke, #728b8b)',
 								textAlign: 'center',
 								textTransform: 'uppercase',

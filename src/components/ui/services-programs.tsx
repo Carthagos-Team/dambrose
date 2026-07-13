@@ -3,7 +3,7 @@ import { BlurReveal } from '@/components/ui/blur-reveal'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { RevealImage } from '@/components/ui/reveal-image'
-import { AlmaVisual, PraevaVisual } from './programs'
+import { AlmaVisual, PraevaVisual, ALMA_TAGLINE, PRAEVA_TAGLINE, PROGRAM_VISUAL_ASPECT } from './programs'
 
 type ProgramCard = {
 	tag: string
@@ -22,7 +22,7 @@ const CARDS: ProgramCard[] = [
 		ctaLabel: 'EXPLORE ALMA',
 		ctaHref: '/alma',
 		ctaBg: 'khaki',
-		imageComponent: <AlmaVisual tagline="Core medicine without interruption." />,
+		imageComponent: <AlmaVisual tagline={ALMA_TAGLINE} />,
 	},
 	{
 		tag: "PRAEVA by Dr. D'Ambrose",
@@ -31,7 +31,7 @@ const CARDS: ProgramCard[] = [
 		ctaLabel: 'EXPLORE PRAEVA',
 		ctaHref: '/praeva',
 		ctaBg: 'teal',
-		imageComponent: <PraevaVisual tagline="Health guided with foresight." />,
+		imageComponent: <PraevaVisual tagline={PRAEVA_TAGLINE} />,
 	},
 ]
 
@@ -39,10 +39,10 @@ export function ServicesPrograms() {
 	return (
 		<section className="w-full bg-ecru-white py-16 md:py-28">
 			<Container>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-2">
+				<div className="flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:gap-2">
 					{CARDS.map((card, i) => (
 						<BlurReveal key={card.tag} delay={i * 0.1} className="flex flex-col">
-							<RevealImage className="w-full aspect-[335/365] md:aspect-10/9 overflow-hidden bg-bison-hide">
+							<RevealImage className={`w-full ${PROGRAM_VISUAL_ASPECT} overflow-hidden bg-bison-hide`}>
 								{card.imageComponent}
 							</RevealImage>
 
