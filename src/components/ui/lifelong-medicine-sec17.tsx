@@ -81,7 +81,7 @@ export function LifelongMedicineSec17() {
 							alt=""
 							width={128}
 							height={40}
-							className="w-[6.6em] h-auto"
+							className="hidden md:block w-[6.6em] h-auto"
 							aria-hidden="true"
 							unoptimized
 						/>
