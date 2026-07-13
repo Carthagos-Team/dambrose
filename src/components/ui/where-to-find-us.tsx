@@ -81,7 +81,7 @@ export function WhereToFindUs() {
 						</span>
 
 						{/* Stamp — pre-tilted SVG (rotation baked in); 4em from bottom, half outside the card's right edge */}
-						<div className="absolute bottom-8 right-4 w-36 md:w-56 md:bottom-16 md:right-auto md:left-full md:-translate-x-1/2 pointer-events-none">
+						<div className="hidden md:block absolute w-36 md:w-56 bottom-16 left-full -translate-x-1/2 pointer-events-none">
 							<Image
 								src="/marks/find-us-stamp.svg"
 								alt=""

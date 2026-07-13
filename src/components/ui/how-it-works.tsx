@@ -31,22 +31,31 @@ export function HowItWorks() {
 			style={{ backgroundColor: '#FFFFE4' }}
 		>
 			<Container>
-				{/* ── Three image cards (staggered heights, top-aligned) ── */}
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-0 items-start">
+				{/* ── Three image cards (staggered heights, top-aligned) ──
+				    Mobile: centered horizontal strip that overflows/clips (per Figma node
+				    4793-691) — panels stay ~305px and the orchid sits centered. From md up it
+				    reverts to the 3-column grid (display:grid overrides the flex row). */}
+				<div className="-mx-5 md:mx-0 flex justify-center overflow-hidden gap-0 items-start md:grid md:grid-cols-3 md:justify-normal md:overflow-visible">
 					{/* Left: woman in chair */}
-					<RevealImage className="relative aspect-453/531 overflow-hidden">
+					<RevealImage className="relative w-[81vw] shrink-0 md:w-auto aspect-453/531 overflow-hidden">
 						<Image src="/alma/sec04/container-1.webp" alt="" fill className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
 					{/* Center: orchid + headline + CTA (tallest) */}
-					<RevealImage delay={0.15} className="relative aspect-454/711 overflow-hidden">
+					<RevealImage
+						delay={0.15}
+						className="relative w-[81vw] shrink-0 md:w-auto aspect-454/711 overflow-hidden"
+					>
 						<Image src="/alma/sec04/container-2.webp" alt="" fill className="object-cover" />
 						<div className="absolute inset-0 bg-black/25" />
 					</RevealImage>
 
 					{/* Right: gradient panel */}
-					<RevealImage delay={0.3} className="relative aspect-453/440 overflow-hidden">
+					<RevealImage
+						delay={0.3}
+						className="relative w-[81vw] shrink-0 md:w-auto aspect-453/440 overflow-hidden"
+					>
 						<div
 							className="absolute inset-0"
 							style={{
@@ -57,15 +66,15 @@ export function HowItWorks() {
 				</div>
 
 				{/* ── Three steps under cards ───────────────────────────── */}
-				<div className="mt-12 md:mt-[5.6rem] grid grid-cols-1 md:grid-cols-3 gap-x-10 md:gap-x-[1.9rem] gap-y-10">
+				<div className="mt-12 md:mt-[5.6rem] grid grid-cols-1 md:grid-cols-3 gap-x-10 md:gap-x-[1.9rem] gap-y-12 md:gap-y-10">
 					{steps.map((s, i) => (
 						<BlurReveal key={s.number} delay={0.1 * (i + 1)}>
-							<div className="grid grid-cols-1 min-[1200px]:grid-cols-2 gap-x-6 gap-y-2 items-start">
-								<div className="flex items-start gap-3">
-									<span className="font-body text-xs text-[#626f77] opacity-60 leading-[1.9]">
+							<div className="grid grid-cols-1 min-[1200px]:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-2 items-start">
+								<div className="flex items-baseline gap-3 md:items-start">
+									<span className="font-body text-xs text-[#626f77] opacity-60 leading-none md:leading-[1.9]">
 										{s.number}
 									</span>
-									<h3 className="font-futura text-[1.2rem] uppercase text-[#626f77] tracking-wider leading-tight">
+									<h3 className="font-futura text-[1.5rem] md:text-[1.2rem] uppercase text-[#626f77] tracking-wider leading-tight">
 										{s.title}
 									</h3>
 								</div>

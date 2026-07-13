@@ -19,7 +19,7 @@ const STEPS = [
 	},
 	{
 		number: '03.',
-		title: 'Ongoing physician‑led oversight',
+		title: 'Ongoing oversight',
 		description:
 			'DAMBROSE PROVIDES CONTINUOUS ACCESS, COORDINATED CARE, AND LONG-TERM MEDICAL GUIDANCE.',
 	},
@@ -101,8 +101,8 @@ export function B2bCorporateMembership() {
 							key={step.number}
 							className="flex flex-col min-[1200px]:flex-row min-[1200px]:items-start gap-3 min-[1200px]:gap-4"
 						>
-							<div className="flex items-start gap-3 md:shrink-0">
-								<span className="font-body text-xs text-ecru-white uppercase shrink-0 pt-1">
+							<div className="flex items-center md:items-start gap-3 md:shrink-0">
+								<span className="font-body text-xs text-ecru-white uppercase shrink-0 md:pt-1">
 									{step.number}
 								</span>
 								<span className="font-display italic text-2xl md:text-[1.44em] text-ecru-white leading-tight md:max-w-[6.3em]">
