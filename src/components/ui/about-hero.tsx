@@ -16,8 +16,8 @@ export function AboutHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/about-us/hero/hero-about.webp"
-						alt="Sunlit interior with window, plant, and seating — calm, residential care setting"
+						src="/about-us/hero/hero-flatlay.webp"
+						alt="DAMBROSE branded stationery flat-lay — card reading &lsquo;Begin a new relationship with your health.&rsquo;"
 						fill
 						className="object-cover object-bottom"
 						sizes="100vw"

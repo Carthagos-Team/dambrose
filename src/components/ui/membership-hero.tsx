@@ -14,22 +14,22 @@ export function MembershipHero() {
 				>
 					{/* Mobile: portrait crop — landscape source lacks height for tall object-cover frames */}
 					<Image
-						src="/membership/hero/hero-membership-mobile.webp"
-						alt="DAMBROSE membership — a personal, physician-led medical relationship"
+						src="/membership/hero/hero-interior-mobile.webp"
+						alt="Sunlit interior with window, plant, and seating — calm, residential care setting"
 						fill
 						sizes="100vw"
 						priority
-						className="object-cover object-center md:hidden"
+						className="object-cover object-bottom md:hidden"
 						quality={95}
 					/>
-					{/* Desktop: full landscape stationery flat-lay */}
+					{/* Desktop: full landscape interior photo */}
 					<Image
-						src="/membership/hero/hero-membership.webp"
-						alt="DAMBROSE membership — a personal, physician-led medical relationship"
+						src="/membership/hero/hero-interior.webp"
+						alt="Sunlit interior with window, plant, and seating — calm, residential care setting"
 						fill
 						sizes="100vw"
 						priority
-						className="object-cover object-center hidden md:block"
+						className="object-cover object-bottom hidden md:block"
 						quality={95}
 					/>
 				</RevealImage>
