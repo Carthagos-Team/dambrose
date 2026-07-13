@@ -16,11 +16,12 @@ export function AboutHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/about-us/hero/hero-bg.webp"
+						src="/about-us/hero/hero-about.webp"
 						alt="Sunlit interior with window, plant, and seating — calm, residential care setting"
 						fill
-						className="object-cover"
+						className="object-cover object-bottom"
 						sizes="100vw"
+						quality={95}
 						priority
 					/>
 				</RevealImage>
