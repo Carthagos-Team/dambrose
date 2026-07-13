@@ -9,7 +9,7 @@ const benefits = [
 	'Full healthcare coordination, from referral to\u00A0follow-up',
 	'A physician present at any specialist visit',
 	'Your advocate in every hospital and clinical setting',
-	'Continuous, proactive care throughout the year',
+	'Continuous, proactive care throughout the year',
 	'Lab work in the comfort of your home or office',
 ] as const
 
