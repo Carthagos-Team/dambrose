@@ -12,11 +12,24 @@ export function LifelongMedicineHero() {
 					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
+					{/* Mobile: dedicated portrait crop — the landscape source under object-cover
+					    in a tall mobile box was being read at a fraction of its native
+					    resolution (sizes="100vw" didn't account for the height-driven crop),
+					    causing visible blur. A purpose-cropped file fixes it. */}
+					<Image
+						src="/lifelong-medicine/hero/hero-lifelong-mobile.webp"
+						alt="Sunlit olive grove with trees framing a path toward a distant building"
+						fill
+						sizes="100vw"
+						priority
+						className="object-cover object-center md:hidden"
+						quality={95}
+					/>
 					<Image
 						src="/lifelong-medicine/hero/hero-lifelong.webp"
 						alt="Sunlit olive grove with trees framing a path toward a distant building"
 						fill
-						className="object-cover object-center"
+						className="object-cover object-center hidden md:block"
 						priority
 						quality={95}
 						sizes="(min-width: 1920px) 100vw, (min-width: 1280px) 1360px, 100vw"
