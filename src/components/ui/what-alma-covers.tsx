@@ -87,7 +87,7 @@ export function WhatAlmaCovers() {
 						<BlurReveal
 							as="article"
 							key={c.title}
-							className={`relative aspect-325/418 lg:aspect-auto lg:h-[26.125rem] overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
+							className={`relative min-h-[26.125rem] overflow-hidden flex p-5 ${c.kind === 'gradient' ? ALMA_GRADIENT : ''}`}
 							delay={index * 0.1}
 						>
 							{c.kind === 'image' && (
@@ -103,7 +103,7 @@ export function WhatAlmaCovers() {
 								</>
 							)}
 
-							<div className="relative flex h-full w-full flex-col justify-between">
+							<div className="relative flex min-h-full w-full flex-col justify-between">
 								<h3
 									className={`font-futura text-base uppercase text-left leading-none -tracking-wide ${c.headerColor}`}
 								>
