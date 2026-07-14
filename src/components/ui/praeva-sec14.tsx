@@ -54,11 +54,11 @@ function Card({ card, delay = 0 }: { card: (typeof CARDS)[number]; delay?: numbe
 			</RevealImage>
 
 			<BlurReveal delay={delay + 0.1}>
-				<div className="flex flex-col gap-2 min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[3.19em]">
+				<div className="flex flex-col gap-2 min-[1200px]:flex-row min-[1200px]:items-center min-[1200px]:gap-[3.19em]">
 					<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119] capitalize shrink-0 whitespace-nowrap">
 						{card.label}
 					</p>
-					<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80 min-[1440px]:flex-1 min-[1440px]:min-w-0">
+					<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80 min-[1200px]:flex-1 min-[1200px]:min-w-0">
 						{card.description}
 					</p>
 				</div>
@@ -74,20 +74,20 @@ export function PraevaSec14() {
 				<Container className="flex flex-col gap-[5.77em] py-[5.77em]">
 					{/* Heading — 430 px wide on desktop, natural wrap gives 2 lines */}
 					<BlurReveal>
-						<h2 className="font-display text-[2.57em] leading-none tracking-[0.025em] text-[#222009] uppercase w-full min-[1440px]:w-[8.607em]">
+						<h2 className="font-display text-[2.57em] leading-none tracking-[0.025em] text-[#222009] uppercase w-full min-[1200px]:w-[8.607em]">
 							For individuals and families who value:
 						</h2>
 					</BlurReveal>
 
-					{/* ── Mobile / tablet (< 1440px) — stacked ── */}
-					<div className="flex flex-col gap-12 min-[1440px]:hidden">
+					{/* ── Mobile / tablet (< 1200px) — stacked ── */}
+					<div className="flex flex-col gap-12 min-[1200px]:hidden">
 						<Card card={CARDS[0]} delay={0.05} />
 						<Card card={CARDS[1]} delay={0.1} />
 						<Card card={CARDS[2]} delay={0.15} />
 					</div>
 
-					{/* ── Desktop (≥ 1440px) — staggered 2-column ── */}
-					<div className="hidden min-[1440px]:block relative">
+					{/* ── Desktop (≥ 1200px) — staggered 2-column ── */}
+					<div className="hidden min-[1200px]:block relative">
 						<div className="flex items-start">
 							{/* Left column: Clarity (top) + Longevity (bottom), 728 px gap */}
 							<div className="flex-1 min-w-0 flex flex-col gap-[37.45em]">

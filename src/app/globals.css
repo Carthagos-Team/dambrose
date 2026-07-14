@@ -115,10 +115,11 @@ html {
 		font-size: clamp(1rem, calc(0.625rem + 0.78vw), 1.125rem);
 	}
 }
-/* Lg+    (≥1024px):  18px → 25.6px @ 2560px (viewport-proportional) */
+/* Lg+    (≥1024px):  fluid & viewport-proportional — 16px @1280 → 18px @1440 → 24px cap @1920.
+   Coefficient 1.25vw = 18px at the 1440 design baseline; grows with the window and caps at 4K. */
 @media (min-width: 1024px) {
 	html {
-		font-size: clamp(1.125rem, 0.9vw, 1.44rem);
+		font-size: clamp(1rem, 1.25vw, 1.5rem);
 	}
 }
 

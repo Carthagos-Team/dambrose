@@ -6,13 +6,15 @@ import { RevealImage } from '@/components/ui/reveal-image'
 /**
  * SEC 12 — /praeva — Figma node 3746:5528
  * Editorial photo collage: chairs top-centre, orchid+landscape+text top-right,
- * heading + leaf bottom-left. Desktop uses absolute layout at ≥ 1440 px.
+ * heading + leaf bottom-left. Desktop uses absolute layout at ≥ 1200 px.
+ * Fluidez vem do root font-size fluido (globals.css, bloco ≥1024px) — a
+ * composição em em escala junto com a viewport.
  */
 export function PraevaSec12() {
 	return (
 		<section className="w-full bg-[#ffffe4]">
-			{/* ── Mobile / tablet layout (< 1440 px) ─────── */}
-			<div className="min-[1440px]:hidden">
+			{/* ── Mobile / tablet layout (< 1200 px) ─────── */}
+			<div className="min-[1200px]:hidden">
 				<Container className="py-16 flex flex-col gap-16">
 					{/* Chairs — partial width, not full-bleed (Figma: 294px of 335px) */}
 					<RevealImage className="relative w-[18.41em] aspect-[295/154] overflow-hidden">
@@ -72,8 +74,8 @@ export function PraevaSec12() {
 				</Container>
 			</div>
 
-			{/* ── Desktop layout (≥ 1440 px) — absolute collage ── */}
-			<div className="hidden min-[1440px]:block relative h-[29.07em] z-[1]">
+			{/* ── Desktop layout (≥ 1200 px) — absolute collage ── */}
+			<div className="hidden min-[1200px]:block relative h-[29.07em] z-[1]">
 				{/* Chairs — upper centre-left */}
 				<div
 					className="absolute top-0 w-[15.15em] h-[7.92em]"

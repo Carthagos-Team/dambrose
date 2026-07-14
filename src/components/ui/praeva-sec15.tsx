@@ -59,7 +59,7 @@ export function PraevaSec15() {
 				</div>
 
 				{/* ── Mobile / tablet — stacked ── */}
-				<div className="flex flex-col gap-12 min-[1440px]:hidden">
+				<div className="flex flex-col gap-12 min-[1200px]:hidden">
 					{STEPS.map((step, i) => (
 						<div key={step.label} className="flex flex-col gap-6">
 							<div className="w-full h-px bg-[rgba(185,189,192,0.2)]" />
@@ -87,8 +87,8 @@ export function PraevaSec15() {
 					))}
 				</div>
 
-				{/* ── Desktop (≥ 1440px) — 3-column grid ── */}
-				<div className="hidden min-[1440px]:block relative">
+				{/* ── Desktop (≥ 1200px) — 3-column grid ── */}
+				<div className="hidden min-[1200px]:block relative">
 					{/* Single continuous horizontal line — all 3 columns share this */}
 					<div className="absolute top-[2.68em] left-0 right-0 h-[0.05em] bg-[rgba(185,189,192,0.2)] pointer-events-none" />
 

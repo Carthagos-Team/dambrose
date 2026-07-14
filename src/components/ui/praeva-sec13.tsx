@@ -66,8 +66,8 @@ export function PraevaSec13() {
 					</div>
 
 					{/* ── Right column: items + CTA ────────────────── */}
-					{/* w-[29.27em] = 569px Figma fixed width (flex-1 below 1440px) */}
-					<div className="flex flex-col gap-[2.42em] flex-1 min-w-0 min-[1440px]:flex-none min-[1440px]:w-[29.27em]">
+					{/* w-[29.27em] = 569px Figma fixed width (flex-1 below 1200px) */}
+					<div className="flex flex-col gap-[2.42em] flex-1 min-w-0 min-[1200px]:flex-none min-[1200px]:w-[29.27em]">
 						{/* gap-[3.29em] = 64px Figma gap between items */}
 						<div className="flex flex-col gap-[3.29em]">
 							{ITEMS.map((item, i) => (
