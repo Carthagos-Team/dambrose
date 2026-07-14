@@ -10,6 +10,10 @@ import { RevealImage } from '@/components/ui/reveal-image'
  * "FOR INDIVIDUALS AND FAMILIES WHO VALUE:" — sticky dot grid, 3 staggered cards.
  * Desktop: left col (Clarity top + Longevity bottom, gap-[37.45em]),
  *          right col (Presence vertically centred via self-stretch).
+ * Fonte proporcional (min-[1200px]) sobrepõe o teto global do root para a altura
+ * fixa em em dos cards (h-[30.86em]) continuar escalando junto com a largura fluida
+ * (w-full) até ~2560/3840 — senão o root trava em 24px e object-cover corta cada vez
+ * mais as fotos (mesma causa do gap corrigido em sec12/sec13). 1.25vw = 18px @1440.
  */
 
 const CARDS = [
@@ -69,7 +73,7 @@ function Card({ card, delay = 0 }: { card: (typeof CARDS)[number]; delay?: numbe
 
 export function PraevaSec14() {
 	return (
-		<section className="relative w-full bg-[#ffffe4]">
+		<section className="relative w-full bg-[#ffffe4] min-[1200px]:text-[clamp(1rem,1.25vw,2rem)]">
 			<div className="relative">
 				<Container className="flex flex-col gap-[5.77em] py-[5.77em]">
 					{/* Heading — 430 px wide on desktop, natural wrap gives 2 lines */}

@@ -7,12 +7,13 @@ import { RevealImage } from '@/components/ui/reveal-image'
  * SEC 12 — /praeva — Figma node 3746:5528
  * Editorial photo collage: chairs top-centre, orchid+landscape+text top-right,
  * heading + leaf bottom-left. Desktop uses absolute layout at ≥ 1200 px.
- * Fluidez vem do root font-size fluido (globals.css, bloco ≥1024px) — a
- * composição em em escala junto com a viewport.
+ * Fonte proporcional (min-[1200px]) sobrepõe o teto global do root para a
+ * composição em em continuar escalando até ~2560 (senão estoura gap à direita
+ * ≥1920, onde o root trava em 24px). 1.25vw = 18px @1440; trava em 32px @2560.
  */
 export function PraevaSec12() {
 	return (
-		<section className="w-full bg-[#ffffe4]">
+		<section className="w-full bg-[#ffffe4] min-[1200px]:text-[clamp(1rem,1.25vw,2rem)]">
 			{/* ── Mobile / tablet layout (< 1200 px) ─────── */}
 			<div className="min-[1200px]:hidden">
 				<Container className="py-16 flex flex-col gap-16">

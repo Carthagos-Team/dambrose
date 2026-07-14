@@ -7,6 +7,9 @@ import { RevealImage } from '@/components/ui/reveal-image'
 /**
  * SEC 13 — /praeva — Figma node 3746:5538
  * "What Praeva Covers" — left column (heading + portrait), right column (4 items + CTA).
+ * Fonte proporcional (min-[1200px]) sobrepõe o teto global do root para as colunas
+ * fixas em em continuarem escalando até ~2560 (senão o bloco de largura fixa fica
+ * alinhado à esquerda e estoura gap à direita ≥1920). 1.25vw = 18px @1440; trava 32px @2560.
  */
 
 const ITEMS = [
@@ -34,7 +37,7 @@ const ITEMS = [
 
 export function PraevaSec13() {
 	return (
-		<section className="w-full bg-[#ffffe4]">
+		<section className="w-full bg-[#ffffe4] min-[1200px]:text-[clamp(1rem,1.25vw,2rem)]">
 			<Container className="py-16 md:pt-[5.77em] md:pb-[1.65em]">
 				<div className="flex flex-col gap-12 md:flex-row md:items-end md:gap-[4.06em]">
 					{/* ── Left column: heading + portrait ─────────── */}
