@@ -13,8 +13,8 @@ export function ServicesHero() {
 					start="top 95%"
 				>
 					<Image
-						src="/services/hero/hero-services.webp"
-						alt="Sunlit golf course with palm trees at golden hour"
+						src="/services/hero/hero-lakeview.webp"
+						alt="Tranquil lakeside dock framed by Spanish moss and oak trees at golden hour"
 						fill
 						sizes="100vw"
 						priority
