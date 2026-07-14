@@ -38,8 +38,8 @@ export function PraevaSec12() {
 					<div className="flex items-start gap-4">
 						<RevealImage className="relative flex-1 h-[17.81em] overflow-hidden">
 							<Image
-								src="/praeva/sec01/photo-2.webp"
-								alt="Aerial landscape — the long-term perspective of preventive care"
+								src="/praeva/sec01/photo-2-editorial.webp"
+								alt="Runner in motion — the long-term perspective of preventive care"
 								fill
 								className="object-cover"
 								sizes="60vw"
