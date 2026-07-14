@@ -2,30 +2,6 @@ import Image from 'next/image'
 import { BlurReveal } from '@/components/ui/blur-reveal'
 import { RevealImage } from '@/components/ui/reveal-image'
 
-const IMAGES = [
-	{
-		src: '/alma/sec01/image-1.webp',
-		alt: '',
-		// 532×259 — flex basis ratio 532 (desktop). Mobile: full-width stacked.
-		basis: 'md:flex-[532]',
-		overlay: 'bg-[rgba(66,61,35,0.22)]',
-	},
-	{
-		src: '/alma/sec01/image-3.webp',
-		alt: '',
-		// 296×259
-		basis: 'md:flex-[296]',
-		overlay: 'bg-[rgba(66,61,35,0.33)]',
-	},
-	{
-		src: '/alma/sec01/image-2.webp',
-		alt: '',
-		// 532×259
-		basis: 'md:flex-[532]',
-		overlay: 'bg-[rgba(66,61,35,0.33)]',
-	},
-] as const
-
 export function CoreMedicine() {
 	return (
 		<section className="w-full bg-half-and-half py-16 md:py-28 flex flex-col gap-16 md:gap-22">
@@ -39,30 +15,43 @@ export function CoreMedicine() {
 				</h2>
 			</BlurReveal>
 
-			{/* ── 3-image strip with gradient overlay ─────────────────── */}
-			<div className="relative w-full">
+			{/* ── Editorial collage strip (Figma SEC 26 / 4868:832) ─────
+			    Full-bleed gradient band crossing the middle; rock photo bleeding off
+			    the LEFT edge (top-aligned), clouds photo bleeding off the RIGHT edge
+			    staggered down. Band and clouds intentionally extend ~2-3.5em below the
+			    strip into the gap. Edge-anchored em values (Figma_px ÷ 16) keep the
+			    composition fluid at any width; below md the whole collage scales as a
+			    proportional miniature via vw font-size (2.083vw = 16px @768). */}
+			<div className="relative w-full h-[16.1875em] overflow-x-clip max-md:[font-size:2.083vw]">
 				<div
 					aria-hidden="true"
-					className="hidden md:block absolute inset-x-0 bottom-0 h-53 bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
+					className="absolute inset-x-0 top-[5em] h-[13.25em] bg-[linear-gradient(180deg,#DEDBBC_0%,#B4A389_50%,#808D95_90%)]"
 				/>
-				<div className="relative flex flex-col md:flex-row w-full px-5 md:px-10 gap-0">
-					{IMAGES.map((img, index) => (
-						<RevealImage
-							key={img.src}
-							className={`relative overflow-hidden aspect-335/259 md:aspect-532/259 flex-none ${img.basis}`}
-							delay={index * 0.15}
-						>
-							<Image
-								src={img.src}
-								alt={img.alt}
-								fill
-								sizes="(min-width: 1024px) 35em, 100vw"
-								className="object-cover"
-							/>
-							<div aria-hidden="true" className={`absolute inset-0 md:hidden ${img.overlay}`} />
-						</RevealImage>
-					))}
-				</div>
+				<RevealImage className="absolute left-[-10.0625em] top-0 w-[33.25em] h-[16.1875em] overflow-hidden">
+					<Image
+						src="/alma/sec01/rock-arch.webp"
+						alt=""
+						fill
+						sizes="(min-width: 768px) 34em, 70vw"
+						quality={95}
+						className="object-cover"
+					/>
+					<div aria-hidden="true" className="absolute inset-0 bg-[rgba(66,61,35,0.22)]" />
+				</RevealImage>
+				<RevealImage
+					className="absolute right-[-22.1875em] top-[3.5em] w-[33.25em] h-[16.1875em] overflow-hidden"
+					delay={0.15}
+				>
+					<Image
+						src="/alma/sec01/clouds-peak.webp"
+						alt=""
+						fill
+						sizes="(min-width: 768px) 34em, 70vw"
+						quality={95}
+						className="object-cover"
+					/>
+					<div aria-hidden="true" className="absolute inset-0 bg-[rgba(66,61,35,0.23)]" />
+				</RevealImage>
 			</div>
 
 			{/* ── Description paragraph ───────────────────────────────── */}
