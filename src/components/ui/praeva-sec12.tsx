@@ -47,11 +47,12 @@ export function PraevaSec12() {
 							delay={0.05}
 						>
 							<Image
-								src="/praeva/sec01/photo-3.webp"
-								alt="Orchid — a detail of natural vitality"
+								src="/praeva/sec01/philia.webp"
+								alt="Pink amaryllis in bloom, backlit petals — a detail of natural vitality"
 								fill
 								className="object-cover"
 								sizes="137px"
+								quality={90}
 							/>
 						</RevealImage>
 					</div>
@@ -72,7 +73,7 @@ export function PraevaSec12() {
 			</div>
 
 			{/* ── Desktop layout (≥ 1440 px) — absolute collage ── */}
-			<div className="hidden min-[1440px]:block relative h-[29.07em] overflow-hidden">
+			<div className="hidden min-[1440px]:block relative h-[29.07em] z-[1]">
 				{/* Chairs — upper centre-left */}
 				<div
 					className="absolute top-0 w-[15.15em] h-[7.92em]"
@@ -98,10 +99,11 @@ export function PraevaSec12() {
 						delay={0.05}
 					>
 						<Image
-							src="/praeva/sec01/photo-3.webp"
-							alt="Orchid — a detail of natural vitality"
+							src="/praeva/sec01/philia.webp"
+							alt="Pink amaryllis in bloom, backlit petals — a detail of natural vitality"
 							fill
 							className="object-cover"
+							quality={90}
 						/>
 					</RevealImage>
 
