@@ -35,7 +35,7 @@ const CARDS = [
 	},
 	{
 		key: 'longevity',
-		src: '/praeva/sec03/card-2-presence.webp',
+		src: '/praeva/sec03/card-2-longevity.webp',
 		alt: 'Man smiling outdoors in athletic wear — the longevity that comes from foresight',
 		label: 'Longevity',
 		description:
@@ -46,7 +46,10 @@ const CARDS = [
 function Card({ card, delay = 0 }: { card: (typeof CARDS)[number]; delay?: number }) {
 	return (
 		<div className="flex flex-col gap-4">
-			<RevealImage className="relative w-full h-[30.86em] overflow-hidden" delay={delay}>
+			<RevealImage
+				className="relative w-full aspect-[1360/907] min-[1200px]:aspect-auto min-[1200px]:h-[30.86em] overflow-hidden"
+				delay={delay}
+			>
 				<Image
 					src={card.src}
 					alt={card.alt}
