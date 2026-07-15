@@ -15,11 +15,22 @@ export function AboutHero() {
 					className="relative h-full w-full overflow-hidden"
 					start="top 95%"
 				>
+					{/* Mobile: letter-focused crop matching prior object-bottom framing */}
+					<Image
+						src="/about-us/hero/hero-flatlay-mobile.webp"
+						alt="DAMBROSE branded stationery flat-lay — card reading &lsquo;Begin a new relationship with your health.&rsquo;"
+						fill
+						className="object-cover object-bottom md:hidden"
+						sizes="100vw"
+						quality={95}
+						priority
+					/>
+					{/* Desktop: full landscape flat-lay */}
 					<Image
 						src="/about-us/hero/hero-flatlay.webp"
 						alt="DAMBROSE branded stationery flat-lay — card reading &lsquo;Begin a new relationship with your health.&rsquo;"
 						fill
-						className="object-cover object-bottom"
+						className="object-cover object-bottom hidden md:block"
 						sizes="100vw"
 						quality={95}
 						priority
