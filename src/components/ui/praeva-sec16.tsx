@@ -105,7 +105,7 @@ export function PraevaSec16() {
 
 									{/* Title + description */}
 									<div className="flex flex-col gap-[0.41em] flex-1 min-w-0">
-										<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119] capitalize">
+										<p className="font-display italic text-[1.34em] leading-[1.27] text-[#282119]">
 											{feature.title}
 										</p>
 										<p className="font-ui text-body-copy leading-[1.4] tracking-[-0.029em] text-[#282119]/80">

@@ -7,8 +7,7 @@ import { Container } from '@/components/ui/container'
 
 // Each benefit is split into two segments. On mobile a hard break (<br className="md:hidden">)
 // forces the exact 2-line layout from Figma (node 4344:274); on desktop the break is hidden
-// and the segments flow as one string, wrapping naturally. The last item forces its break at
-// every breakpoint to keep "of your home" grouped with "or office".
+// and the segments flow as one line, matching the rest of the list.
 const BENEFITS: [string, string][] = [
 	['Always a direct line to your care', 'team, day or night'],
 	['Care whenever you need it,', 'without delay'],
@@ -56,23 +55,19 @@ export function MembershipHolds() {
 					{/* Benefits list */}
 					<BlurReveal delay={0.15} className="w-full max-w-125">
 						<ul>
-							{BENEFITS.map(([line1, line2], i) => {
-								const isLast = i === BENEFITS.length - 1
-								return (
-									<li
-										key={line1}
-										className={[
-											'py-7 font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80',
-											i > 0 ? 'border-t border-rangitoto/30' : '',
-											isLast ? 'border-b border-rangitoto/30' : '',
-										].join(' ')}
-									>
-										{line1}{' '}
-										<br className={isLast ? undefined : 'md:hidden'} aria-hidden />
-										{line2}
-									</li>
-								)
-							})}
+							{BENEFITS.map(([line1, line2], i) => (
+								<li
+									key={line1}
+									className={[
+										'py-7 font-body text-xs uppercase tracking-[-0.04em] text-rangitoto/80 md:whitespace-nowrap',
+										i > 0 ? 'border-t border-rangitoto/30' : '',
+										i === BENEFITS.length - 1 ? 'border-b border-rangitoto/30' : '',
+									].join(' ')}
+								>
+									{line1} <br className="md:hidden" aria-hidden />
+									{line2}
+								</li>
+							))}
 						</ul>
 					</BlurReveal>
 
