@@ -97,17 +97,18 @@ export function AboutSec10() {
 							</p>
 						</BlurReveal>
 
-						{/* Sara photo — desktop row 3 col 1 (placeholder: Kalee's portrait) */}
+						{/* Sara photo — desktop row 3 col 1 */}
 						<RevealImage
 							delay={0.1}
 							className="relative w-full aspect-[3/4] md:aspect-[656/799] overflow-hidden bg-bison-hide md:order-5 md:mt-[2.5em]"
 						>
 							<Image
-								src="/about-us/sec10/kalee.jpg"
+								src="/about-us/sec10/sara.webp"
 								alt="Sara Norton — Registered Nurse at DAMBROSE"
 								fill
 								className="object-cover object-top"
 								sizes="(max-width: 768px) 100vw, 50vw"
+								quality={90}
 							/>
 						</RevealImage>
 
