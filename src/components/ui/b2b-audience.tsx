@@ -7,7 +7,7 @@ const ROWS = [
 	{
 		index: '01',
 		body: 'Founders, C-suite executives, directors, and senior leadership.',
-		image: '/b2b/sec02/showcase-blazer.webp',
+		image: '/b2b/sec02/showcase-blazer-v2.webp',
 		alt: 'Brown patterned blazer draped over a leather office chair in sunlit executive office',
 		side: 'right' as const,
 		objectPosition: 'center center',
@@ -15,7 +15,7 @@ const ROWS = [
 	{
 		index: '02',
 		body: 'Employees with limited time and high pressure.',
-		image: '/b2b/sec02/showcase-books-lamp.webp',
+		image: '/b2b/sec02/showcase-books-lamp-v2.webp',
 		alt: 'Brass desk lamp and stacked books in sunlight with rainbow refraction through shutters',
 		side: 'left' as const,
 		objectPosition: 'center center',
@@ -23,7 +23,7 @@ const ROWS = [
 	{
 		index: '03',
 		body: 'Frequent travelers and managing complex schedules.',
-		image: '/b2b/sec02/showcase-travel-bag.webp',
+		image: '/b2b/sec02/showcase-travel-bag-v2.webp',
 		alt: 'Dark leather travel bag resting on a surface beside a window with soft curtain light',
 		side: 'right' as const,
 		objectPosition: 'center center',
@@ -73,7 +73,7 @@ export function B2bAudience() {
 												fill
 												className="object-cover"
 												quality={90}
-												sizes="(min-width: 768px) 1020px, 100vw"
+												sizes="(min-width: 1920px) 75vw, (min-width: 768px) 70vw, 100vw"
 												style={{ objectPosition: row.objectPosition }}
 											/>
 										</RevealImage>
@@ -90,7 +90,7 @@ export function B2bAudience() {
 												fill
 												className="object-cover"
 												quality={90}
-												sizes="(min-width: 768px) 1020px, 100vw"
+												sizes="(min-width: 1920px) 75vw, (min-width: 768px) 70vw, 100vw"
 												style={{ objectPosition: row.objectPosition }}
 											/>
 										</RevealImage>
