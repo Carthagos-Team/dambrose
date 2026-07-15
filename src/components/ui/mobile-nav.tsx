@@ -204,9 +204,9 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 									    but scrollable with top clearance so the menu button never
 									    overlaps the links on short (laptop) viewports. */}
 										<div className="flex-1 min-h-0 overflow-y-auto px-10.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-											<nav className="flex min-h-full flex-col justify-end pt-20 pb-6 md:pb-10">
+											<nav className="flex min-h-full flex-col justify-end pt-20 pb-6 md:pt-[clamp(4.5rem,12vh,5rem)] md:pb-[clamp(1.5rem,4vh,2.5rem)]">
 												<motion.ul
-													className="flex flex-col gap-[0.4em] md:gap-[0.875em]"
+													className="flex flex-col gap-[0.4em] md:gap-[clamp(0.4em,1.6vh,0.875em)]"
 													variants={listVariants}
 													initial="hidden"
 													animate="visible"
@@ -217,7 +217,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 															<TransitionLink
 																href={link.href}
 																onClick={() => toggle(false)}
-																className={`font-display text-[clamp(1.5rem,min(9vw,5vh),2.85em)] md:text-[clamp(1.75em,min(2.78vw,4.6vh),4em)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
+																className={`font-display text-[clamp(1.5rem,min(9vw,5vh),2.85em)] md:text-[clamp(1.375rem,min(2.78vw,4.6vh),4em)] leading-none tracking-[-0.03em] block w-fit relative no-underline after:pointer-events-none after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:bg-current after:transition-transform after:duration-[600ms] after:ease-[cubic-bezier(0.625,0.05,0,1)] after:[content:''] hover:after:origin-left hover:after:scale-x-100 motion-reduce:after:transition-none ${
 																	pathname === link.href
 																		? 'text-rangitoto after:origin-left after:scale-x-100'
 																		: 'text-olive-haze after:origin-right after:scale-x-0'
@@ -232,9 +232,9 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 										</div>
 
 										{/* Footer dark band */}
-										<div className="bg-rangoon-green px-10.5 py-6 md:py-7 flex flex-col gap-[clamp(1.5rem,5vw,2.25rem)] md:gap-4">
+										<div className="bg-rangoon-green px-10.5 py-6 md:py-[clamp(1rem,2.5vh,1.75rem)] flex flex-col gap-[clamp(1.5rem,5vw,2.25rem)] md:gap-[clamp(0.5rem,1.6vh,1rem)]">
 											{/* Social + copyright */}
-											<div className="flex flex-col gap-[1.5em] md:gap-4">
+											<div className="flex flex-col gap-[1.5em] md:gap-[clamp(0.5rem,1.6vh,1rem)]">
 												<div className="flex items-center gap-4">
 													{SOCIAL_ICONS.map(({ label, href, Icon }) => (
 														<SocialIcon key={label} label={label} href={href}>
@@ -248,7 +248,7 @@ export function MobileNav({ variant = 'default' }: MobileNavProps = {}) {
 											</div>
 
 											{/* Legal links */}
-											<div className="flex flex-col gap-[1.15em] md:gap-4">
+											<div className="flex flex-col gap-[1.15em] md:gap-[clamp(0.5rem,1.6vh,1rem)]">
 												<a
 													href="/terms"
 													className="font-body text-[clamp(0.68rem,3.2vw,0.9rem)] md:text-xs text-ecru-white tracking-tight leading-tight"
