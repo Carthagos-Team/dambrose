@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: "Futura Book";
-	src: url("/fonts/FuturaBT-Book.woff2") format("woff2");
+	src: url("/fonts/Futura-Book.woff2") format("woff2");
 	font-weight: 400;
 	font-display: swap;
 }
@@ -19,8 +19,8 @@
 	--font-display: var(--font-display), "Instrument Serif", serif;
 	--font-body: var(--font-body), "Martian Mono", monospace;
 	--font-ui: var(--font-ui), "Public Sans", sans-serif;
-	--font-futura: var(--font-futura), "Futura Book", sans-serif;
-	--font-accent: var(--font-accent), "TestSohneBreit", sans-serif;
+	--font-futura: "Futura Book", sans-serif;
+	--font-accent: "TestSohneBreit", sans-serif;
 
 	/* ── Color Palette ──────────────────────────────────── */
 
